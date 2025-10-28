@@ -12,6 +12,17 @@ import {
   CTABannerSection
 } from "@/sections";
 import { Heart, Clock, Users, Activity } from "lucide-react";
+import { StructuredData, generateOrganizationSchema, generateLocalBusinessSchema, CLINIC_DATA } from "@/lib/structured-data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Now Medical Clinic Calgary | Our Story & Mission",
+  description: "Learn about Now Medical Clinic Calgary. Our experienced doctors provide compassionate family healthcare 7 days a week until 11 PM. Serving Calgary since 2015.",
+  keywords: ["about now medical clinic", "calgary walk-in clinic", "our story", "family doctors calgary", "medical clinic mission"],
+  alternates: {
+    canonical: "https://nowmedical.ca/about"
+  }
+};
 
 export default function AboutPage() {
   const values = [
@@ -105,9 +116,16 @@ export default function AboutPage() {
     }
   ];
 
+  const organizationSchema = generateOrganizationSchema();
+  const localBusinessSchema = generateLocalBusinessSchema(CLINIC_DATA);
+
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
+    <>
+      <StructuredData data={organizationSchema} />
+      <StructuredData data={localBusinessSchema} />
+      
+      <div className="flex min-h-screen flex-col">
+        <Header />
 
       <main className="flex-1">
         {/* Hero Section */}
@@ -131,7 +149,7 @@ export default function AboutPage() {
               <div>
                 <img
                   src="/images/doctor-sarah-chen.jpg"
-                  alt="Doctor"
+                  alt="Dr. Sarah Chen, experienced family physician at Now Medical Clinic Calgary"
                   className="rounded-lg shadow-lg w-full"
                 />
               </div>
@@ -216,8 +234,9 @@ export default function AboutPage() {
         />
       </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }
 

@@ -2,6 +2,17 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { FAQSection } from "@/sections";
 import { CTABannerSection } from "@/sections";
+import { StructuredData, generateFAQSchema } from "@/lib/structured-data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "FAQ - Frequently Asked Questions | Now Medical Clinic Calgary",
+  description: "Get answers to common questions about our walk-in clinic, family doctors, hours, services, and more. Open 7 days until 11 PM in Calgary.",
+  keywords: ["faq", "frequently asked questions", "walk-in clinic questions", "family doctor faq", "calgary clinic questions"],
+  alternates: {
+    canonical: "https://nowmedical.ca/faq"
+  }
+};
 
 export default function PatientsPage() {
   const faqCategories = [
@@ -115,9 +126,22 @@ export default function PatientsPage() {
     }
   ];
 
+  // Flatten all FAQs for structured data
+  const allFAQs = faqCategories.flatMap(category => 
+    category.questions.map(q => ({
+      question: q.question,
+      answer: q.answer
+    }))
+  );
+
+  const faqSchema = generateFAQSchema(allFAQs);
+
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
+    <>
+      <StructuredData data={faqSchema} />
+      
+      <div className="flex min-h-screen flex-col">
+        <Header />
 
       <main className="flex-1">
         {/* FAQ Section */}
@@ -136,7 +160,8 @@ export default function PatientsPage() {
         />
       </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }

@@ -26,7 +26,7 @@ export default function WhyChooseSection({
             <div className="relative h-[500px] rounded-lg overflow-hidden">
               <img
                 src={image}
-                alt="Why Choose Us"
+                alt="Why choose Now Medical Clinic - experienced doctors and extended hours in Calgary"
                 className="w-full h-full object-cover"
               />
             </div>

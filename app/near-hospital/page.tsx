@@ -8,6 +8,17 @@ import {
 } from "@/sections";
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Clock, Stethoscope, Activity, Brain, Heart, Baby, Shield, Users } from "lucide-react";
+import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, CLINIC_DATA } from "@/lib/structured-data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Walk-In Clinic Near Calgary Hospitals | Open 7 Days Until 11 PM",
+  description: "Walk-in clinic conveniently located near Calgary hospitals. Avoid ER wait times for non-emergency care. Open daily until 11 PM with free parking.",
+  keywords: ["walk-in clinic near hospital calgary", "clinic near hospital", "non emergency care", "urgent care near hospital"],
+  alternates: {
+    canonical: "https://nowmedical.ca/near-hospital"
+  }
+};
 
 export default function NearHospitalPage() {
   const whyChooseItems = [
@@ -124,9 +135,33 @@ export default function NearHospitalPage() {
     }
   ];
 
+  const localBusinessSchema = generateLocalBusinessSchema({
+    ...CLINIC_DATA,
+    description: "Walk-in clinic near Calgary hospitals. Fast non-emergency care. Open until 11 PM daily."
+  });
+
+  const faqSchema = generateFAQSchema([
+    {
+      question: "Where are you located near hospitals?",
+      answer: "We're located at 2520 23 St NE #19, Calgary, conveniently near Peter Lougheed Hospital and other Calgary hospitals."
+    },
+    {
+      question: "Can you handle non-emergency cases?",
+      answer: "Yes, we handle most non-emergency conditions including minor injuries, infections, illnesses, and ongoing medical care. For life-threatening emergencies, please go to the hospital ER or call 911."
+    },
+    {
+      question: "What's the advantage over going to the hospital?",
+      answer: "Our average wait time is under 30 minutes compared to 2-8 hours at hospital ERs. We're ideal for non-emergency conditions that need prompt attention."
+    }
+  ]);
+
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
+    <>
+      <StructuredData data={localBusinessSchema} />
+      <StructuredData data={faqSchema} />
+      
+      <div className="flex min-h-screen flex-col">
+        <Header />
 
       <main className="flex-1">
         {/* Hero Section */}
@@ -179,7 +214,7 @@ export default function NearHospitalPage() {
               <div>
                 <img
                   src="/images/doctor-patient-consultation.png"
-                  alt="Doctor with patient"
+                  alt="Family doctor consulting with patient at Now Medical Clinic Calgary walk-in clinic"
                   className="rounded-lg shadow-lg w-full"
                 />
               </div>
@@ -244,8 +279,9 @@ export default function NearHospitalPage() {
         />
       </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }
 

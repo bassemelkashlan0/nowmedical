@@ -52,7 +52,7 @@ export default function HospitalAlternativeSection({
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <img
                 src={image}
-                alt="Hospital Alternative"
+                alt="Calgary walk-in clinic offering faster alternative to hospital emergency room"
                 className="w-full h-full object-cover"
               />
             </div>

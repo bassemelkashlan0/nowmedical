@@ -31,7 +31,7 @@ export default function StorySection({
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <img
                 src={images[0]}
-                alt="Our Story"
+                alt="Now Medical Clinic team providing compassionate healthcare to Calgary community"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -44,7 +44,7 @@ export default function StorySection({
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <img
                   src={images[1]}
-                  alt="Our Mission"
+                  alt="Medical professionals delivering quality healthcare services in Calgary"
                   className="w-full h-full object-cover"
                 />
               </div>

@@ -22,67 +22,101 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold text-sm mb-4">Quick Links</h3>
+            <h3 className="font-bold text-sm mb-4">Walk-In Services</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="text-muted-foreground hover:text-[#299470]">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/walk-in" className="text-muted-foreground hover:text-[#299470]">
+                <Link href="/walk-in-clinic-calgary" className="text-muted-foreground hover:text-[#299470]">
                   Walk-In Clinic Calgary
                 </Link>
               </li>
               <li>
-                <Link href="/urgent-care" className="text-muted-foreground hover:text-[#299470]">
+                <Link href="/urgent-care-calgary" className="text-muted-foreground hover:text-[#299470]">
                   Urgent Care Calgary
                 </Link>
               </li>
               <li>
-                <Link href="/family-doctor" className="text-muted-foreground hover:text-[#299470]">
-                  24-Hour Walk-In Clinic
+                <Link href="/late-night-clinic" className="text-muted-foreground hover:text-[#299470]">
+                  Late-Night Clinic
                 </Link>
               </li>
               <li>
-                <Link href="/weekend" className="text-muted-foreground hover:text-[#299470]">
-                  Weekend Walk-In Clinic
+                <Link href="/24-hour-walk-in-clinic-calgary" className="text-muted-foreground hover:text-[#299470]">
+                  24-Hour / Extended Hours
                 </Link>
               </li>
               <li>
-                <Link href="/family-doctors" className="text-muted-foreground hover:text-[#299470]">
-                  Family Doctors Accepting New Patients
+                <Link href="/walk-in-clinic-weekends" className="text-muted-foreground hover:text-[#299470]">
+                  Weekend & Holiday Clinic
                 </Link>
               </li>
               <li>
-                <Link href="/female-doctor" className="text-muted-foreground hover:text-[#299470]">
-                  Female Family Doctor Calgary
-                </Link>
-              </li>
-              <li>
-                <Link href="/drivers-medical" className="text-muted-foreground hover:text-[#299470]">
-                  Driver's Medical Calgary
+                <Link href="/drivers-medical-calgary" className="text-muted-foreground hover:text-[#299470]">
+                  Driver's Medical Exams
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-bold text-sm mb-4">Patient Resources</h3>
+            <h3 className="font-bold text-sm mb-4">Family Doctors</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/doctors" className="text-muted-foreground hover:text-[#299470]">
-                  Meet Our Doctors
+                <Link href="/family-doctors-accepting-new-patients" className="text-muted-foreground hover:text-[#299470]">
+                  Accepting New Patients
                 </Link>
               </li>
               <li>
-                <Link href="/patients" className="text-muted-foreground hover:text-[#299470]">
+                <Link href="/female-family-doctor-calgary" className="text-muted-foreground hover:text-[#299470]">
+                  Female Family Doctor
+                </Link>
+              </li>
+              <li>
+                <Link href="/meet-our-doctors" className="text-muted-foreground hover:text-[#299470]">
+                  Meet Our Doctors
+                </Link>
+              </li>
+            </ul>
+            <h3 className="font-bold text-sm mb-2 mt-4">Hospital Area</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/walk-in-clinic-near-peter-lougheed-hospital" className="text-muted-foreground hover:text-[#299470]">
+                  Near Peter Lougheed
+                </Link>
+              </li>
+              <li>
+                <Link href="/walk-in-clinic-near-foothills-hospital" className="text-muted-foreground hover:text-[#299470]">
+                  Near Foothills
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-sm mb-4">About & Resources</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/about" className="text-muted-foreground hover:text-[#299470]">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/best-walk-in-clinic-calgary" className="text-muted-foreground hover:text-[#299470]">
+                  Why Choose Us (4.8★)
+                </Link>
+              </li>
+              <li>
+                <Link href="/patient-experience" className="text-muted-foreground hover:text-[#299470]">
                   Patient Experience
                 </Link>
               </li>
               <li>
+                <Link href="/reviews" className="text-muted-foreground hover:text-[#299470]">
+                  Reviews
+                </Link>
+              </li>
+              <li>
                 <Link href="/services" className="text-muted-foreground hover:text-[#299470]">
-                  Services
+                  All Services
                 </Link>
               </li>
               <li>
@@ -92,22 +126,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/contact" className="text-muted-foreground hover:text-[#299470]">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-muted-foreground hover:text-[#299470]">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="text-muted-foreground hover:text-[#299470]">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-muted-foreground hover:text-[#299470]">
-                  Terms of Use
+                  Contact & Directions
                 </Link>
               </li>
             </ul>
@@ -186,3 +205,5 @@ export function Footer() {
     </footer>
   )
 }
+
+

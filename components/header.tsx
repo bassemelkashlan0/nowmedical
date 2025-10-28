@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { ChevronDown, Menu } from "lucide-react"
 import { Logo } from "@/components/logo"
@@ -18,6 +19,7 @@ import { useState } from "react"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-[#EAF4F1] backdrop-blur supports-[backdrop-filter]:bg-[#EAF4F1]">
@@ -34,44 +36,66 @@ export function Header() {
                 Walk-In Clinic <ChevronDown className="h-4 w-4" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="start" className="min-w-[220px]">
+            <DropdownMenuContent align="start" className="min-w-[240px]">
               <DropdownMenuItem asChild>
-                <Link href="/walk-in">Walk-In Clinic Calgary</Link>
+                <Link href="/walk-in-clinic-calgary" className={pathname === '/walk-in-clinic-calgary' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                  Walk-In Clinic Calgary
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/urgent-care">Urgent Care Calgary</Link>
+                <Link href="/urgent-care-calgary" className={pathname === '/urgent-care-calgary' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                  Urgent Care Calgary
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/late-night-clinic">24-Hour / Open Late Clinic</Link>
+                <Link href="/late-night-clinic" className={pathname === '/late-night-clinic' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                  Late-Night Clinic
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/weekend-holiday">Late-Night Clinic</Link>
+                <Link href="/24-hour-walk-in-clinic-calgary" className={pathname === '/24-hour-walk-in-clinic-calgary' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                  24-Hour / Extended Hours
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/weekend-holiday">Weekend & Holiday Clinic</Link>
+                <Link href="/walk-in-clinic-weekends" className={pathname === '/walk-in-clinic-weekends' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                  Weekend & Holiday Clinic
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuSub>
                 <DropdownMenuSubTrigger>
                   Near Major Hospitals
                 </DropdownMenuSubTrigger>
-                <DropdownMenuSubContent className="min-w-[220px]">
+                <DropdownMenuSubContent className="min-w-[280px]">
                   <DropdownMenuItem asChild>
-                    <Link href="/near-hospital/peter-lougheed">Peter Lougheed Hospital</Link>
+                    <Link href="/walk-in-clinic-near-peter-lougheed-hospital" className={pathname === '/walk-in-clinic-near-peter-lougheed-hospital' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                      Near Peter Lougheed Hospital
+                    </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/near-hospital/foothills">Foothills Hospital</Link>
+                    <Link href="/walk-in-clinic-near-foothills-hospital" className={pathname === '/walk-in-clinic-near-foothills-hospital' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                      Near Foothills Hospital
+                    </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/near-hospital/rockyview">Rockyview Hospital</Link>
+                    <Link href="/walk-in-clinic-near-rockyview-hospital" className={pathname === '/walk-in-clinic-near-rockyview-hospital' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                      Near Rockyview Hospital
+                    </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/near-hospital/alberta-childrens">Alberta Children's Hospital</Link>
+                    <Link href="/walk-in-clinic-near-alberta-childrens-hospital" className={pathname === '/walk-in-clinic-near-alberta-childrens-hospital' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                      Near Alberta Children's Hospital
+                    </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/near-hospital/south-health">South Health Campus</Link>
+                    <Link href="/walk-in-clinic-near-south-health-campus" className={pathname === '/walk-in-clinic-near-south-health-campus' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                      Near South Health Campus
+                    </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/near-hospital/sheldon-chumir">Sheldon M. Chumir Health Centre</Link>
+                    <Link href="/walk-in-clinic-near-sheldon-m-chumir-health-centre" className={pathname === '/walk-in-clinic-near-sheldon-m-chumir-health-centre' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                      Near Sheldon M. Chumir Centre
+                    </Link>
                   </DropdownMenuItem>
                 </DropdownMenuSubContent>
               </DropdownMenuSub>
@@ -86,13 +110,19 @@ export function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="min-w-[260px]">
               <DropdownMenuItem asChild>
-                <Link href="/family-doctors">Family Doctors Accepting New Patients</Link>
+                <Link href="/family-doctors-accepting-new-patients" className={pathname === '/family-doctors-accepting-new-patients' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                  Family Doctors Accepting New Patients
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/doctors">Female Family Doctor Calgary</Link>
+                <Link href="/female-family-doctor-calgary" className={pathname === '/female-family-doctor-calgary' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                  Female Family Doctor Calgary
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/doctors">Meet Our Doctors</Link>
+                <Link href="/meet-our-doctors" className={pathname === '/meet-our-doctors' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                  Meet Our Doctors
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -103,12 +133,19 @@ export function Header() {
                 Services <ChevronDown className="h-4 w-4" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="start" className="min-w-[200px]">
+            <DropdownMenuContent align="start" className="min-w-[220px]">
               <DropdownMenuItem asChild>
-                <Link href="/services">All Services</Link>
+                <Link href="/services" className={pathname === '/services' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                  All Services
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/services#flu-shots">Flu Shots</Link>
+                <Link href="/drivers-medical-calgary" className={pathname === '/drivers-medical-calgary' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                  Driver's Medical Exams
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/services#flu-shots">Flu Shots & Vaccines</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <Link href="/services#prescriptions">Prescription Renewals</Link>
@@ -119,9 +156,40 @@ export function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <Link href="/reviews" className="text-sm font-medium px-3 py-2 transition-colors hover:text-[#299470]">
-            Reviews
-          </Link>
+          <DropdownMenu modal={false}>
+            <DropdownMenuTrigger asChild>
+              <button className="flex items-center gap-1 text-sm font-medium transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-3 py-2">
+                About <ChevronDown className="h-4 w-4" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" className="min-w-[200px]">
+              <DropdownMenuItem asChild>
+                <Link href="/about" className={pathname === '/about' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                  About Us
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/best-walk-in-clinic-calgary" className={pathname === '/best-walk-in-clinic-calgary' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                  Why Choose Us
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/patient-experience" className={pathname === '/patient-experience' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                  Patient Experience
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/reviews" className={pathname === '/reviews' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                  Reviews
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/faq" className={pathname === '/faq' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                  FAQ
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -142,19 +210,52 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col gap-4">
-                <Link href="/walk-in" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
-                  Walk-In Clinic
+                <div className="border-b pb-2">
+                  <p className="text-sm font-semibold text-muted-foreground mb-2">Walk-In Clinic</p>
+                  <Link href="/walk-in-clinic-calgary" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-calgary' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Walk-In Clinic Calgary
+                  </Link>
+                  <Link href="/urgent-care-calgary" className={`block py-1 text-sm ${pathname === '/urgent-care-calgary' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Urgent Care
+                  </Link>
+                  <Link href="/late-night-clinic" className={`block py-1 text-sm ${pathname === '/late-night-clinic' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Late-Night Clinic
+                  </Link>
+                  <Link href="/walk-in-clinic-weekends" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-weekends' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Weekend Clinic
+                  </Link>
+                </div>
+                <div className="border-b pb-2">
+                  <p className="text-sm font-semibold text-muted-foreground mb-2">Family Doctor</p>
+                  <Link href="/family-doctors-accepting-new-patients" className={`block py-1 text-sm ${pathname === '/family-doctors-accepting-new-patients' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Accepting New Patients
+                  </Link>
+                  <Link href="/female-family-doctor-calgary" className={`block py-1 text-sm ${pathname === '/female-family-doctor-calgary' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Female Family Doctor
+                  </Link>
+                  <Link href="/meet-our-doctors" className={`block py-1 text-sm ${pathname === '/meet-our-doctors' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Meet Our Doctors
+                  </Link>
+                </div>
+                <div className="border-b pb-2">
+                  <p className="text-sm font-semibold text-muted-foreground mb-2">Services</p>
+                  <Link href="/services" className={`block py-1 text-sm ${pathname === '/services' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    All Services
+                  </Link>
+                  <Link href="/drivers-medical-calgary" className={`block py-1 text-sm ${pathname === '/drivers-medical-calgary' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Driver's Medical
+                  </Link>
+                </div>
+                <Link href="/best-walk-in-clinic-calgary" className={`text-sm font-medium ${pathname === '/best-walk-in-clinic-calgary' ? 'text-[#299470] font-bold' : ''}`} onClick={() => setIsOpen(false)}>
+                  Why Choose Us
                 </Link>
-                <Link href="/family-doctors" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
-                  Family Doctor
-                </Link>
-                <Link href="/services" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
-                  Services
-                </Link>
-                <Link href="/reviews" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
+                <Link href="/reviews" className={`text-sm font-medium ${pathname === '/reviews' ? 'text-[#299470] font-bold' : ''}`} onClick={() => setIsOpen(false)}>
                   Reviews
                 </Link>
-                <Link href="/contact" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
+                <Link href="/faq" className={`text-sm font-medium ${pathname === '/faq' ? 'text-[#299470] font-bold' : ''}`} onClick={() => setIsOpen(false)}>
+                  FAQ
+                </Link>
+                <Link href="/contact" className={`text-sm font-medium ${pathname === '/contact' ? 'text-[#299470] font-bold' : ''}`} onClick={() => setIsOpen(false)}>
                   Contact
                 </Link>
               </nav>

@@ -8,6 +8,17 @@ import {
 } from "@/sections";
 import { Heart, Stethoscope, Shield, Activity, Baby, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { StructuredData, generateLocalBusinessSchema, CLINIC_DATA } from "@/lib/structured-data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Medical Services Calgary | Walk-In & Family Doctor Clinic",
+  description: "Comprehensive medical services including family medicine, women's health, children's care, chronic disease management, and urgent care. Open 7 days until 11 PM.",
+  keywords: ["medical services calgary", "family medicine", "walk-in services", "comprehensive healthcare", "urgent care services"],
+  alternates: {
+    canonical: "https://nowmedical.ca/services"
+  }
+};
 
 export default function ServicesPage() {
   const services = [
@@ -155,9 +166,17 @@ export default function ServicesPage() {
     }
   ];
 
+  const localBusinessSchema = generateLocalBusinessSchema({
+    ...CLINIC_DATA,
+    description: "Comprehensive medical services: family medicine, walk-in care, urgent care, women's health, children's health, and chronic disease management."
+  });
+
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
+    <>
+      <StructuredData data={localBusinessSchema} />
+      
+      <div className="flex min-h-screen flex-col">
+        <Header />
 
       <main className="flex-1">
         {/* Hero Section */}
@@ -230,7 +249,8 @@ export default function ServicesPage() {
         />
       </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }

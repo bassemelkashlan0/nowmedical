@@ -40,7 +40,7 @@ export default function ContactPage() {
               <div className="relative h-[300px] md:h-[400px]">
                 <Image
                   src="/images/contact/banner-image.png"
-                  alt="Doctor"
+                  alt="Calgary walk-in clinic doctor ready to provide medical care to patients"
                   fill
                   className="object-contain object-right"
                   priority

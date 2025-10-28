@@ -16,6 +16,39 @@ import {
 import { Phone, Users, Clock, Activity, Stethoscope, Brain, Heart, Baby, Shield } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
+import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, generateAggregateRatingSchema, CLINIC_DATA } from "@/lib/structured-data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Walk-In Clinic Calgary | Open 7 Days Until 11 PM",
+  description: "Calgary's trusted walk-in clinic. Real doctors, open daily until 11 PM. Walk-ins welcome — no appointment needed.",
+  keywords: ["walk-in clinic calgary", "walk in clinic near me", "open late medical clinic", "family doctor calgary", "clinic near me"],
+  alternates: {
+    canonical: "https://nowmedical.ca"
+  },
+  openGraph: {
+    title: "Walk-In Clinic Calgary | Open 7 Days Until 11 PM",
+    description: "Calgary's trusted walk-in clinic. Real doctors, open daily until 11 PM. Walk-ins welcome — no appointment needed.",
+    url: "https://nowmedical.ca",
+    siteName: "Now Medical Clinic",
+    images: [
+      {
+        url: "https://nowmedical.ca/images/doctor-patient-consultation.png",
+        width: 1200,
+        height: 630,
+        alt: "Now Medical Clinic - Walk-In Clinic Calgary"
+      }
+    ],
+    locale: "en_CA",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Walk-In Clinic Calgary | Open 7 Days Until 11 PM",
+    description: "Calgary's trusted walk-in clinic. Real doctors, open daily until 11 PM. Walk-ins welcome — no appointment needed.",
+    images: ["https://nowmedical.ca/images/doctor-patient-consultation.png"]
+  }
+};
 
 export default function HomePage() {
   const whyChooseItems = [
@@ -135,7 +168,7 @@ export default function HomePage() {
   const femaleDoctors = [
     {
       name: "Dr. Madiha",
-      avatar: "/images/female-doctor-illustration-avatar.jpg",
+      avatar: "/images/landing/female-doctor-illustration-avatar.svg",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
       phone: "587-391-8188"
@@ -226,9 +259,39 @@ export default function HomePage() {
     "We're located near Peter Lougheed Centre, making us a convenient alternative to long hospital wait times. Whether you need urgent care, a family doctor, or ongoing health management, we're here for you and your family."
   ];
 
+  // Structured Data for SEO
+  const localBusinessSchema = generateLocalBusinessSchema(CLINIC_DATA);
+  const aggregateRatingSchema = generateAggregateRatingSchema({
+    ratingValue: 4.8,
+    reviewCount: 250
+  });
+  const faqSchema = generateFAQSchema([
+    {
+      question: "Do I need an appointment?",
+      answer: "No appointment needed! We welcome walk-ins 7 days a week from 7:30 AM to 11:00 PM, including weekends and holidays."
+    },
+    {
+      question: "Is it covered by AHCIP?",
+      answer: "Yes, most services are covered by the Alberta Health Care Insurance Plan (AHCIP). Please bring your valid Alberta Health Card."
+    },
+    {
+      question: "What are your hours?",
+      answer: "We're open 7:30 AM - 11:00 PM every day of the week, including weekends and statutory holidays."
+    },
+    {
+      question: "Are you accepting new family doctor patients?",
+      answer: "Yes, our family doctors are currently accepting new patients. Call us at 587-391-8188 to register."
+    }
+  ]);
+
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
+    <>
+      <StructuredData data={localBusinessSchema} />
+      <StructuredData data={aggregateRatingSchema} />
+      <StructuredData data={faqSchema} />
+      
+      <div className="flex min-h-screen flex-col">
+        <Header />
 
       {/* Live Status Banner */}
       <div className="bg-[#C8E6E0] border-b border-[#299470]/20">
@@ -267,7 +330,7 @@ export default function HomePage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white" asChild>
-                    <Link href="/walk-in">Walk In Today</Link>
+                    <Link href="/walk-in-clinic-calgary">Walk In Today</Link>
                   </Button>
                   <Button
                     size="lg"
@@ -434,7 +497,8 @@ export default function HomePage() {
         />
       </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }

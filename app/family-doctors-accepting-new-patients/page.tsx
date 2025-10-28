@@ -13,6 +13,39 @@ import {
 import { Button } from "@/components/ui/button";
 import { Phone, Heart, Baby, Activity, Shield, Stethoscope, Users } from "lucide-react";
 import Link from "next/link";
+import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, CLINIC_DATA } from "@/lib/structured-data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Family Doctors Accepting New Patients Calgary | Now Medical",
+  description: "Our Calgary family doctors are accepting new patients. Male and female physicians available. Comprehensive family healthcare. Call 587-391-8188 to register.",
+  keywords: ["family doctors accepting new patients calgary", "new family doctor calgary", "accepting new patients", "register family doctor calgary"],
+  alternates: {
+    canonical: "https://nowmedical.ca/family-doctors-accepting-new-patients"
+  },
+  openGraph: {
+    title: "Family Doctors Accepting New Patients Calgary | Now Medical",
+    description: "Our Calgary family doctors are accepting new patients. Male and female physicians available. Comprehensive family healthcare. Call 587-391-8188 to register.",
+    url: "https://nowmedical.ca/family-doctors-accepting-new-patients",
+    siteName: "Now Medical Clinic",
+    images: [
+      {
+        url: "https://nowmedical.ca/images/doctor-michael-patel.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Now Medical Clinic - Family Doctors Accepting New Patients Calgary"
+      }
+    ],
+    locale: "en_CA",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Family Doctors Accepting New Patients Calgary | Now Medical",
+    description: "Our Calgary family doctors are accepting new patients. Male and female physicians available.",
+    images: ["https://nowmedical.ca/images/doctor-michael-patel.jpg"]
+  }
+};
 
 export default function FamilyDoctorsPage() {
   const whyChooseItems = [
@@ -159,9 +192,37 @@ export default function FamilyDoctorsPage() {
     }
   ];
 
+  const localBusinessSchema = generateLocalBusinessSchema({
+    ...CLINIC_DATA,
+    description: "Calgary family doctors accepting new patients. Comprehensive family healthcare for all ages. Book today."
+  });
+
+  const faqSchema = generateFAQSchema([
+    {
+      question: "Are you accepting new family doctor patients?",
+      answer: "Yes, our family doctors are currently accepting new patients of all ages. Call 587-391-8188 to register with a family doctor."
+    },
+    {
+      question: "Can I choose a male or female family doctor?",
+      answer: "Yes, we have both male and female family doctors available. You can request your preference when registering."
+    },
+    {
+      question: "What services do family doctors provide?",
+      answer: "Our family doctors provide comprehensive healthcare including annual exams, chronic disease management, preventive care, women's health, men's health, children's health, and more."
+    },
+    {
+      question: "How do I register with a family doctor?",
+      answer: "Call us at 587-391-8188 or walk in during our hours to register. Bring your Alberta Health Card and photo ID."
+    }
+  ]);
+
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
+    <>
+      <StructuredData data={localBusinessSchema} />
+      <StructuredData data={faqSchema} />
+      
+      <div className="flex min-h-screen flex-col">
+        <Header />
 
       <main className="flex-1">
         {/* Hero Section */}
@@ -184,7 +245,7 @@ export default function FamilyDoctorsPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white" asChild>
-                    <Link href="/walk-in">Walk-In</Link>
+                    <Link href="/walk-in-clinic-calgary">Walk-In</Link>
                   </Button>
                   <Button
                     size="lg"
@@ -214,7 +275,7 @@ export default function FamilyDoctorsPage() {
               <div>
                 <img
                   src="/images/doctor-michael-patel.jpg"
-                  alt="Family doctor"
+                  alt="Experienced family doctor accepting new patients in Calgary providing comprehensive care"
                   className="rounded-lg shadow-lg w-full"
                 />
               </div>
@@ -268,8 +329,9 @@ export default function FamilyDoctorsPage() {
         />
       </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }
 

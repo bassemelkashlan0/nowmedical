@@ -4,6 +4,17 @@ import { CTABannerSection } from "@/sections";
 import { Play } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { StructuredData, generateVideoObjectSchema } from "@/lib/structured-data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Patient Testimonials & Reviews | Now Medical Clinic Calgary",
+  description: "Watch and read real patient testimonials from Now Medical Clinic Calgary. See what patients say about our walk-in clinic and family doctors.",
+  keywords: ["patient testimonials", "medical clinic reviews", "patient experience", "calgary clinic reviews", "doctor reviews"],
+  alternates: {
+    canonical: "https://nowmedical.ca/patient-experience"
+  }
+};
 
 export default function PatientExperiencePage() {
   const videoTestimonials = [
@@ -54,9 +65,24 @@ export default function PatientExperiencePage() {
     }
   ];
 
+  // Generate VideoObject schemas for each video testimonial
+  const videoSchemas = videoTestimonials.slice(0, 3).map((testimonial, index) => 
+    generateVideoObjectSchema({
+      name: `Patient Testimonial - ${testimonial.name}`,
+      description: testimonial.quote,
+      thumbnailUrl: `https://nowmedical.ca${testimonial.image}`,
+      uploadDate: new Date().toISOString().split('T')[0]
+    })
+  );
+
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
+    <>
+      {videoSchemas.map((schema, index) => (
+        <StructuredData key={index} data={schema} />
+      ))}
+      
+      <div className="flex min-h-screen flex-col">
+        <Header />
 
       <main className="flex-1">
         {/* Hero Section */}
@@ -200,8 +226,9 @@ export default function PatientExperiencePage() {
         />
       </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }
 

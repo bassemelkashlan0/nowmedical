@@ -11,6 +11,17 @@ import {
 import { Button } from "@/components/ui/button";
 import { Check, Clock, Activity, Stethoscope, Brain, Heart, Baby, Shield } from "lucide-react";
 import Link from "next/link";
+import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, CLINIC_DATA } from "@/lib/structured-data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Calgary Hospital Wait Times | Skip the ER - Walk-In Clinic Open Late",
+  description: "Avoid long Calgary hospital ER wait times. Walk in to Now Medical Clinic for non-emergency care. Open until 11 PM daily. Average wait under 30 minutes.",
+  keywords: ["calgary hospital wait times", "er wait times", "skip emergency room", "non emergency clinic", "urgent care calgary"],
+  alternates: {
+    canonical: "https://nowmedical.ca/hospital-wait-times"
+  }
+};
 
 export default function HospitalWaitTimesPage() {
   const skipWaitBenefits = [
@@ -128,9 +139,33 @@ export default function HospitalWaitTimesPage() {
     "Free parking and accessible facilities"
   ];
 
+  const localBusinessSchema = generateLocalBusinessSchema({
+    ...CLINIC_DATA,
+    description: "Skip Calgary hospital ER wait times. Walk-in clinic open until 11 PM daily. Average wait under 30 minutes."
+  });
+
+  const faqSchema = generateFAQSchema([
+    {
+      question: "What are the typical Calgary hospital wait times?",
+      answer: "Calgary hospital emergency room wait times can range from 2-8 hours depending on severity. Our walk-in clinic has an average wait time of under 30 minutes for non-emergency conditions."
+    },
+    {
+      question: "Should I go to the hospital or a walk-in clinic?",
+      answer: "Visit our walk-in clinic for non-life-threatening conditions like minor injuries, infections, flu symptoms, and minor burns. Go to the hospital ER only for serious emergencies like chest pain, severe bleeding, or difficulty breathing."
+    },
+    {
+      question: "Can you treat the same conditions as a hospital?",
+      answer: "We can treat most non-emergency conditions that would send you to an ER, including minor injuries, infections, illnesses, and chronic disease management. For life-threatening emergencies, please call 911."
+    }
+  ]);
+
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
+    <>
+      <StructuredData data={localBusinessSchema} />
+      <StructuredData data={faqSchema} />
+      
+      <div className="flex min-h-screen flex-col">
+        <Header />
 
       <main className="flex-1">
         {/* Hero Section */}
@@ -151,7 +186,7 @@ export default function HospitalWaitTimesPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white" asChild>
-                    <Link href="/walk-in">Walk In Today</Link>
+                    <Link href="/walk-in-clinic-calgary">Walk In Today</Link>
                   </Button>
                   <Button
                     size="lg"
@@ -167,7 +202,7 @@ export default function HospitalWaitTimesPage() {
               <div>
                 <img
                   src="/images/doctor-sarah-chen.jpg"
-                  alt="Doctor"
+                  alt="Calgary family doctor in consultation room providing quality medical care"
                   className="rounded-lg shadow-lg w-full"
                 />
               </div>
@@ -182,7 +217,7 @@ export default function HospitalWaitTimesPage() {
               <div>
                 <img
                   src="/images/modern-medical-clinic-reception-area-with-friendly.jpg"
-                  alt="Clinic reception"
+                  alt="Now Medical Clinic modern reception area with friendly staff welcoming patients"
                   className="rounded-lg shadow-lg w-full"
                 />
               </div>
@@ -249,7 +284,7 @@ export default function HospitalWaitTimesPage() {
               <div>
                 <img
                   src="/images/modern-medical-clinic-exterior-building.jpg"
-                  alt="Clinic exterior"
+                  alt="Now Medical Clinic building exterior located in northeast Calgary"
                   className="rounded-lg shadow-lg w-full"
                 />
               </div>
@@ -310,8 +345,9 @@ export default function HospitalWaitTimesPage() {
         />
       </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }
 

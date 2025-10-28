@@ -70,10 +70,43 @@ const fsJoey = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Walk-In Clinic Calgary | Open 7 Days Until 11 PM | Now Medical Clinic",
-  description:
-    "Calgary's trusted walk-in clinic. Real doctors, open daily until 11 PM. Walk-ins welcome — no appointment needed.",
-  generator: "nowmedical.app",
+  metadataBase: new URL('https://nowmedical.ca'),
+  title: {
+    default: "Walk-In Clinic Calgary | Open 7 Days Until 11 PM | Now Medical Clinic",
+    template: "%s | Now Medical Clinic"
+  },
+  description: "Calgary's trusted walk-in clinic. Real doctors, open daily until 11 PM. Walk-ins welcome — no appointment needed.",
+  keywords: ["walk-in clinic calgary", "family doctor calgary", "urgent care calgary", "clinic near me", "open late clinic", "weekend walk-in clinic"],
+  authors: [{ name: "Now Medical Clinic" }],
+  creator: "Now Medical Clinic",
+  publisher: "Now Medical Clinic",
+  openGraph: {
+    type: "website",
+    locale: "en_CA",
+    url: "https://nowmedical.ca",
+    title: "Walk-In Clinic Calgary | Open 7 Days Until 11 PM | Now Medical Clinic",
+    description: "Calgary's trusted walk-in clinic. Real doctors, open daily until 11 PM. Walk-ins welcome — no appointment needed.",
+    siteName: "Now Medical Clinic",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Walk-In Clinic Calgary | Open 7 Days Until 11 PM | Now Medical Clinic",
+    description: "Calgary's trusted walk-in clinic. Real doctors, open daily until 11 PM. Walk-ins welcome — no appointment needed.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'ADD-YOUR-GOOGLE-SEARCH-CONSOLE-CODE-HERE',
+  },
 }
 
 export default function RootLayout({

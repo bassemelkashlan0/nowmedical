@@ -72,7 +72,7 @@ export default function NearbyHospitalsSection({
             <div className="relative h-[500px] rounded-lg overflow-hidden">
               <img
                 src={image}
-                alt="Nearby Hospitals"
+                alt="Walk-in clinic near Calgary hospitals providing alternative to emergency room wait times"
                 className="w-full h-full object-cover"
               />
             </div>

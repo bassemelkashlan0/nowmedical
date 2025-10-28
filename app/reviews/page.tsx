@@ -5,6 +5,17 @@ import {
   VideoTestimonialsSection,
   CTABannerSection 
 } from "@/sections";
+import { StructuredData, generateAggregateRatingSchema } from "@/lib/structured-data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Patient Reviews & Ratings | Now Medical Clinic Calgary",
+  description: "Read over 500+ reviews from real patients. 4.8★ rating. See why Calgary trusts Now Medical Clinic for walk-in and family doctor services.",
+  keywords: ["patient reviews", "clinic ratings", "google reviews", "calgary clinic reviews", "5 star clinic"],
+  alternates: {
+    canonical: "https://nowmedical.ca/reviews"
+  }
+};
 
 export default function ReviewsPage() {
   const testimonials = [
@@ -82,9 +93,17 @@ export default function ReviewsPage() {
     }
   ];
 
+  const aggregateRatingSchema = generateAggregateRatingSchema({
+    ratingValue: 4.8,
+    reviewCount: 500
+  });
+
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
+    <>
+      <StructuredData data={aggregateRatingSchema} />
+      
+      <div className="flex min-h-screen flex-col">
+        <Header />
 
       <main className="flex-1">
         {/* Hero Section */}
@@ -122,8 +141,9 @@ export default function ReviewsPage() {
         />
       </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }
 

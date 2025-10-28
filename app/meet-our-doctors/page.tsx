@@ -6,6 +6,17 @@ import {
   FindUsSection,
   CTABannerSection 
 } from "@/sections";
+import { StructuredData, generatePhysicianSchema, generateLocalBusinessSchema, CLINIC_DATA } from "@/lib/structured-data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Meet Our Doctors Calgary | Male & Female Family Physicians",
+  description: "Meet our experienced family doctors in Calgary. Male and female physicians accepting new patients. Board-certified doctors providing compassionate care.",
+  keywords: ["doctors calgary", "family physicians", "meet our doctors", "calgary physicians", "male female doctors"],
+  alternates: {
+    canonical: "https://nowmedical.ca/meet-our-doctors"
+  }
+};
 
 export default function DoctorsPage() {
   const femaleDoctors = [
@@ -71,9 +82,30 @@ export default function DoctorsPage() {
     }
   ];
 
+  const allDoctors = [...femaleDoctors, ...maleDoctors];
+  const physicianSchemas = allDoctors.map(doctor => generatePhysicianSchema({
+    name: doctor.name,
+    specialty: "Family Medicine",
+    medicalSpecialty: "Family Medicine",
+    description: doctor.description,
+    telephone: doctor.phone,
+    worksFor: {
+      name: "Now Medical Clinic",
+      url: "https://nowmedical.ca"
+    }
+  }));
+
+  const localBusinessSchema = generateLocalBusinessSchema(CLINIC_DATA);
+
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
+    <>
+      <StructuredData data={localBusinessSchema} />
+      {physicianSchemas.map((schema, index) => (
+        <StructuredData key={index} data={schema} />
+      ))}
+      
+      <div className="flex min-h-screen flex-col">
+        <Header />
 
       <main className="flex-1">
         {/* Hero Section */}
@@ -115,7 +147,8 @@ export default function DoctorsPage() {
         />
       </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }

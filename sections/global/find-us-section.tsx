@@ -3,7 +3,7 @@ interface FindUsSectionProps {
 }
 
 export default function FindUsSection({
-  mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2506.8!2d-114.0!3d51.06!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1"
+  mapEmbedUrl = "https://maps.google.com/maps?q=2520%2023%20St%20NE%20%2319,%20Calgary,%20AB%20T2E%208L2&t=&z=15&ie=UTF8&iwloc=&output=embed"
 }: FindUsSectionProps) {
   return (
     <section className="py-12 md:py-16 px-4 bg-white">
