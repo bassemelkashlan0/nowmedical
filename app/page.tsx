@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "Now Medical Clinic",
     images: [
       {
-        url: "https://nowmedical.ca/images/doctor-patient-consultation.png",
+        url: "https://nowmedical.ca/images/contact/doctor-patient-consultation.png",
         width: 1200,
         height: 630,
         alt: "Now Medical Clinic - Walk-In Clinic Calgary"
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Walk-In Clinic Calgary | Open 7 Days Until 11 PM",
     description: "Calgary's trusted walk-in clinic. Real doctors, open daily until 11 PM. Walk-ins welcome — no appointment needed.",
-    images: ["https://nowmedical.ca/images/doctor-patient-consultation.png"]
+    images: ["https://nowmedical.ca/images/contact/doctor-patient-consultation.png"]
   }
 };
 
@@ -344,9 +344,9 @@ export default function HomePage() {
               </div>
 
               <div className="relative">
-                <div className="relative rounded-full overflow-hidden bg-gradient-to-br from-[#E8F5F3] to-[#C8E6E0] p-8">
+                <div className="relative">
                   <img
-                    src="/images/doctor-patient-consultation.png"
+                    src="/images/contact/doctor-patient-consultation.png"
                     alt="Medical team of three doctors"
                     className="w-full h-auto"
                   />
@@ -402,7 +402,7 @@ export default function HomePage() {
           title="Why Calgary Trusts"
           subtitle="Now Medical Clinic"
           items={whyChooseItems}
-          image="/images/modern-medical-clinic-exterior-building.jpg"
+          image="/images/contact/modern-medical-clinic-exterior-building.png"
         />
 
         {/* Our Promises Section */}
@@ -441,7 +441,7 @@ export default function HomePage() {
 
               <div>
                 <img
-                  src="/images/modern-medical-clinic-interior-waiting-room.jpg"
+                  src="/images/contact/modern-medical-clinic-interior-waiting-room.png"
                   alt="Now Medical Clinic interior"
                   className="rounded-lg shadow-lg w-full"
                 />
@@ -461,7 +461,7 @@ export default function HomePage() {
           title="Our"
           subtitle="Story"
           content={storyContent}
-          images={["/images/modern-medical-clinic-exterior-building.jpg", "/images/modern-medical-clinic-interior-waiting-room.jpg"]}
+          images={["/images/contact/modern-medical-clinic-exterior-building.png", "/images/contact/modern-medical-clinic-interior-waiting-room.png"]}
         />
 
         {/* Conditions Section */}
