@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { Sora } from "next/font/google"
 import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
-import "./globals.css"
+import "../styles/globals.css"
 
 const sora = Sora({ 
   subsets: ["latin"], 

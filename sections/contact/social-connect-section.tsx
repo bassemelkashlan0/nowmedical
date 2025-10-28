@@ -1,4 +1,4 @@
-import { Instagram, Facebook } from 'lucide-react';
+import Image from 'next/image';
 
 interface SocialConnectSectionProps {
   title?: string;
@@ -10,31 +10,43 @@ export default function SocialConnectSection({
   description = "Stay updated on clinic hours, health updates, and health tips"
 }: SocialConnectSectionProps) {
   return (
-    <section className="py-16 px-4 md:px-8 bg-gray-50">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-4">
-          Follow Us & <span className="text-[#4A9B8E]">Stay Connected</span>
+    <section className="py-12 md:py-16 px-4">
+      <div className="container mx-auto max-w-4xl text-center">
+        <h2 className="text-2xl md:text-4xl font-bold mb-4">
+          {title.split('&')[0]}& <span className="text-[#2D7B6F]">{title.split('&')[1]}</span>
         </h2>
         
-        <p className="text-lg text-gray-600 mb-8">{description}</p>
+        <p className="text-base md:text-lg text-gray-700 mb-8">{description}</p>
 
         <div className="flex gap-6 justify-center">
           <a
-            href="https://instagram.com"
+            href="https://instagram.com/nowmedicalclinic"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-500 text-white rounded-full hover:scale-110 transition-transform"
+            className="flex items-center justify-center w-16 h-16 hover:scale-110 transition-transform"
+            aria-label="Follow us on Instagram"
           >
-            <Instagram className="w-8 h-8" />
+            <Image
+              src="/icons/instagram-icon.svg"
+              alt="Instagram"
+              width={64}
+              height={64}
+            />
           </a>
           
           <a
-            href="https://facebook.com"
+            href="https://facebook.com/nowmedicalclinic"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-16 h-16 bg-blue-600 text-white rounded-full hover:scale-110 transition-transform"
+            className="flex items-center justify-center w-16 h-16 hover:scale-110 transition-transform"
+            aria-label="Follow us on Facebook"
           >
-            <Facebook className="w-8 h-8" />
+            <Image
+              src="/icons/facebook-icon.svg"
+              alt="Facebook"
+              width={64}
+              height={64}
+            />
           </a>
         </div>
       </div>
