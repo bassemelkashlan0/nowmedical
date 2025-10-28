@@ -11,7 +11,7 @@ export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-[#EAF4F1] backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <div className="flex items-center gap-2">
@@ -37,11 +37,13 @@ export function SiteHeader() {
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-6 md:flex">
-          <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary">
-              Walk-In Clinic <ChevronDown className="h-4 w-4" />
+          <DropdownMenu modal={false}>
+            <DropdownMenuTrigger asChild>
+              <button className="flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-2 py-1">
+                Walk-In Clinic <ChevronDown className="h-4 w-4" />
+              </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent align="start" className="min-w-[200px]">
               <DropdownMenuItem asChild>
                 <Link href="/walk-in-clinic-calgary">Walk-In Clinic Calgary</Link>
               </DropdownMenuItem>
@@ -57,11 +59,13 @@ export function SiteHeader() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary">
-              Family Doctor <ChevronDown className="h-4 w-4" />
+          <DropdownMenu modal={false}>
+            <DropdownMenuTrigger asChild>
+              <button className="flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-2 py-1">
+                Family Doctor <ChevronDown className="h-4 w-4" />
+              </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent align="start" className="min-w-[200px]">
               <DropdownMenuItem asChild>
                 <Link href="/family-doctors-accepting-new-patients">Accepting New Patients</Link>
               </DropdownMenuItem>
@@ -74,11 +78,13 @@ export function SiteHeader() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary">
-              Services <ChevronDown className="h-4 w-4" />
+          <DropdownMenu modal={false}>
+            <DropdownMenuTrigger asChild>
+              <button className="flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-2 py-1">
+                Services <ChevronDown className="h-4 w-4" />
+              </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent align="start" className="min-w-[200px]">
               <DropdownMenuItem asChild>
                 <Link href="/services">All Services</Link>
               </DropdownMenuItem>

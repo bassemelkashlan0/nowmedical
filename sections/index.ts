@@ -19,3 +19,9 @@ export * from './contact';
 // Patients page sections
 export * from './patients';
 
+// About page sections
+export * from './about';
+
+// Family Doctors page sections
+export * from './family-doctors';
+

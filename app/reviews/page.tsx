@@ -10,55 +10,55 @@ export default function ReviewsPage() {
   const testimonials = [
     {
       name: "Sanny Cooper",
-      avatar: "/placeholder-user.jpg",
+      avatar: "/images/placeholder-user.jpg",
       rating: 5,
       text: "Really good experience at this walk-in clinic. I was in and out in about 1.5 hours, and most of that wait was for the pharmacy inside (they're a little slow). The clinic itself runs smoothly, staff were friendly, and it's very convenient to have the pharmacy on-site. They even have a nice coffee machine in the waiting area (said, but nice to have)."
     },
     {
       name: "Bill Grabovac",
-      avatar: "/placeholder-user.jpg",
+      avatar: "/images/placeholder-user.jpg",
       rating: 5,
       text: "Fast service! Well managed medical clinic! Got to see a medical Dr after a 5 minute wait at 7:50pm. There was a small fee as we did not have an Alberta Health Care Number. The Dr was knowledgeable with the medical condition we experienced. Very Happy with the service we received. A+"
     },
     {
       name: "Jetta Lush",
-      avatar: "/placeholder-user.jpg",
+      avatar: "/images/placeholder-user.jpg",
       rating: 5,
       text: "This place was awesome!!! Hours are wonderful, worked so well for me and my specific situation (working single parent), employees were warm and welcoming. Super fast efficient, doctor was warm, welcoming and super thorough. Great experience overall. Plus the food, drinks and snacks offering, as well as the pharmacy being attached. Modernized way of having a clinic, well done! I will definitely come back here if I ever need to."
     },
     {
       name: "Sanny Cooper",
-      avatar: "/placeholder-user.jpg",
+      avatar: "/images/placeholder-user.jpg",
       rating: 5,
       text: "Really good experience at this walk-in clinic. I was in and out in about 1.5 hours, and most of that wait was for the pharmacy inside (they're a little slow). The clinic itself runs smoothly, staff were friendly, and it's very convenient to have the pharmacy on-site."
     },
     {
       name: "Bill Grabovac",
-      avatar: "/placeholder-user.jpg",
+      avatar: "/images/placeholder-user.jpg",
       rating: 5,
       text: "Fast service! Well managed medical clinic! Got to see a medical Dr after a 5 minute wait at 7:50pm. There was a small fee as we did not have an Alberta Health Care Number. The Dr was knowledgeable with the medical condition we experienced. Very Happy with the service we received. A+"
     },
     {
       name: "Jetta Lush",
-      avatar: "/placeholder-user.jpg",
+      avatar: "/images/placeholder-user.jpg",
       rating: 5,
       text: "This place was awesome!!! Hours are wonderful, worked so well for me and my specific situation (working single parent), employees were warm and welcoming. Super fast efficient, doctor was warm, welcoming and super thorough. Great experience overall."
     },
     {
       name: "Sanny Cooper",
-      avatar: "/placeholder-user.jpg",
+      avatar: "/images/placeholder-user.jpg",
       rating: 5,
       text: "Really good experience at this walk-in clinic. I was in and out in about 1.5 hours, and most of that wait was for the pharmacy inside (they're a little slow). The clinic itself runs smoothly, staff were friendly, and it's very convenient to have the pharmacy on-site."
     },
     {
       name: "Bill Grabovac",
-      avatar: "/placeholder-user.jpg",
+      avatar: "/images/placeholder-user.jpg",
       rating: 5,
       text: "Fast service! Well managed medical clinic! Got to see a medical Dr after a 5 minute wait at 7:50pm. There was a small fee as we did not have an Alberta Health Care Number. The Dr was knowledgeable with the medical condition we experienced. Very Happy with the service we received. A+"
     },
     {
       name: "Jetta Lush",
-      avatar: "/placeholder-user.jpg",
+      avatar: "/images/placeholder-user.jpg",
       rating: 5,
       text: "This place was awesome!!! Hours are wonderful, worked so well for me and my specific situation (working single parent), employees were warm and welcoming. Super fast efficient, doctor was warm, welcoming and super thorough. Great experience overall."
     }
@@ -92,7 +92,7 @@ export default function ReviewsPage() {
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Over <span className="text-[#299470]">Reviews</span>
+                Over <span className="text-[#299470]">500+ Reviews</span>
               </h1>
               <p className="text-lg text-muted-foreground">
                 See what our patients are saying about their experiences at Now Medical Clinic. We're proud to serve the Calgary community with exceptional healthcare.
@@ -103,7 +103,7 @@ export default function ReviewsPage() {
 
         {/* Reviews Section */}
         <TestimonialsSection
-          title="Over Reviews"
+          title="Over 500+ Reviews"
           testimonials={testimonials}
           showAll={true}
         />
