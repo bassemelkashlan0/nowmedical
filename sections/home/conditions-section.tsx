@@ -1,5 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { Activity, Heart, Brain, Users, Droplet, Shield, Stethoscope } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface Condition {
   category: string;
@@ -30,30 +32,31 @@ export default function ConditionsSection({
   conditions
 }: ConditionsSectionProps) {
   return (
-    <section className="py-16 px-4 md:px-8 bg-gray-50">
+    <section className="py-16 px-4 md:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-4">
+        <h2 className="text-5xl font-bold text-center mb-4">
           {title}
         </h2>
-        <h3 className="text-3xl font-bold text-center text-[#4A9B8E] mb-12">
+        <h3 className="text-5xl font-bold text-center text-[#299470] mb-12">
           {subtitle}
         </h3>
 
         <div className="grid md:grid-cols-3 gap-6">
           {conditions.map((condition, index) => (
-            <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-              <div className={`inline-flex p-3 rounded-full bg-[#4A9B8E]/10 mb-4`}>
-                <div className="text-[#4A9B8E]">
-                  {condition.icon || iconMap[condition.category.toLowerCase()]}
+            <Card key={index} className="border-1 border-[#83C1AC] p-6 hover:shadow-lg transition-shadow hover:bg-[#EAF4F1] h-full flex-col flex">
+              <div className={`inline-flex p-3 gap-4 items-center`}>
+                <div className="text-[#299470]">
+                <img src={condition.icon} alt={condition.category} className="h-full w-full" />
                 </div>
+                <h3 className="text-3xl font-bold">{condition.category}</h3>
               </div>
               
-              <h3 className="text-xl font-bold mb-4">{condition.category}</h3>
+              
               
               <ul className="space-y-2">
                 {condition.items.map((item, idx) => (
                   <li key={idx} className="text-gray-600 flex items-start gap-2">
-                    <span className="text-[#4A9B8E] mt-1">•</span>
+                    <span className="text-[#4A9B8E]">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -61,6 +64,12 @@ export default function ConditionsSection({
             </Card>
           ))}
         </div>
+        <div className='w-full text-center justify-center pt-6'>
+        <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
+                    <Link href="/walk-in-clinic-calgary">Walk In Anytime- Real Doctors Real care<img src="/icons/uil-arrow-up-right.svg" alt="Register as a new patient" className="w-5 h-5" /></Link>
+                  </Button>
+                  <p className='text-[12px] pt-4 text-[#6E6E6E]'>Open Until 11 PM, 7 Days a week Including weekends and Holidays</p>
+                  </div>
       </div>
     </section>
   );
