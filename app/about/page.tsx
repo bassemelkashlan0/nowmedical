@@ -1,5 +1,8 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { LiveStatusBanner } from "@/components/live-status-banner";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import {
   MissionSection,
   DifferenceSection,
@@ -126,6 +129,7 @@ export default function AboutPage() {
       
       <div className="flex min-h-screen flex-col">
         <Header />
+        <LiveStatusBanner />
 
       <main className="flex-1">
         {/* Hero Section */}
@@ -139,18 +143,31 @@ export default function AboutPage() {
                   <span className="text-[#299470]">Open Late Every Day</span>
                 </h1>
                 <p className="text-lg text-muted-foreground mb-4">
-                  At Now Medical Clinic, we're more than just a walk-in clinic — we're your family's healthcare partner, providing comprehensive medical services when you need them most.
+                At <b>Now Medical Clinic</b>, we believe that quality healthcare should be <b>accessible, compassionate, and convenient</b> — not stressful or delayed.
                 </p>
-                <p className="text-base text-muted-foreground">
-                  With experienced family doctors, extended hours, and a commitment to compassionate care, we're here to serve the Calgary community 7 days a week.
+                <p className="text-base text-muted-foreground mb-8">
+                We’re proud to be the only clinic in Calgary that <b>opens 7 days a week — until 11 PM</b>, including <b>weekends and holidays</b>.
                 </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white" asChild>
+                    <a href="tel:587-391-8188">Call 587-391-8188</a>
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent"
+                    asChild
+                  >
+                    <Link href="/walk-in-clinic-calgary">Walk In Anytime No Appointment Needed</Link>
+                  </Button>
+                </div>
               </div>
 
               <div>
                 <img
-                  src="/images/doctor-sarah-chen.jpg"
-                  alt="Dr. Sarah Chen, experienced family physician at Now Medical Clinic Calgary"
-                  className="rounded-lg shadow-lg w-full"
+                  src="/images/about-us/about-banner.png"
+                  alt="Now Medical Clinic Calgary doctor"
+                  className="rounded-lg w-full"
                 />
               </div>
             </div>
@@ -162,7 +179,7 @@ export default function AboutPage() {
           title="Our"
           subtitle="Story"
           content={storyContent}
-          images={["/modern-medical-clinic-exterior-building.jpg", "/modern-medical-clinic-interior-waiting-room.jpg"]}
+          images={["/images/about-us/our-story.png", "/images/contact/modern-medical-clinic-interior-waiting-room.png"]}
         />
 
         {/* Our Mission */}
