@@ -1,30 +1,27 @@
 export default function MissionSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#F1F9F4]">
       <div className="container">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           <div>
-            <h2 className="text-3xl font-bold mb-6">
+            <h2 className="text-5xl font-bold mb-6">
               Our <span className="text-[#299470]">Mission</span>
             </h2>
-            <div className="space-y-4 text-muted-foreground">
+            <div className="space-y-4 text-foreground">
               <p>
-                Our mission is to provide accessible, high-quality healthcare to the Calgary community when you need it most. We believe that healthcare should be convenient, compassionate, and comprehensive.
+              To provide timely, <b>compassionate, and patient-centered healthcare </b>— every day of the week.
               </p>
               <p>
-                We're committed to building long-term relationships with our patients and their families, providing continuity of care that goes beyond treating symptoms. We take the time to listen, understand, and address your health concerns with personalized attention.
-              </p>
-              <p>
-                By offering extended hours, walk-in services, and family medicine, we ensure that quality healthcare is available to you and your loved ones, regardless of your schedule or health needs.
+              We know that illness doesn’t wait for office hours.<br/>That’s why our doors <b>stay open from 7:30 AM to 11:00 PM</b>, every single day, <br/><b>including weekends and holidays</b>.<br/> Our mission is simple: when Calgary needs care — we’re here.
               </p>
             </div>
           </div>
 
           <div>
             <img
-              src="/images/modern-medical-clinic-interior-waiting-room.jpg"
+              src="/images/about-us/our-mission.png"
               alt="Doctor consulting with patient"
-              className="rounded-lg shadow-lg w-full"
+              className="w-full"
             />
           </div>
         </div>

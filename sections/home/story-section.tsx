@@ -1,7 +1,9 @@
+import { ReactNode } from 'react';
+
 interface StorySectionProps {
   title?: string;
   subtitle?: string;
-  content: string[];
+  content: (string | ReactNode)[];
   images?: string[];
 }
 
@@ -12,11 +14,11 @@ export default function StorySection({
   images = []
 }: StorySectionProps) {
   return (
-    <section className="py-16 px-4 md:px-8 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 px-4 md:px-8">
+      <div className="container">
 
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+        <div className="grid md:grid-cols-2 gap-18 items-center mb-12">
         {images[0] && (
             <div className="relative overflow-hidden">
               <img
@@ -26,12 +28,12 @@ export default function StorySection({
               />
             </div>
           )}
-          <div className="space-y-4">
-          <h2 className="text-4xl font-bold mb-12">
+          <div className="space-y-4 pl-6">
+          <h2 className="text-5xl font-bold mb-4">
           {title} <span className="text-[#4A9B8E]">{subtitle}</span>
         </h2>
-            {content.slice(0, Math.ceil(content.length / 2)).map((paragraph, index) => (
-              <p key={index} className="text-lg text-gray-700 leading-relaxed">
+            {content.map((paragraph, index) => (
+              <p key={index} className="text-lg text-foreground leading-relaxed">
                 {paragraph}
               </p>
             ))}
