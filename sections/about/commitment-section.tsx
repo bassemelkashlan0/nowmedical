@@ -1,30 +1,45 @@
-export default function CommitmentSection() {
+import { ReactNode } from 'react';
+
+interface CommitmentSectionProps {
+  title?: string;
+  titleHighlight?: string;
+  paragraphs: (string | ReactNode)[];
+  image?: string;
+  imageAlt?: string;
+}
+
+export default function CommitmentSection({
+  title = "Our Commitment",
+  titleHighlight = "to Calgary",
+  paragraphs,
+  image = "/images/modern-medical-clinic-reception-area-with-friendly.jpg",
+  imageAlt = "Medical clinic reception area"
+}: CommitmentSectionProps) {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#F1F9F4]">
       <div className="container">
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-bold mb-6">
-            Our Commitment <span className="text-[#299470]">to Calgary</span>
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            We're proud to be part of the Calgary community, serving families from all walks of life. Our commitment goes beyond medical care — we're here to support the health and wellbeing of every patient who walks through our doors.
-          </p>
-        </div>
-
-        <div className="grid gap-8 md:grid-cols-3">
-          <div className="text-center p-6 rounded-lg bg-gray-50">
-            <div className="text-4xl font-bold text-[#299470] mb-2">7 Days</div>
-            <p className="text-muted-foreground">Open every day including weekends and holidays</p>
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+          {/* Left Column - Text Content */}
+          <div>
+            <h2 className="text-5xl font-bold mb-4">
+              <span className="text-[#299470]">{title}</span> <br/><span className="text-foreground">{titleHighlight}</span>
+            </h2>
+            <div className="space-y-6">
+              {paragraphs.map((paragraph, index) => (
+                <p key={index} className="text-base text-foreground leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
 
-          <div className="text-center p-6 rounded-lg bg-gray-50">
-            <div className="text-4xl font-bold text-[#299470] mb-2">11 PM</div>
-            <p className="text-muted-foreground">Extended hours to fit your busy schedule</p>
-          </div>
-
-          <div className="text-center p-6 rounded-lg bg-gray-50">
-            <div className="text-4xl font-bold text-[#299470] mb-2">100%</div>
-            <p className="text-muted-foreground">Dedicated to your health and wellbeing</p>
+          {/* Right Column - Image/Visual */}
+          <div className="relative">
+            <img
+              src={image}
+              alt={imageAlt}
+              className="w-full"
+            />
           </div>
         </div>
       </div>
