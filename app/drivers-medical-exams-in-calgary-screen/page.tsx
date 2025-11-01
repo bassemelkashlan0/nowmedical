@@ -1,0 +1,86 @@
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { LiveStatusBanner } from "@/components/live-status-banner";
+import hero_img from "@/public/images/drivers-medical-exams/drivers-medical-exams-hero.png";
+import { WhyChooseSection } from "@/sections";
+import walk_cion from "@/public/icons/solar_walking-outline.svg";
+import call_icon from "@/public/icons/solar_phone-outline.svg";
+import why_choose_img from "@/public/images/drivers-medical-exams/Image.png";
+
+
+export default function DriversMedicalExamsInCalgaryScreen() {
+
+    const whyChooseItems = [
+        {
+            text: "Open 7 Days — Until 11:00 PM"
+        },
+        {
+            text: "Walk-Ins Welcome (no appointment required)"
+        },
+        {
+            text: "Experienced Family Doctors familiar with Class 1–6 medicals"
+        },
+        {
+            text: "Same-Day Completion of Alberta Transportation forms"
+        },
+        {
+            text: "Convenient Calgary location with free parking"
+        }
+
+    ];
+
+    return (
+        <div>
+            <Header />
+            <LiveStatusBanner />
+            <main>
+                {/* Hero Section */}
+                <section className="bg-[#F1F9F4] to-white py-16 lg:py-24">
+                    <div className="container">
+                        <div className="grid gap-12 lg:grid-cols-[57%_40%] lg:gap-16 items-center">
+                            <div>
+                                <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl mb-6">
+                                    <span className="text-[#299470]">Driver’s Medical Exams in</span>
+                                    <br />
+                                    <span className="text-[#303030]">Calgary Walk In or Call Today</span>
+                                </h1>
+
+                                <p className="text-base text-foreground mb-4 text-[#303030] ">
+                                    Need your <b>Driver’s Medical Certificate</b> renewed?At <b>Now Medical Clinic</b> , we make it simple — just <b>walk in 7 days a week until 11 PM.</b> Our doctors provide <b>Class 1, 2, 3, 4, and 6 commercial driver medical exams</b> for Alberta licensing.
+                                </p>
+                                <p className="text-lg font-semibold text-foreground mb-8 text-[#303030] ">
+                                    No appointment needed. Fast, friendly, and fully licensed for <b>Transport Canada and Alberta Transportation</b> requirements.                                </p>
+                            </div>
+
+                            <div className="relative">
+                                <div className="relative">
+                                    <img
+                                        src={hero_img.src}
+                                        alt="Medical team of three doctors"
+                                        className="w-full h-auto"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* why choose section */}
+                <WhyChooseSection
+                    title="Why Drivers Choose"
+                    subtitle="Now Medical Clinic"
+                    items={whyChooseItems}
+                    both_btn="flex"
+                    btn_1_text="Walk In for Driver’s Medical "
+                    btn_1_icon={walk_cion}
+                    btn_1_link="#"
+                    btn_2_link="tel:403-457-2222"
+                    btn_2_icon={call_icon}
+                    btn_2_text="Call to Book Now"
+                    image={why_choose_img.src}
+                />
+            </main>
+            <Footer />
+        </div>
+    );
+}   

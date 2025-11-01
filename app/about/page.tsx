@@ -130,7 +130,7 @@ export default function AboutPage() {
       <div className="flex min-h-screen flex-col">
         <Header />
         <LiveStatusBanner />
-
+ 
       <main className="flex-1">
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-[#E8F5F3] to-white py-16">
