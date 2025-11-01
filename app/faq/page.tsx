@@ -142,7 +142,20 @@ export default function PatientsPage() {
       
       <div className="flex min-h-screen flex-col">
         <Header />
-
+      {/* Live Status Banner */}
+      <div className="bg-[#C8E6E0] border-b border-[#299470]/20">
+        <div className="container py-3">
+          <div className="flex items-center justify-center gap-3 text-sm">
+            <div className="flex items-center gap-2">
+              <div className="h-2 w-2 rounded-full bg-[#299470] animate-pulse" />
+              <span className="font-semibold text-[#1A5F56]">Walk-in Live Status</span>
+            </div>
+            <span className="font-bold text-[#1A5F56]">OPEN NOW</span>
+            <div className="hidden sm:block h-4 w-px bg-[#299470]/30" />
+            <span className="hidden sm:inline text-[#1A5F56]">Walk-in is OPEN NOW</span>
+          </div>
+        </div>
+      </div>
       <main className="flex-1">
         {/* FAQ Section */}
         <FAQSection
