@@ -183,18 +183,18 @@ export default function OurServicesPage() {
                                     <span className="text-[#303030]">Walk-In & Family Doctors
                                         in Calgary</span>
                                 </h1>
-                                <p className="text-lg text-muted-foreground mb-4">
+                                <p className="text-base text-muted-foreground mb-4">
                                     From everyday illnesses to long-term family care, our doctors provide <b>comprehensive, compassionate medical services</b> open <b>7 days a week until 11 PM,</b> including <b>weekends and holidays.</b>
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4">
-                                    <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
+                                    <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>
                                         <Link href="/walk-in-clinic-calgary"> <img src={phone_icon.src} alt="Register as a new patient" className="w-5 h-5" /> Call 587-391-8188 to Register</Link>
                                     </Button>
 
                                     <Button
                                         size="lg"
                                         variant="outline"
-                                        className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
+                                        className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent font-bold text-base"
                                         asChild
                                     >
                                         <Link href="/services">Walk In Now <img src="icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>

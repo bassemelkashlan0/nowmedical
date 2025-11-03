@@ -1,4 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button";
+import Arrow_icon from "@/public/icons/uil-arrow-up-right.svg"
+import { Link } from "lucide-react";
 
 interface videoTestimonials {
     name: string;
@@ -11,7 +14,10 @@ interface PatientsVideoSectionProps {
     heading_mid?: string;
     heading_last?: string;
     description?: string;
-    Items:videoTestimonials[];
+    Items: videoTestimonials[];
+    btn_show?: string;
+    btn_text?: string;
+    bg_color?: string;
 }
 
 
@@ -21,13 +27,16 @@ export default function PatientsVideoSection(
         heading_mid,
         heading_last,
         description,
-        Items
+        Items,
+        btn_show,
+        btn_text = " See What Patients Are Saying ",
+        bg_color
     }: PatientsVideoSectionProps
 ) {
 
     return (
         <>
-            <section className="py-14 bg-white">
+            <section className={"py-14  " + (bg_color ? bg_color : "bg-white")}>
                 <div className="container">
                     <div className="text-center mb-12">
                         <h2 className="text-5xl font-bold mb-4">
@@ -57,6 +66,19 @@ export default function PatientsVideoSection(
                             </Card>
                         ))}
                     </div>
+
+                    <div className={" " + (btn_show ? btn_show : "hidden")}>
+
+                        <Button
+                            size="lg"
+                            variant="outline"
+                            className={"border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold "}
+                            asChild
+                        >
+                            <Link href="#">  {btn_text ? btn_text : "See What Patients Are Saying  "}  <img src={Arrow_icon.src} alt="Walk In Now" className="w-5 h-5" /> </Link>
+                        </Button>
+                    </div>
+
                 </div>
             </section>
         </>
