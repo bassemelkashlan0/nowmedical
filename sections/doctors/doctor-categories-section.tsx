@@ -23,7 +23,7 @@ export default function DoctorCategoriesSection({
   maleDoctors
 }: DoctorCategoriesSectionProps) {
   const renderDoctorCard = (doctor: Doctor, index: number) => (
-    <Card key={index} className="overflow-hidden">
+    <Card key={index} className="overflow-hidden shadow-lg p-0">
       <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 relative">
         <img
           src={doctor.avatar}
@@ -31,9 +31,9 @@ export default function DoctorCategoriesSection({
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="p-6">
-        <p className="text-sm text-[#4A9B8E] font-medium mb-1">{doctor.specialty}</p>
-        <h3 className="text-xl font-bold mb-2">
+      <div className="p-4">
+        <p className="text-base text-foreground mb-2">{doctor.specialty}</p>
+        <h3 className="text-2xl font-bold mb-3">
           {doctor.name}
           {doctor.language && (
             <span className="text-sm font-normal text-gray-500 ml-2">
@@ -41,8 +41,8 @@ export default function DoctorCategoriesSection({
             </span>
           )}
         </h3>
-        <p className="text-gray-600 mb-4">{doctor.description}</p>
-        <Button className="w-full bg-[#4A9B8E] hover:bg-[#3d8375]">
+        <p className="text-gray-600 mb-3">{doctor.description}</p>
+        <Button className="w-full bg-[#299470] hover:bg-[#2D7B6F] text-lg">
           <Phone className="w-4 h-4 mr-2" />
           Call 587-391-8188
         </Button>
@@ -52,14 +52,14 @@ export default function DoctorCategoriesSection({
 
   return (
     <section className="py-16 px-4 md:px-8 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-16">
+      <div className="container">
+        {/* <h2 className="text-4xl font-bold text-center mb-16">
           Meet <span className="text-[#4A9B8E]">Our Doctors</span>
-        </h2>
+        </h2> */}
 
         {/* Female Doctors */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold mb-8">Our Female Family Doctors</h3>
+          <h3 className="text-4xl font-bold mb-8">Our Female Family Doctors</h3>
           
           <div className="relative">
             <div className="grid md:grid-cols-4 gap-6 mb-6">
@@ -79,7 +79,7 @@ export default function DoctorCategoriesSection({
 
         {/* Male Doctors */}
         <div>
-          <h3 className="text-3xl font-bold mb-8">Our Male Family Doctors</h3>
+          <h3 className="text-4xl font-bold mb-8">Our Male Family Doctors</h3>
           
           <div className="relative">
             <div className="grid md:grid-cols-4 gap-6 mb-6">

@@ -22,21 +22,28 @@ export default function DoctorsPage() {
   const femaleDoctors = [
     {
       name: "Dr. Madiha",
-      avatar: "/images/female-doctor-illustration-avatar.jpg",
+      avatar: "/images/meet-doctor/dr-madiha.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
       phone: "587-391-8188"
     },
     {
       name: "Dr. Vanessa",
-      avatar: "/images/female-doctor-illustration-avatar-brown-hair.jpg",
+      avatar: "/images/meet-doctor/dr-ebele.png",
+      specialty: "Family Doctors",
+      description: "Experienced in family practice and children's care.",
+      phone: "587-391-8188"
+    },
+    {
+      name: "Dr. Madiha",
+      avatar: "/images/meet-doctor/dr-madiha.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
       phone: "587-391-8188"
     },
     {
       name: "Dr. Ebele",
-      avatar: "/images/female-doctor-illustration-avatar.jpg",
+      avatar: "/images/meet-doctor/dr-ebele.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
       phone: "587-391-8188"
@@ -46,17 +53,31 @@ export default function DoctorsPage() {
   const maleDoctors = [
     {
       name: "Dr. Bedi",
-      avatar: "/images/male-doctor-illustration-avatar.jpg",
+      avatar: "/images/meet-doctor/dr-michael.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
       phone: "587-391-8188"
     },
     {
       name: "Dr. Michael",
-      avatar: "/images/male-doctor-illustration-avatar.jpg",
+      avatar: "/images/meet-doctor/dr-michael.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
       language: "Spanish",
+      phone: "587-391-8188"
+    },
+    {
+      name: "Dr. Madiha",
+      avatar: "/images/meet-doctor/dr-michael.png",
+      specialty: "Family Doctors",
+      description: "Experienced in family practice and children's care.",
+      phone: "587-391-8188"
+    },
+    {
+      name: "Dr. Ebele",
+      avatar: "/images/meet-doctor/dr-michael.png",
+      specialty: "Family Doctors",
+      description: "Experienced in family practice and children's care.",
       phone: "587-391-8188"
     }
   ];
@@ -125,21 +146,6 @@ export default function DoctorsPage() {
           maleDoctors={maleDoctors}
         />
 
-        {/* Testimonials */}
-        <TestimonialsSection
-          title="What Patients Say"
-          testimonials={testimonials}
-        />
-
-        {/* Find Us */}
-        <FindUsSection />
-
-        {/* CTA Banner */}
-        <CTABannerSection
-          title="Ready to Meet Our Team? Book an appointment or walk in today."
-          primaryButtonText="Call 587-391-8188"
-          primaryButtonLink="tel:587-391-8188"
-        />
       </main>
 
         <Footer />
