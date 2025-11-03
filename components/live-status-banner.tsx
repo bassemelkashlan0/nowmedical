@@ -75,7 +75,8 @@ export function LiveStatusBanner() {
               <span className="font-semibold block text-3xl text-[#050505]">03:40 PM</span>
               <span className="hidden block sm:inline text-base text-[#050505]">17-10-2025</span>
             </div>
-          </div>          </div>
+          </div>
+        </div>
       </div>
     </div>
   )
