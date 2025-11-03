@@ -1,14 +1,19 @@
+import { bg } from "date-fns/locale";
 import { MapPin, Clock, Phone as PhoneIcon, ArrowUpRight } from "lucide-react";
 
 interface FindUsSectionProps {
   mapEmbedUrl?: string;
+  bgColor?: string;
+  IsShowBtn?: string;
 }
 
 export default function FindUsSection({
+  bgColor,
+  IsShowBtn,
   mapEmbedUrl = "https://maps.google.com/maps?q=2520%2023%20St%20NE%20%2319,%20Calgary,%20AB%20T2E%208L2&t=&z=15&ie=UTF8&iwloc=&output=embed"
 }: FindUsSectionProps) {
   return (
-    <section className="py-14 bg-[#F4FBF8]">
+    <section className={"py-14 " + (bgColor ? bgColor : "bg-[#F4FBF8]")}>
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-5xl font-bold text-center mb-12">
           <span className="text-[#299470]">Find Us</span> &amp; Hours
@@ -67,7 +72,7 @@ export default function FindUsSection({
               href="https://maps.google.com/maps?q=2520%2023%20St%20NE%20%2319,%20Calgary,%20AB%20T2E%208L2"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border-1 border-[#299470] text-[#299470] font-bold px-4 py-3 text-lg hover:bg-[#EAF4F1] transition"
+              className={" items-center gap-2 px-6 py-3 bg-[#299470] hover:bg-[#256358] text-white font-bold rounded " + (IsShowBtn ? IsShowBtn : " inline-flex")}
             >
               Get Direction on Google Map
               <ArrowUpRight className="w-5 h-5" />
@@ -78,5 +83,4 @@ export default function FindUsSection({
       </div>
     </section>
   );
-}
-
+  }

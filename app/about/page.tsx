@@ -173,7 +173,7 @@ export default function AboutPage() {
       <div className="flex min-h-screen flex-col">
         <Header />
         <LiveStatusBanner />
-
+ 
       <main className="flex-1">
         {/* Hero Section */}
         <section className="bg-[#F1F9F4] py-16">
