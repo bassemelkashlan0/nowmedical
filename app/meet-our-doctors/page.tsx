@@ -22,21 +22,28 @@ export default function DoctorsPage() {
   const femaleDoctors = [
     {
       name: "Dr. Madiha",
-      avatar: "/images/female-doctor-illustration-avatar.jpg",
+      avatar: "/images/meet-doctor/dr-madiha.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
       phone: "587-391-8188"
     },
     {
       name: "Dr. Vanessa",
-      avatar: "/images/female-doctor-illustration-avatar-brown-hair.jpg",
+      avatar: "/images/meet-doctor/dr-ebele.png",
+      specialty: "Family Doctors",
+      description: "Experienced in family practice and children's care.",
+      phone: "587-391-8188"
+    },
+    {
+      name: "Dr. Madiha",
+      avatar: "/images/meet-doctor/dr-madiha.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
       phone: "587-391-8188"
     },
     {
       name: "Dr. Ebele",
-      avatar: "/images/female-doctor-illustration-avatar.jpg",
+      avatar: "/images/meet-doctor/dr-ebele.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
       phone: "587-391-8188"
@@ -46,17 +53,31 @@ export default function DoctorsPage() {
   const maleDoctors = [
     {
       name: "Dr. Bedi",
-      avatar: "/images/male-doctor-illustration-avatar.jpg",
+      avatar: "/images/meet-doctor/dr-michael.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
       phone: "587-391-8188"
     },
     {
       name: "Dr. Michael",
-      avatar: "/images/male-doctor-illustration-avatar.jpg",
+      avatar: "/images/meet-doctor/dr-michael.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
       language: "Spanish",
+      phone: "587-391-8188"
+    },
+    {
+      name: "Dr. Madiha",
+      avatar: "/images/meet-doctor/dr-michael.png",
+      specialty: "Family Doctors",
+      description: "Experienced in family practice and children's care.",
+      phone: "587-391-8188"
+    },
+    {
+      name: "Dr. Ebele",
+      avatar: "/images/meet-doctor/dr-michael.png",
+      specialty: "Family Doctors",
+      description: "Experienced in family practice and children's care.",
       phone: "587-391-8188"
     }
   ];
@@ -109,42 +130,22 @@ export default function DoctorsPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-b from-[#E8F5F3] to-white py-16">
+        <section className="bg-[#F1F9F4] py-16">
           <div className="container">
             <div className="max-w-3xl">
-              <h1 className="text-4xl font-bold tracking-tight mb-4">
+              <h1 className="text-6xl font-bold mb-4">
                 Meet <span className="text-[#299470]">Our Doctors</span>
               </h1>
-              <p className="text-xl text-muted-foreground">
-                Our team of experienced, board-certified physicians is dedicated to providing exceptional care to every
-                patient.
-              </p>
             </div>
           </div>
         </section>
 
         {/* Doctors Categories */}
         <DoctorCategoriesSection
-          title="Meet Our Doctors"
           femaleDoctors={femaleDoctors}
           maleDoctors={maleDoctors}
         />
 
-        {/* Testimonials */}
-        <TestimonialsSection
-          title="What Patients Say"
-          testimonials={testimonials}
-        />
-
-        {/* Find Us */}
-        <FindUsSection />
-
-        {/* CTA Banner */}
-        <CTABannerSection
-          title="Ready to Meet Our Team? Book an appointment or walk in today."
-          primaryButtonText="Call 587-391-8188"
-          primaryButtonLink="tel:587-391-8188"
-        />
       </main>
 
         <Footer />
