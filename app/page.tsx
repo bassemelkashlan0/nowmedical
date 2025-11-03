@@ -424,6 +424,7 @@ export default function HomePage() {
           subtitle="Now Medical Clinic"
           items={whyChooseItems}
           image="/images/landing/why-calgary-trusts.png"
+          btn_class="inline-flex"
         />
 
         {/* Our Promises Section */}

@@ -2,13 +2,16 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { LiveStatusBanner } from "@/components/live-status-banner";
 import hero_img from "@/public/images/drivers-medical-exams/drivers-medical-exams-hero.png";
-import { WhyChooseSection } from "@/sections";
+import { FindUsSection, WhyChooseSection } from "@/sections";
 import walk_cion from "@/public/icons/solar_walking-outline.svg";
 import call_icon from "@/public/icons/solar_phone-outline.svg";
 import why_choose_img from "@/public/images/drivers-medical-exams/Image.png";
+import BottomCallAction from "@/components/ui/bottom-call-acction";
 
 
-export default function DriversMedicalExamsInCalgaryScreen() {
+
+export default function DriversMedicalExamsInCalgaryScreen()
+ {
 
     const whyChooseItems = [
         {
@@ -79,6 +82,20 @@ export default function DriversMedicalExamsInCalgaryScreen() {
                     btn_2_text="Call to Book Now"
                     image={why_choose_img.src}
                 />
+
+                {/* Mind Us  Section */}
+                <FindUsSection
+                 bgColor=" "
+                 IsShowBtn='hidden'
+                />
+
+                {/* Bottom Call to Action Section */}
+                <div className="mt-14"></div>
+                <BottomCallAction 
+                    title="Driver’s Medical Calgary | Class 1, 2, 3, 4, 6 "
+                    title_2="Exams | Walk In or Call"
+                    description="Need a driver’s medical in Calgary? Walk in 7 days until 11 PM. Class 1–6 commercial driver exams. Fast, same-day forms. Call 587-391-8188."
+                />  
             </main>
             <Footer />
         </div>

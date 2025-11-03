@@ -1,8 +1,7 @@
-import { CheckCheck, CheckCircle2, CheckIcon } from 'lucide-react';
+import { CheckCheck, CheckCircle2, CheckIcon, DotIcon } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from 'next/image';
-import { bg } from 'date-fns/locale';
 
 
 interface WhyChooseItem {
@@ -13,7 +12,9 @@ interface WhyChooseItem {
 interface WhyChooseSectionProps {
   title?: string;
   para?: string
+  para_2?: string
   subtitle?: string;
+  Sub_desc?: string;
   items: WhyChooseItem[];
   image?: string;
   btn_1_text?: string;
@@ -24,17 +25,27 @@ interface WhyChooseSectionProps {
   btn_2_icon?: React.ReactNode;
   btn_class?: string;
   both_btn?: string;
+  full_bg_btn?: string;
+  full_btn_link?: string;
+  full_btn_text?: string;
+  full_btn_icon?: React.ReactNode;
   order?: string;
   bg_color?: string;
-  title_2?: string; 
+  title_2?: string;
   py?: string;
+  IsDot?: boolean;
+  h2_color_1?: string;
+  h2_color_2?: string;
+  h2_sub_color?: string;
 }
 
 export default function WhyChooseSection({
   title = "Why Choose",
   subtitle = "Now Medical Clinic",
   items,
+  Sub_desc,
   para,
+  para_2,
   image,
   btn_1_icon,
   btn_2_icon,
@@ -47,7 +58,15 @@ export default function WhyChooseSection({
   order,
   bg_color,
   title_2,
+  full_bg_btn,
+  full_btn_link,
+  full_btn_text,
+  full_btn_icon,
+  IsDot,
   py,
+  h2_color_1,
+  h2_color_2,
+  h2_sub_color
 }: WhyChooseSectionProps) {
   return (
     <section className={" px-4 md:px-8 " + (bg_color ? bg_color : "") + (py ? py : " py-4 md:py-14 ")}>
@@ -64,16 +83,28 @@ export default function WhyChooseSection({
           )}
 
           <div className={(order ? order : "")}>
-            <h2 className="text-5xl font-bold mb-4">
-              {title} <span className='text-[#299470]'>{title_2}</span> <br /> <span className="text-[#299470]">{subtitle}</span>
+            <h2 className={"text-5xl font-bold mb-4 "}>
+              <span className={" " + (h2_color_1 ? h2_color_1 : ' text-[#303030] ')}>   {title}  </span> <span className={' ' + (h2_color_2 ? h2_color_2 :  " text-[#299470] ")}>{title_2}</span> <br /> <span className={ (h2_sub_color ? h2_sub_color : "text-[#299470]" )}>{subtitle}</span>
             </h2>
+            <p className='text-[#303030] text-3xl font-medium mb-2 ' > {Sub_desc} </p>
             <p className="text-lg text-foreground mb-5">
               {para}
             </p>
+
+            <p className="text-lg text-foreground mb-4 ">
+              {para_2}
+            </p>
+
             <ul className="space-y-4 mb-7">
               {items.map((item, index) => (
                 <li key={index} className="flex items-start gap-3 font-semibold text-lg text-foreground">
-                  <CheckIcon className="w-6 h-6 text-[#299470] flex-shrink-0 mt-1" />
+
+                  {IsDot ? (
+                    <DotIcon className="w-6 h-6 flex-shrink-0 mt-1 -mr-2 text-[#303030] " />
+                  ) : (
+                    <CheckIcon className="w-6 h-6 text-[#299470] flex-shrink-0 mt-1" />
+                  )}
+
                   <span className="text-lg">{item.text}</span>
                 </li>
               ))}
@@ -87,9 +118,22 @@ export default function WhyChooseSection({
               <Link href="/services">Walk In Now <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
             </Button>
 
-            <div className={" pt-4 flex-col md:flex-row gap-4  items-center  " + (both_btn ? both_btn : "hidden")}>
+            <Button className={"bg-[#299470] hover:bg-[#256358] text-white font-bold px-4 py-4 text-lg " + (full_bg_btn ? full_bg_btn : "hidden")}>
+              <Link href={full_btn_link ? full_btn_link as string : "#"} className='flex' >
+                <Image
+                  src={full_btn_icon ? full_btn_icon as string : "/icons/btn_phone-outline-icon.svg"}
+                  alt="Phone"
+                  width={20}
+                  height={20}
+                  className="mr-3 "
+                />
+                {full_btn_text}
+              </Link>
+            </Button>
+
+            <div className={"  flex-col md:flex-row gap-4  items-center  " + (both_btn ? both_btn : "hidden pt-4")}>
               <Button className="bg-[#299470] hover:bg-[#256358] text-white font-bold px-4 py-4 text-lg">
-                <Link href={btn_1_link ? btn_1_link as string : "#"}  className='flex' >
+                <Link href={btn_1_link ? btn_1_link as string : "#"} className='flex' >
                   <Image
                     src={btn_1_icon ? btn_1_icon as string : "/icons/btn_phone-outline-icon.svg"}
                     alt="Phone"

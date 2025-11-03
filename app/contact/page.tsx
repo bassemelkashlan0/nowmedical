@@ -11,12 +11,15 @@ import {
   WalkInBookSection,
   ComingFromHospitalSection,
   FindUsSection,
-  SocialConnectSection
+  SocialConnectSection,
 } from "@/sections";
 import { Phone, Users, Clock, Activity, Stethoscope, Brain, Heart, Baby, Shield } from "lucide-react";
 import Image from "next/image";
+import BottomCallAction from "@/components/ui/bottom-call-acction";
 
 export default function ContactPage() {
+   const mapEmbedUrl = "https://maps.google.com/maps?q=2520%2023%20St%20NE%20%2319,%20Calgary,%20AB%20T2E%208L2&t=&z=15&ie=UTF8&iwloc=&output=embed"
+
 
   const whyChooseItems_1 = [
     {
@@ -91,7 +94,31 @@ export default function ContactPage() {
         <ContactInfoSection />
 
         {/* Find Us on the Map */}
-        <FindUsSection />
+        {/* <FindUsSection /> */}
+        <section className={"py-14 "}>
+          <div className="container mx-auto ">
+            <h2 className="text-5xl font-bold text-center mb-12">
+              <span className="text-[#299470]">Find Us</span> &amp; Hours
+            </h2>
+            <div className="flex  items-center">
+              {/* Map */}
+              <div className="w-full  mx-auto md:mx-0">
+                <div className="overflow-hidden shadow-sm">
+                  <iframe
+                    src={mapEmbedUrl}
+                    width="100%"
+                    height="500"
+                    style={{ minHeight: 320, border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Now Medical Clinic Location Map"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
 
         {/* Why Choose Us Section */}
@@ -125,7 +152,7 @@ export default function ContactPage() {
 
         />
 
-       
+
         {/* <section className="py-16 bg-[#F1F9F4]">
           <div className="container">
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
@@ -177,19 +204,11 @@ export default function ContactPage() {
         <SocialConnectSection />
 
         {/* Bottom Call to Action */}
-        <section className="bg-[#195A44] max-w-[1240px] mx-auto rounded-[16px] py-14 px-18 mb-10 md:mb-[60px]">
-          <div className="mx-auto">
-            <h2 className=" text-4xl  md:text-5xl font-bold  mb-2 text-[#fefefe]">
-              Now Medical Clinic Calgary's Walk-In &
-            </h2>
-            <h3 className="text-4xl md:text-5xl font-bold text-[#fefefe] mb-2">
-              Family Doctor Clinic Open Late Every Day.
-            </h3>
-            <p className="text-[#fefefe] text-base ">
-              Early or evening care Late hours you can depend on!
-            </p>
-          </div>
-        </section>
+        <BottomCallAction 
+        title="Now Medical Clinic Calgary’s Walk-In &"
+        title_2="Family Doctor Clinic Open Late Every Day."
+        description="Fast, professional care when you need it most.."
+        />
       </main>
 
       <Footer />
