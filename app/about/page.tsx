@@ -230,7 +230,8 @@ export default function AboutPage() {
 
         {/* Our Values */}
         <ValuesSection
-          title="Our Values"
+          title="Our"
+          subtitle="Values"
           description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, "
           values={values}
         />

@@ -2,6 +2,7 @@ import { CheckCheck, CheckCircle2, CheckIcon, DotIcon } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from 'next/image';
+import { ReactNode } from 'react';
 
 
 interface WhyChooseItem {
@@ -10,7 +11,7 @@ interface WhyChooseItem {
 }
 
 interface WhyChooseSectionProps {
-  title?: string;
+  title?: string | ReactNode;
   para?: string
   para_2?: string
   subtitle?: string;
@@ -29,9 +30,10 @@ interface WhyChooseSectionProps {
   full_btn_link?: string;
   full_btn_text?: string;
   full_btn_icon?: React.ReactNode;
+  full_btn_icon_class?: string;
   order?: string;
   bg_color?: string;
-  title_2?: string;
+  title_2?: string | ReactNode;
   py?: string;
   IsDot?: boolean;
   h2_color_1?: string;
@@ -62,6 +64,7 @@ export default function WhyChooseSection({
   full_btn_link,
   full_btn_text,
   full_btn_icon,
+  full_btn_icon_class,
   IsDot,
   py,
   h2_color_1,
@@ -119,15 +122,15 @@ export default function WhyChooseSection({
             </Button>
 
             <Button className={"bg-[#299470] hover:bg-[#256358] text-white font-bold px-4 py-4 text-lg " + (full_bg_btn ? full_bg_btn : "hidden")}>
-              <Link href={full_btn_link ? full_btn_link as string : "#"} className='flex' >
+              <Link href={full_btn_link ? full_btn_link as string : "#"} className='flex items-center' >
+                {full_btn_text}
                 <Image
                   src={full_btn_icon ? full_btn_icon as string : "/icons/btn_phone-outline-icon.svg"}
                   alt="Phone"
                   width={20}
                   height={20}
-                  className="mr-3 "
+                  className={"ml-3 " + (full_btn_icon_class ? full_btn_icon_class : "")}
                 />
-                {full_btn_text}
               </Link>
             </Button>
 
