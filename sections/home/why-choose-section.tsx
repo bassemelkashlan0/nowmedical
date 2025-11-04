@@ -39,6 +39,7 @@ interface WhyChooseSectionProps {
   h2_color_1?: string;
   h2_color_2?: string;
   h2_sub_color?: string;
+  btn_2_bg?: string;
 }
 
 export default function WhyChooseSection({
@@ -69,7 +70,8 @@ export default function WhyChooseSection({
   py,
   h2_color_1,
   h2_color_2,
-  h2_sub_color
+  h2_sub_color,
+  btn_2_bg
 }: WhyChooseSectionProps) {
   return (
     <section className={" px-4 md:px-8 " + (bg_color ? bg_color : "") + (py ? py : " py-4 md:py-14 ")}>
@@ -147,7 +149,7 @@ export default function WhyChooseSection({
                   {btn_1_text}
                 </Link>
               </Button>
-              <Button variant="outline" className="border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 px-4 py-4 text-lg font-bold">
+              <Button variant="outline" className={`border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 px-4 py-4 text-lg font-bold ${btn_2_bg ? btn_2_bg : ''}`}>
                 <Link href={btn_2_link ? btn_2_link as string : "#"} className='flex'>
                   <Image
                     src={btn_2_icon ? btn_2_icon as string : "/icons/btn_phone-outline-icon.svg"}
