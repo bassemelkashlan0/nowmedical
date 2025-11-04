@@ -4,7 +4,35 @@ import { useEffect, useState } from "react"
 
 export function LiveStatusBanner() {
   const [currentTime, setCurrentTime] = useState(new Date())
-  const [isOpen, setIsOpen] = useState(false)
+  const [isActive, setIsActive] = useState(true)
+  const [loading, setLoading] = useState(true)
+
+  // Fetch status from API
+  useEffect(() => {
+    const fetchStatus = async () => {
+      try {
+        const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api'
+        const response = await fetch(`${API_BASE_URL}/status`, {
+          credentials: "include",
+        })
+        const data = await response.json()
+        setIsActive(data.isActive ?? true)
+      } catch (error) {
+        console.error("Error fetching status:", error)
+        // Default to active if API fails
+        setIsActive(true)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchStatus()
+
+    // Poll for status updates every 30 seconds
+    const statusInterval = setInterval(fetchStatus, 30000)
+
+    return () => clearInterval(statusInterval)
+  }, [])
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -14,18 +42,6 @@ export function LiveStatusBanner() {
     return () => clearInterval(timer)
   }, [])
 
-  useEffect(() => {
-    const hours = currentTime.getHours()
-    const minutes = currentTime.getMinutes()
-    const currentMinutes = hours * 60 + minutes
-
-    // Open from 7:30 AM (450 minutes) to 11:00 PM (1380 minutes)
-    const openTime = 7 * 60 + 30 // 7:30 AM
-    const closeTime = 23 * 60 // 11:00 PM
-
-    setIsOpen(currentMinutes >= openTime && currentMinutes < closeTime)
-  }, [currentTime])
-
   const formatTime = (date: Date) => {
     return date.toLocaleTimeString("en-US", {
       hour: "2-digit",
@@ -34,46 +50,58 @@ export function LiveStatusBanner() {
     })
   }
 
-  const formatDate = () => {
-    return currentTime.toLocaleDateString("en-US", {
+  const formatDate = (date: Date) => {
+    return date.toLocaleDateString("en-US", {
       day: "2-digit",
       month: "2-digit",
       year: "numeric",
     })
   }
 
-  return (
-    // <div className="border-b bg-accent/50">
-    //   <div className="container flex items-center justify-center gap-3 py-2 text-sm">
-    //     <div className="flex items-center gap-2">
-    //       <div className={`h-2 w-2 rounded-full ${isOpen ? "bg-green-500" : "bg-red-500"}`} />
-    //       <span className="font-medium">Walk-in Live Status</span>
-    //     </div>
-    //     <span className="font-semibold">{formatTime(currentTime)}</span>
-    //     <span className="text-muted-foreground">Walk-in is {isOpen ? "OPEN NOW" : "CLOSED NOW"}</span>
-    //     <span className="text-muted-foreground">{formatDate()}</span>
-    //   </div>
-    // </div>
+  if (loading) {
+    return (
+      <div className="bg-[#A7D3C4]">
+        <div className="container py-7">
+          <div className="flex items-center justify-center gap-[24px] text-sm">
+            <div className="text-[#050505]">Loading status...</div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
-    <div className="bg-[#A7D3C4] ">
+  return (
+    <div className={isActive ? "bg-[#A7D3C4]" : "bg-red-200"}>
       <div className="container py-7">
         <div className="flex items-center justify-center gap-[24px] text-sm">
           <div className="flex items-center  gap-[24px]">
-            <div className="w-[32px] h-[32px] flex items-center justify-center bg-[#4DA688] rounded-full">
-              <div className="h-[22px] w-[22px]  rounded-full bg-[#195A44] animate-pulse" />
+            <div className={`w-[32px] h-[32px] flex items-center justify-center rounded-full ${
+              isActive ? "bg-[#4DA688]" : "bg-red-400"
+            }`}>
+              <div
+                className={`h-[22px] w-[22px] rounded-full ${
+                  isActive
+                    ? "bg-[#195A44] animate-pulse"
+                    : "bg-red-600"
+                }`}
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-semibold block text-3xl text-[#050505]">Walk-in Live Status</span>
-              <span className="hidden block sm:inline text-base text-[#050505]">Walk-in is OPEN NOW</span>
+              <span className="hidden block sm:inline text-base text-[#050505]">
+                Walk-in is {isActive ? "OPEN NOW" : "CLOSED"}
+              </span>
             </div>
           </div>
 
-          {/* <span className="font-bold text-[#1A5F56]">OPEN NOW</span> */}
           <div className="flex items-center  gap-[24px]">
-
             <div className="flex flex-col">
-              <span className="font-semibold block text-3xl text-[#050505]">03:40 PM</span>
-              <span className="hidden block sm:inline text-base text-[#050505]">17-10-2025</span>
+              <span className="font-semibold block text-3xl text-[#050505]">
+                {formatTime(currentTime)}
+              </span>
+              <span className="hidden block sm:inline text-base text-[#050505]">
+                {formatDate(currentTime)}
+              </span>
             </div>
           </div>
         </div>
