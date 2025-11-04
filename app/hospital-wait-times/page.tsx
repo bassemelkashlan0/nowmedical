@@ -18,6 +18,8 @@ import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, CLINIC_
 import type { Metadata } from "next";
 import { text } from "stream/consumers";
 import PatientsVideoSection from "@/sections/global/atients-video";
+import SkipWait_img from "@/public/images/hospital-wait-times/wait-times-reception.png";
+import FamilyMedicine_img from "@/public/images/hospital-wait-times/why-us.png";
 
 export const metadata: Metadata = {
   title: "Calgary Hospital Wait Times | Skip the ER - Walk-In Clinic Open Late",
@@ -190,6 +192,42 @@ export default function HospitalWaitTimesPage() {
       answer: "We can treat most non-emergency conditions that would send you to an ER, including minor injuries, infections, illnesses, and chronic disease management. For life-threatening emergencies, please call 911."
     }
   ]);
+  // Items for "Skip the Wait" section
+  const skipWaitItems = [
+    {
+      text: "No long hospital lines",
+    },
+    {
+      text: "No waiting for hours",
+    },
+    {
+      text: "Real family doctors — not virtual consults",
+    }
+  ];
+
+  // Items for "Family Medicine" section
+  const familyMedicineItems = [
+    {
+      text: " Open 7 Days a Week — Until 11 PM",
+    },
+    {
+      text: "Walk-Ins Always Welcome — No Appointment Needed",
+    },
+    {
+      text: "Real Family Doctors (Male & Female)",
+    },
+    {
+      text: "⭐ 4.8   Google Rating from Over 250 Reviews",
+    },
+    {
+      text: " Free Parking & Convenient NE Calgary Location",
+    },
+    {
+      text: "Multilingual Team English, Arabic, Urdu, Hindi, Spanish & French",
+    }
+  ];
+
+  // Items for "Women's Health" section
 
   return (
     <>
@@ -239,41 +277,27 @@ export default function HospitalWaitTimesPage() {
             </div>
           </section>
 
-          {/* Skip the Wait */}
-          <section className="py-20 bg-white">
-            <div className="container">
-              <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-                <div>
-                  <img
-                    src="/images/modern-medical-clinic-reception-area-with-friendly.jpg"
-                    alt="Now Medical Clinic modern reception area with friendly staff welcoming patients"
-                    className="rounded-lg shadow-lg w-full"
-                  />
-                </div>
+          {/*Skip the Wait Section */}
+          <WhyChooseSection
+            bg_color="bg-white"
+            title="Skip the Wait"
+            title_2="Walk In Today"
+            subtitle=""
+            para="At Now Medical Clinic, you don't need an appointment or a referral. Our doctors see walk-in patients 7 days a week until 11:00 PM, including weekends and holidays."
+            items={skipWaitItems}
+            image={SkipWait_img.src}
+            singleButton={true}
+            itemsAsParagraph={true}
+            btn_1_icon="/icons/solar_phone-outline.svg"
+            btn_1_link="tel:587-391-8188"
+            btn_1_text="Call 587-391-8188"
+            address="Address:2520 23 St NE #19, AB T2E 8L2"
+            h2_color_1="text-[#303030]"
+            h2_color_2="text-[#299470]"
+          />
 
-                <div>
-                  <h2 className="text-3xl font-bold mb-6">
-                    Skip the Wait <span className="text-[#299470]">Walk In Today</span>
-                  </h2>
-                  <div className="space-y-3">
-                    {skipWaitBenefits.map((benefit, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#299470]/10 flex-shrink-0 mt-0.5">
-                          <Check className="h-4 w-4 text-[#299470]" />
-                        </div>
-                        <p className="text-muted-foreground">{benefit}</p>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-8">
-                    <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white" asChild>
-                      <a href="tel:587-391-8188">Call 587-391-8188</a>
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+
+
 
           {/* Hospital Wait Times Comparison */}
           <LiveWaitTimesSection
@@ -286,35 +310,27 @@ export default function HospitalWaitTimesPage() {
             <div className="container">
               <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
                 <div>
-                  <h2 className="text-3xl font-bold mb-6">
+                  <h2 className="text-5xl font-bold mb-4">
                     <span className="text-[#299470]">Open Late</span>, Open Weekends, Open on Holidays
                   </h2>
-                  <div className="space-y-4 text-muted-foreground">
-                    <p>
-                      At Now Medical Clinic, we understand that health concerns don't follow a 9-to-5 schedule. That's why we're open when you need us most:
+                  <div className="space-y-4 text-foreground">
+                    <p className="text-base">
+                      We’re one of Calgary’s <b>only medical clinics open until 11 PM every day,</b> including Saturdays, Sundays, and holidays.
                     </p>
-                    <ul className="space-y-2 ml-4">
-                      <li className="flex items-start gap-2">
-                        <Clock className="w-5 h-5 text-[#299470] flex-shrink-0 mt-0.5" />
-                        <span><strong>7 days a week</strong> — including weekends</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Clock className="w-5 h-5 text-[#299470] flex-shrink-0 mt-0.5" />
-                        <span><strong>Open until 11:00 PM</strong> every day</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Clock className="w-5 h-5 text-[#299470] flex-shrink-0 mt-0.5" />
-                        <span><strong>Open on holidays</strong> — no closures</span>
-                      </li>
-                    </ul>
+                    <p className="text-base">
+                      Many patients visit us after checking ER wait times and realizing they don’t need to spend the night waiting in line.
+                    </p>
+                    <p className="text-base">
+                      So instead of waiting at the hospital, <b>walk in to Now Medical Clinic</b> fast, real, and compassionate care.
+                    </p>
                   </div>
                 </div>
 
                 <div>
                   <img
-                    src="/images/modern-medical-clinic-exterior-building.jpg"
+                    src="/images/hospital-wait-times/wait-times-open.png"
                     alt="Now Medical Clinic building exterior located in northeast Calgary"
-                    className="rounded-lg shadow-lg w-full"
+                    className="w-full"
                   />
                 </div>
               </div>
@@ -333,12 +349,17 @@ export default function HospitalWaitTimesPage() {
 
           {/* Why Calgarians Choose Us */}
 
+          {/*Family Medicine Section */}
           <WhyChooseSection
+            bg_color="bg-white"
             title="Why Calgarians Choose"
+            title_2=""
             subtitle="Now Medical Clinic"
-            image={whyUs_img.src}
-            items={whyChoose}
-
+            items={familyMedicineItems}
+            image={FamilyMedicine_img.src}
+            h2_color_1="text-[#299470]"
+            h2_color_2="text-[#303030]"
+            h2_sub_color="text-[#303030]"
           />
 
           {/* What Patients Say */}
@@ -357,7 +378,14 @@ export default function HospitalWaitTimesPage() {
           <NearbyHospitalsSection
             title="Nearby"
             subtitle="Hospitals"
-            image="/modern-medical-clinic-exterior-building.jpg"
+            hospitals={[
+              { name: "Foothills Medical Centre" },
+              { name: "Peter Lougheed Centre" },
+              { name: "Rockyview General Hospital" },
+              { name: "South Health Campus" },
+              { name: "Alberta Children's Hospital" }
+            ]}
+            image="/images/hospital-wait-times/wait-times-near.png"
           />
 
           {/* Find Us */}

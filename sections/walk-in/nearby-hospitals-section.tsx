@@ -1,10 +1,5 @@
-import { Card } from '@/components/ui/card';
-import { MapPin, Clock } from 'lucide-react';
-
 interface Hospital {
   name: string;
-  distance?: string;
-  waitTime?: string;
 }
 
 interface NearbyHospitalsSectionProps {
@@ -12,68 +7,57 @@ interface NearbyHospitalsSectionProps {
   subtitle?: string;
   hospitals?: Hospital[];
   image?: string;
+  introText?: string;
+  conclusionText?: string;
 }
 
 export default function NearbyHospitalsSection({
   title = "Nearby",
   subtitle = "Hospitals",
   hospitals = [
-    { name: "Peter Lougheed Centre", distance: "5 min", waitTime: "2-4 hours" },
-    { name: "Rockyview General Hospital", distance: "12 min", waitTime: "3-5 hours" },
-    { name: "South Health Campus", distance: "18 min", waitTime: "2-3 hours" },
-    { name: "Alberta Children's Hospital", distance: "15 min", waitTime: "2-4 hours" }
+    { name: "Foothills Medical Centre" },
+    { name: "Peter Lougheed Centre" },
+    { name: "Rockyview General Hospital" },
+    { name: "South Health Campus" },
+    { name: "Alberta Children's Hospital" }
   ],
-  image
+  image,
+  introText = "We frequently help patients looking for faster alternatives near:",
+  conclusionText = "Now Medical Clinic is 10-20 minutes from most major hospitals — and always open late."
 }: NearbyHospitalsSectionProps) {
   return (
-    <section className="py-16 px-4 md:px-8 bg-gray-50">
+    <section className="py-16 px-4 md:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12">
-          {title} <span className="text-[#4A9B8E]">{subtitle}</span>
+        <h2 className="text-5xl font-bold mb-8">
+          <span className="text-[#303030]">{title}</span> <span className="text-[#299470]">{subtitle}</span>
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-4">
-            {hospitals.map((hospital, index) => (
-              <Card key={index} className="p-6">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="font-bold text-lg mb-2">{hospital.name}</h3>
-                    <div className="flex items-center gap-4 text-sm text-gray-600">
-                      {hospital.distance && (
-                        <div className="flex items-center gap-1">
-                          <MapPin className="w-4 h-4" />
-                          <span>{hospital.distance} away</span>
-                        </div>
-                      )}
-                      {hospital.waitTime && (
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4 text-red-500" />
-                          <span className="text-red-500">{hospital.waitTime} wait</span>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            ))}
-            
-            <div className="bg-[#4A9B8E]/10 p-6 rounded-lg">
-              <p className="font-bold text-lg mb-2">
-                Skip the wait at Now Medical Clinic!
-              </p>
-              <p className="text-gray-700">
-                Average wait time: <span className="text-[#4A9B8E] font-bold">Under 30 minutes</span>
-              </p>
-            </div>
+          <div>
+            <p className="text-base text-gray-700 mb-6">
+              {introText}
+            </p>
+
+            <ul className="space-y-3 mb-6">
+              {hospitals.map((hospital, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <span className="text-[#299470] mt-1">•</span>
+                  <span className="text-base text-gray-800">{hospital.name}</span>
+                </li>
+              ))}
+            </ul>
+
+            <p className="text-base text-gray-700">
+              {conclusionText}
+            </p>
           </div>
 
           {image && (
-            <div className="relative h-[500px] rounded-lg overflow-hidden">
+            <div className="relative">
               <img
                 src={image}
-                alt="Walk-in clinic near Calgary hospitals providing alternative to emergency room wait times"
-                className="w-full h-full object-cover"
+                alt="Now Medical Clinic building exterior located in northeast Calgary"
+                className="w-full h-auto rounded-lg object-cover"
               />
             </div>
           )}
@@ -82,4 +66,3 @@ export default function NearbyHospitalsSection({
     </section>
   );
 }
-

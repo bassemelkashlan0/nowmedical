@@ -40,6 +40,9 @@ interface WhyChooseSectionProps {
   h2_color_2?: string;
   h2_sub_color?: string;
   btn_2_bg?: string;
+  singleButton?: boolean;
+  itemsAsParagraph?: boolean;
+  address?: string;
 }
 
 export default function WhyChooseSection({
@@ -71,7 +74,10 @@ export default function WhyChooseSection({
   h2_color_1,
   h2_color_2,
   h2_sub_color,
-  btn_2_bg
+  btn_2_bg,
+  singleButton = false,
+  itemsAsParagraph = false,
+  address
 }: WhyChooseSectionProps) {
   return (
     <section className={" px-4 md:px-8 " + (bg_color ? bg_color : "") + (py ? py : " py-4 md:py-14 ")}>
@@ -100,20 +106,35 @@ export default function WhyChooseSection({
               {para_2}
             </p>
 
-            <ul className="space-y-4 mb-7">
-              {items.map((item, index) => (
-                <li key={index} className="flex items-start gap-3 font-semibold text-lg text-foreground">
+            {itemsAsParagraph ? (
+              <div className="mb-7 font-semibold text-lg text-foreground">
+                {items.map((item, index) => (
+                  <p key={index} className="flex items-start gap-3 mb-2">
+                    {IsDot ? (
+                      <DotIcon className="w-6 h-6 flex-shrink-0 mt-1 -mr-2 text-[#303030]" />
+                    ) : (
+                      <CheckIcon className="w-6 h-6 text-[#299470] flex-shrink-0 mt-1" />
+                    )}
+                    <span className="text-lg">{item.text}</span>
+                  </p>
+                ))}
+              </div>
+            ) : (
+              <ul className="space-y-4 mb-7">
+                {items.map((item, index) => (
+                  <li key={index} className="flex items-start gap-3 font-semibold text-lg text-foreground">
 
-                  {IsDot ? (
-                    <DotIcon className="w-6 h-6 flex-shrink-0 mt-1 -mr-2 text-[#303030] " />
-                  ) : (
-                    <CheckIcon className="w-6 h-6 text-[#299470] flex-shrink-0 mt-1" />
-                  )}
+                    {IsDot ? (
+                      <DotIcon className="w-6 h-6 flex-shrink-0 mt-1 -mr-2 text-[#303030] " />
+                    ) : (
+                      <CheckIcon className="w-6 h-6 text-[#299470] flex-shrink-0 mt-1" />
+                    )}
 
-                  <span className="text-lg">{item.text}</span>
-                </li>
-              ))}
-            </ul>
+                    <span className="text-lg">{item.text}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
             <Button
               size="lg"
               variant="outline"
@@ -136,32 +157,61 @@ export default function WhyChooseSection({
               </Link>
             </Button>
 
-            <div className={"  flex-col md:flex-row gap-4  items-center  " + (both_btn ? both_btn : "hidden pt-4")}>
-              <Button className="bg-[#299470] hover:bg-[#256358] text-white font-bold px-4 py-4 text-lg">
-                <Link href={btn_1_link ? btn_1_link as string : "#"} className='flex' >
-                  <Image
-                    src={btn_1_icon ? btn_1_icon as string : "/icons/btn_phone-outline-icon.svg"}
-                    alt="Phone"
-                    width={20}
-                    height={20}
-                    className="mr-3 "
-                  />
-                  {btn_1_text}
-                </Link>
-              </Button>
-              <Button variant="outline" className={`border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 px-4 py-4 text-lg font-bold ${btn_2_bg ? btn_2_bg : ''}`}>
-                <Link href={btn_2_link ? btn_2_link as string : "#"} className='flex'>
-                  <Image
-                    src={btn_2_icon ? btn_2_icon as string : "/icons/btn_phone-outline-icon.svg"}
-                    alt="Phone"
-                    width={20}
-                    height={20}
-                    className="mr-3 "
-                  />
-                  {btn_2_text}
-                </Link>
-              </Button>
-            </div>
+            {singleButton ? (
+              <div className="pt-4">
+                <div className="flex mb-4">
+                  <Button variant="outline" className={`border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 px-4 py-4 text-lg font-bold bg-transparent`}>
+                    <Link href={btn_1_link ? btn_1_link as string : "#"} className='flex items-center'>
+                      <Image
+                        src={btn_1_icon ? btn_1_icon as string : "/icons/btn_phone-outline-icon.svg"}
+                        alt="Phone"
+                        width={20}
+                        height={20}
+                        className="mr-3"
+                      />
+                      {btn_1_text}
+                    </Link>
+                  </Button>
+                </div>
+                {address && (
+                  <div className="flex items-center gap-2  inline-flex">
+                    <img 
+                      src="/images/hospital-wait-times/flowbite_map-pin-outline.svg" 
+                      alt="Location" 
+                      className="w-5 h-5"
+                    />
+                    <span className="text-lg text-[#299470] font-bold">{address}</span>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className={"  flex-col md:flex-row gap-4  items-center  " + (both_btn ? both_btn : "hidden pt-4")}>
+                <Button className="bg-[#299470] hover:bg-[#256358] text-white font-bold px-4 py-4 text-lg">
+                  <Link href={btn_1_link ? btn_1_link as string : "#"} className='flex' >
+                    <Image
+                      src={btn_1_icon ? btn_1_icon as string : "/icons/btn_phone-outline-icon.svg"}
+                      alt="Phone"
+                      width={20}
+                      height={20}
+                      className="mr-3 "
+                    />
+                    {btn_1_text}
+                  </Link>
+                </Button>
+                <Button variant="outline" className={`border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 px-4 py-4 text-lg font-bold ${btn_2_bg ? btn_2_bg : ''}`}>
+                  <Link href={btn_2_link ? btn_2_link as string : "#"} className='flex'>
+                    <Image
+                      src={btn_2_icon ? btn_2_icon as string : "/icons/btn_phone-outline-icon.svg"}
+                      alt="Phone"
+                      width={20}
+                      height={20}
+                      className="mr-3 "
+                    />
+                    {btn_2_text}
+                  </Link>
+                </Button>
+              </div>
+            )}
 
           </div>
         </div>
