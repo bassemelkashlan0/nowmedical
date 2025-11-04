@@ -5,26 +5,26 @@ export default function FamilyHealthSection() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           <div>
             <img
-              src="/images/modern-medical-clinic-interior-waiting-room.jpg"
+              src="/images/family-doctor/finding-doctor.png"
               alt="Family health"
-              className="rounded-lg shadow-lg w-full"
+              className="w-full"
             />
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold mb-6">
-              Your Family's Health, <span className="text-[#299470]">In Good Hands</span>
+            <h2 className="text-5xl font-bold mb-6 text-[#299470]">
+              Your Family's Health, In<br /><span className="text-foreground"> Good Hands</span>
             </h2>
             <div className="space-y-4 text-muted-foreground">
-              <p>
-                At Now Medical Clinic, our family doctors provide comprehensive healthcare for patients of all ages — from newborns to seniors. We focus on building long-term relationships with you and your family.
+              <p className="text-foreground">
+              Finding a doctor who truly listens shouldn’t be difficult. <b>At Now Medical Clinic,</b> our experienced family doctors offer <b>comprehensive, continuous care.</b>
               </p>
-              <p>
-                Our physicians take the time to understand your unique health history, lifestyle, and concerns. We believe in preventive care, early detection, and personalized treatment plans that work for you.
+              <p className="text-foreground">
+              We take the time to understand your medical history, lifestyle, and long-term health goals, so you can build a relationship with a doctor who knows you.
               </p>
-              <p>
-                Whether you need routine check-ups, chronic disease management, or acute care, our team is here to support your family's health journey every step of the way.
-              </p>
+              <p className="text-foreground  text-lg">
+             <b>We’re accepting new patients from all across Calgary — adults, seniors, and children.</b>
+               </p>
             </div>
           </div>
         </div>

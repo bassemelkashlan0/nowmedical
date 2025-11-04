@@ -72,7 +72,7 @@ export default function FindUsSection({
               href="https://maps.google.com/maps?q=2520%2023%20St%20NE%20%2319,%20Calgary,%20AB%20T2E%208L2"
               target="_blank"
               rel="noopener noreferrer"
-              className={" items-center gap-2 px-6 py-3 bg-[#299470] hover:bg-[#256358] text-white font-bold rounded " + (IsShowBtn ? IsShowBtn : " inline-flex")}
+              className={" items-center gap-2 px-6 py-3 bg-[#299470] hover:bg-[#256358] text-white font-bold " + (IsShowBtn ? IsShowBtn : " inline-flex")}
             >
               Get Direction on Google Map
               <ArrowUpRight className="w-5 h-5" />

@@ -1,7 +1,12 @@
+'use client'
+
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Phone } from 'lucide-react';
 import Link from "next/link";
+import Image from 'next/image';
+import { Carousel, CarouselContent, CarouselItem, CarouselApi } from '@/components/ui/carousel';
+import { useState, useEffect } from 'react';
 
 interface Doctor {
   name: string;
@@ -10,6 +15,18 @@ interface Doctor {
   description: string;
   phone?: string;
   language?: string;
+  specialtyClassName?: string;
+  nameClassName?: string;
+  descriptionClassName?: string;
+  cardClassName?: string;
+}
+
+interface ButtonConfig {
+  text: string;
+  link: string;
+  icon?: string;
+  variant?: "default" | "outline";
+  className?: string;
 }
 
 interface DoctorsSectionProps {
@@ -17,16 +34,42 @@ interface DoctorsSectionProps {
   femaleDoctors?: Doctor[];
   maleDoctors?: Doctor[];
   showCategories?: boolean;
+  customButtons?: ButtonConfig[];
+  description?: string;
+  descriptionClassName?: string;
+  useCarousel?: boolean;
+  bgColor?: string;
 }
 
 export default function DoctorsSection({
   title = "Meet Our Doctors",
   femaleDoctors = [],
   maleDoctors = [],
-  showCategories = true
+  showCategories = true,
+  customButtons,
+  description,
+  descriptionClassName,
+  useCarousel = false,
+  bgColor = "bg-[#F1F9F4]"
 }: DoctorsSectionProps) {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  const allDoctors = [...femaleDoctors, ...maleDoctors];
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on('select', () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
   const renderDoctorCard = (doctor: Doctor, index: number) => (
-    <Card key={index} className="overflow-hidden p-0 gap-0">
+    <Card key={index} className={`overflow-hidden p-0 gap-0 shadow-[0px_10px_14px_0px_#0000000D] mb-4 ${doctor.cardClassName || ''}`}>
       <div className="aspect-square bg-[#EAF4F1] relative">
         <img
           src={doctor.avatar}
@@ -35,8 +78,8 @@ export default function DoctorsSection({
         />
       </div>
       <div className="p-4">
-        <p className="text-m text-[#050505] font-medium mb-2">{doctor.specialty}</p>
-        <h3 className="text-2xl font-medium mb-3">
+        <p className={`text-m text-[#050505] font-medium mb-2 ${doctor.specialtyClassName || ''}`}>{doctor.specialty}</p>
+        <h3 className={`text-2xl font-medium mb-3 ${doctor.nameClassName || ''}`}>
           {doctor.name}
           {doctor.language && (
             <span className="text-sm font-normal text-gray-500 ml-2">
@@ -44,7 +87,7 @@ export default function DoctorsSection({
             </span>
           )}
         </h3>
-        <p className="text-gray-600">{doctor.description}</p>
+        <p className={`${doctor.descriptionClassName || ''}`}>{doctor.description}</p>
         {/* <Button className="w-full bg-[#4A9B8E] hover:bg-[#3d8375]">
           <Phone className="w-4 h-4 mr-2" />
           Call 587-391-8188
@@ -53,13 +96,28 @@ export default function DoctorsSection({
     </Card>
   );
 
+  // Group doctors into slides of 4
+  const groupDoctorsIntoSlides = (doctors: Doctor[], itemsPerSlide: number = 4) => {
+    const slides: Doctor[][] = [];
+    for (let i = 0; i < doctors.length; i += itemsPerSlide) {
+      slides.push(doctors.slice(i, i + itemsPerSlide));
+    }
+    return slides;
+  };
+
+  const doctorSlides = useCarousel ? groupDoctorsIntoSlides(allDoctors, 4) : [];
+
   return (
-    <section className="py-16 px-4 md:px-8 bg-[#F1F9F4]">
+    <section className={`py-16 px-4 md:px-8 ${bgColor}`}>
       <div className="max-w-7xl mx-auto">
         <h2 className="text-5xl font-bold text-center mb-4">
-          {title.split(' ')[0]} <span className="text-[#4A9B8E]">{title.split(' ').slice(1).join(' ')}</span>
+          <span className="text-[#299470]">{title.split(' ').slice(0, -1).join(' ')}</span> {title.split(' ')[title.split(' ').length - 1]}
         </h2>
-        <p className="text-[16px] text-center mb-8">Our diverse team of male and female family doctors provides care in multiple languages. Each doctor brings years of <br />experience in family medicine, chronic condition management, and preventive health</p>
+        {description && (
+          <p className={`text-center mb-8 ${descriptionClassName || ''}`}>
+            {description}
+          </p>
+        )}
 
         {showCategories && femaleDoctors.length > 0 && (
           <div className="mb-12">
@@ -79,28 +137,86 @@ export default function DoctorsSection({
           </div>
         )}
 
-        {!showCategories && (
+        {!showCategories && !useCarousel && (
           <div className="grid md:grid-cols-4 gap-6">
-            {[...femaleDoctors, ...maleDoctors].map(renderDoctorCard)}
+            {allDoctors.map(renderDoctorCard)}
+          </div>
+        )}
+
+        {!showCategories && useCarousel && (
+          <div className="relative">
+            <Carousel setApi={setApi} className="w-full">
+              <CarouselContent>
+                {doctorSlides.map((slide, slideIndex) => (
+                  <CarouselItem key={slideIndex}>
+                    <div className="grid md:grid-cols-4 gap-6">
+                      {slide.map((doctor, doctorIndex) => 
+                        renderDoctorCard(doctor, slideIndex * 4 + doctorIndex)
+                      )}
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+            {/* Pagination Dots */}
+            <div className="flex justify-center gap-2 mt-8">
+              {Array.from({ length: count }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => api?.scrollTo(index)}
+                  className={`h-2 w-2 rounded-full transition-all ${
+                    index + 1 === current
+                      ? 'bg-[#299470] w-8'
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         )}
 
         <div className="flex gap-4 justify-center mt-8">
-          {/* <Button className="bg-[#4A9B8E] hover:bg-[#3d8375]">
-            <Phone className="w-4 h-4 mr-2" />
-            Call 587-391-8188
-          </Button> */}
-                  <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
-                    <Link href="/walk-in-clinic-calgary">Register as a New Patient Today</Link>
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
-                    asChild
-                  >
-                    <Link href="/services">Meet Our Doctors <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
-                  </Button>
+          {customButtons ? (
+            customButtons.map((button, index) => (
+              <Button
+                key={index}
+                size="lg"
+                variant={button.variant || "default"}
+                className={button.className || (button.variant === "outline" 
+                  ? "border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
+                  : "bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg")}
+                asChild
+              >
+                <Link href={button.link} className="flex items-center">
+                  {button.icon && (
+                    <Image
+                      src={button.icon}
+                      alt=""
+                      width={20}
+                      height={20}
+                      className=""
+                    />
+                  )}
+                  {button.text}
+                </Link>
+              </Button>
+            ))
+          ) : (
+            <>
+              <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
+                <Link href="/walk-in-clinic-calgary">Register as a New Patient Today</Link>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
+                asChild
+              >
+                <Link href="/services">Meet Our Doctors <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
+              </Button>
+            </>
+          )}
         </div>
       </div>
     </section>

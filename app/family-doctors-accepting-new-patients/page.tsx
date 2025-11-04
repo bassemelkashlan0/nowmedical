@@ -8,13 +8,17 @@ import {
   DoctorsSection,
   TestimonialsSection,
   FindUsSection,
-  CTABannerSection
+  CTABannerSection,
+  WalkInHeroSection
 } from "@/sections";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, Heart, Baby, Activity, Shield, Stethoscope, Users } from "lucide-react";
 import Link from "next/link";
 import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
+import Family_img from "@/public/images/our-services/family-medicine.png";
+import ValuesSection from "@/sections/home/values-section";
 
 export const metadata: Metadata = {
   title: "Family Doctors Accepting New Patients Calgary | Now Medical",
@@ -133,41 +137,56 @@ export default function FamilyDoctorsPage() {
   const femaleDoctors = [
     {
       name: "Dr. Madiha",
-      avatar: "/images/female-doctor-illustration-avatar.jpg",
+      avatar: "/images/family-doctor/dr-madiha.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
-      phone: "587-391-8188"
+      phone: "587-391-8188",
+      specialtyClassName: "text-base font-normal",
+      nameClassName: "text-2xl",
+      descriptionClassName: "text-base text-foreground"
     },
     {
       name: "Dr. Vanessa",
-      avatar: "/images/female-doctor-illustration-avatar-brown-hair.jpg",
+      avatar: "/images/family-doctor/dr-ebele.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
-      phone: "587-391-8188"
+      phone: "587-391-8188",
+      specialtyClassName: "text-base font-normal",
+      nameClassName: "text-2xl",
+      descriptionClassName: "text-base text-foreground"
     },
     {
       name: "Dr. Ebele",
-      avatar: "/images/female-doctor-illustration-avatar.jpg",
+      avatar: "/images/family-doctor/dr-ebele.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
-      phone: "587-391-8188"
+      phone: "587-391-8188",
+      specialtyClassName: "text-base font-normal",
+      nameClassName: "text-2xl",
+      descriptionClassName: "text-base text-foreground"
     }
   ];
 
   const maleDoctors = [
     {
       name: "Dr. Michael",
-      avatar: "/images/male-doctor-illustration-avatar.jpg",
+      avatar: "/images/family-doctor/dr-michael.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
-      phone: "587-391-8188"
+      phone: "587-391-8188",
+      specialtyClassName: "text-base font-normal",
+      nameClassName: "text-2xl",
+      descriptionClassName: "text-base text-foreground"
     },
     {
       name: "Dr. Bedi",
-      avatar: "/images/male-doctor-illustration-avatar.jpg",
+      avatar: "/images/family-doctor/dr-michael.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
-      phone: "587-391-8188"
+      phone: "587-391-8188",
+      specialtyClassName: "text-base font-normal",
+      nameClassName: "text-2xl",
+      descriptionClassName: "text-base text-foreground"
     }
   ];
 
@@ -215,7 +234,70 @@ export default function FamilyDoctorsPage() {
       answer: "Call us at 587-391-8188 or walk in during our hours to register. Bring your Alberta Health Card and photo ID."
     }
   ]);
-
+  const FamilyMadicine = [
+    {
+        text: "Accepting New Patients",
+    },
+    {
+        text: "Open 7 Days a Week — Evenings, Weekends & Holidays",
+    },
+    {
+        text: "Same-Day Appointments & Walk-Ins Welcome",
+    },
+    {
+        text: "Doctors Who Speak Multiple Languages",
+    },
+    {
+        text: "Convenient Calgary Location with Free Parking",
+    },
+    {
+        text: "Short Waits, Real Doctors, Personalized Care",
+    }
+]
+const values = [
+  {
+    title: "Preventive & Routine Care",
+    description: ["Annual physical exams","Blood pressure and diabetes management","Health screening and lab follow-ups"],
+    image: "/images/family-doctor/preventive-routine-care.svg"
+  },
+  {
+    title: "Women’s Health",
+    description: ["Pap tests, birth control, menopause support","Prenatal and postnatal care"],
+    image: "/images/family-doctor/women-health.svg"
+  },
+  {
+    title: "Children’s Health",
+    description: ["Immunizations, check-ups, growth monitoring", "Asthma and allergy management"],
+    image: "/images/family-doctor/children-health.svg"
+  },
+  {
+    title: "Men’s Health",
+    description: ["Prostate health, cholesterol, heart checks","Stress and sleep issues"],
+    image: "/images/family-doctor/men-health.svg"
+  },
+  {
+    title: "Chronic Conditions",
+    description: ["Diabetes, hypertension, asthma, thyroid issues", "Regular medication renewals and monitoring"],
+    image: "/images/family-doctor/chronic-conditions.svg"
+  }
+];
+const videoTestimonials = [
+  {
+    name: "Bessie Cooper",
+    image: "/images/about-us/bessie-cooper.png",
+    quote: "Finally a clinic open late that actually cares about patients."
+  },
+  {
+    name: "Jenny Wilson",
+    image: "/images/about-us/jenny-wilson.png",
+    quote: "Friendly staff, short wait times, and doctors who listen."
+  },
+  {
+    name: "Cameron Williamson",
+    image: "/images/about-us/cameron-williamson.png",
+    quote: "This clinic makes it easy for families — especially on weekends and holidays."
+  }
+];
   return (
     <>
       <StructuredData data={localBusinessSchema} />
@@ -226,107 +308,150 @@ export default function FamilyDoctorsPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-b from-[#E8F5F3] to-white py-16">
-          <div className="container">
-            <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-              <div>
-                <h1 className="text-4xl font-bold tracking-tight lg:text-5xl mb-6">
-                  <span className="text-foreground">Family Doctors</span>
-                  <br />
-                  <span className="text-foreground">in Calgary</span>
-                  <br />
-                  <span className="text-[#299470]">Accepting New Patients Now</span>
-                </h1>
-                <p className="text-lg text-muted-foreground mb-2 font-semibold">
-                  Male and Female Family Doctors
-                </p>
-                <p className="text-base text-muted-foreground mb-8">
-                  Looking for a family doctor in Calgary? Our experienced physicians are accepting new patients of all ages. From newborns to seniors, we provide comprehensive family healthcare.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white" asChild>
-                    <Link href="/walk-in-clinic-calgary">Walk-In</Link>
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent"
-                    asChild
-                  >
-                    <a href="tel:587-391-8188">
-                      <Phone className="mr-2 h-5 w-5" />
-                      587-391-8188
-                    </a>
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent"
-                    asChild
-                  >
-                    <a href="tel:587-387-7254">
-                      <Phone className="mr-2 h-5 w-5" />
-                      587-387-7254
-                    </a>
-                  </Button>
-                </div>
-              </div>
-
-              <div>
-                <img
-                  src="/images/doctor-michael-patel.jpg"
-                  alt="Experienced family doctor accepting new patients in Calgary providing comprehensive care"
-                  className="rounded-lg shadow-lg w-full"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+        <WalkInHeroSection
+          title={
+            <>
+              <span className="text-foreground">Family Doctors</span>
+              <br />
+              <span className="text-[#299470]">in Calgary Accepting New Patients Now</span>
+            </>
+          }
+          subtitle="Male and Female Family Doctors"
+          description={<>Looking for a family doctor you can trust?<br />At <b>Now Medical Clinic,</b> our caring physicians are accepting new patients in Calgary for ongoing care <b>open 7 days a week until 11 PM,</b> including <b>weekends and holidays.</b></>}
+          additionalText=""
+          buttons={[
+            {
+              text: "Walk In Now",
+              link: "/walk-in-clinic-calgary",
+              icon: "/icons/solar_walking-outline.svg",
+              variant: "default",
+            },
+            {
+              text: "Register as a New Patient",
+              link: "tel:587-391-8188",
+              icon: "/icons/uil-arrow-up-right-grn.svg",
+              variant: "outline",
+            },
+            {
+              text: "Call 587-391-8188",
+              link: "tel:587-387-7254",
+              icon: "/icons/solar_phone-outline.svg",
+              variant: "outline",
+            }
+          ]}
+          image="/images/family-doctor/family-doctor-banner.png"
+          imageAlt="Experienced family doctor accepting new patients in Calgary providing comprehensive care"
+          bgColor="bg-[#F1F9F4]"
+          className="py-8"
+        />
 
         {/* Family Health Section */}
         <FamilyHealthSection />
 
-        {/* Why Choose Us */}
-        <WhyChooseSection
-          title="Why Choose"
-          subtitle="Now Medical Clinic"
-          items={whyChooseItems}
-          image="/modern-medical-clinic-exterior-building.jpg"
-        />
+                {/*Family Medicine Section */}
+                <WhyChooseSection
+                    bg_color="bg-[#F1F9F4]"
+                    title="Family"
+                    title_2="Medicine"
+                    subtitle=""
+                    items={FamilyMadicine}
+                    image={Family_img.src}
+                    both_btn="flex pt-0"
+                    btn_1_icon="/icons/btn_phone-outline-icon.svg"
+                    btn_1_link="tel:587-391-8188"
+                    btn_1_text="Call 587-391-8188"
+                    btn_2_icon="/icons/solar_phone-outline.svg"
+                    btn_2_link="#"
+                    btn_2_text="Register as a New Patient"
+                    btn_2_bg="bg-transparent"
+                    order="order-first"
+                    h2_color_1="text-[#299470]"
+                    h2_color_2="text-[#303030]"
+                />
 
         {/* Meet Our Doctors */}
         <DoctorsSection
           title="Meet Our Doctors"
+          description="Our team of caring physicians provides a full range of family medicine from preventive care to chronic condition management. Each doctor combines medical expertise with compassion and approachability."
+          descriptionClassName="text-xl font-medium text-foreground"
           femaleDoctors={femaleDoctors}
           maleDoctors={maleDoctors}
-          showCategories={true}
+          showCategories={false}
+          useCarousel={true}
+          bgColor="bg-white"
+          customButtons={[
+            {
+              text: "Call 587-391-8188",
+              link: "tel:587-391-8188",
+              icon: "/icons/btn_phone-outline-icon.svg",
+              variant: "default",
+              className: "bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg"
+            },
+            {
+              text: "Register as a New Patient",
+              link: "/walk-in-clinic-calgary",
+              icon: "/icons/solar_phone-outline.svg",
+              variant: "outline",
+              className: "border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
+            }
+          ]}
         />
 
-        {/* Comprehensive Family Medicine */}
-        <ComprehensiveCareSection
-          title="Comprehensive"
-          subtitle="Family Medicine"
-          categories={comprehensiveCare}
+        {/* Our Values */}
+        <ValuesSection
+          title="Common Conditions"
+          subtitle="We Treat"
+          description="Our walk-in doctors handle most medical concerns, so you can avoid the ER and get treated quickly"
+          values={values}
+          titleFontWeight="font-medium"
+          useListFormat={true}
+          buttonText="Walk In Anytime No Appointment Needed"
+          buttonLink="/walk-in-clinic-calgary"
+          buttonIcon="/icons/uil-arrow-up-right.svg"
+          buttonIconClass=""
         />
 
         {/* How to Register */}
         <HowToRegisterSection />
 
-        {/* What Patients Say */}
-        <TestimonialsSection
-          title="What Patients Say"
-          testimonials={testimonials}
-        />
+
+        {/* What Patients Say - Video Testimonials */}
+        <section className="py-20 bg-white">
+          <div className="container">
+            <div className="text-center mb-12">
+              <h2 className="text-5xl font-bold mb-4">
+                What <span className="text-[#299470]">Patients</span> Say
+              </h2>
+              <p className="text-xl text-foreground max-w-2xl mx-auto">
+              See what Calgary patients are saying about their experience with Now Medical Clinic.
+              </p>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+              {videoTestimonials.map((testimonial, index) => (
+                <Card key={index} className="p-0 overflow-hidden rounded hover:shadow-lg transition-shadow border-1 border-[#83C1AC] hover:bg-[#EAF4F1]">
+                  <CardContent className="p-0">
+                    <div className="relative aspect-video bg-gray-100">
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="w-full h-[290px] object-cover"
+                      />
+                    </div>
+                    <div className="py-4 px-4">
+                      <h3 className="font-semibold text-lg mb-2">{testimonial.name}</h3>
+                      <p className="text-sm text-muted-foreground italic">"{testimonial.quote}"</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+        </div>
+        </section>
 
         {/* Find Us */}
-        <FindUsSection />
+        <FindUsSection bgColor="bg-white" />
 
-        {/* CTA Banner */}
-        <CTABannerSection
-          title="Now Medical Clinic Calgary Male and Female Family Doctors Accepting New Patients."
-          primaryButtonText="Call 587-391-8188"
-          primaryButtonLink="tel:587-391-8188"
-        />
       </main>
 
         <Footer />
