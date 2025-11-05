@@ -20,6 +20,7 @@ import { text } from "stream/consumers";
 import PatientsVideoSection from "@/sections/global/atients-video";
 import SkipWait_img from "@/public/images/hospital-wait-times/wait-times-reception.png";
 import FamilyMedicine_img from "@/public/images/hospital-wait-times/why-us.png";
+import BottomCallAction from "@/components/ui/bottom-call-acction";
 
 export const metadata: Metadata = {
   title: "Calgary Hospital Wait Times | Skip the ER - Walk-In Clinic Open Late",
@@ -241,7 +242,7 @@ export default function HospitalWaitTimesPage() {
           {/* Hero Section */}
           <section className="bg-[#F1F9F4] to-white pt-8 pb-14">
             <div className="container">
-              <div className="grid gap-4 lg:grid-cols-[55%_44%] lg:gap-4 items-center  ">
+              <div className="grid gap-4 lg:grid-cols-[59%_40%] lg:gap-4 items-center  ">
                 <div>
                   <h1 className=" font-bold tracking-tight lg:text-6xl mb-4">
                     Tired of Long Hospital Wait Times <span className="text-[#299470] " >Visit Now Medical Clinic </span>
@@ -388,14 +389,44 @@ export default function HospitalWaitTimesPage() {
             image="/images/hospital-wait-times/wait-times-near.png"
           />
 
-          {/* Find Us */}
-          <FindUsSection />
+          {/* Skip Line */}
+          <section className="py-5 bg-[#EEF8F2] ">
+            <div className="container  max-w-[1080px] w-full">
+              <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+                <div>
+                  <h2 className="text-5xl font-bold mb-4">
+                    <span className="text-[#299470]">Skip the Line </span> <br />
+                    See a Doctor Now
+                  </h2>
+                  <div className="space-y-4 text-foreground">
+                    <p className="text-xl mb-6">
+                      Stop waiting in the ER
+                    </p>
+                    <p className="text-base">
+                      <b>Walk in today or call 587-391-8188</b> to speak with our team. <br />
+                      We’re open <b>7 days a week until 11 PM,</b> including weekends and holidays.
+                    </p>
 
+                  </div>
+                </div>
+
+                <div>
+                  <img
+                    src="/images/hospital-wait-times/wait-times-see-dr.png"
+                    alt="Now Medical Clinic building exterior located in northeast Calgary"
+                    className="w-full"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+<div className="pt-15"></div>
           {/* CTA Banner */}
-          <CTABannerSection
-            title="Hospital Wait Times Calgary | Skip the Line | Walk-in Clinic Open Until 11 PM"
-            primaryButtonText="Call 587-391-8188"
-            primaryButtonLink="tel:587-391-8188"
+          <BottomCallAction
+          title='Hospital Wait Times Calgary | Skip the Line | '
+          title_2="Walk-In Clinic Open Until 11 PM"
+          description="Tired of long hospital wait times in Calgary? Walk in to Now Medical Clinic — open 7 days until 11 PM. Real doctors, no appointment needed."
           />
         </main>
 

@@ -77,7 +77,8 @@ export default function LiveWaitTimesSection({
         </div>
 
         <p className="text-sm text-left">
-          If you have life-threatening symptoms such as chest pain, severe bleeding, or trouble breathing, <strong>call 911</strong> or go to the nearest emergency department.
+          If you have life-threatening symptoms such as chest pain, severe bleeding, or trouble breathing, <strong>call 911</strong> <br />
+           or go to the nearest emergency department.
         </p>
       </div>
     </section>
