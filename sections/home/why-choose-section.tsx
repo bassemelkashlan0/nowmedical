@@ -14,6 +14,7 @@ interface WhyChooseSectionProps {
   title?: string | ReactNode;
   para?: string
   para_2?: string
+  para_after?: string | ReactNode;
   subtitle?: string;
   Sub_desc?: string;
   items: WhyChooseItem[];
@@ -52,6 +53,7 @@ export default function WhyChooseSection({
   Sub_desc,
   para,
   para_2,
+  para_after,
   image,
   btn_1_icon,
   btn_2_icon,
@@ -134,6 +136,11 @@ export default function WhyChooseSection({
                   </li>
                 ))}
               </ul>
+            )}
+            {para_after && (
+              <p className="text-lg text-foreground mb-4">
+                {para_after}
+              </p>
             )}
             <Button
               size="lg"

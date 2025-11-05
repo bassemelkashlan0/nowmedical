@@ -6,6 +6,12 @@ import { Clock, Phone, MapPin, AlertCircle, Check } from "lucide-react";
 import Link from "next/link";
 import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
+import { LiveStatusBanner } from "@/components/live-status-banner";
+import { FindUsSection, WhyChooseSection } from "@/sections";
+import BottomCallAction from "@/components/ui/bottom-call-acction";
+import hero_img from "@/public/images/urgent-case-hero.png";
+import bg_img from "@/public/images/color-img.png";
+import whyChoose_img from "@/public/images/whyChoose.png";
 
 export const metadata: Metadata = {
   title: "24-Hour Walk-In Clinic Calgary | Open Late Until 11 PM",
@@ -24,6 +30,42 @@ export default function TwentyFourHourClinicPage() {
     "Real family doctors on-site",
     "Shorter wait times than emergency rooms",
     "Convenient NE Calgary location with free parking"
+  ];
+
+  const whatWeTreat = [
+    {
+      text: 'Cold, flu, sore throat, fever'
+    },
+    {
+      text: 'UTIs, rashes, ear or sinus infections'
+    },
+    {
+      text: "Sprains, minor injuries, muscle pain"
+    },
+    {
+      text: "Cuts, burns, or insect bites"
+    },
+    {
+      text: "Prescription renewals and follow-ups"
+    },
+  ];
+
+  const whyChoose = [
+    {
+      text: "Open 7:30 AM – 11 PM, 7 days a week"
+    },
+    {
+      text: "Open on weekends and holidays"
+    },
+    {
+      text: "Real family doctors on-site"
+    },
+    {
+      text: "Shorter waits than hospitals or urgent care centres"
+    },
+    {
+      text: "Free parking & easy to All Calgary areas."
+    }
   ];
 
   const faqSchema = generateFAQSchema([
@@ -48,243 +90,129 @@ export default function TwentyFourHourClinicPage() {
 
   return (
     <>
-      <StructuredData data={localBusinessSchema} />
-      <StructuredData data={faqSchema} />
-      
       <div className="flex min-h-screen flex-col">
         <Header />
+        <LiveStatusBanner />
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-gradient-to-b from-[#E8F5F3] to-white py-16">
+          <section className="bg-[#F1F9F4] to-white pt-8 pb-14">
             <div className="container">
-              <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+              <div className="grid gap-4 lg:grid-cols-2 lg:gap-4 items-center  ">
                 <div>
-                  <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                    <Clock className="h-4 w-4" />
-                    Extended Hours: 7:30 AM - 11 PM
-                  </div>
-                  <h1 className="text-4xl font-bold tracking-tight lg:text-5xl mb-6">
-                    <span className="text-foreground">24-Hour Walk-In Clinic</span>
-                    <br />
-                    <span className="text-[#299470]">Calgary</span>
+                  <h1 className=" font-bold tracking-tight lg:text-6xl mb-4">
+                    <span className="text-[#299470] " >24-Hour Walk-In Clinic Calgary </span>
+                    (Open Until 11 PM Daily)
                   </h1>
-                  <p className="text-lg text-muted-foreground mb-4">
-                    <strong>Open until 11 PM every day</strong> for after-hours care. Walk in anytime — no appointment needed.
+
+                  <p className="text-base  text-foreground mb-4">
+                    Looking for a <b>24-hour walk-in clinic in Calgary?</b><br />Now Medical Clinic is one of <b>Calgary’s latest-open medical clinics — 7:30 AM to 11 PM, every day including weekends and holidays.</b><br /> We’re your trusted <b>after-hours alternative to 24-hour clinics,</b> offering <b>real doctors, shorter waits, and free parking.</b>
                   </p>
-                  <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-8">
-                    <div className="flex gap-3">
-                      <AlertCircle className="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" />
-                      <div className="text-sm text-amber-800">
-                        <p className="font-semibold mb-1">Extended Hours Clinic</p>
-                        <p>We offer extended hours from 7:30 AM to 11:00 PM (15.5 hours daily) — longer than most clinics in Calgary.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white" asChild>
-                      <Link href="/contact">Get Directions</Link>
-                    </Button>
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="border-[#299470] text-[#299470] hover:bg-[#299470]/10"
-                      asChild
-                    >
-                      <a href="tel:587-391-8188">
-                        <Phone className="mr-2 h-5 w-5" />
-                        587-391-8188
-                      </a>
-                    </Button>
-                  </div>
+
+
                 </div>
 
-                <div>
-                  <Card className="bg-white shadow-lg">
-                    <CardContent className="p-8">
-                      <div className="flex items-center gap-3 mb-6">
-                        <div className="h-12 w-12 rounded-full bg-[#E8F5F3] flex items-center justify-center">
-                          <Clock className="h-6 w-6 text-[#299470]" />
-                        </div>
-                        <div>
-                          <p className="text-sm text-muted-foreground">Extended Hours</p>
-                          <p className="text-2xl font-bold text-[#299470]">7:30 AM - 11:00 PM</p>
-                        </div>
-                      </div>
-                      <div className="space-y-3">
-                        <div className="flex justify-between py-2 border-b">
-                          <span className="font-medium">Every Day</span>
-                          <span className="text-muted-foreground">15.5 hours daily</span>
-                        </div>
-                        <div className="flex justify-between py-2 border-b">
-                          <span className="font-medium">Weekends</span>
-                          <span className="text-[#299470] font-medium">✓ Open</span>
-                        </div>
-                        <div className="flex justify-between py-2">
-                          <span className="font-medium">Holidays</span>
-                          <span className="text-[#299470] font-medium">✓ Open</span>
-                        </div>
-                        <div className="mt-4 p-3 bg-[#299470]/5 rounded-lg">
-                          <p className="text-sm font-medium text-[#299470]">Walk-ins Welcome — No Appointment Needed</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                <div className="flex justify-center items-center">
+                  <img
+                    src={hero_img.src}
+                    alt="Now Medical Clinic Calgary doctor"
+                    className="rounded-lg  "
+                  />
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Extended Hours Benefits */}
-          <section className="py-16 bg-white">
-            <div className="container">
-              <div className="max-w-3xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold mb-4">
-                    Extended Hours <span className="text-[#299470]">Benefits</span>
-                  </h2>
-                  <p className="text-lg text-muted-foreground">
-                    Healthcare that fits your schedule — early morning to late night.
-                  </p>
-                </div>
+          {/* What we Treat */}
+          <WhyChooseSection
+            title="When to"
+            title_2="Visit Now"
+            subtitle="Medical Clinic"
+            items={whatWeTreat}
+            image={bg_img.src}
+            h2_color_1='text-[#299470]'
+            h2_color_2='text-[#000000]'
+            h2_sub_color='text-[#299470]'
+            para_after={<>We're here 7 days a week — perfect for anyone searching for <b>"24-hour urgent care"</b> or <b>"after-hours medical clinic."</b></>}
+          />
 
-                <div className="grid gap-4">
-                  {extendedHoursBenefits.map((benefit, index) => (
-                    <Card key={index}>
-                      <CardContent className="p-4 flex items-center gap-3">
-                        <div className="h-8 w-8 rounded-full bg-[#E8F5F3] flex items-center justify-center flex-shrink-0">
-                          <Check className="h-5 w-5 text-[#299470]" />
-                        </div>
-                        <span className="font-medium">{benefit}</span>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
+          {/* why choose  */}
+          <WhyChooseSection
+            title="Why Patients"
+            subtitle=""
+            title_2="Choose Us"
+            items={whyChoose}
+            image={whyChoose_img.src}
+            h2_color_1='text-[#299470]'
+            h2_color_2='text-[#303030]'
+            order="order-first"
+            bg_color="bg-[#F1F9F4] "
+            py=" pt-30 pb-22"
+          />
 
-          {/* How It Works */}
-          <section className="py-16 bg-gray-50">
-            <div className="container">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold mb-4">How Extended Hours Work</h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Access medical care on your schedule.
-                </p>
-              </div>
-
-              <div className="grid gap-8 md:grid-cols-3 max-w-4xl mx-auto">
-                <Card>
-                  <CardContent className="p-6 text-center">
-                    <div className="h-16 w-16 rounded-full bg-[#299470] text-white text-2xl font-bold flex items-center justify-center mx-auto mb-4">
-                      1
-                    </div>
-                    <h3 className="font-semibold mb-2">Walk In Anytime</h3>
-                    <p className="text-sm text-muted-foreground">
-                      No appointment needed. Just arrive between 7:30 AM and 11:00 PM any day of the week.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardContent className="p-6 text-center">
-                    <div className="h-16 w-16 rounded-full bg-[#299470] text-white text-2xl font-bold flex items-center justify-center mx-auto mb-4">
-                      2
-                    </div>
-                    <h3 className="font-semibold mb-2">Quick Check-In</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Register at the front desk with your health card. Average wait time is under 30 minutes.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardContent className="p-6 text-center">
-                    <div className="h-16 w-16 rounded-full bg-[#299470] text-white text-2xl font-bold flex items-center justify-center mx-auto mb-4">
-                      3
-                    </div>
-                    <h3 className="font-semibold mb-2">See a Doctor</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Meet with an experienced family doctor who will diagnose and treat your condition.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </section>
-
-          {/* Location */}
-          <section className="py-16 bg-white">
-            <div className="container">
-              <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-3xl font-bold mb-8">Visit Our Extended Hours Clinic</h2>
-                
-                <Card>
-                  <CardContent className="p-8">
-                    <div className="grid gap-6 md:grid-cols-2 text-left mb-6">
-                      <div>
-                        <div className="flex items-center gap-3 mb-3">
-                          <MapPin className="h-5 w-5 text-[#299470]" />
-                          <h3 className="font-semibold">Location</h3>
-                        </div>
-                        <p className="text-sm text-muted-foreground">Now Medical Clinic</p>
-                        <p className="text-sm text-muted-foreground">2520 23 St NE #19</p>
-                        <p className="text-sm text-muted-foreground">Calgary, AB T2E 8L2</p>
-                      </div>
-
-                      <div>
-                        <div className="flex items-center gap-3 mb-3">
-                          <Clock className="h-5 w-5 text-[#299470]" />
-                          <h3 className="font-semibold">Extended Hours</h3>
-                        </div>
-                        <p className="text-sm text-muted-foreground">7 Days a Week</p>
-                        <p className="text-sm font-medium">7:30 AM - 11:00 PM</p>
-                        <p className="text-sm text-[#299470] mt-1">Including weekends & holidays</p>
-                      </div>
-                    </div>
-
-                    <div className="pt-6 border-t">
-                      <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                        <Button className="bg-[#299470] hover:bg-[#2D7B6F]" asChild>
-                          <Link href="/contact">Get Directions</Link>
-                        </Button>
-                        <Button variant="outline" asChild>
-                          <a href="tel:587-391-8188">
-                            <Phone className="mr-2 h-4 w-4" />
-                            Call 587-391-8188
-                          </a>
-                        </Button>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </section>
-
-          {/* CTA */}
-          <section className="py-16 bg-[#299470] text-white">
-            <div className="container text-center">
-              <h2 className="text-3xl font-bold mb-4">
-                Extended Hours: 7:30 AM - 11 PM Daily
-              </h2>
-              <p className="text-lg mb-8 max-w-2xl mx-auto">
-                Walk in anytime — no appointment needed. Open 7 days a week.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" asChild>
-                  <a href="tel:587-391-8188">
-                    <Phone className="mr-2 h-5 w-5" />
-                    Call 587-391-8188
-                  </a>
+          {/* Map Section */}
+          <FindUsSection
+            bgColor="bg-white"
+            customButtons={
+              <>
+                <Button
+                  size="lg"
+                  className="border border-[#299470] bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-[16px] py-[11px] flex items-center gap-[10px] cursor-pointer"
+                  asChild
+                >
+                  <Link href="/services">
+                    <img
+                      src="/icons/solar_walking-outline.svg"
+                      alt=""
+                      className="w-5 h-5"
+                    />
+                    Walk In Now
+                  </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[#299470]" asChild>
-                  <Link href="/walk-in-clinic-weekends">Weekend Clinic →</Link>
+
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-white font-bold text-lg px-[16px] py-[11px] flex items-center gap-[10px] cursor-pointer"
+                  asChild
+                >
+                  <Link href="tel:587-391-8188">
+                    <img
+                      src="/icons/solar_phone-outline.svg"
+                      alt=""
+                      className="w-5 h-5"
+                    />
+                    587-391-8188
+                  </Link>
                 </Button>
-              </div>
-            </div>
-          </section>
+
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-white font-bold text-lg px-[16px] py-[11px] flex items-center gap-[10px] cursor-pointer"
+                  asChild
+                >
+                  <Link href="https://maps.google.com/maps?q=2520%2023%20St%20NE%20%2319,%20Calgary,%20AB%20T2E%208L2" target="_blank" rel="noopener noreferrer">
+                    <img
+                      src="/icons/pin-outline-icon.svg"
+                      alt=""
+                      className="w-5 h-5"
+                    />
+                    Get Direction
+                  </Link>
+                </Button>
+              </>
+            }
+          />
+          <div className="mt-15"></div>
+          {/* CTA Banner */}
+          <BottomCallAction
+            title='24-Hour Walk-In Clinic Calgary | Open Late 7 '
+            title_2="Days a Week"
+            description={<>Searching for a 24-hour walk-in clinic in Calgary? We're open until 11 PM daily — real<br/> doctors, short waits, open weekends & holidays. Call 587-391-8188.</>}
+          />
+
+
         </main>
 
         <Footer />

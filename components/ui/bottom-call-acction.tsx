@@ -1,10 +1,10 @@
 
-
+import { ReactNode } from "react";
 
 interface BottomCallAction {
     title?: string;
     title_2?: string;
-    description?: string;
+    description?: string | ReactNode;
 }
 
 export default function BottomCallAction({ title, title_2, description }: BottomCallAction) {
