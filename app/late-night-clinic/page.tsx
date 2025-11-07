@@ -3,8 +3,8 @@ import { Footer } from "@/components/footer";
 import Link from "next/link";
 import type { Metadata } from "next";
 import hero_img from "@/public/images/urgent-case-hero.png"
-import bg_img from "@/public/images/color-img.png"
-import whyChoose_img from "@/public/images/whyChoose.png"
+import bg_img from "@/public/images/walkin-sub/late-night-treat.png"
+import whyChoose_img from "@/public/images/walkin-sub/late-night-why-choose.png"
 import { FindUsSection, WhyChooseSection } from "@/sections";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
 import { Button } from "@/components/ui/button";
@@ -93,7 +93,7 @@ export default function LateNightClinicPage() {
             title="Why Choose"
             subtitle="Our Late-Night Clinic"
             items={whyChoose}
-            image={bg_img.src}
+            image={whyChoose_img.src}
           />
 
           {/* why choose  */}
@@ -102,7 +102,7 @@ export default function LateNightClinicPage() {
             subtitle=""
             title_2="Us for Urgent Care"
             items={whyChoose}
-            image={whyChoose_img.src}
+            image={bg_img.src}
             h2_color_1='text-[#299470]'
             h2_color_2='text-[#303030]'
             order="order-first"

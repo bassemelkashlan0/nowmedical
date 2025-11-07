@@ -7,9 +7,9 @@ import type { Metadata } from "next";
 import { LiveStatusBanner } from "@/components/live-status-banner";
 import { FindUsSection, WhyChooseSection } from "@/sections";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
-import hero_img from "@/public/images/hospital-peter/hospital-peter-banner.png";
-import bg_img from "@/public/images/hospital-peter/why-us-south-health.png";
-import whyChoose_img from "@/public/images/walkin-sub/why-choose-south.png";
+import hero_img from "@/public/images/major-sub/hero.png";
+import bg_img from "@/public/images/major-sub/alberta-comman-visit.png";
+import whyChoose_img from "@/public/images/major-sub/alberta-why-choose.png"; 
 
 
 export const metadata: Metadata = {

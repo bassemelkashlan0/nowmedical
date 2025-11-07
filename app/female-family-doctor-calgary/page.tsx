@@ -8,6 +8,9 @@ import type { Metadata } from "next";
 import { LiveStatusBanner } from "@/components/live-status-banner";
 import PatientsVideoSection from "@/sections/global/atients-video";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
+import your_helth_img from "@/public/images/female-family/your-health.png"
+import why_us_img from "@/public/images/female-family/why-us.png"
+
 
 export const metadata: Metadata = {
   title: "Female Family Doctor in Calgary | Accepting New Patients",
@@ -45,8 +48,6 @@ export default function FemaleFamilyDoctorPage() {
       language: "English"
     }
   ];
-
-  const maleDoctors: any[] = [];
 
   const videoTestimonials = [
     {
@@ -217,7 +218,7 @@ export default function FemaleFamilyDoctorPage() {
             title={<><span className="text-[#299470]">Your Health,</span> <span className="text-[#303030]">Your</span><br /></>}
             subtitle={<span className="text-[#303030]"> Comfort, Your Doctor</span>}
             content={storyContent}
-            images={["/images/walk-in/walk-in-reception.png"]}
+            images={["/images/female-family/your-health.png"]}
           />
 
 
@@ -284,7 +285,7 @@ export default function FemaleFamilyDoctorPage() {
             title_2=""
             subtitle="Now Medical Clinic"
             items={whyWomenChoose}
-            image="/images/contact/modern-medical-clinic-interior-waiting-room.png"
+            image={why_us_img.src}
             h2_color_1="text-[#303030]"
             h2_color_2="text-[#299470]"
             h2_sub_color="text-[#299470]"

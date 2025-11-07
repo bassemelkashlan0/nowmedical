@@ -12,12 +12,10 @@ import {
   WalkInHeroSection
 } from "@/sections";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Phone, Heart, Baby, Activity, Shield, Stethoscope, Users } from "lucide-react";
-import Link from "next/link";
 import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
-import Family_img from "@/public/images/our-services/family-medicine.png";
+import Family_img from "@/public/images/family-doctor/why-us.png";
 import ValuesSection from "@/sections/home/values-section";
 
 export const metadata: Metadata = {
@@ -351,9 +349,9 @@ const videoTestimonials = [
                 {/*Family Medicine Section */}
                 <WhyChooseSection
                     bg_color="bg-[#F1F9F4]"
-                    title="Family"
-                    title_2="Medicine"
-                    subtitle=""
+                    title="Why Choose "
+                    subtitle="Now Medical Clinic"
+                    h2_sub_color="text-[#303030]"
                     items={FamilyMadicine}
                     image={Family_img.src}
                     both_btn="flex pt-0"

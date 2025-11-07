@@ -7,12 +7,10 @@ import type { Metadata } from "next";
 import { LiveStatusBanner } from "@/components/live-status-banner";
 import { FindUsSection, WhyChooseSection } from "@/sections";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
-import hero_img from "@/public/images/urgent-case-hero.png";
-import bg_img from "@/public/images/color-img.png";
-import whyChoose_img from "@/public/images/whyChoose.png";
-import phone_icon from "@/public/icons/solar_phone-outline.svg";
-import walk_icon from "@/public/icons/solar_walking-outline.svg";
-import location_icon from "@/public/icons/pin-outline-icon.svg";
+import hero_img from "@/public/images/major-sub/hero.png";
+import bg_img from "@/public/images/major-sub/rocky-skip-hospital.png";
+import whyChoose_img from "@/public/images/major-sub/rocky-why-now.png";
+
 
 export const metadata: Metadata = {
   title: "Walk-In Clinic Near Rockyview Hospital | Open 7 Days Until 11 PM",
