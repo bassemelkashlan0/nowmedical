@@ -30,7 +30,7 @@ export default function StorySection({
           )}
           <div className="space-y-4 pl-6">
           <h2 className="text-5xl font-bold mb-4">
-          {title} <span className="text-[#299470]">{subtitle}</span>
+          {title} {typeof subtitle === 'string' ? <span className="text-[#299470]">{subtitle}</span> : subtitle}
         </h2>
             {content.map((paragraph, index) => (
               <p key={index} className="text-lg text-foreground leading-relaxed">

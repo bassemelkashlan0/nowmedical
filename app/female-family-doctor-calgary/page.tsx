@@ -1,12 +1,13 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { DoctorsSection, TestimonialsSection, FindUsSection, CTABannerSection } from "@/sections";
+import { FindUsSection, CTABannerSection, VideoTestimonialsSection, WhyChooseSection, StorySection, MeetOurSlider } from "@/sections";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Heart, Baby, Shield, Check } from "lucide-react";
 import Link from "next/link";
-import { StructuredData, generatePhysicianSchema, generateFAQSchema, CLINIC_DATA } from "@/lib/structured-data";
+import { StructuredData, generatePhysicianSchema, generateFAQSchema, generateLocalBusinessSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
+import { LiveStatusBanner } from "@/components/live-status-banner";
+import PatientsVideoSection from "@/sections/global/atients-video";
+import BottomCallAction from "@/components/ui/bottom-call-acction";
 
 export const metadata: Metadata = {
   title: "Female Family Doctor in Calgary | Accepting New Patients",
@@ -18,53 +19,50 @@ export const metadata: Metadata = {
 };
 
 export default function FemaleFamilyDoctorPage() {
-  const womensHealthServices = [
-    { icon: <Heart className="w-6 h-6" />, title: "Well-Woman Exams", description: "Annual check-ups and preventive care" },
-    { icon: <Baby className="w-6 h-6" />, title: "Pregnancy Care", description: "Prenatal care and pregnancy testing" },
-    { icon: <Shield className="w-6 h-6" />, title: "Birth Control", description: "Contraception counseling and prescriptions" },
-    { icon: <Heart className="w-6 h-6" />, title: "Pap Smears", description: "Cervical cancer screening" },
-    { icon: <Baby className="w-6 h-6" />, title: "Menopause Care", description: "Hormone therapy and symptom management" },
-    { icon: <Shield className="w-6 h-6" />, title: "UTI Treatment", description: "Urinary tract infection care" }
-  ];
-
   const femaleDoctors = [
+    {
+      name: "Dr. Vanessa",
+      avatar: "/images/female-family/slide-one.png",
+      specialty: "Gynecologist",
+      description: "Specializes in women's health and comprehensive family medicine.",
+      phone: "587-391-8188",
+      language: "English"
+    },
     {
       name: "Dr. Madiha",
       avatar: "/images/female-doctor-illustration-avatar.jpg",
       specialty: "Family Medicine",
       description: "Experienced in women's health, family practice, and children's care.",
-      phone: "587-391-8188"
-    },
-    {
-      name: "Dr. Vanessa",
-      avatar: "/images/female-doctor-illustration-avatar-brown-hair.jpg",
-      specialty: "Family Medicine",
-      description: "Specializes in women's health and comprehensive family medicine.",
-      phone: "587-391-8188"
+      phone: "587-391-8188",
+      language: "English"
     },
     {
       name: "Dr. Ebele",
       avatar: "/images/female-doctor-illustration-avatar.jpg",
       specialty: "Family Medicine",
       description: "Dedicated to providing compassionate women's healthcare.",
-      phone: "587-391-8188"
+      phone: "587-391-8188",
+      language: "English"
     }
   ];
 
   const maleDoctors: any[] = [];
 
-  const testimonials = [
+  const videoTestimonials = [
     {
-      name: "Sarah M.",
-      avatar: "/images/placeholder-user.jpg",
-      rating: 5,
-      text: "Dr. Madiha is amazing! She really takes the time to listen and makes me feel comfortable discussing sensitive health topics."
+      name: "Bessie Cooper",
+      image: "/images/patients-say/bessie-cooper.png",
+      quote: "Finally a clinic open late that actually cares about patients."
     },
     {
-      name: "Jennifer L.",
-      avatar: "/images/placeholder-user.jpg",
-      rating: 5,
-      text: "So happy I found a female doctor accepting new patients. The whole team is professional and caring."
+      name: "Jenny Wilson",
+      image: "/images/patients-say/jenny-wilson.png",
+      quote: "Friendly staff, short wait times, and doctors who listen."
+    },
+    {
+      name: "Cameron Williamson",
+      image: "/images/patients-say/cameron-williamson.png",
+      quote: "This clinic makes it easy for families — especially on weekends and holidays."
     }
   ];
 
@@ -96,166 +94,233 @@ export default function FemaleFamilyDoctorPage() {
     }
   }));
 
+  const localBusinessSchema = generateLocalBusinessSchema(CLINIC_DATA);
+
+  // Areas of expertise for female family physician
+  const expertiseAreas = [
+    { text: "Women's health and wellness" },
+    { text: "Reproductive and hormonal care" },
+    { text: "Children's check-ups and family care" },
+    { text: "Chronic condition management and preventive health" }
+  ];
+
+  // Women's health services
+  const womensHealthServices = [
+    { text: "Pap tests and cervical cancer screening" },
+    { text: "Birth control consultations and renewals" },
+    { text: "Menstrual pain and irregular period evaluation" },
+    { text: "Pregnancy testing and early pregnancy care" },
+    { text: "Menopause symptoms management" },
+    { text: "Breast health and lump checks" },
+    { text: "Urinary tract infections (UTIs) and yeast infections" },
+    { text: "Sexual health consultations and STI testing" }
+  ];
+
+  // Family & children's care services
+  const familyChildrenCare = [
+    { text: "Immunizations and flu shots" },
+    { text: "Ear infections, cough, or fever in children" },
+    { text: "Growth monitoring and development check-ups" },
+    { text: "Asthma and allergy management" },
+    { text: "School and daycare medical forms" },
+    { text: "We care for your whole family from newborns to seniors." }
+  ];
+
+  // Why women choose items
+  const whyWomenChoose = [
+    { text: "Female Family Doctors Accepting New Patients" },
+    { text: "Open 7 Days a Week Until 11 PM" },
+    { text: "Open on Weekends and Holidays" },
+    { text: "Walk-in or Call Anytime No Appointment Needed" },
+    { text: "Convenient Calgary Location with Free Parking" }
+  ];
+  // Story Content
+  const storyContent = [
+    <>
+      At <b>Now Medical Clinic,</b> we know that many women feel more comfortable discussing their health with a female doctor.<br /> Whether it’s your first check-up, a sensitive concern, or ongoing family care, our female physicians are here to make your experience comfortable and empowering.
+    </>,
+    <>
+      We’re proud to offer <b>female family doctors accepting new patients</b> in Calgary open <b>7 days a week until 11 PM,</b> including <b>weekends and holidays</b>
+    </>
+  ];
   return (
     <>
+      <StructuredData data={localBusinessSchema} />
       <StructuredData data={faqSchema} />
       {physicianSchemas.map((schema, index) => (
         <StructuredData key={index} data={schema} />
       ))}
-      
+
       <div className="flex min-h-screen flex-col">
         <Header />
+        <LiveStatusBanner />
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-gradient-to-b from-[#E8F5F3] to-white py-16">
+          <section className="bg-[#F1F9F4] pt-8 pb-14">
             <div className="container">
-              <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+              <div className="grid gap-4 lg:grid-cols-2 lg:gap-4 items-center">
                 <div>
-                  <div className="inline-flex items-center gap-2 bg-pink-50 text-pink-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                    <Heart className="h-4 w-4" />
-                    Female Physicians
-                  </div>
-                  <h1 className="text-4xl font-bold tracking-tight lg:text-5xl mb-6">
-                    <span className="text-foreground">Female Family Doctor</span>
-                    <br />
-                    <span className="text-foreground">in Calgary</span>
-                    <br />
-                    <span className="text-[#299470]">Accepting New Patients</span>
+                  <h1 className="font-bold text-[#299470] tracking-tight lg:text-6xl mb-4">
+                    Female Family Doctor<br />
+                    <span className="text-[#303030]">  in Calgary Accepting New Patients Now</span>
                   </h1>
-                  <p className="text-lg text-muted-foreground mb-4">
-                    <strong>Looking for a female family doctor?</strong> Our experienced female physicians are accepting new patients.
+
+                  <p className="text-base text-foreground mb-4 font-bold">
+                    Looking for a compassionate, experienced female physician?
                   </p>
-                  <p className="text-base text-muted-foreground mb-8">
-                    Comprehensive women's health care including Pap smears, birth control, pregnancy care, and more. Open 7 days until 11 PM.
+                  <p className="text-base text-foreground mb-4">
+                    At <b>Now Medical Clinic,</b> our <b>female family doctors</b> provide personalized care for women, children, and families with same-day access and flexible hours.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white" asChild>
-                      <a href="tel:587-391-8188">
-                        <Phone className="mr-2 h-5 w-5" />
-                        Call to Register
-                      </a>
+                  <p className="text-base text-foreground mb-4 font-bold">
+                    Comfort, understanding, and expert care from doctors who truly listen.
+                  </p>
+
+                  <div className="flex flex-col pt-9 sm:flex-row gap-4">
+                    <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>
+                      <Link href="tel:587-391-8188">
+                        <img src="/icons/btn_phone-outline-icon.svg" alt="Call to register" className="w-5 h-5" />
+                        Call 587-391-8188 to Register
+                      </Link>
+
                     </Button>
+
                     <Button
                       size="lg"
                       variant="outline"
-                      className="border-[#299470] text-[#299470] hover:bg-[#299470]/10"
+                      className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold"
                       asChild
                     >
-                      <Link href="/walk-in-clinic-calgary">Walk-In Services</Link>
+                      <Link href="/walk-in-clinic-calgary">
+                        Walk In Today
+                        <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Today" className="w-5 h-5" />
+                      </Link>
                     </Button>
                   </div>
                 </div>
 
-                <div>
+                <div className="flex justify-center items-center">
                   <img
-                    src="/images/doctor-michael-patel.jpg"
-                    alt="Female family physician providing comprehensive medical care to Calgary families"
-                    className="rounded-lg shadow-lg w-full"
+                    src="/images/female-family/banner.png"
+                    alt="Female family doctor at Now Medical Clinic Calgary"
+                    className="w-full max-w-md"
                   />
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Women's Health Services */}
-          <section className="py-16 bg-white">
-            <div className="container">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold mb-4">
-                  Comprehensive <span className="text-[#299470]">Women's Health Services</span>
-                </h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Our female doctors provide a full range of healthcare services for women of all ages.
-                </p>
-              </div>
 
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {womensHealthServices.map((service, index) => (
-                  <Card key={index}>
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
-                        <div className="h-12 w-12 rounded-full bg-[#E8F5F3] flex items-center justify-center text-[#299470] flex-shrink-0">
-                          {service.icon}
-                        </div>
-                        <div>
-                          <h3 className="font-semibold mb-1">{service.title}</h3>
-                          <p className="text-sm text-muted-foreground">{service.description}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </section>
 
-          {/* Why Choose Our Female Doctors */}
-          <section className="py-16 bg-gray-50">
-            <div className="container">
-              <div className="max-w-3xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold mb-4">Why Choose Our Female Family Doctors?</h2>
-                </div>
-
-                <div className="grid gap-4">
-                  <Card>
-                    <CardContent className="p-4 flex items-center gap-3">
-                      <Check className="h-5 w-5 text-[#299470] flex-shrink-0" />
-                      <span className="font-medium">Accepting new patients for ongoing family care</span>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-4 flex items-center gap-3">
-                      <Check className="h-5 w-5 text-[#299470] flex-shrink-0" />
-                      <span className="font-medium">Comprehensive women's health services</span>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-4 flex items-center gap-3">
-                      <Check className="h-5 w-5 text-[#299470] flex-shrink-0" />
-                      <span className="font-medium">Extended hours: Open until 11 PM, 7 days a week</span>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-4 flex items-center gap-3">
-                      <Check className="h-5 w-5 text-[#299470] flex-shrink-0" />
-                      <span className="font-medium">Comfortable, private consultations</span>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-4 flex items-center gap-3">
-                      <Check className="h-5 w-5 text-[#299470] flex-shrink-0" />
-                      <span className="font-medium">Care for all ages from teens to seniors</span>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Meet Our Doctors */}
-          <DoctorsSection
-            title="Meet Our Female Family Doctors"
-            femaleDoctors={femaleDoctors}
-            maleDoctors={maleDoctors}
-            showCategories={false}
+          {/* Our Story */}
+          <StorySection
+            title={<><span className="text-[#299470]">Your Health,</span> <span className="text-[#303030]">Your</span><br /></>}
+            subtitle={<span className="text-[#303030]"> Comfort, Your Doctor</span>}
+            content={storyContent}
+            images={["/images/walk-in/walk-in-reception.png"]}
           />
 
-          {/* Testimonials */}
-          <TestimonialsSection
-            title="What Patients Say"
-            testimonials={testimonials}
+
+          {/* Meet Our Female Family Physician Section */}
+          <MeetOurSlider
+            title="Meet Our"
+            title_2="Female Family Physician"
+            description="Our Female Family doctors areas of expertise include"
+            items={expertiseAreas}
+            doctors={femaleDoctors.map(doctor => ({
+              name: doctor.name,
+              avatar: doctor.avatar,
+              specialty: doctor.specialty,
+              language: doctor.language
+            }))}
+            bgColor="bg-[#F1F9F4]"
           />
 
-          {/* Find Us */}
-          <FindUsSection />
+          {/* Comprehensive Women's Health Services Section */}
+          <WhyChooseSection
+            title="Comprehensive"
+            title_2=""
+            subtitle="Women's Health Services"
+            para={<>Our clinic offers a wide range of <b>walk-in and family medicine services</b> designed to support women's health and wellbeing.</>}
+            items={womensHealthServices}
+            image="/images/female-family/compre.png"
+            h2_color_1="text-[#303030]"
+            h2_color_2="text-[#299470]"
+            h2_sub_color="text-[#299470]"
+            py=""
+            IsDot={true}
+            bg_color="bg-white"
+            order="order-last"
+            both_btn="flex pt-4"
+            btn_1_icon="/icons/btn_phone-outline-icon.svg"
+            btn_1_link="tel:587-391-8188"
+            btn_1_text="Call 587-391-8188"
+            btn_2_text="Walk In"
+            btn_2_icon="/icons/uil-arrow-up-right-grn.svg"
+            btn_2_link="/walk-in-clinic-calgary"
+            btn_2_bg="bg-transparent"
+            btn_2_iconAfter={true}
+          />
 
-          {/* CTA */}
-          <CTABannerSection
-            title="Register with a Female Family Doctor Today. Call 587-391-8188"
-            primaryButtonText="Call to Register"
-            primaryButtonLink="tel:587-391-8188"
+          {/* Family & Children's Care Section */}
+          <WhyChooseSection
+            title="Family & "
+            title_2="Children's Care"
+            subtitle=""
+            para="Our female family doctors also provide comprehensive care for children and families."
+            items={familyChildrenCare}
+            image="/images/female-family/child-care.png"
+            h2_color_1="text-[#303030]"
+            h2_color_2="text-[#299470]"
+            h2_sub_color="text-[#299470]"
+            IsDot={true}
+            bg_color="bg-[#F1F9F4]"
+            order="order-first"
+          />
+
+          {/* Why Women Choose Now Medical Clinic Section */}
+          <WhyChooseSection
+            title="Why Women Choose"
+            title_2=""
+            subtitle="Now Medical Clinic"
+            items={whyWomenChoose}
+            image="/images/contact/modern-medical-clinic-interior-waiting-room.png"
+            h2_color_1="text-[#303030]"
+            h2_color_2="text-[#299470]"
+            h2_sub_color="text-[#299470]"
+            IsDot={false}
+            bg_color="bg-white"
+            order="order-last"
+            singleButton={true}
+            btn_1_icon="/icons/btn_phone-outline-icon.svg"
+            btn_1_link="tel:587-391-8188"
+            btn_1_text="Call 587-391-8188 Speak to Our Team and Register Today"
+            btn_1_bg="bg-[#299470]"
+          />
+
+          {/* What Patients Say */}
+          <PatientsVideoSection
+            bg_color="bg-[#EEF8F2]"
+            heading_first="What"
+            heading_mid="Patients"
+            heading_last="Say"
+            description=" See what Calgary patients are saying about their experience with Now Medical Clinic."
+            Items={videoTestimonials}
+            // btn_show=" block"
+            btn_text=" See What Patients Are Saying"
+          />
+
+          {/* Find Us & Hours Section */}
+          <FindUsSection
+            bgColor="bg-white"
+            showFreeParking={true}
+          />
+
+          {/* CTA Banner */}
+          <BottomCallAction
+            title='Now Medical Clinic — Female Family Doctors in Calgary, Accepting New Patients.'
+            title_2=""
+            description="Compassionate care, professional expertise, open 7 days a week."
           />
         </main>
 
@@ -264,4 +329,3 @@ export default function FemaleFamilyDoctorPage() {
     </>
   );
 }
-

@@ -7,9 +7,9 @@ import type { Metadata } from "next";
 import { LiveStatusBanner } from "@/components/live-status-banner";
 import { FindUsSection, WhyChooseSection } from "@/sections";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
-import hero_img from "@/public/images/urgent-case-hero.png";
-import bg_img from "@/public/images/color-img.png";
-import whyChoose_img from "@/public/images/whyChoose.png";
+import hero_img from "@/public/images/hospital-peter/hospital-peter-banner.png";
+import bg_img from "@/public/images/hospital-peter/why-us-south-health.png";
+import whyChoose_img from "@/public/images/walkin-sub/why-choose-south.png";
 
 export const metadata: Metadata = {
   title: "Walk-In Clinic Near South Health Campus | Open 7 Days Until 11 PM",

@@ -12,7 +12,7 @@ interface WhyChooseItem {
 
 interface WhyChooseSectionProps {
   title?: string | ReactNode;
-  para?: string
+  para?: string | ReactNode;
   para_2?: string
   para_after?: string | ReactNode;
   subtitle?: string;
@@ -41,7 +41,9 @@ interface WhyChooseSectionProps {
   h2_color_2?: string;
   h2_sub_color?: string;
   btn_2_bg?: string;
+  btn_2_iconAfter?: boolean;
   singleButton?: boolean;
+  btn_1_bg?: string;
   itemsAsParagraph?: boolean;
   address?: string;
 }
@@ -77,7 +79,9 @@ export default function WhyChooseSection({
   h2_color_2,
   h2_sub_color,
   btn_2_bg,
+  btn_2_iconAfter = false,
   singleButton = false,
+  btn_1_bg,
   itemsAsParagraph = false,
   address
 }: WhyChooseSectionProps) {
@@ -96,7 +100,7 @@ export default function WhyChooseSection({
           )}
 
           <div className={(order ? order : "")}>
-            <h2 className={"text-5xl font-bold mb-4 "}>
+            <h2 className={"text-5xl font-bold mb-5 "}>
               <span className={" " + (h2_color_1 ? h2_color_1 : ' text-[#303030] ')}>   {title}  </span> <span className={' ' + (h2_color_2 ? h2_color_2 :  " text-[#299470] ")}>{title_2}</span> <br /> <span className={ (h2_sub_color ? h2_sub_color : "text-[#299470]" )}>{subtitle}</span>
             </h2>
             <p className='text-[#303030] text-3xl font-medium mb-2 ' > {Sub_desc} </p>
@@ -167,7 +171,7 @@ export default function WhyChooseSection({
             {singleButton ? (
               <div className="pt-4">
                 <div className="flex mb-4">
-                  <Button variant="outline" className={`border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 px-4 py-4 text-lg font-bold bg-transparent`}>
+                  <Button variant={btn_1_bg ? "default" : "outline"} className={`${btn_1_bg ? btn_1_bg : 'border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 bg-transparent'} px-4 py-4 text-lg font-bold ${btn_1_bg ? 'text-white hover:opacity-90' : ''}`}>
                     <Link href={btn_1_link ? btn_1_link as string : "#"} className='flex items-center'>
                       <Image
                         src={btn_1_icon ? btn_1_icon as string : "/icons/btn_phone-outline-icon.svg"}
@@ -207,14 +211,25 @@ export default function WhyChooseSection({
                 </Button>
                 <Button variant="outline" className={`border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 px-4 py-4 text-lg font-bold ${btn_2_bg ? btn_2_bg : ''}`}>
                   <Link href={btn_2_link ? btn_2_link as string : "#"} className='flex'>
-                    <Image
-                      src={btn_2_icon ? btn_2_icon as string : "/icons/btn_phone-outline-icon.svg"}
-                      alt="Phone"
-                      width={20}
-                      height={20}
-                      className="mr-3 "
-                    />
+                    {!btn_2_iconAfter && (
+                      <Image
+                        src={btn_2_icon ? btn_2_icon as string : "/icons/btn_phone-outline-icon.svg"}
+                        alt="Phone"
+                        width={20}
+                        height={20}
+                        className="mr-3 "
+                      />
+                    )}
                     {btn_2_text}
+                    {btn_2_iconAfter && (
+                      <Image
+                        src={btn_2_icon ? btn_2_icon as string : "/icons/btn_phone-outline-icon.svg"}
+                        alt="Phone"
+                        width={20}
+                        height={20}
+                        className="ml-3 "
+                      />
+                    )}
                   </Link>
                 </Button>
               </div>

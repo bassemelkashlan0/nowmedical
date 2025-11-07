@@ -25,3 +25,6 @@ export * from './about';
 // Family Doctors page sections
 export * from './family-doctors';
 
+// Female Family Doctor page sections
+export * from './female-family-doctor';
+
