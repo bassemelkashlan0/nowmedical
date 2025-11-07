@@ -293,8 +293,8 @@ const Family_img = "/images/walk-in/why-us.png";
 
           {/* Our Story */}
           <StorySection
-            title={<>Fast, Friendly Medical care<br /></>}
-            subtitle="No Appointment Needed"
+            title={<><span className="text-[#299470]">Fast, Friendly Medical care</span><br /></>}
+            subtitle={<><span className="text-[#303030]">No Appointment Needed</span></>}
             content={storyContent}
             images={["/images/walk-in/walk-in-reception.png"]}
           />

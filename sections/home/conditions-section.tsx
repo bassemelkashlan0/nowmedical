@@ -52,8 +52,8 @@ export default function ConditionsSection({
 
         <div className="grid md:grid-cols-3 mt-6 gap-6">
           {conditions.map((condition, index) => (
-            <Card key={index} className="border-1 border-[#83C1AC] p-6 hover:shadow-lg transition-shadow hover:bg-[#EAF4F1] h-full flex-col flex">
-              <div className={`inline-flex p-3 gap-4 items-center`}>
+            <Card key={index} className="border-1 border-[#83C1AC] p-5 hover:shadow-lg transition-shadow hover:bg-[#EAF4F1] h-full flex-col flex">
+              <div className={`inline-flex pb-6 gap-4 items-center`}>
                 <div className="text-[#299470]">
                   <img src={condition.icon} alt={condition.category} className="h-full w-full" />
                 </div>

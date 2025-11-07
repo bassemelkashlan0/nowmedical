@@ -303,7 +303,7 @@ export default function HomePage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white py-16 lg:py-24">
+          <section className="bg-[#F1F9F4] to-white py-8">
             <div className="container">
               <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
                 <div>
@@ -535,6 +535,7 @@ export default function HomePage() {
           {/* Meet Our Doctors */}
           <DoctorsSection
             title="Meet Our Doctors"
+            description={<>Our diverse team of male and female family doctors provides care in multiple languages. Each doctor brings years of <br/>experience in family medicine, chronic condition management, and preventive health</>}
             femaleDoctors={femaleDoctors}
             maleDoctors={maleDoctors}
             showCategories={false}

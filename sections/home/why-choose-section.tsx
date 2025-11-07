@@ -87,7 +87,7 @@ export default function WhyChooseSection({
 }: WhyChooseSectionProps) {
   return (
     <section className={" px-4 md:px-8 " + (bg_color ? bg_color : "") + (py ? py : " py-4 md:py-14 ")}>
-      <div className="max-w-7xl mx-auto">
+      <div className="container">
         <div className="grid md:grid-cols-2 gap-18 items-center">
           {image && (
             <div className="relative overflow-hidden">

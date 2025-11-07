@@ -23,7 +23,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-[#EAF4F1] backdrop-blur supports-[backdrop-filter]:bg-[#EAF4F1]">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex py-4 items-center justify-between">
         <Link href="/" className="flex items-center">
           <Logo className="h-8 w-auto" />
         </Link>
@@ -193,8 +193,8 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button asChild className="hidden md:flex bg-[#299470] hover:bg-[#2D7B6F] text-white">
-            <Link href="/contact">
+          <Button className="hidden md:flex bg-[#299470] hover:bg-[#2D7B6F] text-white py-[11px] px-8">
+            <Link href="/contact" className="text-lg font-bold flex items-center gap-2">
               Contact Us
               <ChevronDown className="ml-1 h-4 w-4" />
             </Link>
