@@ -10,8 +10,8 @@ import { LiveStatusBanner } from "@/components/live-status-banner";
 import { FindUsSection, WhyChooseSection } from "@/sections";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
 import hero_img from "@/public/images/urgent-case-hero.png";
-import bg_img from "@/public/images/color-img.png";
-import whyChoose_img from "@/public/images/whyChoose.png";
+import bg_img from "@/public/images/walkin-sub/weekend-visit.png";
+import whyChoose_img from "@/public/images/walkin-sub/weekend-why-choose.png";
 
 export const metadata: Metadata = {
   title: "Weekend Walk-In Clinic Calgary | Open Holidays Until 11 PM",

@@ -2,9 +2,9 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import Link from "next/link";
 import type { Metadata } from "next";
-import hero_img from "@/public/images/urgent-case-hero.png"
-import bg_img from "@/public/images/color-img.png"
-import whyChoose_img from "@/public/images/whyChoose.png"
+import hero_img from "@/public/images/walkin-sub/argent-case-hero.png"
+import whyChoose_img from "@/public/images/walkin-sub/clinic-calgery-why-choose.png"
+import bg_img from "@/public/images/walkin-sub/clinic-calgery-treat.png"
 import { FindUsSection, WhyChooseSection } from "@/sections";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
 import { Button } from "@/components/ui/button";
@@ -213,12 +213,12 @@ export default function UrgentCarePage() {
             description="Tired of long hospital wait times in Calgary? Walk in to Now Medical Clinic — open 7 days until 11 PM. Real doctors, no appointment needed."
           />
 
-                    
-        </main> 
-     
-        <Footer />              
-      </div> 
+
+        </main>
+
+        <Footer />
+      </div>
     </>
   );
-}              
+}
 
