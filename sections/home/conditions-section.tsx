@@ -16,7 +16,7 @@ interface ConditionsSectionProps {
   para?: string
   para_2?: string
   conditions: Condition[];
-  bg_color?:string;
+  bg_color?: string;
 }
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -38,16 +38,16 @@ export default function ConditionsSection({
   bg_color
 }: ConditionsSectionProps) {
   return (
-    <section className={"py-14 px-4 md:px-8  " + (bg_color ? bg_color : "bg-white") }>
-      <div className="max-w-7xl mx-auto">
+    <section className={"py-[54px] px-4 md:px-8  " + (bg_color ? bg_color : "bg-white")}>
+      <div className="container mx-auto">
         <div className="">
-          <h2 className="text-5xl font-bold text-center mb-4">
+          <h2 className="text-5xl font-bold text-[#303030] text-center mb-4">
             {title} <br />
             <span className="text-[#299470]">{subtitle}</span>
           </h2>
 
-          <p className='text-base text-[#303030] font-medium text-center '> {para} </p>
-          <p className='text-base text-[#303030] font-medium text-center '> {para_2} </p>
+          <p className='text-xl text-[#303030] font-medium text-center '> {para} </p>
+          <p className='text-xl text-[#303030] font-medium text-center '> {para_2} </p>
         </div>
 
         <div className="grid md:grid-cols-3 mt-6 gap-6">
@@ -57,12 +57,12 @@ export default function ConditionsSection({
                 <div className="text-[#299470]">
                   <img src={condition.icon} alt={condition.category} className="h-full w-full" />
                 </div>
-                <h3 className="text-3xl font-bold">{condition.category}</h3>
+                <h3 className="text-3xl font-medium">{condition.category}</h3>
               </div>
               <ul className="space-y-2">
                 {condition.items.map((item, idx) => (
-                  <li key={idx} className="text-gray-600 flex items-start gap-2">
-                    <span className="text-[#4A9B8E]">•</span>
+                  <li key={idx} className="text-[#303030] flex items-start gap-2">
+                    <span className="text-[#303030]">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -71,7 +71,7 @@ export default function ConditionsSection({
           ))}
         </div>
         <div className='w-full text-center justify-center pt-6'>
-          <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
+          <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] font-bold text-white text-lg" asChild>
             <Link href="/walk-in-clinic-calgary">Walk In Anytime- Real Doctors Real care<img src="/icons/uil-arrow-up-right.svg" alt="Register as a new patient" className="w-5 h-5" /></Link>
           </Button>
           <p className='text-[12px] pt-4 text-[#6E6E6E]'>Open Until 11 PM, 7 Days a week Including weekends and Holidays</p>

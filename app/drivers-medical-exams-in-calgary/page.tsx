@@ -38,21 +38,24 @@ export default function DriversMedicalExamsInCalgaryScreen()
             <LiveStatusBanner />
             <main>
                 {/* Hero Section */}
-                <section className="bg-[#F1F9F4] to-white py-16 lg:py-24">
+                <section className="bg-[#F1F9F4] to-white py-11 ">
                     <div className="container">
                         <div className="grid gap-12 lg:grid-cols-[57%_40%] lg:gap-16 items-center">
                             <div>
-                                <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl mb-6">
+                                <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl mb-[21px] ">
                                     <span className="text-[#299470]">Driver’s Medical Exams in</span>
                                     <br />
                                     <span className="text-[#303030]">Calgary Walk In or Call Today</span>
                                 </h1>
 
-                                <p className="text-base text-foreground mb-4 text-[#303030] ">
-                                    Need your <b>Driver’s Medical Certificate</b> renewed?At <b>Now Medical Clinic</b> , we make it simple — just <b>walk in 7 days a week until 11 PM.</b> Our doctors provide <b>Class 1, 2, 3, 4, and 6 commercial driver medical exams</b> for Alberta licensing.
+                                <p className="text-base mb-4 text-[#303030] ">
+                                    Need your <b>Driver’s Medical Certificate</b> renewed? <br />
+                                     At <b>Now Medical Clinic</b> , we make it simple — just <b>walk in 7 days a week until 11 PM.</b> <br />
+                                      Our doctors provide <b>Class 1, 2, 3, 4, and 6 commercial driver medical exams</b> for Alberta
+                                      <br /> licensing.
                                 </p>
-                                <p className="text-lg font-semibold text-foreground mb-8 text-[#303030] ">
-                                    No appointment needed. Fast, friendly, and fully licensed for <b>Transport Canada and Alberta Transportation</b> requirements.                                </p>
+                                <p className="text-base  mb-8 text-[#303030] ">
+                                    No appointment needed. Fast, friendly, and fully licensed for <b>Transport Canada and Alberta <br /> Transportation</b> requirements.                                </p>
                             </div>
 
                             <div className="relative">
@@ -73,7 +76,7 @@ export default function DriversMedicalExamsInCalgaryScreen()
                     title="Why Drivers Choose"
                     subtitle="Now Medical Clinic"
                     items={whyChooseItems}
-                    both_btn="flex"
+                    both_btn="flex pt-4 "
                     btn_1_text="Walk In for Driver’s Medical "
                     btn_1_icon={walk_cion}
                     btn_1_link="#"

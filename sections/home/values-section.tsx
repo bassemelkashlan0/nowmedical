@@ -23,6 +23,8 @@ interface ValuesSectionProps {
   buttonIconClass?: string;
   titleFontWeight?: string;
   useListFormat?: boolean;
+  title_color?: string,
+  sub_color?: string
 }
 
 export default function ValuesSection({
@@ -30,6 +32,8 @@ export default function ValuesSection({
   subtitle = "Values",
   description,
   values,
+  title_color,
+  sub_color,
   buttonText,
   buttonLink,
   buttonIcon,
@@ -38,13 +42,13 @@ export default function ValuesSection({
   useListFormat = false
 }: ValuesSectionProps) {
   return (
-    <section className="py-16 px-4 md:px-8 bg-white">
+    <section className="py-[54px] px-4 md:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-5xl font-bold text-center mb-4">
-          {title} <span className="text-[#299470]">{subtitle}</span>
+        <h2 className={"text-5xl font-bold text-center mb-4 " + ( title_color ? title_color : " text-[#050505]  " )  } >
+          {title} <span className={ (sub_color ? sub_color : " text-[#299470]")}>{subtitle}</span>
         </h2>
         {description && (
-          <p className="text-base text-center text-foreground mb-6 max-w-3xl mx-auto">
+          <p className="text-base text-center text-[#000000] mb-6 max-w-3xl mx-auto">
             {description}
           </p>
         )}
@@ -73,12 +77,12 @@ export default function ValuesSection({
                   />
                 ) : null}
               </div>
-              <h3 className={`text-3xl ${titleFontWeight} mb-4`}>{value.title}</h3>
+              <h3 className={`text-3xl text-[#050505] ${titleFontWeight} mb-4`}>{value.title}</h3>
               {useListFormat && Array.isArray(value.description) ? (
                 <ul className="text-gray-600 flex-grow space-y-2">
                   {value.description.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <DotIcon className="w-5 h-5 text-[#299470] flex-shrink-0 mt-1" />
+                    <li key={idx} className="flex text-[#303030] items-start gap-2">
+                      <DotIcon className="w-5 h-5 text-[#303030] flex-shrink-0 mt-1" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -91,7 +95,7 @@ export default function ValuesSection({
         </div>
 
         {buttonText && buttonLink && (
-          <div className="flex justify-center mt-8">
+          <div className="flex justify-center mt-6">
             <Button
               size="lg"
               className="bg-[#299470] hover:bg-[#256358] text-white font-bold px-6 py-6 text-lg"

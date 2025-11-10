@@ -53,90 +53,30 @@ export const metadata: Metadata = {
 };
 
 export default function WalkInPage() {
-  const conditions = [
-    {
-      category: "Chronic Conditions",
-      icon: <Activity className="w-8 h-8" />,
-      items: [
-        "Diabetes (Type 1 & Type 2)",
-        "High blood pressure (Hypertension)",
-        "Asthma and COPD",
-        "Arthritis and joint pain"
-      ]
-    },
-    {
-      category: "Walk-in & Urgent Care",
-      icon: <Stethoscope className="w-8 h-8" />,
-      items: [
-        "Cold, cough, and flu symptoms",
-        "Sore throat and tonsillitis",
-        "Ear and eye infections",
-        "Minor injuries and lacerations"
-      ]
-    },
-    {
-      category: "Mental Health & Wellness",
-      icon: <Brain className="w-8 h-8" />,
-      items: [
-        "Anxiety and panic attacks",
-        "Depression and mood disorders",
-        "Stress management",
-        "Sleep disorders and insomnia"
-      ]
-    },
-    {
-      category: "Men's Health",
-      icon: <Heart className="w-8 h-8" />,
-      items: [
-        "Erectile dysfunction and libido issues",
-        "Low testosterone and fatigue",
-        "Prostate exams and PSA screening",
-        "Weight management and fitness advice"
-      ]
-    },
-    {
-      category: "Women's Health",
-      icon: <Heart className="w-8 h-8" />,
-      items: [
-        "Pregnancy testing and prenatal care",
-        "Birth control and family planning",
-        "Menstrual irregularities and PMS",
-        "Pap smears and screening"
-      ]
-    },
-    {
-      category: "Children's Health",
-      icon: <Baby className="w-8 h-8" />,
-      items: [
-        "Childhood immunizations",
-        "Growth and development monitoring",
-        "Cough, cold, and ear infections",
-        "School and sports physicals"
-      ]
-    }
-  ];
+
   const FamilyMadicine = [
     {
-        text: "Annual check-ups & physicals",
+      text: "Annual check-ups & physicals",
     },
     {
-        text: "Chronic disease management (diabetes, hypertension, asthma)",
+      text: "Chronic disease management (diabetes, hypertension, asthma)",
     },
     {
-        text: "Preventive care & lab follow-ups",
+      text: "Preventive care & lab follow-ups",
     },
     {
-        text: "Men’s and women’s health",
+      text: "Men’s and women’s health",
     },
     {
-        text: "Mental health & stress management",
+      text: "Mental health & stress management",
     }
-] 
-const Family_img = "/images/walk-in/why-us.png";
+  ]
+  const Family_img = "/images/walk-in/why-us.png";
   // Story Content
   const storyContent = [
     <>
-      At Now Medical Clinic, we make healthcare simple. You don’t have to wait for weeks to see a doctor — just walk in and get care the same day. Our experienced family doctors provide compassionate, professional care for patients of all ages.
+      At Now Medical Clinic, we make healthcare simple. <br /> You don’t have to wait for weeks to see a doctor — just walk in and get care the same day. <br />
+      Our experienced family doctors provide compassionate, professional care for patients of all ages.
     </>,
     <>
       <b className="text-lg">Whether it’s morning, evening, or a holiday we’re here when you need us most.</b>
@@ -145,12 +85,12 @@ const Family_img = "/images/walk-in/why-us.png";
   const values = [
     {
       title: "Everyday Illnesses",
-      description: ["Cold, cough, flu, sore throat, earache","Sinus infections, Strep throat, Fever, Allergies"],
+      description: ["Cold, cough, flu, sore throat, earache", "Sinus infections, Strep throat, Fever, Allergies"],
       image: "/images/walk-in/everyday-illnesses.svg"
     },
     {
       title: "Women’s & Sexual Health",
-      description: ["Women’s & Sexual Health","Pregnancy testing, Pap tests, menopause care", "STI treatment, emergency contraception"],
+      description: ["Women’s & Sexual Health", "Pregnancy testing, Pap tests, menopause care", "STI treatment, emergency contraception"],
       image: "/images/walk-in/women-sexual-health.svg"
     },
     {
@@ -232,6 +172,7 @@ const Family_img = "/images/walk-in/why-us.png";
       quote: "This clinic makes it easy for families — especially on weekends and holidays."
     }
   ];
+
   return (
     <>
       <StructuredData data={localBusinessSchema} />
@@ -239,55 +180,58 @@ const Family_img = "/images/walk-in/why-us.png";
 
       <div className="flex min-h-screen flex-col">
         <Header />
-        <LiveStatusBanner />  
+        <LiveStatusBanner />
         <main className="flex-1">
           {/* Hero Section */}
           <WalkInHeroSection />
 
 
           {/* Bottom Call to Action */}
-          <section className="bg-[#195A44] max-w-[1240px] mx-auto rounded-[16px] p-12 my-[60px]">
-            <div className="mx-auto">
-              <h2 className="text-2xl md:text-5xl font-bold text-white mb-3">
-                Near the Hospital? We’re a Fast Option
-              </h2>
+          <section className=" py-15 ">
+            <div className="container bg-[#195A44] rounded-[20px] py-14 ">
+              <div className="mx-auto">
+                <h2 className="text-2xl md:text-5xl font-bold text-[#FEFEFE] mb-[10px] ">
+                  Near the Hospital? We’re a Fast Option
+                </h2>
 
-              <p className="text-white text-base md:text-lg">
-                Coming from a hospital area and don’t need the ER? Walk in for same-day care with shorter waits <b>open late, 7 days a week</b>.
-              </p>
+                <p className="text-[#FEFEFE] text-base ">
+                  Coming from a hospital area and don’t need the ER? Walk in for same-day care with shorter waits <b className="text-lg"> open late, 7 days a week</b>.
+                </p>
+              </div>
+              {/* Buttons */}
+              <div className="flex flex-col sm:flex-row gap-6 pt-10 ">
+                <Button
+                  size="lg"
+                  className="bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-6 py-6 flex items-center gap-2"
+                  asChild
+                >
+                  <Link href="/services">
+                    <img
+                      src="/icons/solar_walking-outline.svg"
+                      alt=""
+                      className="w-5 h-5"
+                    />
+                    Walk In Now
+                  </Link>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border border-white text-white hover:bg-transparent bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
+                  asChild
+                >
+                  <Link href="/contact">
+                    <img
+                      src="/images/walk-in/flowbite_map-pin-outline.svg"
+                      alt=""
+                      className="w-5 h-5"
+                    />
+                    Get Direction
+                  </Link>
+                </Button>
+              </div>
             </div>
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-12">
-              <Button
-                size="lg"
-                className="bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-6 py-6 flex items-center gap-2"
-                asChild
-              >
-                <Link href="/services">
-                  <img
-                    src="/icons/solar_walking-outline.svg"
-                    alt=""
-                    className="w-5 h-5"
-                  />
-                  Walk In Now
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border border-white text-white hover:bg-transparent bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
-                asChild
-              >
-                <Link href="/contact">
-                  <img
-                    src="/images/walk-in/flowbite_map-pin-outline.svg"
-                    alt=""
-                    className="w-5 h-5"
-                  />
-                  Get Direction
-                </Link>
-              </Button>
-            </div>
+
           </section>
 
 
@@ -302,13 +246,14 @@ const Family_img = "/images/walk-in/why-us.png";
           {/*Family Medicine Section */}
           <WhyChooseSection
             bg_color="bg-[#F1F9F4]"
+            py=" pt-[141px] pb-[206px]  "
             title={<>Why Choose<br /></>}
             title_2="Our Walk-In Clinic"
             subtitle=""
             items={FamilyMadicine}
             image={Family_img}
             para=" We’re here when other clinics are closed and when you need care the most."
-            full_bg_btn="inline-flex"
+            full_bg_btn="inline-flex mt-4"
             full_btn_link="/walk-in-clinic-calgary"
             full_btn_text="Skip the Wait Walk In Today"
             full_btn_icon="/icons/uil-arrow-up-right.svg"
@@ -319,36 +264,36 @@ const Family_img = "/images/walk-in/why-us.png";
           />
 
 
-        {/* Our Values */}
-        <ValuesSection
-          title="Common Conditions"
-          subtitle="We Treat"
-          description="Our walk-in doctors handle most medical concerns, so you can avoid the ER and get treated quickly"
-          values={values}
-          titleFontWeight="font-medium"
-          useListFormat={true}
-          buttonText="Walk In Anytime No Appointment Needed"
-          buttonLink="/walk-in-clinic-calgary"
-          buttonIcon="/icons/uil-arrow-up-right.svg"
-          buttonIconClass=""
-        />
+          {/* Our Values */}
+          <ValuesSection
+            title="Common Conditions"
+            subtitle="We Treat"
+            description="Our walk-in doctors handle most medical concerns, so you can avoid the ER and get treated quickly"
+            values={values}
+            titleFontWeight="font-medium"
+            useListFormat={true}
+            buttonText="Walk In Anytime No Appointment Needed"
+            buttonLink="/walk-in-clinic-calgary"
+            buttonIcon="/icons/uil-arrow-up-right.svg"
+            buttonIconClass=""
+          />
 
           {/* Bottom Call to Action */}
-          <section className="bg-[#195A44] max-w-[1240px] mx-auto rounded-[16px] py-8 px-18 my-[60px]">
+          <section className="bg-[#195A44] max-w-[1240px] mx-auto rounded-[16px] py-7 px-24 my-[60px]">
             <div className="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-8 items-center">
               {/* Left Column - Text and Buttons */}
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#FEFEFE] ">
                   Open When You Need Us Most
                 </h2>
-                
-                <div className="space-y-3 text-white text-base md:text-lg">
+
+                <div className="space-y-3 text-[#FEFEFE] text-base">
                   <p>
-                  Walk in before or after work we’re open from <b>7:30 AM to 11:00 PM,</b> every day. <br/>Our clinic stays open on weekends and holidays, so you never have to delay car
+                    Walk in before or after work we’re open from <b>7:30 AM to 11:00 PM,</b> every day. <br />Our clinic stays open on weekends and holidays, so you never have to delay car
                   </p>
-                  <p>
-                  <b>You don’t need to call ahead — just come in.</b><br />
-                  Our caring team will help you feel better fast.
+                  <p className="text-[#FEFEFE]  " >
+                    <b className="text-lg" >You don’t need to call ahead — just come in.</b><br />
+                    Our caring team will help you feel better fast.
                   </p>
                 </div>
 
@@ -398,100 +343,98 @@ const Family_img = "/images/walk-in/why-us.png";
           </section>
 
 
-        {/* Meet Our Doctors */}
-        <section className="py-20 bg-gray-50">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="text-5xl font-bold mb-4">
-                Meet <span className="text-[#4A9B8E]">Our Doctors</span>
-              </h2>
-              <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-                Our team of experienced family doctors brings diverse backgrounds and shared dedication to patient care. Our doctors collaborate to ensure continuity of care, whether you walk in for an urgent concern or visit regularly as a registered patient.
-              </p>
-            </div>
+          {/* Meet Our Doctors */}
+          <section className="py-[54px] bg-[#F1F9F4] ">
+            <div className="container">
+              <div className="text-center mb-8">
+                <h2 className="text-5xl font-bold">
+                  Meet <span className="text-[#4A9B8E]">Our Doctors</span>
+                </h2>
+              </div>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto mb-8">
-              {doctors.map((doctor, index) => (
-                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm">
-                  {/* Top Section with Light Green Background */}
-                  <div className="bg-[#4A9B8E]/10 flex items-center justify-center">
-                    <img
-                      src={doctor.avatar}
-                      alt={doctor.name}
-                      className="w-full h-[300px] object-cover"
-                    />
-                  </div>
-                  {/* Bottom Section with White Background */}
-                  <div className="p-4 text-start">
-                    <p className="text-base text-foreground mb-1">{doctor.specialty}</p>
-                    <h3 className="text-2xl font-bold text-foreground font-medium mb-3">{doctor.name}</h3>
-                    <p className="text-base text-foreground">{doctor.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Call-to-Action Button */}
-            <div className="flex justify-center">
-            <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
-                    <Link href="/walk-in-clinic-calgary"><img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5" /> Call 587-391-8188 to Book or Walk In Today</Link>
-                  </Button>
-            </div>
-          </div>
-        </section>
-
-
-        {/* What Patients Say - Video Testimonials */}
-        <section className="py-20 bg-white">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="text-5xl font-bold mb-4">
-                What <span className="text-[#299470]">Patients</span> Say
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              See what Calgary patients are saying about their experience with Now Medical Clinic.
-              </p>
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
-              {videoTestimonials.map((testimonial, index) => (
-                <Card key={index} className="p-0 overflow-hidden rounded hover:shadow-lg transition-shadow border-1 border-[#83C1AC] hover:bg-[#EAF4F1]">
-                  <CardContent className="p-0">
-                    <div className="relative aspect-video bg-gray-100">
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto mb-8">
+                {doctors.map((doctor, index) => (
+                  <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm">
+                    {/* Top Section with Light Green Background */}
+                    <div className="bg-[#4A9B8E]/10 flex items-center justify-center">
                       <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="w-full h-[290px] object-cover"
+                        src={doctor.avatar}
+                        alt={doctor.name}
+                        className="w-full h-[300px] object-cover"
                       />
                     </div>
-                    <div className="py-4 px-4">
-                      <h3 className="font-semibold text-lg mb-2">{testimonial.name}</h3>
-                      <p className="text-sm text-muted-foreground italic">"{testimonial.quote}"</p>
+                    {/* Bottom Section with White Background */}
+                    <div className="p-4 text-start">
+                      <p className="text-base text-foreground mb-1">{doctor.specialty}</p>
+                      <h3 className="text-2xl font-bold text-foreground font-medium mb-3">{doctor.name}</h3>
+                      <p className="text-base text-foreground">{doctor.description}</p>
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
+                  </div>
+                ))}
+              </div>
+
+              {/* Call-to-Action Button */}
+              <div className="flex justify-center">
+                <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
+                  <Link href="/walk-in-clinic-calgary"><img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5" /> Call 587-391-8188 to Book or Walk In Today</Link>
+                </Button>
+              </div>
             </div>
-            <div className="flex justify-center mt-6">
-            <Button
-                    size="lg"
-                    variant="outline"
-                    className="border border-[#299470] text-[#299470] hover:bg-[#299470]/10 font-bold text-lg px-6 py-6 flex items-center gap-2"
-                    asChild
-                  >
-                    <Link href="/patients-stories">
+          </section>
+
+
+          {/* What Patients Say - Video Testimonials */}
+          <section className="py-[54px] bg-white">
+            <div className="container">
+              <div className="text-center mb-6  ">
+                <h2 className="text-5xl font-bold mb-4">
+                  What <span className="text-[#299470]">Patients</span> Are Saying
+                </h2>
+                <p className="text-xl text-[#303030] ">
+                  At Now Medical Clinic, our doctors treat a wide range of medical conditions  <br />
+                  so you can skip the ER and get real help today.
+                </p>
+              </div>
+
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+                {videoTestimonials.map((testimonial, index) => (
+                  <Card key={index} className="p-0 overflow-hidden rounded hover:shadow-lg transition-shadow border-1 border-[#83C1AC] hover:bg-[#EAF4F1]">
+                    <CardContent className="p-0">
+                      <div className="relative aspect-video bg-gray-100">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="w-full h-[290px] object-cover"
+                        />
+                      </div>
+                      <div className="py-4 px-4">
+                        <h3 className="font-bold text-lg text-[#303030] mb-2">{testimonial.name}</h3>
+                        <p className="text-base  text-[#050505] italic">"{testimonial.quote}"</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+              <div className="flex justify-center mt-6">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border border-[#299470] text-[#299470] hover:bg-[#299470]/10 font-bold text-lg px-6 py-6 flex items-center gap-2"
+                  asChild
+                >
+                  <Link href="/patients-stories">
                     See Real Patent Stories
-                      <img
-                        src="/icons/uil-arrow-up-right-grn.svg"
-                        alt=""
-                        className="w-f h-5"
-                      />
-                      
-                    </Link>
-                  </Button>
-                  </div>
-        </div>
-        </section>
+                    <img
+                      src="/icons/uil-arrow-up-right-grn.svg"
+                      alt=""
+                      className="w-f h-5"
+                    />
+
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </section>
 
 
           {/* Find Us */}

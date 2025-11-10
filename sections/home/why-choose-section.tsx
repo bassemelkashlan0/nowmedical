@@ -40,12 +40,16 @@ interface WhyChooseSectionProps {
   h2_color_1?: string;
   h2_color_2?: string;
   h2_sub_color?: string;
+  sub_desc_color?: string;
   btn_2_bg?: string;
   btn_2_iconAfter?: boolean;
   singleButton?: boolean;
   btn_1_bg?: string;
   itemsAsParagraph?: boolean;
   address?: string;
+  para_color?: string,
+  para_mb?: string,
+  h2_py?: string
 }
 
 export default function WhyChooseSection({
@@ -78,15 +82,19 @@ export default function WhyChooseSection({
   h2_color_1,
   h2_color_2,
   h2_sub_color,
+  sub_desc_color,
   btn_2_bg,
   btn_2_iconAfter = false,
   singleButton = false,
   btn_1_bg,
   itemsAsParagraph = false,
-  address
+  address,
+  para_color,
+  para_mb,
+  h2_py
 }: WhyChooseSectionProps) {
   return (
-    <section className={" px-4 md:px-8 " + (bg_color ? bg_color : "") + (py ? py : " py-4 md:py-14 ")}>
+    <section className={" px-4 md:px-8 " + (bg_color ? bg_color : "") + (py ? py : " py-4 md:py-[54px] ")}>
       <div className="container">
         <div className="grid md:grid-cols-2 gap-18 items-center">
           {image && (
@@ -100,20 +108,22 @@ export default function WhyChooseSection({
           )}
 
           <div className={(order ? order : "")}>
-            <h2 className={"text-5xl font-bold mb-5 "}>
-              <span className={" " + (h2_color_1 ? h2_color_1 : ' text-[#303030] ')}>   {title}  </span> <span className={' ' + (h2_color_2 ? h2_color_2 :  " text-[#299470] ")}>{title_2}</span> <br /> <span className={ (h2_sub_color ? h2_sub_color : "text-[#299470]" )}>{subtitle}</span>
+            <h2 className={"text-5xl font-bold " + ( h2_py ? h2_py : " mb-4  ") }>
+              <span className={" " + (h2_color_1 ? h2_color_1 : ' text-[#303030] ')}>   {title}  </span> <span className={' ' + (h2_color_2 ? h2_color_2 : " text-[#299470] ")}>{title_2}</span> <br /> <span className={(h2_sub_color ? h2_sub_color : "text-[#299470]")}>{subtitle}</span>
             </h2>
-            <p className='text-[#303030] text-3xl font-medium mb-2 ' > {Sub_desc} </p>
-            <p className="text-lg text-foreground mb-5">
+
+            <p className={' text-3xl font-medium mb-2 ' + (sub_desc_color ? sub_desc_color : 'text-[#303030]')}> {Sub_desc} </p>
+            <p className={"text-base text-[#303030]  " + (para_color ? para_color : " text-[#303030] ") + " " +
+              (para_mb ? para_mb : "mb-6")}>
               {para}
             </p>
 
-            <p className="text-lg text-foreground mb-4 ">
+            <p className="text-base text-[#303030] mb-4 mt-8 ">
               {para_2}
             </p>
 
             {itemsAsParagraph ? (
-              <div className="mb-7 font-semibold text-lg text-foreground">
+              <div className="mb-7 font-semibold text-lg text-[#303030]">
                 {items.map((item, index) => (
                   <p key={index} className="flex items-start gap-3 mb-2">
                     {IsDot ? (
@@ -126,7 +136,7 @@ export default function WhyChooseSection({
                 ))}
               </div>
             ) : (
-              <ul className="space-y-4 mb-7">
+              <ul className="space-y-4 mb-6">
                 {items.map((item, index) => (
                   <li key={index} className="flex items-start gap-3 font-semibold text-lg text-foreground">
 
@@ -136,7 +146,7 @@ export default function WhyChooseSection({
                       <CheckIcon className="w-6 h-6 text-[#299470] flex-shrink-0 mt-1" />
                     )}
 
-                    <span className="text-lg">{item.text}</span>
+                    <span className="text-lg text-[#303030] font-bold ">{item.text}</span>
                   </li>
                 ))}
               </ul>
@@ -186,9 +196,9 @@ export default function WhyChooseSection({
                 </div>
                 {address && (
                   <div className="flex items-center gap-2  inline-flex">
-                    <img 
-                      src="/images/hospital-wait-times/flowbite_map-pin-outline.svg" 
-                      alt="Location" 
+                    <img
+                      src="/images/hospital-wait-times/flowbite_map-pin-outline.svg"
+                      alt="Location"
                       className="w-5 h-5"
                     />
                     <span className="text-lg text-[#299470] font-bold">{address}</span>

@@ -5,14 +5,14 @@ import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { ChevronDown, Menu } from "lucide-react"
 import { Logo } from "@/components/logo"
-import { 
-  DropdownMenu, 
-  DropdownMenuContent, 
-  DropdownMenuItem, 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
   DropdownMenuTrigger,
   DropdownMenuSub,
   DropdownMenuSubTrigger,
-  DropdownMenuSubContent 
+  DropdownMenuSubContent
 } from "@/components/ui/dropdown-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { useState } from "react"
@@ -23,42 +23,42 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-[#EAF4F1] backdrop-blur supports-[backdrop-filter]:bg-[#EAF4F1]">
-      <div className="container flex py-4 items-center justify-between">
+      <div className="container flex md:h-[81px] items-center justify-between">
         <Link href="/" className="flex items-center">
-          <Logo className="h-8 w-auto" />
+          <Logo className="" />
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-2">
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-1 text-sm font-medium transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-3 py-2">
+              <button className="flex items-center gap-1 text-base text-[#242121] font-normal transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-3 py-2">
                 Walk-In Clinic <ChevronDown className="h-4 w-4" />
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="min-w-[240px]">
               <DropdownMenuItem asChild>
-                <Link href="/walk-in-clinic-calgary" className={pathname === '/walk-in-clinic-calgary' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                <Link href="/walk-in-clinic-calgary" className={pathname === '/walk-in-clinic-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                   Walk-In Clinic Calgary
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/urgent-care-calgary" className={pathname === '/urgent-care-calgary' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                <Link href="/urgent-care-calgary" className={pathname === '/urgent-care-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                   Urgent Care Calgary
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/late-night-clinic" className={pathname === '/late-night-clinic' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                <Link href="/late-night-clinic" className={pathname === '/late-night-clinic' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                   Late-Night Clinic
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/24-hour-walk-in-clinic-calgary" className={pathname === '/24-hour-walk-in-clinic-calgary' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                <Link href="/24-hour-walk-in-clinic-calgary" className={pathname === '/24-hour-walk-in-clinic-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                   24-Hour / Extended Hours
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/walk-in-clinic-weekends" className={pathname === '/walk-in-clinic-weekends' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                <Link href="/walk-in-clinic-weekends" className={pathname === '/walk-in-clinic-weekends' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                   Weekend & Holiday Clinic
                 </Link>
               </DropdownMenuItem>
@@ -68,32 +68,32 @@ export function Header() {
                 </DropdownMenuSubTrigger>
                 <DropdownMenuSubContent className="min-w-[280px]">
                   <DropdownMenuItem asChild>
-                    <Link href="/walk-in-clinic-near-peter-lougheed-hospital" className={pathname === '/walk-in-clinic-near-peter-lougheed-hospital' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                    <Link href="/walk-in-clinic-near-peter-lougheed-hospital" className={pathname === '/walk-in-clinic-near-peter-lougheed-hospital' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                       Near Peter Lougheed Hospital
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/walk-in-clinic-near-foothills-hospital" className={pathname === '/walk-in-clinic-near-foothills-hospital' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                    <Link href="/walk-in-clinic-near-foothills-hospital" className={pathname === '/walk-in-clinic-near-foothills-hospital' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                       Near Foothills Hospital
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/walk-in-clinic-near-rockyview-hospital" className={pathname === '/walk-in-clinic-near-rockyview-hospital' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                    <Link href="/walk-in-clinic-near-rockyview-hospital" className={pathname === '/walk-in-clinic-near-rockyview-hospital' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                       Near Rockyview Hospital
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/walk-in-clinic-near-alberta-childrens-hospital" className={pathname === '/walk-in-clinic-near-alberta-childrens-hospital' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                    <Link href="/walk-in-clinic-near-alberta-childrens-hospital" className={pathname === '/walk-in-clinic-near-alberta-childrens-hospital' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                       Near Alberta Children's Hospital
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/walk-in-clinic-near-south-health-campus" className={pathname === '/walk-in-clinic-near-south-health-campus' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                    <Link href="/walk-in-clinic-near-south-health-campus" className={pathname === '/walk-in-clinic-near-south-health-campus' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                       Near South Health Campus
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/walk-in-clinic-near-sheldon-m-chumir-health-centre" className={pathname === '/walk-in-clinic-near-sheldon-m-chumir-health-centre' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                    <Link href="/walk-in-clinic-near-sheldon-m-chumir-health-centre" className={pathname === '/walk-in-clinic-near-sheldon-m-chumir-health-centre' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                       Near Sheldon M. Chumir Centre
                     </Link>
                   </DropdownMenuItem>
@@ -104,23 +104,23 @@ export function Header() {
 
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-1 text-sm font-medium transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-3 py-2">
+              <button className="flex items-center gap-1 text-base text-[#242121] font-normal transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-3 py-2">
                 Family Doctor <ChevronDown className="h-4 w-4" />
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="min-w-[260px]">
               <DropdownMenuItem asChild>
-                <Link href="/family-doctors-accepting-new-patients" className={pathname === '/family-doctors-accepting-new-patients' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                <Link href="/family-doctors-accepting-new-patients" className={pathname === '/family-doctors-accepting-new-patients' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                   Family Doctors Accepting New Patients
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/female-family-doctor-calgary" className={pathname === '/female-family-doctor-calgary' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                <Link href="/female-family-doctor-calgary" className={pathname === '/female-family-doctor-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                   Female Family Doctor Calgary
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/meet-our-doctors" className={pathname === '/meet-our-doctors' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                <Link href="/meet-our-doctors" className={pathname === '/meet-our-doctors' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                   Meet Our Doctors
                 </Link>
               </DropdownMenuItem>
@@ -129,18 +129,18 @@ export function Header() {
 
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-1 text-sm font-medium transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-3 py-2">
+              <button className="flex items-center gap-1 text-base text-[#242121] font-normal transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-3 py-2">
                 Services <ChevronDown className="h-4 w-4" />
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="min-w-[220px]">
               <DropdownMenuItem asChild>
-                <Link href="/services" className={pathname === '/services' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                <Link href="/services" className={pathname === '/services' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                   All Services
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/drivers-medical-calgary" className={pathname === '/drivers-medical-calgary' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
+                <Link href="/drivers-medical-calgary" className={pathname === '/drivers-medical-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                   Driver's Medical Exams
                 </Link>
               </DropdownMenuItem>
@@ -156,47 +156,33 @@ export function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <DropdownMenu modal={false}>
-            <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-1 text-sm font-medium transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-3 py-2">
-                About <ChevronDown className="h-4 w-4" />
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start" className="min-w-[200px]">
-              <DropdownMenuItem asChild>
-                <Link href="/about" className={pathname === '/about' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
-                  About Us
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/best-walk-in-clinic-calgary" className={pathname === '/best-walk-in-clinic-calgary' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
-                  Why Choose Us
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/patient-experience" className={pathname === '/patient-experience' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
-                  Patient Experience
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/reviews" className={pathname === '/reviews' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
-                  Reviews
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/faq" className={pathname === '/faq' ? 'bg-[#299470]/10 text-[#299470] font-semibold' : ''}>
-                  FAQ
-                </Link>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <button className="flex items-center gap-1 text-base text-[#242121] font-normal transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-3 py-2">
+            <Link href='/reviews' >
+              Reviews
+            </Link>
+          </button>
+
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button className="hidden md:flex bg-[#299470] hover:bg-[#2D7B6F] text-white py-[11px] px-8">
-            <Link href="/contact" className="text-lg font-bold flex items-center gap-2">
+          <Button asChild className="hidden w-full text-lg md:w-[173px] md:flex bg-[#299470] hover:bg-[#2D7B6F] text-white">
+            <Link href="/contact" >
               Contact Us
-              <ChevronDown className="ml-1 h-4 w-4" />
+              {/* <ChevronDown className="ml-1 h-[20px] w-[20px]" /> */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="ml-1 !h-[20px] !w-[20px] flex-shrink-0 block text-white"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+
+
             </Link>
           </Button>
 

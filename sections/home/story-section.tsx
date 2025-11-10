@@ -18,7 +18,7 @@ export default function StorySection({
       <div className="container">
 
 
-        <div className="grid md:grid-cols-2 gap-18 items-center justify-center mb-12">
+        <div className="grid md:grid-cols-2 gap-18 items-center justify-center">
         {images[0] && (
             <div className="relative overflow-hidden">
               <img
@@ -33,7 +33,7 @@ export default function StorySection({
           {title} {typeof subtitle === 'string' ? <span className="text-[#299470]">{subtitle}</span> : subtitle}
         </h2>
             {content.map((paragraph, index) => (
-              <p key={index} className="text-lg text-foreground leading-relaxed">
+              <p key={index} className="text-base text-[#050505] leading-relaxed">
                 {paragraph}
               </p>
             ))}

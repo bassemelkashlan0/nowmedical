@@ -87,7 +87,7 @@ export function LiveStatusBanner() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-semibold block text-3xl text-[#050505]">Walk-in Live Status</span>
+              <span className="font-medium block text-3xl text-[#050505]">Walk-in Live Status</span>
               <span className="hidden block sm:inline text-base text-[#050505]">
                 Walk-in is {isActive ? "OPEN NOW" : "CLOSED"}
               </span>
@@ -96,7 +96,7 @@ export function LiveStatusBanner() {
 
           <div className="flex items-center  gap-[24px]">
             <div className="flex flex-col">
-              <span className="font-semibold block text-3xl text-[#050505]">
+              <span className="font-medium block text-3xl text-[#050505]">
                 {formatTime(currentTime)}
               </span>
               <span className="hidden block sm:inline text-base text-[#050505]">

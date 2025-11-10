@@ -25,14 +25,14 @@ interface WalkInHeroSectionProps {
 export default function WalkInHeroSection({
   title = (
     <>
-      <span className="text-[#299470]">Walk-In Clinic Calgary</span><br/>
+      <span className="text-[#299470]">Walk-In Clinic Calgary</span><br />
       Open 7 Days Until 11 PM
     </>
   ),
   subtitle = "Including Weekend and Holidays",
   description = (
     <>
-      Need a doctor today? Walk in anytime — no appointment needed. We're open 7 days late <b>evenings, weekends, and holidays</b> to help you feel better faster.
+      Need a doctor today? Walk in anytime — no appointment needed. <br /> We're open 7 days late <b>evenings, weekends, and holidays</b> to help you feel better faster.
     </>
   ),
   additionalText = "Real doctors. Short wait convenient Calgary location",
@@ -62,30 +62,30 @@ export default function WalkInHeroSection({
   className = ""
 }: WalkInHeroSectionProps) {
   return (
-    <section className={`${bgColor} py-8 ${className}`}>
+    <section className={`${bgColor} py-11  ${className}`}>
       <div className="container">
-        <div className="grid gap-18 lg:grid-cols-2 lg:gap-8 items-center">
+        <div className="grid justify-between gap-18 lg:grid-cols-[55%_40%] lg:gap-8 items-center">
           {/* Left Section - Text Content (60-70% width) */}
           <div className="space-y-4">
-            <h1 className="text-6xl font-bold text-foreground mb-5">
+            <h1 className="text-6xl font-bold text-[#303030] mb-[21px] ">
               {title}
             </h1>
             {subtitle && (
-              <p className="text-3xl font-medium text-[#303030] mb-5">
+              <p className="text-3xl font-medium text-[#303030] mb-[21px] ">
                 {subtitle}
               </p>
             )}
             {description && (
-              <p className="text-base text-foreground mb-4">
+              <p className="text-base text-[#303030] mb-1 ">
                 {description}
               </p>
             )}
             {additionalText && (
-              <p className="text-lg font-bold text-foreground">
+              <p className=" mb-0 ext-lg font-bold text-[#050505] ">
                 {additionalText}
               </p>
             )}
-            
+
             {/* Buttons */}
             {buttons && buttons.length > 0 && (
               <div className="flex flex-col sm:flex-row gap-4 pt-12">
@@ -104,10 +104,10 @@ export default function WalkInHeroSection({
                   >
                     <Link href={button.link}>
                       {button.icon && (
-                        <img 
-                          src={button.icon} 
-                          alt="" 
-                          className="w-5 h-5" 
+                        <img
+                          src={button.icon}
+                          alt=""
+                          className="w-5 h-5"
                         />
                       )}
                       {button.text}
@@ -119,20 +119,22 @@ export default function WalkInHeroSection({
           </div>
 
           {/* Right Section - Image with Graphics (30-40% width) */}
-          {image && (
-            <div className="">
-              <div className="relative w-full">              
-                {/* Doctor Image */}
-                <div className="relative z-30">
-                  <img
-                    src={image}
-                    alt={imageAlt}
-                    className="w-full h-auto"
-                  />
+          <div className="flex item-end justify-end">
+            {image && (
+              <div className="">
+                <div className="relative w-full">
+                  {/* Doctor Image */}
+                  <div className="relative z-30">
+                    <img
+                      src={image}
+                      alt={imageAlt}
+                      className="w-full h-auto"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </section>

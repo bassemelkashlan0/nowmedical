@@ -128,7 +128,7 @@ export default function HospitalPeterLougheed() {
             <LiveStatusBanner />
             <main>
                 {/* Hero Section with Banner */}
-                <section className="bg-[#F1F9F4] to-white pt-8 pb-14">
+                <section className="bg-[#F1F9F4] to-white py-11">
                     <div className="container">
                         <div className="grid gap-4 lg:grid-cols-[55%_44%] lg:gap-4 items-center  ">
                             <div>
@@ -140,7 +140,7 @@ export default function HospitalPeterLougheed() {
                                     <span className="text-[#303030]">Open 7 Days Until 11 PM</span>
                                 </h1>
 
-                                <p className=" text-3xl text-[#303030] mb-4 ">Including Weekend and Holidays </p>
+                                <p className=" text-3xl text-[#303030] mb-4 font-medium ">Including Weekend and Holidays </p>
 
                                 <p className="text-base  text-[#303030] mb-4">
                                     Need medical care and want to skip long ER waits? Walk in and see a real family doctor today <br />
@@ -190,6 +190,7 @@ export default function HospitalPeterLougheed() {
                     title="Why "
                     title_2="Choose Us"
                     subtitle=""
+                    h2_py=" mb-5"
                     items={whyChooseItems}
                     IsDot={true}
                     image={whyChoose_img.src}

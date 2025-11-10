@@ -240,7 +240,7 @@ export default function HospitalWaitTimesPage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white pt-8 pb-14">
+          <section className="bg-[#F1F9F4] to-white pt-10 pb-[111px]  ">
             <div className="container">
               <div className="grid gap-4 lg:grid-cols-[59%_40%] lg:gap-4 items-center  ">
                 <div>
@@ -249,20 +249,24 @@ export default function HospitalWaitTimesPage() {
                     Open 7 Days Until 11 PM
                   </h1>
 
-                  <p className=" text-3xl text-[#303030] mb-4 mt-9 ">The Reality of Calgary’s Hospital Wait Times </p>
+                  <p className=" text-3xl font-medium text-[#303030] mb-4 mt-13 ">The Reality of Calgary’s Hospital Wait Times </p>
 
-                  <p className="text-base  text-[#303030] mb-4">
-                    If you’ve ever searched for <b>“Calgary hospital wait times”</b> , you already know how unpredictable emergency departments can be. <br />
-                    Depending on the time of day, <b>ER waits in Calgary hospitals can stretch from 3 to 8 hours</b>  especially at <b>Foothills Medical Centre, Peter Lougheed Centre,</b> or <b>Rockyview General Hospital.</b>
-                  </p>
+                  <div className="">
+                    <p className="text-base  text-[#303030] mb-4">
+                      If you’ve ever searched for <b>“Calgary hospital wait times”</b> , you already know how unpredictable emergency <br />
+                      departments can be. <br />
+                      Depending on the time of day, <b>ER waits in Calgary hospitals can stretch from 3 to 8 <br />
+                        hours</b>  especially at <b>Foothills Medical Centre, Peter Lougheed Centre,</b> or <b>Rockyview General Hospital.</b>
+                    </p>
 
-                  <p className="text-base  text-[#303030] mb-4">
-                    But most people waiting in the ER don’t actually need emergency care. <br />
-                    They simply need to see a <b>real doctor fast</b> for infections, fever, minor injuries, or medication renewals.
-                  </p>
-                  <p className="text-base  text-[#303030] mb-4">
-                    That’s exactly why <b>Now Medical Clinic </b> exists.
-                  </p>
+                    <p className="text-base  text-[#303030] mb-4">
+                      But most people waiting in the ER don’t actually need emergency care. <br />
+                      They simply need to see a <b>real doctor fast</b> for infections, fever, minor injuries, or medication renewals.
+                    </p>
+                    <p className="text-base  text-[#303030] mb-4">
+                      That’s exactly why <b>Now Medical Clinic </b> exists.
+                    </p>
+                  </div>
 
 
                 </div>
@@ -298,8 +302,6 @@ export default function HospitalWaitTimesPage() {
           />
 
 
-
-
           {/* Hospital Wait Times Comparison */}
           <LiveWaitTimesSection
             title="Hospital Wait Times vs. Now Medical Clinic"
@@ -307,22 +309,25 @@ export default function HospitalWaitTimesPage() {
           />
 
           {/* Hours Section */}
-          <section className="py-20 bg-white">
+          <section className="py-[54px] bg-white">
             <div className="container">
               <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
                 <div>
-                  <h2 className="text-5xl font-bold mb-4">
+                  <h2 className="text-5xl text-[#303030] font-bold mb-4">
                     <span className="text-[#299470]">Open Late</span>, Open Weekends, Open on Holidays
                   </h2>
                   <div className="space-y-4 text-foreground">
                     <p className="text-base">
-                      We’re one of Calgary’s <b>only medical clinics open until 11 PM every day,</b> including Saturdays, Sundays, and holidays.
+                      We’re one of Calgary’s <b>only medical clinics open until 11 PM every day,</b> <br />
+                      including Saturdays, Sundays, and holidays.
                     </p>
                     <p className="text-base">
-                      Many patients visit us after checking ER wait times and realizing they don’t need to spend the night waiting in line.
+                      Many patients visit us after checking ER wait times and realizing they don’t need to <br />
+                      spend the night waiting in line.
                     </p>
                     <p className="text-base">
-                      So instead of waiting at the hospital, <b>walk in to Now Medical Clinic</b> fast, real, and compassionate care.
+                      So instead of waiting at the hospital, <b>walk in to Now Medical Clinic</b> fast, real, and <br />
+                      compassionate care.
                     </p>
                   </div>
                 </div>
@@ -358,9 +363,7 @@ export default function HospitalWaitTimesPage() {
             subtitle="Now Medical Clinic"
             items={familyMedicineItems}
             image={FamilyMedicine_img.src}
-            h2_color_1="text-[#299470]"
-            h2_color_2="text-[#303030]"
-            h2_sub_color="text-[#303030]"
+            h2_sub_color="text-[#299470]"
           />
 
           {/* What Patients Say */}
@@ -371,7 +374,7 @@ export default function HospitalWaitTimesPage() {
             heading_last="Say"
             description=" See what Calgary patients are saying about their experience with Now Medical Clinic."
             Items={videoTestimonials}
-            // btn_show=" block"
+            btn_show=" flex"
             btn_text=" See What Patients Are Saying"
           />
 
@@ -394,15 +397,15 @@ export default function HospitalWaitTimesPage() {
             <div className="container  max-w-[1080px] w-full">
               <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
                 <div>
-                  <h2 className="text-5xl font-bold mb-4">
+                  <h2 className="text-5xl text-[#303030] font-bold mb-4">
                     <span className="text-[#299470]">Skip the Line </span> <br />
                     See a Doctor Now
                   </h2>
                   <div className="space-y-4 text-foreground">
-                    <p className="text-xl mb-6">
+                    <p className="text-xl text-[#303030] mb-6">
                       Stop waiting in the ER
                     </p>
-                    <p className="text-base">
+                    <p className="text-base text-[#303030] ">
                       <b>Walk in today or call 587-391-8188</b> to speak with our team. <br />
                       We’re open <b>7 days a week until 11 PM,</b> including weekends and holidays.
                     </p>
@@ -421,12 +424,12 @@ export default function HospitalWaitTimesPage() {
             </div>
           </section>
 
-<div className="pt-15"></div>
+          <div className="pt-15"></div>
           {/* CTA Banner */}
           <BottomCallAction
-          title='Hospital Wait Times Calgary | Skip the Line | '
-          title_2="Walk-In Clinic Open Until 11 PM"
-          description="Tired of long hospital wait times in Calgary? Walk in to Now Medical Clinic — open 7 days until 11 PM. Real doctors, no appointment needed."
+            title='Hospital Wait Times Calgary | Skip the Line | '
+            title_2="Walk-In Clinic Open Until 11 PM"
+            description="Tired of long hospital wait times in Calgary? Walk in to Now Medical Clinic — open 7 days until 11 PM. Real doctors, no appointment needed."
           />
         </main>
 

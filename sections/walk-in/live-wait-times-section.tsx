@@ -36,21 +36,21 @@ export default function LiveWaitTimesSection({
   currentWaitTime = "< 30 min"
 }: LiveWaitTimesSectionProps) {
   return (
-    <section className="py-16 px-4 md:px-8 bg-[#F1F9F4]">
+    <section className="py-[54px] px-4 md:px-8 bg-[#F1F9F4]">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-5xl font-bold text-center mb-12">
+        <h2 className="text-5xl font-bold text-center mb-6 ">
           <span className="text-[#299470]">Hospital Wait Times</span> <span className="text-[#303030]">vs. Now Medical Clinic</span>
         </h2>
 
-        <div className="overflow-x-auto mb-6">
+        <div className="overflow-x-auto mb-4">
           <table className="w-full border-collapse overflow-hidden border border-gray-200">
             <thead>
               <tr className="bg-[#A7D3C4]">
                 <th className="text-left text-lg py-4 px-6 font-bold border border-gray-200"></th>
-                <th className="text-center text-lg py-4 px-6 font-bold border border-gray-200">
+                <th className="text-center text-[#303030] text-lg py-4 px-6 font-bold border border-gray-200">
                   Average Hospital ER (Calgary)
                 </th>
-                <th className="text-center text-lg py-4 px-6 font-bold border border-gray-200">
+                <th className="text-center text-[#303030] text-lg py-4 px-6 font-bold border border-gray-200">
                   Now Medical Clinic
                 </th>
               </tr>
@@ -61,13 +61,13 @@ export default function LiveWaitTimesSection({
                   key={index} 
                   className={index % 2 === 0 ? "bg-transparent" : "bg-[#F9F9F9]"}
                 >
-                  <td className="py-4 px-6 font-bold text-lg border border-gray-200">
+                  <td className="py-4 px-6 text-[#303030] font-bold text-lg border border-gray-200">
                     {row.label}
                   </td>
-                  <td className="py-4 px-6 text-center text-lg border border-gray-200">
+                  <td className="py-4 px-6 text-center text-base text-[#303030] border border-gray-200">
                     {row.hospital}
                   </td>
-                  <td className="py-4 px-6 text-center text-lg border border-gray-200">
+                  <td className="py-4 px-6 text-center text-base text-[#303030] border border-gray-200">
                     {row.clinic}
                   </td>
                 </tr>
@@ -76,8 +76,8 @@ export default function LiveWaitTimesSection({
           </table>
         </div>
 
-        <p className="text-sm text-left">
-          If you have life-threatening symptoms such as chest pain, severe bleeding, or trouble breathing, <strong>call 911</strong> <br />
+        <p className="text-[12px]  text-left">
+          If you have life-threatening symptoms such as chest pain, severe bleeding, or trouble breathing, <strong className="text-[14px]" >call 911</strong> <br />
            or go to the nearest emergency department.
         </p>
       </div>

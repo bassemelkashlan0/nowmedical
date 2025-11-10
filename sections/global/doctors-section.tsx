@@ -39,6 +39,7 @@ interface DoctorsSectionProps {
   descriptionClassName?: string;
   useCarousel?: boolean;
   bgColor?: string;
+  sec_py? :string;
 }
 
 export default function DoctorsSection({
@@ -50,6 +51,7 @@ export default function DoctorsSection({
   description,
   descriptionClassName,
   useCarousel = false,
+  sec_py,
   bgColor = "bg-[#F1F9F4]"
 }: DoctorsSectionProps) {
   const [api, setApi] = useState<CarouselApi>();
@@ -68,6 +70,7 @@ export default function DoctorsSection({
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
+
   const renderDoctorCard = (doctor: Doctor, index: number) => (
     <Card key={index} className={`overflow-hidden p-0 gap-0 shadow-[0px_10px_14px_0px_#0000000D] mb-4 ${doctor.cardClassName || ''}`}>
       <div className="aspect-square bg-[#EAF4F1] relative">
@@ -108,13 +111,17 @@ export default function DoctorsSection({
   const doctorSlides = useCarousel ? groupDoctorsIntoSlides(allDoctors, 4) : [];
 
   return (
-    <section className={`py-16 px-4 md:px-8 ${bgColor}`}>
+    <section className={` px-4 md:px-8  ${bgColor} ` + (sec_py ? sec_py : "  py-[54px] ") }>
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-5xl font-bold text-center mb-4">
-          <span className="text-[#299470]">{title.split(' ').slice(0, -1).join(' ')}</span> {title.split(' ')[title.split(' ').length - 1]}
-        </h2>
+        <h2 className="text-5xl font-bold text-[#299470] text-center mb-4">
+          <span>
+            <span className="text-[#303030]">
+              {title.split(' ')[0]}
+            </span>{" "}
+            {title.split(' ').slice(1).join(' ')}
+          </span>        </h2>
         {description && (
-          <p className={`text-center mb-8 ${descriptionClassName || ''}`}>
+          <p className={`text-center text-[#303030] mb-8 ${descriptionClassName || ''}`}>
             {description}
           </p>
         )}
@@ -122,7 +129,7 @@ export default function DoctorsSection({
         {showCategories && femaleDoctors.length > 0 && (
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-6">Our Female Family Doctors</h3>
-            <div className="grid md:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-4 gap-5">
               {femaleDoctors.map(renderDoctorCard)}
             </div>
           </div>
@@ -150,7 +157,7 @@ export default function DoctorsSection({
                 {doctorSlides.map((slide, slideIndex) => (
                   <CarouselItem key={slideIndex}>
                     <div className="grid md:grid-cols-4 gap-6">
-                      {slide.map((doctor, doctorIndex) => 
+                      {slide.map((doctor, doctorIndex) =>
                         renderDoctorCard(doctor, slideIndex * 4 + doctorIndex)
                       )}
                     </div>
@@ -164,11 +171,10 @@ export default function DoctorsSection({
                 <button
                   key={index}
                   onClick={() => api?.scrollTo(index)}
-                  className={`h-2 w-2 rounded-full transition-all ${
-                    index + 1 === current
+                  className={`h-2 w-2 rounded-full transition-all ${index + 1 === current
                       ? 'bg-[#299470] w-8'
                       : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
+                    }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
@@ -183,7 +189,7 @@ export default function DoctorsSection({
                 key={index}
                 size="lg"
                 variant={button.variant || "default"}
-                className={button.className || (button.variant === "outline" 
+                className={button.className || (button.variant === "outline"
                   ? "border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
                   : "bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg")}
                 asChild
@@ -204,13 +210,13 @@ export default function DoctorsSection({
             ))
           ) : (
             <>
-              <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
+              <Button size="lg" className="bg-[#299470] font-bold hover:bg-[#2D7B6F] text-white text-lg" asChild>
                 <Link href="/walk-in-clinic-calgary">Register as a New Patient Today</Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
+                className="border-[#299470] text-[#299470] font-bold hover:bg-[#299470]/10 bg-transparent text-lg"
                 asChild
               >
                 <Link href="/services">Meet Our Doctors <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>

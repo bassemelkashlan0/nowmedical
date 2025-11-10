@@ -177,16 +177,16 @@ export default function OurServicesPage() {
                     <div className="container">
                         <div className="grid gap-4 lg:grid-cols-[50%_48%] lg:gap-4 items-center  ">
                             <div>
-                                <h1 className="text-[#299470] font-bold tracking-tight lg:text-6xl mb-6">
+                                <h1 className="text-[#299470] font-bold tracking-tight lg:text-6xl mb-[21px] ">
                                     Complete Medical Care
                                     <br />
                                     <span className="text-[#303030]">Walk-In & Family Doctors
                                         in Calgary</span>
                                 </h1>
-                                <p className="text-base text-muted-foreground mb-4">
+                                <p className="text-base text-muted-foreground mb-1">
                                     From everyday illnesses to long-term family care, our doctors provide <b>comprehensive, compassionate medical services</b> open <b>7 days a week until 11 PM,</b> including <b>weekends and holidays.</b>
                                 </p>
-                                <div className="flex flex-col sm:flex-row gap-4">
+                                <div className="flex flex-col sm:flex-row gap-4 pt-12">
                                     <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>
                                         <Link href="/walk-in-clinic-calgary"> <img src={phone_icon.src} alt="Register as a new patient" className="w-5 h-5" /> Call 587-391-8188 to Register</Link>
                                     </Button>
@@ -239,7 +239,7 @@ export default function OurServicesPage() {
                     image={Family_img.src}
                     para=" Our family physicians are accepting new patients in Calgary and provide ongoing, personalized medical care for patients of all ages from infants to seniors."
                     para_2="We help with:"
-                    both_btn="flex pt-9"
+                    both_btn="flex pt-7"
                     btn_1_icon="/icons/btn_phone-outline-icon.svg"
                     btn_1_link="tel:587-391-8188"
                     btn_1_text="Call 587-391-8188"
@@ -250,6 +250,7 @@ export default function OurServicesPage() {
                     IsDot={true}
                     h2_color_1="text-[#299470]"
                     h2_color_2="text-[#303030]"
+                    h2_py='mb-6'
                 />
 
                 {/* Women Helth's Section  */}
@@ -261,7 +262,7 @@ export default function OurServicesPage() {
                     image={Women_helth_img.src}
                     para=" Our female family doctors provide private and compassionate care for all women’s health needs."
                     para_2="Services include:"
-                    both_btn="flex pt-9"
+                    both_btn="flex pt-7"
                     btn_1_icon="/icons/solar_walking-outline.svg"
                     btn_1_link="#"
                     btn_1_text="Walk In Now"
@@ -285,7 +286,7 @@ export default function OurServicesPage() {
                     para_2="We treat:"
                     items={ChildrenCare}
                     image={Children_img.src}
-                    both_btn="flex pt-9"
+                    both_btn="flex pt-7"
                     btn_1_icon="/icons/btn_phone-outline-icon.svg"
                     btn_1_link="tel:587-391-8188"
                     btn_1_text="Call 587-391-8188"
@@ -308,7 +309,7 @@ export default function OurServicesPage() {
                     image={sexual_img.src}
                     para="Private, judgment-free, and confidential. Our doctors offer sexual health consultations and testing in a comfortable environment."
                     para_2="We treat:"
-                    both_btn="flex pt-9"
+                    both_btn="flex pt-2"
                     btn_1_icon="/icons/solar_walking-outline.svg"
                     btn_1_link="#"
                     btn_1_text="Walk In Now"
@@ -326,10 +327,15 @@ export default function OurServicesPage() {
                     bg_color="bg-[#F1F9F4]"
                     title="Vaccinations"
                     subtitle="& Preventive Care"
-                    para=" Stay healthy all year long. We offer immunizations, flu shots, and preventive health consultations for all ages."
+                    para={
+                        <>
+                            Stay healthy all year long. <br />
+                            We offer immunizations, flu shots, and preventive health consultations for all ages.
+                        </>
+                    }
                     items={Vaccinations}
                     image={Vaccionation_img.src}
-                    both_btn="flex pt-9"
+                    both_btn="flex pt-7"
                     btn_1_icon="/icons/solar_walking-outline.svg"
                     btn_1_link="#"
                     btn_1_text="Walk In Now"
@@ -349,7 +355,7 @@ export default function OurServicesPage() {
                     para="Fast prescription renewals and medication reviews to keep your treatment consistent and safe."
                     items={prescriptionServices}
                     image={Precscription_img.src}
-                    both_btn="flex pt-9"
+                    both_btn="flex pt-2"
                     btn_1_icon="/icons/solar_walking-outline.svg"
                     btn_1_link="#"
                     btn_1_text="Walk In Now"
@@ -368,7 +374,7 @@ export default function OurServicesPage() {
                     subtitle="Now Medical Clinic"
                     items={whyChooseItems}
                     image={whychoose_img.src}
-                    both_btn="flex pt-9"
+                    both_btn="flex pt-2"
                     btn_1_icon="/icons/solar_walking-outline.svg"
                     btn_1_link="#"
                     btn_1_text="Walk In Now"

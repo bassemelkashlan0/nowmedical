@@ -208,19 +208,19 @@ export default function HomePage() {
   const testimonials = [
     {
       name: "Sanny Cooper",
-      avatar: "/images/placeholder-user.jpg",
+      avatar: "/images/landing/review_1.png",
       rating: 5,
       text: "Really good experience at this walk-in clinic. I was in and out in about 1.5 hours, and most of that wait was for the pharmacy inside (they're a little slow). The clinic itself runs smoothly, staff were friendly, and it's very convenient to have the pharmacy on-site."
     },
     {
       name: "Bill Grabovac",
-      avatar: "/images/placeholder-user.jpg",
+      avatar: "/images/landing/review_2.png",
       rating: 5,
       text: "Fast service! Well managed medical clinic! Got to see a medical Dr after a 5 minute wait at 7:50pm. There was a small fee as we did not have an Alberta Health Care Number. The Dr was knowledgeable with the medical condition we experienced. Very Happy with the service we received. A+"
     },
     {
       name: "Jetta Lush",
-      avatar: "/images/placeholder-user.jpg",
+      avatar: "/images/landing/review_3.png",
       rating: 5,
       text: "This place was awesome!!! Hours are wonderful, worked so well for me and my specific situation (working single parent), employees were warm and welcoming. Super fast efficient, doctor was warm, welcoming and super thorough. Great experience overall."
     }
@@ -303,35 +303,34 @@ export default function HomePage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white py-8">
+          <section className="bg-[#F1F9F4] to-white pt-5 md:pb-[70px] ">
             <div className="container">
-              <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+              <div className="grid gap-12 lg:grid-cols-[53%_46%] lg:gap-14 items-center">
                 <div>
-                  <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl mb-6">
+                  <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl  mb-4 md:mb-[21px] ">
                     <span className="text-[#299470]">Walk-In & Family Doctor</span>
                     <br />
                     <span className="text-[#299470]">Clinic in Calgary</span>
                     <br />
                     <span className="text-foreground">Open 7 Days Until 11 PM</span>
                   </h1>
-                  <p className="text-lg text-muted-foreground mb-4">
-                    <span className="font-semibold text-[36px] text-foreground">Including weekends and holidays*</span>
+                  <p className=" text-muted-foreground mb-4 md:mb-[21px]">
+                    <span className="font-bold text-[#303030] text-[36px]/10 ">Including weekends and holidays</span>
                   </p>
-                  <p className="text-base text-foreground mb-4">
-                    Now Medical Clinic offers a spectrum of walk-in and family doctor services. Our experienced team is
-                    here to provide quality healthcare when you need it most. No appointment necessary.
+                  <p className="text-base text-[#000000] mb-3 md:mb-[15px] ">
+                    Skip the hospital wait. See a Real doctor Today — No Appointment Needed. Fast, friendly care for you and your family, Open on Weekends and Holidays, serving all areas of Calgary.
                   </p>
-                  <p className="text-lg font-semibold text-foreground mb-8">
+                  <p className="text-lg font-bold text-[#050505] mb-8 md:mb-[52px] ">
                     Real doctors. Real care. Open late every day
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
+                    <Button size="lg" className="bg-[#299470] text-bold hover:bg-[#2D7B6F] text-white text-lg" asChild>
                       <Link href="/walk-in-clinic-calgary">Register as a new patient<img src="/icons/uil-arrow-up-right.svg" alt="Register as a new patient" className="w-5 h-5" /></Link>
                     </Button>
                     <Button
                       size="lg"
                       variant="outline"
-                      className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
+                      className="border-[#299470] text-bold text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
                       asChild
                     >
                       <Link href="/services">Walk In Now <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
@@ -353,55 +352,57 @@ export default function HomePage() {
           </section>
 
           {/* Quick Info Cards */}
-          <section className="py-8">
-            <div className="container mx-auto bg-[#F2FAF7] rounded-2xl px-4 md:px-12 py-10">
-              <div className="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-[#CDEDE3] justify-center items-stretch">
-                {/* Card 1: Walk-In Visits */}
-                <div className="flex-1 flex flex-col items-center justify-center px-4 py-6 text-center">
-                  <div className="flex items-center justify-center mb-4">
-                    {/* Placeholder icon */}
-                    <span className="inline-flex h-[100px] w-[100px] rounded-full bg-[#E8F5F3] items-center justify-center">
-                      {/* Medical Bag/Phone Emoji placeholder */}
-                      <span className="mt-16">
-                        <img src="/images/landing/mobile.png" alt="Walk-In Visits" className="w-full h-full" />
+          <section className="py-9">
+            <div className="container">
+              <div className=" mx-auto bg-[#EEF8F2]   rounded-2xl px-4 md:px-12 py-8">
+                <div className="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-[#CDEDE3] justify-center items-stretch">
+                  {/* Card 1: Walk-In Visits */}
+                  <div className="flex-1 flex flex-col items-center justify-center px-4 py-6 text-center  border-r-2  border-[#9AD9BA80]  ">
+                    <div className="flex items-center justify-center mb-4">
+                      {/* Placeholder icon */}
+                      <span className="inline-flex h-[100px] w-[100px] rounded-full bg-[#4AB27F1A] items-center justify-center">
+                        {/* Medical Bag/Phone Emoji placeholder */}
+                        <span className="mt-16">
+                          <img src="/images/landing/mobile.png" alt="Walk-In Visits" className="w-full h-full" />
 
+                        </span>
                       </span>
-                    </span>
+                    </div>
+                    <h3 className="font-bold text-[26px] mb-2 mt-8 text-[#303030] ">Walk - In Visits</h3>
+                    <p className="text-base font-normal  text-[#000000] ">
+                      No appoint ment needed. See real doctors 7<br /> days a week even on holidays.
+                    </p>
                   </div>
-                  <h3 className="font-bold text-[26px] mb-2 mt-8">Walk - In Visits</h3>
-                  <p className="text-m text-foreground">
-                    No appointment needed. See real doctors 7<br /> days a week even on holidays.
-                  </p>
-                </div>
-                {/* Card 2: Family Doctors */}
-                <div className="flex-1 flex flex-col items-center justify-center px-4 py-6 text-center">
-                  <div className="flex items-center justify-center mb-4">
-                    {/* Stethoscope icon placeholder */}
-                    <span className="inline-flex h-[100px] w-[100px] rounded-full bg-[#E8F5F3] items-center justify-center">
-                      <span className="mt-16">
-                        <img src="/images/landing/stethoscope.png" alt="Family Doctors" className="w-full h-full" />
+                  {/* Card 2: Family Doctors */}
+                  <div className="flex-1 flex flex-col items-center justify-center px-4 py-6 text-center border-r-2  border-[#9AD9BA80] ">
+                    <div className="flex items-center justify-center mb-4">
+                      {/* Stethoscope icon placeholder */}
+                      <span className="inline-flex h-[100px] w-[100px] rounded-full bg-[#4AB27F1A] items-center justify-center">
+                        <span className="mt-16">
+                          <img src="/images/landing/stethoscope.png" alt="Family Doctors" className="w-full h-full" />
+                        </span>
                       </span>
-                    </span>
+                    </div>
+                    <h3 className="font-bold text-[26px] mb-2 mt-8 text-[#303030] ">Family Doctors</h3>
+                    <p className="text-base font-normal  text-[#000000]">
+                      Ongoing care for your whole family from<br /> newborns to seniors.
+                    </p>
                   </div>
-                  <h3 className="font-bold text-[26px] mb-2 mt-8">Family Doctors</h3>
-                  <p className="text-m text-foreground">
-                    Ongoing care for your whole family from<br /> newborns to seniors.
-                  </p>
-                </div>
-                {/* Card 3: Open 7 days */}
-                <div className="flex-1 flex flex-col items-center justify-center px-4 py-6 text-center">
-                  <div className="flex items-center justify-center mb-4">
-                    {/* 24/7 service icon placeholder */}
-                    <span className="inline-flex h-[100px] w-[100px] rounded-full bg-[#E8F5F3] items-center justify-center">
-                      <span className="mt-8">
-                        <img src="/images/landing/24x7.png" alt="Open 7 days" className="w-full h-full" />
+                  {/* Card 3: Open 7 days */}
+                  <div className="flex-1 flex flex-col items-center justify-center px-4 py-6 text-center">
+                    <div className="flex items-center justify-center mb-4">
+                      {/* 24/7 service icon placeholder */}
+                      <span className="inline-flex h-[100px] w-[100px] rounded-full bg-[#4AB27F1A] items-center justify-center">
+                        <span className="mt-8">
+                          <img src="/images/landing/24x7.png" alt="Open 7 days" className="w-full h-full" />
+                        </span>
                       </span>
-                    </span>
+                    </div>
+                    <h3 className="font-bold text-[26px] mb-2 mt-8 text-[#303030] ">Open 7 days</h3>
+                    <p className="text-base font-normal  text-[#000000]">
+                      Until 11:00 PM, including weekends and<br /> Holidays
+                    </p>
                   </div>
-                  <h3 className="font-bold text-[26px] mb-2 mt-8">Open 7 days</h3>
-                  <p className="text-m text-foreground">
-                    Until 11:00 PM, including weekends and<br /> Holidays
-                  </p>
                 </div>
               </div>
             </div>
@@ -410,6 +411,9 @@ export default function HomePage() {
           {/* Why Choose Us Section */}
           <WhyChooseSection
             title="Why Calgary Trusts"
+            h2_color_1=" text-[#050505] "
+            para="We’re here when other clinics are closed and when you need care the most."
+            para_color=" text-[#000000] "
             subtitle="Now Medical Clinic"
             items={whyChooseItems}
             image="/images/landing/why-calgary-trusts.png"
@@ -417,14 +421,14 @@ export default function HomePage() {
           />
 
           {/* Our Promises Section */}
-          <section className="py-16 bg-[#F1F9F4]">
+          <section className="py-8 bg-[#F1F9F4]">
             <div className="container">
-              <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+              <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center md:px-[59px] ">
                 <div>
-                  <h2 className="text-5xl font-bold mb-4">
+                  <h2 className="text-5xl text-[#050505] font-bold mb-4">
                     Our <span className="text-[#299470]">Promises</span>
                   </h2>
-                  <div className="space-y-4 text-foreground">
+                  <div className="space-y-4 text-[#000000] ">
                     <p>
                       When you or your loved ones need care, you shouldn’t wait days for an appointment. <br />At Now Medical Clinic, our doctors are ready 7 days a week — weekends and holidays <br />included, offering fast, compassionate, professional care for all Calgary residents.<br /> No Appointment Needed
                       <br /> Because your health matters now — not later.
@@ -447,22 +451,24 @@ export default function HomePage() {
           <ConditionsSection
             title="Common Medical Conditions"
             subtitle="We Treat"
+            para="At Now Medical Clinic, our doctors treat a wide range of medical conditions "
+            para_2="so you can skip the ER and get real help today."
             conditions={conditions}
           />
 
           {/* Walk-in Video Promo Section */}
-          <section className="py-12">
-            <div className="container mx-auto flex flex-col items-center">
+          <section className="py-[54px]  ">
+            <div className="container mx-auto max-w-[1170px] w-full flex flex-col items-center">
               {/* Headline with Green Text */}
-              <h2 className="text-5xl font-bold text-center mb-2">
+              <h2 className="text-5xl font-bold text-[#303030] text-center mb-4">
                 Walk in today until <span className="text-[#299470]">11:00 Pm, Open 7 days</span>
               </h2>
               {/* Subheadline */}
-              <p className="text-[20px] text-center text-foreground mb-6">
+              <p className="text-[20px] text-center text-[#303030] mb-6">
                 Register as a new patient today with our Male or Female Family Doctors ,Accepting New Patient
               </p>
               {/* Video Player (with custom poster) */}
-              <div className="w-full aspect-video bg-[#299470] rounded-lg shadow overflow-hidden flex items-center justify-center mb-4 relative">
+              <div className="w-full aspect-video bg-[#299470] rounded-lg shadow overflow-hidden flex items-center justify-center relative">
                 <video
                   className="w-full h-full object-cover"
                   poster="/images/landing/video-thumb.png"
@@ -476,47 +482,47 @@ export default function HomePage() {
           </section>
 
           {/* Family Doctors Accepting New Patients Section */}
-          <section className="bg-[#F1F9F4] pt-16 pb-0">
+          <section className="bg-[#F1F9F4] pt-[54px] pb-0">
             <div className="container mx-auto flex flex-col items-center">
               {/* Headline */}
-              <h2 className="text-5xl font-bold text-center mb-4">
+              <h2 className="text-5xl font-bold text-[#303030] text-center mb-4">
                 Family Doctors Accepting <span className="text-[#299470]">New Patients</span>
               </h2>
               {/* Subheadline */}
               <div className="text-center mb-4">
-                <p className="font-bold text-lg text-foreground">Looking for a family doctor in Calgary?</p>
+                <p className="font-bold text-lg text--[#000000">Looking for a family doctor in Calgary?</p>
               </div>
-              <div className="text-center max-w-3xl mb-8 text-foreground">
-                Our caring Male and Female Doctors are accepting new patients in Calgary for long-term, comprehensive care. Get matched with a doctor who listens, understands, and builds lasting relationships with your family.
+              <div className="text-center  mb-8 text-[#000000] ">
+                Our caring Male and Female Doctors are accepting new patients in Calgary for long-term, comprehensive care. Get matched with <br /> a doctor who listens, understands, and builds lasting relationships with your family.
               </div>
               {/* Cards Row */}
-              <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5">
                 {/* Card 1: Male & Female Doctors */}
-                <div className="rounded-xl border border-[#83C1AC] bg-white shadow-sm flex flex-col items-center justify-between px-6 py-8 text-center hover:shadow-lg transition">
-                  <span className="inline-flex h-14 w-14 items-center justify-center mb-4">
+                <div className="rounded-xl border border-[#83C1AC] bg-white shadow-sm flex flex-col items-center justify-between px-5 py-5 text-center hover:shadow-lg transition">
+                  <span className="inline-flex h-14 w-14 items-center justify-center mb-6">
                     {/* icon: users */}
                     <img src="/images/landing/new-patients.svg" alt="" />
                   </span>
-                  <h3 className="font-bold text-3xl mb-2">Male & Female Doctors</h3>
-                  <p className="text-gray-600 text-[15px]">Choose a doctor you're comfortable with</p>
+                  <h3 className="font-medium text-[#000000]  text-3xl mb-[10px] ">Male & Female Doctors</h3>
+                  <p className="text-[#303030] text-base ">Choose a doctor you're comfortable with</p>
                 </div>
                 {/* Card 2: Multiple Languages */}
-                <div className="rounded-xl border border-[#83C1AC] bg-white shadow-sm flex flex-col items-center justify-between px-6 py-8 text-center hover:shadow-lg transition">
+                <div className="rounded-xl border border-[#83C1AC] bg-white shadow-sm flex flex-col items-center justify-between px-5 py-5 text-center hover:shadow-lg transition">
                   <span className="inline-flex h-14 w-14 items-center justify-center mb-4">
                     {/* icon: globe / languages */}
                     <img src="/images/landing/new-patients.svg" alt="" />
                   </span>
-                  <h3 className="font-bold text-3xl mb-2">Multiple languages</h3>
-                  <p className="text-gray-600 text-[16px]">English, Spanish, French, Arabic, Urdu, Hindi</p>
+                  <h3 className="font-medium text-[#000000]  text-3xl mb-[10px] ">Multiple languages</h3>
+                  <p className="text-[#303030] text-base">English, Spanish, French, Arabic, Urdu, Hindi</p>
                 </div>
                 {/* Card 3: Comprehensive Care */}
-                <div className="rounded-xl border border-[#83C1AC] bg-white shadow-sm flex flex-col items-center justify-between px-6 py-8 text-center hover:shadow-lg transition">
+                <div className="rounded-xl border border-[#83C1AC] bg-white shadow-sm flex flex-col items-center justify-between px-5 py-5 text-center hover:shadow-lg transition">
                   <span className="inline-flex h-14 w-14 items-center justify-center mb-4">
                     {/* icon: comprehensive care */}
                     <img src="/images/landing/new-patients.svg" alt="" />
                   </span>
-                  <h3 className="font-bold text-3xl mb-2">Comprehensive Care</h3>
-                  <p className="text-gray-600 text-[16px]">Chronic conditions preventive health & more</p>
+                  <h3 className="font-medium text-[#000000]  text-3xl mb-[10px] ">Comprehensive Care</h3>
+                  <p className="text-[#303030] text-base">Chronic conditions preventive health & more</p>
                 </div>
               </div>
             </div>
@@ -535,7 +541,7 @@ export default function HomePage() {
           {/* Meet Our Doctors */}
           <DoctorsSection
             title="Meet Our Doctors"
-            description={<>Our diverse team of male and female family doctors provides care in multiple languages. Each doctor brings years of <br/>experience in family medicine, chronic condition management, and preventive health</>}
+            description={<>Our diverse team of male and female family doctors provides care in multiple languages. Each doctor brings years of <br />experience in family medicine, chronic condition management, and preventive health</>}
             femaleDoctors={femaleDoctors}
             maleDoctors={maleDoctors}
             showCategories={false}

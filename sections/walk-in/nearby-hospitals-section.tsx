@@ -33,15 +33,15 @@ export default function NearbyHospitalsSection({
             <h2 className="text-5xl font-bold">
             <span className="text-[#303030]">{title}</span> <span className="text-[#299470]">{subtitle}</span>
           </h2>
-            <p className="text-base text-gray-700 mb-6">
+            <p className="text-base text-[#303030] py-4 ">
               {introText}
             </p>
 
             <ul className="space-y-3 mb-6">
               {hospitals.map((hospital, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <span className="text-[#299470] mt-1">•</span>
-                  <span className="text-base text-gray-800">{hospital.name}</span>
+                  <span className="text-[#303030] mt-1">•</span>
+                  <span className="text-lg text-[#303030]  font-bold ">{hospital.name}</span>
                 </li>
               ))}
             </ul>

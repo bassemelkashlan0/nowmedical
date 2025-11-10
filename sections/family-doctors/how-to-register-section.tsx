@@ -22,13 +22,13 @@ export default function HowToRegisterSection() {
   ];
 
   return (
-    <section className="py-16 px-4 md:px-8 bg-[#F1F9F4]">
+    <section className="py-[54px] px-4 md:px-8 bg-[#EEF8F2]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-6">
-          <h2 className="text-5xl font-bold mb-4">
+          <h2 className="text-5xl text-[#303030] font-bold mb-4">
             How to <span className="text-[#299470]">Register</span>
           </h2>
-          <p className="text-base text-foreground max-w-2xl mx-auto">
+          <p className="text-base text-[#000000] ">
             Becoming a patient is easy just complete a few quick steps.
           </p>
         </div>
@@ -50,7 +50,7 @@ export default function HowToRegisterSection() {
               )}
               
               {/* Icon Box */}
-              <div className="relative z-10 h-20 w-20 items-center justify-center rounded-lg border border-[#43B97F33] mx-auto mb-6">
+              <div className="relative z-10 h-[90px] w-[90px] items-center justify-center rounded-lg border border-[#43B97F33] mx-auto mb-7">
                 <img 
                   src={step.icon} 
                   alt={step.title}
@@ -59,8 +59,8 @@ export default function HowToRegisterSection() {
               </div>
               
               {/* Content */}
-              <h3 className="text-3xl font-medium mb-3">{step.title}</h3>
-              <p className="text-base leading-relaxed text-foreground">{step.description}</p>
+              <h3 className="text-3xl text-[#313131] font-medium mb-[14px] ">{step.title}</h3>
+              <p className="text-base leading-relaxed text-[#313131]">{step.description}</p>
             </div>
           ))}
         </div>
@@ -69,16 +69,16 @@ export default function HowToRegisterSection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button
             size="lg"
-            className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg font-medium px-6 py-3"
+            className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg font-medium px-6 py-3 font-bold"
             asChild
           >
-            <Link href="/walk-in-clinic-calgary" className="flex items-center">
+            <Link href="/walk-in-clinic-calgary" className="flex items-center ">
               <Image
                 src="/icons/btn_phone-outline-icon.svg"
                 alt=""
                 width={20}
                 height={20}
-                className="brightness-0 invert"
+                className="brightness-0  invert"
               />
               Register as a New Patient
             </Link>
@@ -87,7 +87,7 @@ export default function HowToRegisterSection() {
           <Button
             size="lg"
             variant="outline"
-            className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-medium px-6 py-3"
+            className="border-[#299470] font-bold text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-medium px-6 py-3"
             asChild
           >
             <Link href="tel:587-391-8188" className="flex items-center">
