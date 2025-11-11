@@ -6,7 +6,7 @@ import { Phone } from 'lucide-react';
 import Link from "next/link";
 import Image from 'next/image';
 import { Carousel, CarouselContent, CarouselItem, CarouselApi } from '@/components/ui/carousel';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ReactNode } from 'react';
 
 interface Doctor {
   name: string;
@@ -35,7 +35,7 @@ interface DoctorsSectionProps {
   maleDoctors?: Doctor[];
   showCategories?: boolean;
   customButtons?: ButtonConfig[];
-  description?: string;
+  description?: string | ReactNode;
   descriptionClassName?: string;
   useCarousel?: boolean;
   bgColor?: string;
@@ -99,7 +99,7 @@ export default function DoctorsSection({
     </Card>
   );
 
-  // Group doctors into slides of 4
+  // Group doctors into slides - showing 4 doctors per slide for desktop view
   const groupDoctorsIntoSlides = (doctors: Doctor[], itemsPerSlide: number = 4) => {
     const slides: Doctor[][] = [];
     for (let i = 0; i < doctors.length; i += itemsPerSlide) {
@@ -121,9 +121,9 @@ export default function DoctorsSection({
             {title.split(' ').slice(1).join(' ')}
           </span>        </h2>
         {description && (
-          <p className={`text-center text-[#303030] mb-8 ${descriptionClassName || ''}`}>
+          <div className={`text-center text-[#303030] mb-8 ${descriptionClassName || ''}`}>
             {description}
-          </p>
+          </div>
         )}
 
         {showCategories && femaleDoctors.length > 0 && (
@@ -171,10 +171,11 @@ export default function DoctorsSection({
                 <button
                   key={index}
                   onClick={() => api?.scrollTo(index)}
-                  className={`h-2 w-2 rounded-full transition-all ${index + 1 === current
+                  className={`h-2 rounded-full transition-all ${
+                    index + 1 === current
                       ? 'bg-[#299470] w-8'
-                      : 'bg-gray-300 hover:bg-gray-400'
-                    }`}
+                      : 'bg-gray-300 w-2 hover:bg-gray-400'
+                  }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
@@ -194,7 +195,8 @@ export default function DoctorsSection({
                   : "bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg")}
                 asChild
               >
-                <Link href={button.link} className="flex items-center">
+                <Link href={button.link} className="flex items-center gap-2">
+                  {button.text}
                   {button.icon && (
                     <Image
                       src={button.icon}
@@ -204,7 +206,6 @@ export default function DoctorsSection({
                       className=""
                     />
                   )}
-                  {button.text}
                 </Link>
               </Button>
             ))

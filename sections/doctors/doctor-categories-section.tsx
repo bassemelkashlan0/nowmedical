@@ -1,6 +1,10 @@
+'use client'
+
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Phone, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Carousel, CarouselContent, CarouselItem, CarouselApi } from '@/components/ui/carousel';
+import { useState, useEffect } from 'react';
 
 interface Doctor {
   name: string;
@@ -22,18 +26,47 @@ export default function DoctorCategoriesSection({
   femaleDoctors,
   maleDoctors
 }: DoctorCategoriesSectionProps) {
+  const [femaleApi, setFemaleApi] = useState<CarouselApi>();
+  const [maleApi, setMaleApi] = useState<CarouselApi>();
+  const [femaleCanScrollPrev, setFemaleCanScrollPrev] = useState(false);
+  const [femaleCanScrollNext, setFemaleCanScrollNext] = useState(false);
+  const [maleCanScrollPrev, setMaleCanScrollPrev] = useState(false);
+  const [maleCanScrollNext, setMaleCanScrollNext] = useState(false);
+
+  useEffect(() => {
+    if (!femaleApi) return;
+    setFemaleCanScrollPrev(femaleApi.canScrollPrev());
+    setFemaleCanScrollNext(femaleApi.canScrollNext());
+
+    femaleApi.on('select', () => {
+      setFemaleCanScrollPrev(femaleApi.canScrollPrev());
+      setFemaleCanScrollNext(femaleApi.canScrollNext());
+    });
+  }, [femaleApi]);
+
+  useEffect(() => {
+    if (!maleApi) return;
+    setMaleCanScrollPrev(maleApi.canScrollPrev());
+    setMaleCanScrollNext(maleApi.canScrollNext());
+
+    maleApi.on('select', () => {
+      setMaleCanScrollPrev(maleApi.canScrollPrev());
+      setMaleCanScrollNext(maleApi.canScrollNext());
+    });
+  }, [maleApi]);
+
   const renderDoctorCard = (doctor: Doctor, index: number) => (
-    <Card key={index} className="overflow-hidden shadow-lg p-0">
-      <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 relative">
+    <Card key={index} className="overflow-hidden p-0 gap-0 shadow-[0px_10px_14px_0px_#0000000D]">
+      <div className="aspect-square bg-[#EAF4F1] relative rounded-t-lg overflow-hidden">
         <img
           src={doctor.avatar}
           alt={doctor.name}
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="p-4">
-        <p className="text-base text-foreground mb-2">{doctor.specialty}</p>
-        <h3 className="text-2xl font-bold mb-3">
+      <div className="p-4 bg-white">
+        <p className="text-m text-[#050505] font-medium mb-2">{doctor.specialty}</p>
+        <h3 className="text-2xl font-medium mb-3">
           {doctor.name}
           {doctor.language && (
             <span className="text-sm font-normal text-gray-500 ml-2">
@@ -41,61 +74,147 @@ export default function DoctorCategoriesSection({
             </span>
           )}
         </h3>
-        <p className="text-gray-600 mb-3">{doctor.description}</p>
-        <Button className="w-full bg-[#299470] hover:bg-[#2D7B6F] text-lg">
+        <p className="text-sm text-[#050505] mb-3">{doctor.description}</p>
+        <Button className="w-full bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg">
           <Phone className="w-4 h-4 mr-2" />
-          Call 587-391-8188
+          Call {doctor.phone || '587-391-8188'}
         </Button>
       </div>
     </Card>
   );
 
+  // Group doctors into slides of 4
+  const groupDoctorsIntoSlides = (doctors: Doctor[], itemsPerSlide: number = 4) => {
+    const slides: Doctor[][] = [];
+    for (let i = 0; i < doctors.length; i += itemsPerSlide) {
+      slides.push(doctors.slice(i, i + itemsPerSlide));
+    }
+    return slides;
+  };
+
+  const femaleSlides = groupDoctorsIntoSlides(femaleDoctors, 4);
+  const maleSlides = groupDoctorsIntoSlides(maleDoctors, 4);
+
   return (
     <section className="py-16 px-4 md:px-8 bg-white">
       <div className="container">
-        {/* <h2 className="text-4xl font-bold text-center mb-16">
-          Meet <span className="text-[#4A9B8E]">Our Doctors</span>
-        </h2> */}
-
         {/* Female Doctors */}
-        <div className="mb-16">
-          <h3 className="text-4xl font-bold mb-8">Our Female Family Doctors</h3>
-          
-          <div className="relative">
-            <div className="grid md:grid-cols-4 gap-6 mb-6">
-              {femaleDoctors.slice(0, 4).map(renderDoctorCard)}
-            </div>
+        {femaleDoctors.length > 0 && (
+          <div className="mb-16">
+            <h3 className="text-4xl font-bold text-[#303030] mb-6">Our Female Family Doctors</h3>
             
-            <div className="flex justify-end gap-2">
-              <button className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50">
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50">
-                <ChevronRight className="w-5 h-5" />
-              </button>
+            <div className="relative">
+              <Carousel 
+                setApi={setFemaleApi} 
+                className="w-full"
+                opts={{
+                  align: 'start',
+                  loop: false,
+                }}
+              >
+                <CarouselContent className="-ml-2 md:-ml-4">
+                  {femaleSlides.map((slide, slideIndex) => (
+                    <CarouselItem key={slideIndex} className="pl-2 md:pl-4 basis-full">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 pb-6">
+                        {slide.map((doctor, doctorIndex) =>
+                          renderDoctorCard(doctor, slideIndex * 4 + doctorIndex)
+                        )}
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
+              
+              {femaleSlides.length > 1 && (
+                <div className="flex justify-end gap-2 mt-4">
+                  <button
+                    onClick={() => femaleApi?.scrollPrev()}
+                    disabled={!femaleCanScrollPrev}
+                    className={`p-2 rounded-lg transition-colors ${
+                      femaleCanScrollPrev
+                        ? 'bg-[#299470] text-white hover:bg-[#2D7B6F]'
+                        : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    }`}
+                    aria-label="Previous slide"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={() => femaleApi?.scrollNext()}
+                    disabled={!femaleCanScrollNext}
+                    className={`p-2 rounded-lg transition-colors ${
+                      femaleCanScrollNext
+                        ? 'bg-[#299470] text-white hover:bg-[#2D7B6F]'
+                        : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    }`}
+                    aria-label="Next slide"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+                </div>
+              )}
             </div>
           </div>
-        </div>
+        )}
 
         {/* Male Doctors */}
-        <div>
-          <h3 className="text-4xl font-bold mb-8">Our Male Family Doctors</h3>
-          
-          <div className="relative">
-            <div className="grid md:grid-cols-4 gap-6 mb-6">
-              {maleDoctors.slice(0, 4).map(renderDoctorCard)}
-            </div>
+        {maleDoctors.length > 0 && (
+          <div>
+            <h3 className="text-4xl font-bold text-[#303030] mb-6">Our Male Family Doctors</h3>
             
-            <div className="flex justify-end gap-2">
-              <button className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50">
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50">
-                <ChevronRight className="w-5 h-5" />
-              </button>
+            <div className="relative">
+              <Carousel 
+                setApi={setMaleApi} 
+                className="w-full"
+                opts={{
+                  align: 'start',
+                  loop: false,
+                }}
+              >
+                <CarouselContent className="-ml-2 md:-ml-4">
+                  {maleSlides.map((slide, slideIndex) => (
+                    <CarouselItem key={slideIndex} className="pl-2 md:pl-4 basis-full">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 pb-6">
+                        {slide.map((doctor, doctorIndex) =>
+                          renderDoctorCard(doctor, slideIndex * 4 + doctorIndex)
+                        )}
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
+              
+              {maleSlides.length > 1 && (
+                <div className="flex justify-end gap-2 mt-4">
+                  <button
+                    onClick={() => maleApi?.scrollPrev()}
+                    disabled={!maleCanScrollPrev}
+                    className={`p-2 rounded-lg transition-colors ${
+                      maleCanScrollPrev
+                        ? 'bg-[#299470] text-white hover:bg-[#2D7B6F]'
+                        : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    }`}
+                    aria-label="Previous slide"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={() => maleApi?.scrollNext()}
+                    disabled={!maleCanScrollNext}
+                    className={`p-2 rounded-lg transition-colors ${
+                      maleCanScrollNext
+                        ? 'bg-[#299470] text-white hover:bg-[#2D7B6F]'
+                        : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    }`}
+                    aria-label="Next slide"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+                </div>
+              )}
             </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );
