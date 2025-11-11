@@ -23,6 +23,9 @@ interface TestimonialsSectionProps {
   showAllToggle?: boolean;
   customButtonText?: string;
   customButtonLink?: string;
+  showTitleAndSubtitle?: boolean;
+  hideBottomText?: boolean;
+  initialCount?: number;
 }
 
 export default function TestimonialsSection({
@@ -33,9 +36,12 @@ export default function TestimonialsSection({
   showAllToggle = false,
   customButtonText,
   customButtonLink,
+  showTitleAndSubtitle = true,
+  hideBottomText = false,
+  initialCount = 9,
 }: TestimonialsSectionProps) {
   const [showAll, setShowAll] = useState(false);
-  const displayedTestimonials = showAll ? testimonials : testimonials.slice(0, 9);
+  const displayedTestimonials = showAll ? testimonials : testimonials.slice(0, initialCount);
 
   const revie_images = [
     review_1, review_2, review_3
@@ -43,12 +49,16 @@ export default function TestimonialsSection({
   return (
     <section className="py-[54px] px-4 md:px-8 bg-white">
       <div className="container  mx-auto">
-        <h2 className="text-5xl font-bold text-center  mb-4 text-[#4A9B8E]">
-          {title.split(" ")[0]}{" "}
-          <span className="text-[#303030] ">{title.split(" ").slice(1).join(" ")}</span>
-        </h2>
+        {showTitleAndSubtitle && (
+          <>
+            <h2 className="text-5xl font-bold text-center  mb-4 text-[#4A9B8E]">
+              {title.split(" ")[0]}{" "}
+              <span className="text-[#303030] ">{title.split(" ").slice(1).join(" ")}</span>
+            </h2>
 
-        <p className="text-center text-[20px] text-[#303030] font-medium mb-6">{subtitle}</p>
+            <p className="text-center text-[20px] text-[#303030] font-medium mb-6">{subtitle}</p>
+          </>
+        )}
 
         <div className="grid md:grid-cols-3 gap-6 mb-6 md:px-5 ">
           {displayedTestimonials.map((testimonial, index) => (
@@ -84,14 +94,15 @@ export default function TestimonialsSection({
         </div>
 
         <div className="text-center">
-          <p className="text-[#000000] mb-6">{bottomText}</p>
+          {!hideBottomText && <p className="text-[#000000] mb-6">{bottomText}</p>}
 
           {showAllToggle ? (
             <button
               onClick={() => setShowAll(!showAll)}
-              className="px-6 py-2 border border-[#4A9B8E] text-[#4A9B8E] font-bold rounded hover:bg-[#4A9B8E] hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-2 border border-[#4A9B8E] text-[#4A9B8E] font-bold hover:bg-[#EAF4F1] transition-colors cursor-pointer"
             >
-              {showAll ? "Show Less →" : "Show All →"}
+              {showAll ? "Show Less" : "Show All"}
+              <img src="/icons/uil-arrow-up-right-grn.svg" alt="" className="w-5 h-5" />
             </button>
           ) : (
             customButtonText && (

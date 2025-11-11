@@ -115,7 +115,7 @@ export default function DoctorCategoriesSection({
                 <CarouselContent className="-ml-2 md:-ml-4">
                   {femaleSlides.map((slide, slideIndex) => (
                     <CarouselItem key={slideIndex} className="pl-2 md:pl-4 basis-full">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 pb-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 p-6">
                         {slide.map((doctor, doctorIndex) =>
                           renderDoctorCard(doctor, slideIndex * 4 + doctorIndex)
                         )}
@@ -174,7 +174,7 @@ export default function DoctorCategoriesSection({
                 <CarouselContent className="-ml-2 md:-ml-4">
                   {maleSlides.map((slide, slideIndex) => (
                     <CarouselItem key={slideIndex} className="pl-2 md:pl-4 basis-full">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 pb-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 p-6">
                         {slide.map((doctor, doctorIndex) =>
                           renderDoctorCard(doctor, slideIndex * 4 + doctorIndex)
                         )}
