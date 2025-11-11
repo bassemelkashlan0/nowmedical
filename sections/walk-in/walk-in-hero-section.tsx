@@ -81,7 +81,7 @@ export default function WalkInHeroSection({
               </p>
             )}
             {additionalText && (
-              <p className=" mb-0 ext-lg font-bold text-[#050505] ">
+              <p className=" mb-0 text-lg font-bold text-[#050505] ">
                 {additionalText}
               </p>
             )}
@@ -119,15 +119,15 @@ export default function WalkInHeroSection({
           </div>
 
           {/* Right Section - Image with Graphics (30-40% width) */}
-          <div className="flex item-end justify-end ml-8 ">
+          <div className="flex items-end justify-end ml-8 ">
             <iframe
               width="100%"
               height="500"
               src="https://youtube.com/embed/IpTEkX4lRWQ"
               title="YouTube Shorts Video"
-              frameborder="0"
+              frameBorder="0"
               allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
+              allowFullScreen>
             </iframe>
           </div>
         </div>

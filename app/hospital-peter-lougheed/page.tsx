@@ -133,7 +133,7 @@ export default function HospitalPeterLougheed() {
             <LiveStatusBanner />
             <main>
                 {/* Hero Section with Banner */}
-                <section className="bg-[#F1F9F4] to-white py-11">
+                <section className="bg-[#F1F9F4] to-white py-[54px]">
                     <div className="container">
                         <div className="grid gap-4 lg:grid-cols-[55%_44%] lg:gap-4 items-center  ">
                             <div>
@@ -179,12 +179,17 @@ export default function HospitalPeterLougheed() {
 
                             </div>
 
-                            <div className="flex justify-center items-center">
-                                <img
-                                    src={hero_img.src}
-                                    alt="Now Medical Clinic Calgary doctor"
-                                    className="rounded-lg  "
-                                />
+                            <div className="flex justify-center items-center ml-8">
+
+                            <iframe
+                      width="100%"
+                      height="500"
+                      src="https://www.youtube.com/embed/zeArmG81bAE?rel=0&modestbranding=1&showinfo=0"
+                      title="YouTube Shorts Video"
+                      frameborder="0"
+                      allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+                    </iframe>
                             </div>
                         </div>
                     </div>
