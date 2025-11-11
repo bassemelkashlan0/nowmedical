@@ -68,7 +68,7 @@ export function Header() {
                 </DropdownMenuSubTrigger>
                 <DropdownMenuSubContent className="min-w-[280px]">
                   <DropdownMenuItem asChild>
-                    <Link href="/walk-in-clinic-near-peter-lougheed-hospital" className={pathname === '/walk-in-clinic-near-peter-lougheed-hospital' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                    <Link href="/hospital-peter-lougheed" className={pathname === '/walk-in-clinic-near-peter-lougheed-hospital' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                       Near Peter Lougheed Hospital
                     </Link>
                   </DropdownMenuItem>
