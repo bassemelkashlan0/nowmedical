@@ -50,7 +50,7 @@ export default function NearbyHospitalsSection({
               {conclusionText}
             </p>
           </div>
-
+ 
           {image && (
             <div className="relative">
               <img
@@ -60,6 +60,7 @@ export default function NearbyHospitalsSection({
               />
             </div>
           )}
+          
         </div>
       </div>
     </section>
