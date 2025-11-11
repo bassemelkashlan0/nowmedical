@@ -5,9 +5,10 @@ interface BottomCallAction {
     title?: string;
     title_2?: string;
     description?: string | ReactNode;
+    description_2?: string | ReactNode;
 }
 
-export default function BottomCallAction({ title, title_2, description }: BottomCallAction) {
+export default function BottomCallAction({ title, title_2, description, description_2 }: BottomCallAction) {
 
     return (
         <>
@@ -18,7 +19,8 @@ export default function BottomCallAction({ title, title_2, description }: Bottom
                         {title_2}
                     </h2>
                     <p className="text-[#fefefe] text-base ">
-                        {description}
+                        {description} <br />
+                        {description_2}
                     </p>
                 </div>
             </section>

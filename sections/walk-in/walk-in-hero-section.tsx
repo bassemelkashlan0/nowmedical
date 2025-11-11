@@ -39,7 +39,7 @@ export default function WalkInHeroSection({
   buttons = [
     {
       text: "Walk In Now",
-      link: "/services",
+      link: "/",
       icon: "/icons/solar_walking-outline.svg",
       variant: "default" as const,
     },
@@ -51,7 +51,7 @@ export default function WalkInHeroSection({
     },
     {
       text: "Get Direction",
-      link: "/contact",
+      link: "https://share.google/CkrlunWzewWZjaPmv",
       icon: "/icons/pin-outline-icon.svg",
       variant: "outline" as const,
     }
@@ -62,7 +62,7 @@ export default function WalkInHeroSection({
   className = ""
 }: WalkInHeroSectionProps) {
   return (
-    <section className={`${bgColor} py-11  ${className}`}>
+    <section className={`${bgColor} py-[54px]  ${className}`}>
       <div className="container">
         <div className="grid justify-between gap-18 lg:grid-cols-[53%_46%]  lg:gap-8 items-center">
           {/* Left Section - Text Content (60-70% width) */}
@@ -102,7 +102,7 @@ export default function WalkInHeroSection({
                     }
                     asChild
                   >
-                    <Link href={button.link}>
+                    <Link href={button.link}  >
                       {button.icon && (
                         <img
                           src={button.icon}

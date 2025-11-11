@@ -1,13 +1,7 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import {
-  HeroSection,
-  LiveWaitTimesSection,
-  HospitalAlternativeSection,
-  NearbyHospitalsSection,
-  ConditionsSection,
   FindUsSection,
-  CTABannerSection,
   WalkInHeroSection,
   StorySection,
   WhyChooseSection,
@@ -15,40 +9,18 @@ import {
 } from "@/sections";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Clock, MapPin, FileText, CreditCard, AlertCircle, Phone, Activity, Stethoscope, Brain, Heart, Baby, Shield } from "lucide-react";
 import Link from "next/link";
 import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
 import { LiveStatusBanner } from "@/components/live-status-banner";
 
+
 export const metadata: Metadata = {
-  title: "Walk-In Clinic Calgary | Open 7 Days | No Appointment Needed",
-  description: "Walk in 7 days a week until 11 PM. Real doctors, short wait times, no appointments. Calgary's trusted walk-in medical clinic.",
+  title: "Walk-In Clinic Calgary | Same-Day Medical Care Without Appointment",
+  description: "Visit our Walk-In Clinic in Calgary for same-day medical care. Get quick, professional treatment for your health concerns—no appointment needed.",
   keywords: ["walk-in clinic calgary", "walk in clinic near me", "open 7 days clinic", "no appointment needed", "calgary walk-in"],
   alternates: {
     canonical: "https://nowmedical.ca/walk-in-clinic-calgary"
-  },
-  openGraph: {
-    title: "Walk-In Clinic Calgary | Open 7 Days | No Appointment Needed",
-    description: "Walk in 7 days a week until 11 PM. Real doctors, short wait times, no appointments. Calgary's trusted walk-in medical clinic.",
-    url: "https://nowmedical.ca/walk-in-clinic-calgary",
-    siteName: "Now Medical Clinic",
-    images: [
-      {
-        url: "https://nowmedical.ca/images/modern-medical-clinic-exterior-building.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Now Medical Clinic - Walk-In Clinic Calgary"
-      }
-    ],
-    locale: "en_CA",
-    type: "website"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Walk-In Clinic Calgary | Open 7 Days | No Appointment Needed",
-    description: "Walk in 7 days a week until 11 PM. Real doctors, short wait times, no appointments.",
-    images: ["https://nowmedical.ca/images/modern-medical-clinic-exterior-building.jpg"]
   }
 };
 
@@ -231,7 +203,6 @@ export default function WalkInPage() {
                 </Button>
               </div>
             </div>
-
           </section>
 
 

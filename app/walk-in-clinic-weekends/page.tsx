@@ -1,25 +1,19 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Clock, Phone, MapPin, Calendar, Check } from "lucide-react";
 import Link from "next/link";
 import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
 import { LiveStatusBanner } from "@/components/live-status-banner";
 import { FindUsSection, WhyChooseSection } from "@/sections";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
-import hero_img from "@/public/images/urgent-case-hero.png";
 import bg_img from "@/public/images/walkin-sub/weekend-visit.png";
 import whyChoose_img from "@/public/images/walkin-sub/weekend-why-choose.png";
 
 export const metadata: Metadata = {
-  title: "Weekend Walk-In Clinic Calgary | Open Holidays Until 11 PM",
-  description: "Open Saturdays, Sundays, and holidays until 11 PM. Walk in anytime — no appointment needed. Calgary's trusted weekend clinic.",
+  title: "Weekend Walk-In Clinic Calgary | Open Saturdays & Sundays",
+  description: "Need medical care on weekends or holidays? Visit our Calgary walk-in clinic open 7 days a week. No appointment needed—walk-ins welcome.",
   keywords: ["walk in clinic open sunday calgary", "weekend clinic", "open holidays clinic", "saturday walk-in clinic calgary"],
-  alternates: {
-    canonical: "https://nowmedical.ca/walk-in-clinic-weekends"
-  }
 };
 
 export default function WeekendClinicPage() {
@@ -88,26 +82,38 @@ export default function WeekendClinicPage() {
           {/* Hero Section */}
           <section className="bg-[#F1F9F4] to-white pt-8 pb-14">
             <div className="container">
-              <div className="grid gap-4 lg:grid-cols-2 lg:gap-4 items-center  ">
+              <div className="grid gap-4 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
-                  <h1 className=" font-bold tracking-tight lg:text-6xl mb-4">
+                  <h1 className=" font-bold text-[#303030] tracking-tight lg:text-6xl mb-4">
                     <span className="text-[#299470] " >Weekend Walk-In Clinic Calgary </span>
                     Open Saturdays, Sundays & Holidays
                   </h1>
 
-                  <p className="text-base  text-foreground mb-4">
-                    Need to see a doctor this weekend? At Now Medical Clinic, we're here when most clinics are closed. We're open every Saturday, Sunday, and even on holidays until 11 PM. Whether it's a cold that just won't go away or you need a prescription renewal before Monday, walk in today no appointment needed. Skip the hospital wait. See a real doctor this weekend.
+                  <p className="text-lg  text-[#050505] font-bold mb-4">
+                    Need to see a doctor this weekend?
+                  </p>
+                  <p className="text-base  text-[#303030] mb-4">
+                    At <b>Now Medical Clinic,</b> we're here when most clinics are closed. We're <b>open every Saturday, Sunday, and even on holidays until 11 PM.</b> <br />
+
+                    Whether it's a cold that just won't go away or you need a prescription renewal before Monday, walk in today no appointment needed.  </p>
+
+                  <p className="text-lg  text-[#050505] font-bold" >
+                    Skip the hospital wait. See a real doctor this weekend.
                   </p>
 
 
                 </div>
 
-                <div className="flex justify-center items-center">
-                  <img
-                    src={hero_img.src}
-                    alt="Now Medical Clinic Calgary doctor"
-                    className="rounded-lg  "
-                  />
+                <div className="flex justify-center items-center ml-8 ">
+                  <iframe
+                    width="100%"
+                    height="500"
+                    src="https://www.youtube.com/embed/IpTEkX4lRWQ?rel=0&modestbranding=1&showinfo=0"
+                    title="YouTube Shorts Video"
+                    frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                  </iframe>
                 </div>
               </div>
             </div>
@@ -122,7 +128,6 @@ export default function WeekendClinicPage() {
             image={whyChoose_img.src}
             h2_color_1='text-[#303030]'
             h2_color_2='text-[#299470]'
-            py=" pt-30 pb-22"
             order="order-last"
           />
 
@@ -145,7 +150,6 @@ export default function WeekendClinicPage() {
           {/* Map Section */}
           <FindUsSection
             bgColor="bg-white"
-            showFreeParking={true}
             customButtons={
               <>
                 <Button
@@ -153,7 +157,7 @@ export default function WeekendClinicPage() {
                   className="border border-[#299470] bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-[16px] py-[11px] flex items-center gap-[10px] cursor-pointer"
                   asChild
                 >
-                  <Link href="/services">
+                  <Link href="/walk-in-clinic-calgary">
                     <img
                       src="/icons/solar_walking-outline.svg"
                       alt=""
@@ -185,7 +189,7 @@ export default function WeekendClinicPage() {
                   className="border border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-white font-bold text-lg px-[16px] py-[11px] flex items-center gap-[10px] cursor-pointer"
                   asChild
                 >
-                  <Link href="https://maps.google.com/maps?q=2520%2023%20St%20NE%20%2319,%20Calgary,%20AB%20T2E%208L2" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://share.google/CkrlunWzewWZjaPmv" target="_blank" rel="noopener noreferrer">
                     <img
                       src="/icons/pin-outline-icon.svg"
                       alt=""
@@ -197,6 +201,8 @@ export default function WeekendClinicPage() {
               </>
             }
           />
+
+
           <div className="mt-15"></div>
           {/* CTA Banner */}
           <BottomCallAction

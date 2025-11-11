@@ -3,20 +3,18 @@ import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, CLINIC_DATA } from "@/lib/structured-data";
-import type { Metadata } from "next";
 import { LiveStatusBanner } from "@/components/live-status-banner";
 import { FindUsSection, WhyChooseSection } from "@/sections";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
-import hero_img from "@/public/images/major-sub/hero.png";
 import bg_img from "@/public/images/major-sub/rocky-skip-hospital.png";
 import whyChoose_img from "@/public/images/major-sub/rocky-why-now.png";
+import type { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-  title: "Walk-In Clinic Near Rockyview Hospital | Open 7 Days Until 11 PM",
-  description: "Non-emergency care near Rockyview Hospital. Walk in anytime — open 7 days until 11 PM.",
+  title: "Walk-In Clinic Near Rockyview Hospital Calgary",
+  description: "Now Medical walk-in clinic near Rockyview Hospital. Quick access to medical care—no appointment needed.",
   keywords: ["walk in clinic near rockyview hospital", "clinic near rockyview"],
-  alternates: { canonical: "https://nowmedical.ca/walk-in-clinic-near-rockyview-hospital" }
 };
 
 export default function RockyviewHospitalPage() {
@@ -79,9 +77,9 @@ export default function RockyviewHospitalPage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white pt-8 pb-14">
+          <section className="bg-[#F1F9F4] to-white py-[54px] ">
             <div className="container">
-              <div className="grid gap-4 lg:grid-cols-2 lg:gap-4 items-center  ">
+              <div className="grid gap-4 lg:grid-cols-2 lg:gap-12  items-center  ">
                 <div>
                   <h1 className=" font-bold tracking-tight lg:text-6xl mb-4">
                     Walk-In Clinic Near <br /><span className="text-[#299470]">Rockyview Hospital</span> <br />Open 7 Days Until 11 PM
@@ -89,16 +87,20 @@ export default function RockyviewHospitalPage() {
 
                   <p className="text-base  text-foreground mb-4">
                     Need a doctor near <b>Rockyview General Hospital ?</b>  </p>
-                    <p className="text-base  text-foreground mb-4">Walk in to <b>Now Medical Clinic</b> with real family doctors open <b>7 days a week until 11 PM,</b> including <b>weekends and holidays.</b></p>
+                  <p className="text-base  text-foreground mb-4">Walk in to <b>Now Medical Clinic</b> with real family doctors open <b>7 days a week until 11 PM,</b> including <b>weekends and holidays.</b></p>
 
                 </div>
 
-                <div className="flex justify-center items-center">
-                  <img
-                    src={hero_img.src}
-                    alt="Now Medical Clinic Calgary doctor"
-                    className="rounded-lg  "
-                  />
+                <div className="flex justify-center items-center ml-8">
+                  <iframe
+                    width="100%"
+                    height="500"
+                    src="https://www.youtube.com/embed/X0BcuE-6Kuw?rel=0&modestbranding=1&showinfo=0"
+                    title="YouTube Shorts Video"
+                    frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                  </iframe>
                 </div>
               </div>
             </div>
@@ -118,8 +120,8 @@ export default function RockyviewHospitalPage() {
             order="order-last"
           />
 
-                    {/* Why Now Medical Clinic */}
-                    <WhyChooseSection
+          {/* Why Now Medical Clinic */}
+          <WhyChooseSection
             title="Why "
             title_2=""
             subtitle="Now Medical Clinic"
@@ -128,7 +130,7 @@ export default function RockyviewHospitalPage() {
             h2_color_1='text-[#303030]'
             h2_color_2='text-[#299470]'
             h2_sub_color='text-[#299470]'
-            py=" pt-30 pb-22"
+            py=" py-8 "
             order="order-first"
             IsDot={false}
             bg_color="bg-[#F1F9F4]"
@@ -153,14 +155,14 @@ export default function RockyviewHospitalPage() {
                     Walk In Today
                   </Link>
                 </Button>
-                
+
                 <Button
                   size="lg"
                   variant="outline"
                   className="border border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-white font-bold text-lg px-[16px] py-[11px] flex items-center gap-[10px] cursor-pointer"
                   asChild
                 >
-                  <Link href="https://maps.google.com/maps?q=2520%2023%20St%20NE%20%2319,%20Calgary,%20AB%20T2E%208L2" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://share.google/CkrlunWzewWZjaPmv" target="_blank" rel="noopener noreferrer">
                     <img
                       src="/icons/pin-outline-icon.svg"
                       alt=""
@@ -175,9 +177,10 @@ export default function RockyviewHospitalPage() {
           <div className="mt-15"></div>
           {/* CTA Banner */}
           <BottomCallAction
-            title='Walk-In Clinic Near Rockyview Hospital Open 7 Days Until 11 PM'
-            title_2=""
-            description="Skip ER waits at Rockyview Hospital walk in for real-doctor care 7 days a week until 11 PM, Fast walk-in & free parking, Call 587-391-8188."
+            title='Walk-In Clinic Near Rockyview Hospital | '
+            title_2="Open 7 Days Until 11 PM"
+            description="Skip ER waits at Rockyview Hospital walk in for real-doctor care 7 days a week until 11 PM. Fast walk-in & free parking. Call"
+            description_2=' 587-391-8188.'
           />
 
 

@@ -11,36 +11,11 @@ import { Button } from "@/components/ui/button";
 import { LiveStatusBanner } from "@/components/live-status-banner";
 
 
-
 export const metadata: Metadata = {
-  title: "Urgent Care Calgary | Walk-In Non-Emergency Clinic",
-  description: "Avoid ER wait times. Walk in for same-day urgent care, open until 11 PM daily. Calgary's trusted non-emergency medical clinic.",
+  title: "Urgent Care Calgary | Immediate Medical Attention Without Appointment",
+  description: "Need urgent care in Calgary? Get immediate medical attention for non-life-threatening emergencies. Walk-ins welcome, no appointment needed.",
   keywords: ["urgent care calgary", "non emergency clinic calgary", "urgent care walk in", "same day medical care", "calgary urgent care"],
-  alternates: {
-    canonical: "https://nowmedical.ca/urgent-care-calgary"
-  },
-  openGraph: {
-    title: "Urgent Care Calgary | Walk-In Non-Emergency Clinic",
-    description: "Avoid ER wait times. Walk in for same-day urgent care, open until 11 PM daily. Calgary's trusted non-emergency medical clinic.",
-    url: "https://nowmedical.ca/urgent-care-calgary",
-    siteName: "Now Medical Clinic",
-    images: [
-      {
-        url: "https://nowmedical.ca/images/modern-medical-clinic-interior-waiting-room.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Now Medical Clinic - Urgent Care Calgary"
-      }
-    ],
-    locale: "en_CA",
-    type: "website"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Urgent Care Calgary | Walk-In Non-Emergency Clinic",
-    description: "Avoid ER wait times. Walk in for same-day urgent care, open until 11 PM daily.",
-    images: ["https://nowmedical.ca/images/modern-medical-clinic-interior-waiting-room.jpg"]
-  }
+
 };
 
 export default function UrgentCarePage() {
@@ -87,17 +62,17 @@ export default function UrgentCarePage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white pt-8 pb-14">
+          <section className="bg-[#F1F9F4] to-white py-[54px] ">
             <div className="container">
-              <div className="grid gap-4 lg:grid-cols-2 lg:gap-4 items-center  ">
+              <div className="grid gap-4 lg:grid-cols-[53%_46%] lg:gap-4 items-center  ">
                 <div>
-                  <h1 className=" font-bold tracking-tight lg:text-6xl mb-4">
+                  <h1 className=" font-bold tracking-tight lg:text-6xl mb-[21px] ">
                     <span className="text-[#299470] " >Urgent Care in Calgary </span> <br />
                     Walk-In Clinic Open <br />
                     Late 7 Days a Week
                   </h1>
 
-                  <p className="text-base  text-[#303030] mb-4">
+                  <p className="text-base  text-[#000000] mb-4">
                     Need medical care now? <br />
                     Skip long hospital waits — visit <b>Now Medical Clinic,</b> Calgary’s trusted <b>urgent care alternative,</b> <br />
                     <b>open daily until 11 PM,</b> including <b>weekends and holidays.</b>
@@ -107,11 +82,15 @@ export default function UrgentCarePage() {
                 </div>
 
                 <div className="flex justify-center items-center">
-                  <img
-                    src={hero_img.src}
-                    alt="Now Medical Clinic Calgary doctor"
-                    className="rounded-lg  "
-                  />
+                  <iframe
+                    width="100%"
+                    height="500"
+                    src="https://www.youtube.com/embed/X0BcuE-6Kuw?rel=0&modestbranding=1&showinfo=0"
+                    title="YouTube Shorts Video"
+                    frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                  </iframe>
                 </div>
               </div>
             </div>
@@ -122,6 +101,7 @@ export default function UrgentCarePage() {
             title="What"
             title_2="We Treat"
             subtitle=""
+            py=" py-[69px] "
             items={whatWeTreat}
             image={bg_img.src}
           />
@@ -158,7 +138,7 @@ export default function UrgentCarePage() {
                 className="bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-6 py-6 flex items-center gap-2"
                 asChild
               >
-                <Link href="/services">
+                <Link href="/walk-in-clinic-calgary">
                   <img
                     src="/icons/solar_walking-outline.svg"
                     alt=""
@@ -190,7 +170,7 @@ export default function UrgentCarePage() {
                 className="border border-white text-white hover:bg-transparent bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
                 asChild
               >
-                <Link href="/contact">
+                <Link href="https://share.google/CkrlunWzewWZjaPmv">
                   <img
                     src="/images/walk-in/flowbite_map-pin-outline.svg"
                     alt=""
@@ -208,9 +188,13 @@ export default function UrgentCarePage() {
           <div className="mt-15"></div>
           {/* CTA Banner */}
           <BottomCallAction
-            title='Hospital Wait Times Calgary | Skip the Line | '
-            title_2="Walk-In Clinic Open Until 11 PM"
-            description="Tired of long hospital wait times in Calgary? Walk in to Now Medical Clinic — open 7 days until 11 PM. Real doctors, no appointment needed."
+            title='Urgent Care Calgary | Walk-In Clinic '
+            title_2="Open Late 7 Days"
+            description={
+              <>
+                Need urgent care in Calgary? Skip ER waits — walk in today 7:30 AM–11 PM with real  <br /> doctors. Open weekends & holidays. Call 587-391-8188
+              </>
+            }
           />
 
 

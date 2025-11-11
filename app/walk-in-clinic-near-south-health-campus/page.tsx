@@ -7,15 +7,13 @@ import type { Metadata } from "next";
 import { LiveStatusBanner } from "@/components/live-status-banner";
 import { FindUsSection, WhyChooseSection } from "@/sections";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
-import hero_img from "@/public/images/hospital-peter/hospital-peter-banner.png";
 import bg_img from "@/public/images/hospital-peter/why-us-south-health.png";
 import whyChoose_img from "@/public/images/walkin-sub/why-choose-south.png";
 
 export const metadata: Metadata = {
-  title: "Walk-In Clinic Near South Health Campus | Open 7 Days Until 11 PM",
-  description: "Non-emergency care near South Health Campus. Walk in anytime — open 7 days until 11 PM.",
+  title: "Walk-In Clinic Near South Health Campus Calgary",
+  description: "Now Medical walk-in clinic near South Health Campus. Quick access to medical care—no appointment needed",
   keywords: ["walk in clinic near south health campus", "clinic near shc"],
-  alternates: { canonical: "https://nowmedical.ca/walk-in-clinic-near-south-health-campus" }
 };
 
 export default function SouthHealthCampusPage() {
@@ -75,9 +73,9 @@ export default function SouthHealthCampusPage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white pt-8 pb-14">
+          <section className="bg-[#F1F9F4] to-white py-[54px] ">
             <div className="container">
-              <div className="grid gap-4 lg:grid-cols-2 lg:gap-4 items-center  ">
+              <div className="grid gap-4 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
                   <h1 className=" font-bold tracking-tight lg:text-6xl mb-4">
                     Walk-In Clinic Near <br /><span className="text-[#299470]">South Health Campus</span> <br />Open Late Every Day
@@ -88,12 +86,16 @@ export default function SouthHealthCampusPage() {
 
                 </div>
 
-                <div className="flex justify-center items-center">
-                  <img
-                    src={hero_img.src}
-                    alt="Now Medical Clinic Calgary doctor"
-                    className="rounded-lg  "
-                  />
+                <div className="flex justify-center items-center ml-8 ">
+                  <iframe
+                    width="100%"
+                    height="500"
+                    src="https://www.youtube.com/embed/cyZfzJUXe8o?rel=0&modestbranding=1&showinfo=0"
+                    title="YouTube Shorts Video"
+                    frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                  </iframe>
                 </div>
               </div>
             </div>
@@ -123,7 +125,7 @@ export default function SouthHealthCampusPage() {
             h2_color_1='text-[#303030]'
             h2_color_2='text-[#299470]'
             h2_sub_color='text-[#303030]'
-            py=" pt-30 pb-22"
+            py=" py-[35px] "
             order="order-first"
             IsDot={false}
             bg_color="bg-[#F1F9F4]"
@@ -148,14 +150,14 @@ export default function SouthHealthCampusPage() {
                     Walk In Today
                   </Link>
                 </Button>
-                
+
                 <Button
                   size="lg"
                   variant="outline"
                   className="border border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-white font-bold text-lg px-[16px] py-[11px] flex items-center gap-[10px] cursor-pointer"
                   asChild
                 >
-                  <Link href="https://maps.google.com/maps?q=2520%2023%20St%20NE%20%2319,%20Calgary,%20AB%20T2E%208L2" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://share.google/CkrlunWzewWZjaPmv" target="_blank" rel="noopener noreferrer">
                     <img
                       src="/icons/pin-outline-icon.svg"
                       alt=""
@@ -170,9 +172,10 @@ export default function SouthHealthCampusPage() {
           <div className="mt-15"></div>
           {/* CTA Banner */}
           <BottomCallAction
-            title='Walk-In Clinic Near South Health Campus I Open 7 Days Until 11 PM'
-            title_2=""
-            description="Emergency care near South Health Campus — walk in today for real doctor care 7 days a week until 11 PM. Skip ER waits. Call 587-391-8188."
+            title='Walk-In Clinic Near South Health'
+            title_2="Campus | Open 7 Days Until 11 PM"
+            description="Emergency care near South Health Campus — walk in today for real doctor care 7 days a week until 11 PM. Skip ER waits. Call "
+            description_2='587-391-8188.'
           />
 
 

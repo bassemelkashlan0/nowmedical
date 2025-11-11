@@ -10,7 +10,12 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ConditionsSection, FindUsSection, WhyChooseSection } from "@/sections";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+    title: "Walk-In Clinic Near Peter Lougheed Hospital Calgary",
+    description: "Now Medical walk-in clinic near Peter Lougheed Hospital. Quick access to medical care—no appointment needed."
+}
 
 export default function HospitalPeterLougheed() {
     const whyChooseItems = [
