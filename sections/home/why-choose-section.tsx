@@ -164,7 +164,7 @@ export default function WhyChooseSection({
               className={"border-[#299470]  text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg  " + (btn_class ? ` ${btn_class}` : "hidden")}
               asChild
             >
-              <Link href="/services">Walk In Now <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
+              <Link href="/walk-in-clinic-calgary">Walk In Now <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
             </Button>
 
             <Button className={"bg-[#299470] hover:bg-[#256358] text-white font-bold px-4 py-4 text-lg " + (full_bg_btn ? full_bg_btn : "hidden")}>

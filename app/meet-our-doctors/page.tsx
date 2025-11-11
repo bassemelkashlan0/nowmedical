@@ -2,16 +2,13 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { 
   DoctorCategoriesSection,
-  TestimonialsSection,
-  FindUsSection,
-  CTABannerSection 
 } from "@/sections";
 import { StructuredData, generatePhysicianSchema, generateLocalBusinessSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Meet Our Doctors Calgary | Male & Female Family Physicians",
-  description: "Meet our experienced family doctors in Calgary. Male and female physicians accepting new patients. Board-certified doctors providing compassionate care.",
+  title: "Meet Our Doctors | Experienced Family Physicians | Now Medical",
+  description: "Meet our experienced family doctors at Now Medical in Calgary. Learn about our compassionate team dedicated to your health and wellness.",
   keywords: ["doctors calgary", "family physicians", "meet our doctors", "calgary physicians", "male female doctors"],
   alternates: {
     canonical: "https://nowmedical.ca/meet-our-doctors"
