@@ -11,7 +11,8 @@ import {
   WalkInHeroSection,
   StorySection,
   WhyChooseSection,
-  ValuesSection
+  ValuesSection,
+  DoctorsSection
 } from "@/sections";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -125,34 +126,68 @@ export default function WalkInPage() {
       answer: "Our average wait time is under 30 minutes, much faster than hospital emergency rooms."
     }
   ]);
-  const doctors = [
+  const femaleDoctors = [
     {
       name: "Dr. Madiha",
-      avatar: "/images/about-us/dr-madiha.png",
+      avatar: "/images/landing/dr-madiha.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
-      phone: "587-391-8188"
     },
     {
       name: "Dr. Vanessa",
-      avatar: "/images/about-us/dr-vanessa.png",
+      avatar: "/images/landing/dr-ebele.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
-      phone: "587-391-8188"
+    },
+    {
+      name: "Dr. Ebele",
+      avatar: "/images/landing/dr-ebele.png",
+      specialty: "Family Doctors",
+      description: "Experienced in family practice and children's care.",
+    },
+    {
+      name: "Dr. Madiha",
+      avatar: "/images/landing/dr-madiha.png",
+      specialty: "Family Doctors",
+      description: "Experienced in family practice and children's care.",
+    }
+  ];
+
+  const maleDoctors = [
+    {
+      name: "Dr. Michael",
+      avatar: "/images/landing/dr-michael.png",
+      specialty: "Family Doctors",
+      description: "Experienced in family practice and children's care.",
+      language: "Spanish",
     },
     {
       name: "Dr. Michael",
-      avatar: "/images/about-us/dr-michael.png",
+      avatar: "/images/landing/dr-michael.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
-      phone: "587-391-8188"
+      language: "Spanish",
     },
     {
-      name: "Dr. Bedi",
-      avatar: "/images/about-us/dr-vanessa.png",
+      name: "Dr. Michael",
+      avatar: "/images/landing/dr-michael.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
-      phone: "587-391-8188"
+      language: "Spanish",
+    },
+    {
+      name: "Dr. Michael",
+      avatar: "/images/landing/dr-michael.png",
+      specialty: "Family Doctors",
+      description: "Experienced in family practice and children's care.",
+      language: "Spanish",
+    },
+    {
+      name: "Dr. Michael",
+      avatar: "/images/landing/dr-michael.png",
+      specialty: "Family Doctors",
+      description: "Experienced in family practice and children's care.",
+      language: "Spanish",
     }
   ];
   const videoTestimonials = [
@@ -344,43 +379,21 @@ export default function WalkInPage() {
 
 
           {/* Meet Our Doctors */}
-          <section className="py-[54px] bg-[#F1F9F4] ">
-            <div className="container">
-              <div className="text-center mb-8">
-                <h2 className="text-5xl font-bold">
-                  Meet <span className="text-[#4A9B8E]">Our Doctors</span>
-                </h2>
-              </div>
-
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto mb-8">
-                {doctors.map((doctor, index) => (
-                  <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm">
-                    {/* Top Section with Light Green Background */}
-                    <div className="bg-[#4A9B8E]/10 flex items-center justify-center">
-                      <img
-                        src={doctor.avatar}
-                        alt={doctor.name}
-                        className="w-full h-[300px] object-cover"
-                      />
-                    </div>
-                    {/* Bottom Section with White Background */}
-                    <div className="p-4 text-start">
-                      <p className="text-base text-foreground mb-1">{doctor.specialty}</p>
-                      <h3 className="text-2xl font-bold text-foreground font-medium mb-3">{doctor.name}</h3>
-                      <p className="text-base text-foreground">{doctor.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Call-to-Action Button */}
-              <div className="flex justify-center">
-                <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
-                  <Link href="/walk-in-clinic-calgary"><img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5" /> Call 587-391-8188 to Book or Walk In Today</Link>
-                </Button>
-              </div>
-            </div>
-          </section>
+          <DoctorsSection
+            title="Meet Our Doctors"
+            femaleDoctors={femaleDoctors}
+            maleDoctors={maleDoctors}
+            showCategories={false}
+            useCarousel={true}
+            customButtons={[
+              {
+                text: "Meet Our Doctors",
+                link: "/meet-our-doctors",
+                icon: "/icons/uil-arrow-up-right.svg",
+                variant: "default"
+              }
+            ]}
+          />
 
 
           {/* What Patients Say - Video Testimonials */}

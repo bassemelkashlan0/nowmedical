@@ -193,6 +193,12 @@ export default function HomePage() {
       avatar: "/images/landing/dr-ebele.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
+    },
+    {
+      name: "Dr. Madiha",
+      avatar: "/images/landing/dr-madiha.png",
+      specialty: "Family Doctors",
+      description: "Experienced in family practice and children's care.",
     }
   ];
 
@@ -202,6 +208,35 @@ export default function HomePage() {
       avatar: "/images/landing/dr-michael.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
+      language: "Spanish",
+    },
+    {
+      name: "Dr. Michael",
+      avatar: "/images/landing/dr-michael.png",
+      specialty: "Family Doctors",
+      description: "Experienced in family practice and children's care.",
+      language: "Spanish",
+    },
+    {
+      name: "Dr. Michael",
+      avatar: "/images/landing/dr-michael.png",
+      specialty: "Family Doctors",
+      description: "Experienced in family practice and children's care.",
+      language: "Spanish",
+    },
+    {
+      name: "Dr. Michael",
+      avatar: "/images/landing/dr-michael.png",
+      specialty: "Family Doctors",
+      description: "Experienced in family practice and children's care.",
+      language: "Spanish",
+    },
+    {
+      name: "Dr. Michael",
+      avatar: "/images/landing/dr-michael.png",
+      specialty: "Family Doctors",
+      description: "Experienced in family practice and children's care.",
+      language: "Spanish",
     }
   ];
 
@@ -519,6 +554,7 @@ export default function HomePage() {
             femaleDoctors={femaleDoctors}
             maleDoctors={maleDoctors}
             showCategories={false}
+            useCarousel={true}
           />
 
           {/* Patient Experience */}
