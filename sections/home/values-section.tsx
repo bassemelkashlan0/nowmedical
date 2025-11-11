@@ -53,7 +53,7 @@ export default function ValuesSection({
           </p>
         )}
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-5 ">
           {values.map((value, index) => (
             <Card key={index} className="p-4 text-start hover:shadow-lg hover:bg-[#EAF4F1] transition-shadow border-1 border-[#83C1AC] h-full flex flex-col">
               <div className="inline-flex mb-6">
@@ -77,9 +77,9 @@ export default function ValuesSection({
                   />
                 ) : null}
               </div>
-              <h3 className={`text-3xl text-[#050505] ${titleFontWeight} mb-4`}>{value.title}</h3>
+              <h3 className={`text-3xl font-medium text-[#050505] ${titleFontWeight} mb-4`}>{value.title}</h3>
               {useListFormat && Array.isArray(value.description) ? (
-                <ul className="text-gray-600 flex-grow space-y-2">
+                <ul className=" flex-grow space-y-2">
                   {value.description.map((item, idx) => (
                     <li key={idx} className="flex text-[#303030] items-start gap-2">
                       <DotIcon className="w-5 h-5 text-[#303030] flex-shrink-0 mt-1" />
@@ -88,7 +88,7 @@ export default function ValuesSection({
                   ))}
                 </ul>
               ) : (
-                <p className="text-gray-600 flex-grow">{Array.isArray(value.description) ? value.description.join(' ') : value.description}</p>
+                <p className="text-[#303030] flex-grow">{Array.isArray(value.description) ? value.description.join(' ') : value.description}</p>
               )}
             </Card>
           ))}

@@ -16,7 +16,7 @@ export default function DifferenceSection({
   imageAlt = "Medical clinic reception area"
 }: DifferenceSectionProps) {
   return (
-    <section className="py-20">
+    <section className="py-[94]  ">
       <div className="container">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           <div>
@@ -28,7 +28,7 @@ export default function DifferenceSection({
           </div>
 
           <div>
-            <h2 className="text-5xl font-bold mb-6">
+            <h2 className="text-5xl text-[#303030] font-bold mb-6 ">
               {title} <br/><span className="text-[#299470]">{titleHighlight}</span> Different
             </h2>
             <div className="space-y-4">
@@ -37,7 +37,7 @@ export default function DifferenceSection({
                   <div className="flex h-6 w-6 items-center justify-center flex-shrink-0 mt-0.5">
                     <img src="/images/about-us/uil-check.svg" alt="Check" className="w-6 h-6" />
                   </div>
-                  <p className="text-foreground text-lg font-bold">{item}</p>
+                  <p className="text-[#303030] text-lg font-bold">{item}</p>
                 </div>
               ))}
             </div>

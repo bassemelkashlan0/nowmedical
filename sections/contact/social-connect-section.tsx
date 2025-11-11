@@ -10,9 +10,9 @@ export default function SocialConnectSection({
   description = "Stay updated on clinic hours, health updates, and health tips"
 }: SocialConnectSectionProps) {
   return (
-    <section className="py-10 md:py-14 px-4">
+    <section className="py-15  px-4">
       <div className="container mx-auto max-w-4xl text-center">
-        <h2 className="text-2xl md:text-6xl font-bold mb-2 text-[#303930]">
+        <h2 className="text-5xl font-bold mb-[10px] text-[#303930]">
           {title} 
         </h2>
         

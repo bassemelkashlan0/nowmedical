@@ -8,12 +8,15 @@ interface FindUsSectionProps {
   IsShowBtn?: string;
   customButtons?: ReactNode;
   showFreeParking?: boolean;
+  dairection?: string
 }
+
 
 export default function FindUsSection({
   bgColor,
   IsShowBtn,
   customButtons,
+  dairection,
   showFreeParking = false,
   mapEmbedUrl = "https://maps.google.com/maps?q=2520%2023%20St%20NE%20%2319,%20Calgary,%20AB%20T2E%208L2&t=&z=15&ie=UTF8&iwloc=&output=embed"
 }: FindUsSectionProps) {
@@ -96,7 +99,8 @@ export default function FindUsSection({
               <div className="inline-flex">
                 {/* Button */}
                 <a
-                  href="https://maps.google.com/maps?q=2520%2023%20St%20NE%20%2319,%20Calgary,%20AB%20T2E%208L2"
+                  // href="/https://maps.google.com/maps?q=2520%2023%20St%20NE%20%2319,%20Calgary,%20AB%20T2E%208L2"
+                  href={ dairection ? dairection : "https://share.google/CkrlunWzewWZjaPmv" }
                   target="_blank"
                   rel="noopener noreferrer"
                   className={" items-center gap-2 mt-2 px-6 py-3 bg-[#299470] hover:bg-[#256358] text-white font-bold " + (IsShowBtn ? IsShowBtn : " inline-flex")}

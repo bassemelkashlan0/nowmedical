@@ -18,16 +18,16 @@ export default function ContactInfoSection({
   hours = "7:30 AM - 11:00 PM (Everyday / 7 Days a Week, Weekends & Holidays Included)"
 }: ContactInfoSectionProps) {
   return (
-    <section className="py-12 md:py-16 px-4 bg-white">
+    <section className="py-[54px]  px-4 bg-white">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-2xl md:text-5xl font-bold text-center mb-6 text-[#303030]">
-          Clinic <span className="text-[#2D7B6F]">Contact Information</span>
+          Clinic <span className="text-[#299470]">Contact Information</span>
         </h2>
 
         <div className="mb-6">
-          <div className="grid md:grid-cols-2 gap-4 md:gap-4 mb-12">
-            <Card className="border-1 border-[#83C1AC] rounded-[6px] p-0">
-              <div className="p-6 flex items-start gap-6">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-4 mb-[42px] ">
+            <Card className="border-1 border-[#83C1AC] rounded-[6px] p-0 ">
+              <div className="p-4 flex items-start gap-6">
                 <div className="rounded-lg flex-shrink-0">
                   <Image
                     src="/icons/address.svg"
@@ -44,7 +44,7 @@ export default function ContactInfoSection({
             </Card>
 
             <Card className="border-1 border-[#83C1AC] rounded-[6px] p-0">
-              <div className="p-6 flex items-start gap-6">
+              <div className="p-4 flex items-start gap-6">
                 <div className="rounded-lg flex-shrink-0">
                   <Image
                     src="/icons/phone.svg"
@@ -63,7 +63,7 @@ export default function ContactInfoSection({
 
           <div className=" grid md:grid-cols-2 gap-4 md:gap-4 ">
             <Card className="border-1 border-[#83C1AC] rounded-[6px] p-0">
-              <div className="p-6 flex items-start gap-6">
+              <div className="p-4 flex items-start gap-6">
                 <div className="rounded-lg flex-shrink-0">
                   <Image
                     src="/icons/fax.svg"
@@ -80,7 +80,7 @@ export default function ContactInfoSection({
             </Card>
 
             <Card className="border-1 border-[#83C1AC] rounded-[6px] p-0">
-              <div className="p-6 flex items-start gap-6">
+              <div className="p-4 flex items-start gap-6">
                 <div className="rounded-lg flex-shrink-0">
                   <Image
                     src="/icons/email.svg"
@@ -105,7 +105,7 @@ export default function ContactInfoSection({
           </p>
         </div>
 
-        <div className="flex pt-4 flex-col md:flex-row gap-4 justify-center items-center">
+        <div className="flex pt-[6px] flex-col md:flex-row gap-4 justify-center items-center">
           <Button className="bg-[#299470] hover:bg-[#256358] text-white font-bold px-6 py-6 text-lg">
             <Image
               src="/icons/btn_phone-outline-icon.svg"

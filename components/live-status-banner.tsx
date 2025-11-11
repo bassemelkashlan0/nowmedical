@@ -60,7 +60,7 @@ export function LiveStatusBanner() {
 
   if (loading) {
     return (
-      <div className="bg-[#A7D3C4]">
+      <div className="bg-[#A7D3C4] z-40 sticky w-full mx-auto top-[82px]">
         <div className="container py-7">
           <div className="flex items-center justify-center gap-[24px] text-sm">
             <div className="text-[#050505]">Loading status...</div>
@@ -71,7 +71,7 @@ export function LiveStatusBanner() {
   }
 
   return (
-    <div className={isActive ? "bg-[#A7D3C4]" : "bg-red-200"}>
+    <div className={ " sticky w-full mx-auto top-[82px] z-40   " +   (isActive ? "bg-[#A7D3C4]" : "bg-red-200 ")}>
       <div className="container py-7">
         <div className="flex items-center justify-center gap-[24px] text-sm">
           <div className="flex items-center  gap-[24px]">

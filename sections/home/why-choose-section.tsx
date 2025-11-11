@@ -49,7 +49,8 @@ interface WhyChooseSectionProps {
   address?: string;
   para_color?: string,
   para_mb?: string,
-  h2_py?: string
+  h2_py?: string,
+  col_gap?: string
 }
 
 export default function WhyChooseSection({
@@ -91,12 +92,13 @@ export default function WhyChooseSection({
   address,
   para_color,
   para_mb,
-  h2_py
+  h2_py,
+  col_gap,
 }: WhyChooseSectionProps) {
   return (
     <section className={" px-4 md:px-8 " + (bg_color ? bg_color : "") + (py ? py : " py-4 md:py-[54px] ")}>
       <div className="container">
-        <div className="grid md:grid-cols-2 gap-18 items-center">
+        <div className={"grid md:grid-cols-2  items-center " + ( col_gap ? col_gap : " gap-18 ")}>
           {image && (
             <div className="relative overflow-hidden">
               <img
@@ -246,6 +248,7 @@ export default function WhyChooseSection({
             )}
 
           </div>
+
         </div>
       </div>
     </section>

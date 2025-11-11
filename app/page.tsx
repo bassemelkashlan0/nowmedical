@@ -226,44 +226,6 @@ export default function HomePage() {
     }
   ];
 
-  const values = [
-    {
-      title: "Compassion",
-      description: "We treat every patient with empathy and understanding",
-      icon: <Heart className="w-8 h-8" />
-    },
-    {
-      title: "Accessibility",
-      description: "Open 7 days a week with extended hours for your convenience",
-      icon: <Clock className="w-8 h-8" />
-    },
-    {
-      title: "Communication",
-      description: "Clear, honest communication about your health",
-      icon: <Users className="w-8 h-8" />
-    },
-    {
-      title: "Diversity",
-      description: "We serve patients from all backgrounds and cultures",
-      icon: <Users className="w-8 h-8" />
-    },
-    {
-      title: "Excellence",
-      description: "Committed to the highest standards of medical care",
-      icon: <Activity className="w-8 h-8" />
-    },
-    {
-      title: "Community",
-      description: "Proud to serve the Calgary community",
-      icon: <Heart className="w-8 h-8" />
-    }
-  ];
-
-  const storyContent = [
-    "At Now Medical Clinic, we believe healthcare should be accessible when you need it most. Founded with a mission to provide quality medical care with extended hours, we've been serving the Calgary community for years.",
-    "Our team of experienced physicians and healthcare professionals are dedicated to providing comprehensive family medicine and walk-in services. We understand that health concerns don't follow a 9-to-5 schedule, which is why we're open 7 days a week until 11 PM.",
-    "We're located near Peter Lougheed Centre, making us a convenient alternative to long hospital wait times. Whether you need urgent care, a family doctor, or ongoing health management, we're here for you and your family."
-  ];
 
   // Structured Data for SEO
   const localBusinessSchema = generateLocalBusinessSchema(CLINIC_DATA);
@@ -303,7 +265,7 @@ export default function HomePage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white pt-5 md:pb-[70px] ">
+          <section className="bg-[#F1F9F4] to-white py-[54px] ">
             <div className="container">
               <div className="grid gap-12 lg:grid-cols-[53%_46%] lg:gap-14 items-center">
                 <div>
@@ -340,11 +302,23 @@ export default function HomePage() {
 
                 <div className="relative">
                   <div className="relative">
-                    <img
+                    {/* <img
                       src="/images/landing/home-banner.png"
                       alt="Medical team of three doctors"
                       className="w-full h-auto"
-                    />
+                    /> */}
+
+                    <iframe
+                      width="100%"
+                      height="500"
+                      src="https://www.youtube.com/embed/zeArmG81bAE?rel=0&modestbranding=1&showinfo=0"
+                      title="YouTube Shorts Video"
+                      frameborder="0"
+                      allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+                    </iframe>
+
+
                   </div>
                 </div>
               </div>

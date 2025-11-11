@@ -10,14 +10,12 @@ import {
   CommitmentSection,
   ValuesSection,
   StorySection,
-  DoctorsSection,
-  TestimonialsSection,
   FindUsSection,
   CTABannerSection
 } from "@/sections";
-import { Heart, Clock, Users, Activity, Phone, Play } from "lucide-react";
 import { StructuredData, generateOrganizationSchema, generateLocalBusinessSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
+import BottomCallAction from "@/components/ui/bottom-call-acction";
 
 export const metadata: Metadata = {
   title: "About Now Medical Clinic Calgary | Our Story & Mission",
@@ -102,27 +100,6 @@ export default function AboutPage() {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Sanny Cooper",
-      avatar: "/images/placeholder-user.jpg",
-      rating: 5,
-      text: "Really good experience at this walk-in clinic. The clinic runs smoothly, staff were friendly, and it's very convenient to have the pharmacy on-site."
-    },
-    {
-      name: "Bill Grabovac",
-      avatar: "/images/placeholder-user.jpg",
-      rating: 5,
-      text: "Fast service! Well managed medical clinic! The Dr was knowledgeable with the medical condition we experienced. Very Happy with the service we received. A+"
-    },
-    {
-      name: "Jetta Lush",
-      avatar: "/images/placeholder-user.jpg",
-      rating: 5,
-      text: "This place was awesome!!! Hours are wonderful, employees were warm and welcoming. Super fast efficient, doctor was warm, welcoming and super thorough."
-    }
-  ];
-
   const videoTestimonials = [
     {
       name: "Bessie Cooper",
@@ -169,177 +146,186 @@ export default function AboutPage() {
     <>
       <StructuredData data={organizationSchema} />
       <StructuredData data={localBusinessSchema} />
-      
+
       <div className="flex min-h-screen flex-col">
         <Header />
         <LiveStatusBanner />
- 
-      <main className="flex-1">
-        {/* Hero Section */}
-        <section className="bg-[#F1F9F4] py-16">
-          <div className="container">
-            <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-              <div>
-                <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl mb-6">
-                  Real Doctors. Real Care.
-                  <br />
-                  <span className="text-[#299470]">Open Late Every Day</span>
-                </h1>
-                <p className="text-m text-foreground mb-4">
-                At <b>Now Medical Clinic</b>, we believe that quality healthcare should be <b>accessible, compassionate, and convenient</b> — not stressful or delayed.
-                </p>
-                <p className="text-base text-foreground mb-8">
-                We’re proud to be the only clinic in Calgary that <b>opens 7 days a week — until 11 PM</b>, including <b>weekends and holidays</b>.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
-                    <Link href="/walk-in-clinic-calgary"><img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5" />Call 587-391-8188</Link>
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
-                    asChild
-                  >
-                    <Link href="/services">Walk In Anytime No Appointment Needed<img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
-                  </Button>
-                </div>
-              </div>
 
-              <div>
-                <img
-                  src="/images/about-us/about-banner.png"
-                  alt="Now Medical Clinic Calgary doctor"
-                  className="rounded-lg w-full"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Our Story */}
-        <StorySection
-          title="Our"
-          subtitle="Story"
-          content={storyContent}
-          images={["/images/about-us/our-story.png", "/images/contact/modern-medical-clinic-interior-waiting-room.png"]}
-        />
-
-        {/* Our Mission */}
-        <MissionSection />
-
-        {/* Our Values */}
-        <ValuesSection
-          title="Our"
-          subtitle="Values"
-          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, "
-          values={values}
-        />
-
-        {/* Meet Our Doctors */}
-        <section className="py-20 bg-gray-50">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="text-5xl font-bold mb-4">
-                Meet <span className="text-[#4A9B8E]">Our Doctors</span>
-              </h2>
-              <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-                Our team of experienced family doctors brings diverse backgrounds and shared dedication to patient care. Our doctors collaborate to ensure continuity of care, whether you walk in for an urgent concern or visit regularly as a registered patient.
-              </p>
-            </div>
-
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto mb-8">
-              {doctors.map((doctor, index) => (
-                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm">
-                  {/* Top Section with Light Green Background */}
-                  <div className="bg-[#4A9B8E]/10 flex items-center justify-center">
-                    <img
-                      src={doctor.avatar}
-                      alt={doctor.name}
-                      className="w-full h-[300px] object-cover"
-                    />
-                  </div>
-                  {/* Bottom Section with White Background */}
-                  <div className="p-4 text-start">
-                    <p className="text-base text-foreground mb-1">{doctor.specialty}</p>
-                    <h3 className="text-2xl font-bold text-foreground font-medium mb-3">{doctor.name}</h3>
-                    <p className="text-base text-foreground">{doctor.description}</p>
+        <main className="flex-1">
+          {/* Hero Section */}
+          <section className="bg-[#F1F9F4] py-16">
+            <div className="container">
+              <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+                <div>
+                  <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl mb-[21px] ">
+                    Real Doctors. Real Care.
+                    <br />
+                    <span className="text-[#299470]">Open Late Every Day</span>
+                  </h1>
+                  <p className="text-m text-[#303030] mb-12 ">
+                    At <b>Now Medical Clinic</b>, we believe that quality healthcare should be <b>accessible, compassionate, and convenient</b> — not stressful or delayed.
+                    <br />
+                    We’re proud to be the only clinic in Calgary that <b>opens 7 days a week — until 11 PM</b>, including <b>weekends and holidays</b>.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
+                      <Link href="/walk-in-clinic-calgary"><img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5" />Call 587-391-8188</Link>
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
+                      asChild
+                    >
+                      <Link href="/walk-in-clinic-calgary">Walk In Anytime No Appointment Needed<img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
+                    </Button>
                   </div>
                 </div>
-              ))}
+
+                <div>
+                  <img
+                    src="/images/about-us/about-banner.png"
+                    alt="Now Medical Clinic Calgary doctor"
+                    className="rounded-lg w-full"
+                  />
+                </div>
+              </div>
             </div>
+          </section>
 
-            {/* Call-to-Action Button */}
-            <div className="flex justify-center">
-            <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
-                    <Link href="/walk-in-clinic-calgary"><img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5" /> Call 587-391-8188 to Book or Walk In Today</Link>
-                  </Button>
-            </div>
-          </div>
-        </section>
+          {/* Our Story */}
+          <StorySection
+            sec_py=" py-[46px] "
+            title="Our "
+            title_color=" text-[#299470] "
+            subtitle="Story"
+            sub_color=" text-[#303030] "
+            content={storyContent}
+            images={["/images/about-us/our-story.png", "/images/contact/modern-medical-clinic-interior-waiting-room.png"]}
+          />
 
-        {/* What Makes Us Different */}
-        <DifferenceSection 
-          title="What Makes"
-          titleHighlight="Now Medical Clinic"
-          differences={differences}
-          image="/images/about-us/clinic-diffrent.png"
-          imageAlt="Medical clinic reception area"
-        />
+          {/* Our Mission */}
+          <MissionSection />
 
-        {/* Our Commitment to Calgary */}
-        <CommitmentSection 
-          title="Our Commitment"
-          titleHighlight="to Calgary"
-          paragraphs={commitmentParagraphs}
-          image="/images/about-us/our-commitment.png"
-          imageAlt="Medical clinic reception area"
-        />
+          {/* Our Values */}
+          <ValuesSection
+            title="Our"
+            sub_color=" text-[#303030]"
+            subtitle="Values"
+            title_color=" text-[#299470] "
+            description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, "
+            values={values}
+          />
 
-        {/* What Patients Say - Video Testimonials */}
-        <section className="py-20 bg-white">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="text-5xl font-bold mb-4">
-                What <span className="text-[#299470]">Patients</span> Say
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              See what Calgary patients are saying about their experience with Now Medical Clinic.
-              </p>
-            </div>
+          {/* Meet Our Doctors */}
+          <section className="py-[54px] bg-[#F1F9F4] ">
+            <div className="container">
+              <div className="text-center mb-8 ">
+                <h2 className="text-5xl text-[#303030] font-bold mb-4">
+                  Meet <span className="text-[#299470]">Our Doctors</span>
+                </h2>
+                <p className="text-lg text-[#303030] leading-relaxed max-w-4xl mx-auto">
+                  Our team of experienced family doctors brings diverse backgrounds and shared dedication to patient care. Our doctors collaborate to ensure continuity of care, whether you walk in for an urgent concern or visit regularly as a registered patient.
+                </p>
+              </div>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
-              {videoTestimonials.map((testimonial, index) => (
-                <Card key={index} className="p-0 overflow-hidden rounded hover:shadow-lg transition-shadow border-1 border-[#83C1AC] hover:bg-[#EAF4F1]">
-                  <CardContent className="p-0">
-                    <div className="relative aspect-video bg-gray-100">
+              <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4  mb-8">
+                {doctors.map((doctor, index) => (
+                  <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm">
+                    {/* Top Section with Light Green Background */}
+                    <div className="bg-[#4A9B8E]/10 flex items-center justify-center">
                       <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="w-full h-[290px] object-cover"
+                        src={doctor.avatar}
+                        alt={doctor.name}
+                        className="w-full h-[300px] object-cover"
                       />
                     </div>
-                    <div className="py-4 px-4">
-                      <h3 className="font-semibold text-lg mb-2">{testimonial.name}</h3>
-                      <p className="text-sm text-muted-foreground italic">"{testimonial.quote}"</p>
+                    {/* Bottom Section with White Background */}
+                    <div className="p-4 text-start">
+                      <p className="text-base text-[#050505] mb-2 ">{doctor.specialty}</p>
+                      <h3 className="text-2xl font-medium text-[#050505] mb-3">{doctor.name}</h3>
+                      <p className="text-base text-[#303030]">{doctor.description}</p>
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
+                  </div>
+                ))}
+              </div>
+
+              {/* Call-to-Action Button */}
+              <div className="flex justify-center">
+                <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
+                  <Link href="/walk-in-clinic-calgary"><img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5" /> Call 587-391-8188 to Book or Walk In Today</Link>
+                </Button>
+              </div>
             </div>
-        </div>
-        </section>
+          </section>
 
-        {/* Find Us */}
-        <FindUsSection />
+          {/* What Makes Us Different */}
+          <DifferenceSection
+            title="What Makes"
+            titleHighlight="Now Medical Clinic"
+            differences={differences}
+            image="/images/about-us/clinic-diffrent.png"
+            imageAlt="Medical clinic reception area"
+          />
 
-        {/* CTA Banner */}
-        <CTABannerSection
-          title="Now Medical Clinic — Real Doctors. Real Care. Open 7 Days Until 11 PM"
-          primaryButtonText="Call 587-391-8188"
-          primaryButtonLink="tel:587-391-8188"
-        />
-      </main>
+          {/* Our Commitment to Calgary */}
+          <CommitmentSection
+            title="Our Commitment"
+            titleHighlight="to Calgary"
+            paragraphs={commitmentParagraphs}
+            image="/images/about-us/our-commitment.png"
+            imageAlt="Medical clinic reception area"
+          />
+
+          {/* What Patients Say - Video Testimonials */}
+          <section className="py-20 bg-white">
+            <div className="container">
+              <div className="text-center mb-12">
+                <h2 className="text-5xl font-bold mb-4">
+                  What <span className="text-[#299470]">Patients</span> Say
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  See what Calgary patients are saying about their experience with Now Medical Clinic.
+                </p>
+              </div>
+
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+                {videoTestimonials.map((testimonial, index) => (
+                  <Card key={index} className="p-0 overflow-hidden rounded hover:shadow-lg transition-shadow border-1 border-[#83C1AC] hover:bg-[#EAF4F1]">
+                    <CardContent className="p-0">
+                      <div className="relative aspect-video bg-gray-100">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="w-full h-[290px] object-cover"
+                        />
+                      </div>
+                      <div className="py-4 px-4">
+                        <h3 className="font-semibold text-lg mb-2">{testimonial.name}</h3>
+                        <p className="text-sm text-muted-foreground italic">"{testimonial.quote}"</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Find Us */}
+          <FindUsSection
+            bgColor=" "
+            dairection='https://share.google/CkrlunWzewWZjaPmv'
+          />
+          <div className="mt-15"></div>
+          {/* CTA Banner */}
+          <BottomCallAction
+            title="Now Medical Clinic — Real Doctors. "
+            title_2="Real Care. Open 7 Days Until 11 PM."
+            description="Serving Calgary with compassion and commitment."
+          />
+
+
+        </main>
 
         <Footer />
       </div>

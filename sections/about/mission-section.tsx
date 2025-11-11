@@ -1,14 +1,14 @@
 export default function MissionSection() {
   return (
-    <section className="py-20 bg-[#F1F9F4]">
+    <section className="py-[54px] bg-[#F1F9F4]">
       <div className="container">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           <div>
-            <h2 className="text-5xl font-bold mb-6">
+            <h2 className="text-5xl font-bold mb-4 ">
               Our <span className="text-[#299470]">Mission</span>
             </h2>
-            <div className="space-y-4 text-foreground">
-              <p>
+            <div className="space-y-4 text-[#303030]  ">
+              <p className="mb-8">
               To provide timely, <b>compassionate, and patient-centered healthcare </b>— every day of the week.
               </p>
               <p>

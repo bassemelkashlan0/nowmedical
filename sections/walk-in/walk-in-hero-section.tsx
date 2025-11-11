@@ -64,7 +64,7 @@ export default function WalkInHeroSection({
   return (
     <section className={`${bgColor} py-11  ${className}`}>
       <div className="container">
-        <div className="grid justify-between gap-18 lg:grid-cols-[55%_40%] lg:gap-8 items-center">
+        <div className="grid justify-between gap-18 lg:grid-cols-[53%_46%]  lg:gap-8 items-center">
           {/* Left Section - Text Content (60-70% width) */}
           <div className="space-y-4">
             <h1 className="text-6xl font-bold text-[#303030] mb-[21px] ">
@@ -120,20 +120,15 @@ export default function WalkInHeroSection({
 
           {/* Right Section - Image with Graphics (30-40% width) */}
           <div className="flex item-end justify-end">
-            {image && (
-              <div className="">
-                <div className="relative w-full">
-                  {/* Doctor Image */}
-                  <div className="relative z-30">
-                    <img
-                      src={image}
-                      alt={imageAlt}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                </div>
-              </div>
-            )}
+            <iframe
+              width="100%"
+              height="500"
+              src="https://youtube.com/embed/IpTEkX4lRWQ"
+              title="YouTube Shorts Video"
+              frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
           </div>
         </div>
       </div>

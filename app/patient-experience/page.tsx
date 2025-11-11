@@ -1,11 +1,10 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { CTABannerSection } from "@/sections";
-import { Play } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { StructuredData, generateVideoObjectSchema } from "@/lib/structured-data";
 import type { Metadata } from "next";
+import { LiveStatusBanner } from "@/components/live-status-banner";
 
 export const metadata: Metadata = {
   title: "Patient Testimonials & Reviews | Now Medical Clinic Calgary",
@@ -66,7 +65,7 @@ export default function PatientExperiencePage() {
   ];
 
   // Generate VideoObject schemas for each video testimonial
-  const videoSchemas = videoTestimonials.slice(0, 3).map((testimonial, index) => 
+  const videoSchemas = videoTestimonials.slice(0, 3).map((testimonial, index) =>
     generateVideoObjectSchema({
       name: `Patient Testimonial - ${testimonial.name}`,
       description: testimonial.quote,
@@ -80,57 +79,60 @@ export default function PatientExperiencePage() {
       {videoSchemas.map((schema, index) => (
         <StructuredData key={index} data={schema} />
       ))}
-      
+
       <div className="flex min-h-screen flex-col">
+        {/* Header */}
         <Header />
+        {/* Live Status Bar */}
+        <LiveStatusBanner />
 
-      <main className="flex-1">
-        {/* Hero Section */}
-        <section className="bg-[#F1F9F4] py-16">
-          <div className="container">
-            <div className="text-start">
-              <h1 className="text-6xl font-bold mb-4">
-                What <span className="text-[#299470]">Patients Say</span>
-              </h1>
+        <main className="flex-1">
+          {/* Hero Section */}
+          <section className="bg-[#F1F9F4] py-17">
+            <div className="container">
+              <div className="text-start">
+                <h1 className="text-6xl text-[#303030] font-bold ">
+                  What <span className="text-[#299470]">Patients Say</span>
+                </h1>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Video Testimonials Grid */}
-        <section className="py-20 bg-white">
-          <div className="container">
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
-              {videoTestimonials.map((testimonial, index) => (
-                <Card key={index} className="p-0 overflow-hidden rounded hover:shadow-lg transition-shadow border-1 border-[#83C1AC] hover:bg-[#EAF4F1]">
-                  <CardContent className="p-0">
-                    <div className="relative aspect-video bg-gray-100">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="w-full h-[290px] object-cover"
-                      />
-                    </div>
-                    <div className="py-4 px-4">
-                      <h3 className="font-semibold text-lg mb-2">{testimonial.name}</h3>
-                      <p className="text-sm text-muted-foreground italic">"{testimonial.quote}"</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+          {/* Video Testimonials Grid */}
+          <section className="py-8 bg-white">
+            <div className="container">
+              <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+                {videoTestimonials.map((testimonial, index) => (
+                  <Card key={index} className="p-0 overflow-hidden rounded hover:shadow-lg transition-shadow border-1 border-[#83C1AC] hover:bg-[#EAF4F1]">
+                    <CardContent className="p-0">
+                      <div className="relative aspect-video bg-gray-100">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="w-full h-[290px] object-cover"
+                        />
+                      </div>
+                      <div className="p-5 ">
+                        <h3 className="font-bold text-lg text-[#303030] mb-3 ">{testimonial.name}</h3>
+                        <p className="text-base text-[#050505] italic">"{testimonial.quote}"</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
-        </div>
-        <div className="text-center mt-12">
+            <div className="text-center mt-6 ">
               <Button
                 variant="outline"
                 size="lg"
-                className="border-[#299470] text-[#299470] hover:bg-[#299470]/10"
+                className="border-[#299470] text-lg font-bold text-[#299470] hover:bg-[#299470]/10"
               >
-                Show Less
+             <span>    Show Less  </span> <img src="/icons/uil-arrow-up-right-grn.svg" alt="" />
               </Button>
             </div>
-        </section>
+          </section>
 
-      </main>
+        </main>
 
         <Footer />
       </div>

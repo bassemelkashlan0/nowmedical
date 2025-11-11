@@ -4,6 +4,7 @@ import { FAQSection } from "@/sections";
 import { CTABannerSection } from "@/sections";
 import { StructuredData, generateFAQSchema } from "@/lib/structured-data";
 import type { Metadata } from "next";
+import { LiveStatusBanner } from "@/components/live-status-banner";
 
 export const metadata: Metadata = {
   title: "FAQ - Frequently Asked Questions | Now Medical Clinic Calgary",
@@ -127,7 +128,7 @@ export default function PatientsPage() {
   ];
 
   // Flatten all FAQs for structured data
-  const allFAQs = faqCategories.flatMap(category => 
+  const allFAQs = faqCategories.flatMap(category =>
     category.questions.map(q => ({
       question: q.question,
       answer: q.answer
@@ -139,39 +140,28 @@ export default function PatientsPage() {
   return (
     <>
       <StructuredData data={faqSchema} />
-      
+
       <div className="flex min-h-screen flex-col">
         <Header />
-      {/* Live Status Banner */}
-      <div className="bg-[#C8E6E0] border-b border-[#299470]/20">
-        <div className="container py-3">
-          <div className="flex items-center justify-center gap-3 text-sm">
-            <div className="flex items-center gap-2">
-              <div className="h-2 w-2 rounded-full bg-[#299470] animate-pulse" />
-              <span className="font-semibold text-[#1A5F56]">Walk-in Live Status</span>
-            </div>
-            <span className="font-bold text-[#1A5F56]">OPEN NOW</span>
-            <div className="hidden sm:block h-4 w-px bg-[#299470]/30" />
-            <span className="hidden sm:inline text-[#1A5F56]">Walk-in is OPEN NOW</span>
-          </div>
-        </div>
-      </div>
-      <main className="flex-1">
-        {/* FAQ Section */}
-        <FAQSection
-          title="Frequently Asked Questions"
-          subtitle="Walk-In & Family Doctor Clinic in Calgary"
-          description="At Now Medical Clinic, we want your visit to be simple, fast, and stress-free. Below are Q & A to answers to our most common patient questions — from walk-in care and hours to insurance coverage, family doctors, and urgent care services."
-          categories={faqCategories}
-        />
+        {/* Live Status Banner */}
+        <LiveStatusBanner />
 
-        {/* CTA Banner */}
-        <CTABannerSection
-          title="Need more info? Walk-in or call us at 587-391-8188 — we're happy to help you anytime!"
-          primaryButtonText="Call 587-391-8188"
-          primaryButtonLink="tel:587-391-8188"
-        />
-      </main>
+        <main className="flex-1">
+
+          {/* FAQ Section */}
+          <FAQSection
+            title="Frequently Asked Questions"
+            subtitle="Walk-In & Family Doctor Clinic in Calgary"
+            description="At Now Medical Clinic, we want your visit to be simple, fast, and stress-free. Below are Q & A to answers to our most common patient questions — from walk-in care and hours to insurance coverage, family doctors, and urgent care services."
+            categories={faqCategories}
+          />
+
+          {/* CTA Banner */}
+          <div className="mb-[159px]" >
+            <p className="text-[#303030] text-sm text-center font-medium " >Need help right now? Walk in today — we’re open until 11 PM every day for your convenience.</p>
+          </div>
+
+        </main>
 
         <Footer />
       </div>
