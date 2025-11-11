@@ -19,12 +19,15 @@ interface DoctorCategoriesSectionProps {
   title?: string;
   femaleDoctors: Doctor[];
   maleDoctors: Doctor[];
+  sec_py? : string
+
 }
 
 export default function DoctorCategoriesSection({
   title = "Meet Our Doctors",
   femaleDoctors,
-  maleDoctors
+  maleDoctors,
+  sec_py
 }: DoctorCategoriesSectionProps) {
   const [femaleApi, setFemaleApi] = useState<CarouselApi>();
   const [maleApi, setMaleApi] = useState<CarouselApi>();
@@ -96,12 +99,12 @@ export default function DoctorCategoriesSection({
   const maleSlides = groupDoctorsIntoSlides(maleDoctors, 4);
 
   return (
-    <section className="py-16 px-4 md:px-8 bg-white">
+    <section className={" px-4 md:px-8 bg-white " + ( sec_py ? sec_py : " pt-8  pb-18" ) }>
       <div className="container">
         {/* Female Doctors */}
         {femaleDoctors.length > 0 && (
           <div className="mb-16">
-            <h3 className="text-4xl font-bold text-[#303030] mb-6">Our Female Family Doctors</h3>
+            <h3 className="text-4xl font-bold text-[#303030] mb-8 ">Our Female Family Doctors</h3>
             
             <div className="relative">
               <Carousel 

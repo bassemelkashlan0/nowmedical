@@ -1,6 +1,6 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { FindUsSection, CTABannerSection, VideoTestimonialsSection, WhyChooseSection, StorySection, MeetOurSlider } from "@/sections";
+import { FindUsSection, WhyChooseSection, StorySection, MeetOurSlider } from "@/sections";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { StructuredData, generatePhysicianSchema, generateFAQSchema, generateLocalBusinessSchema, CLINIC_DATA } from "@/lib/structured-data";
@@ -8,17 +8,13 @@ import type { Metadata } from "next";
 import { LiveStatusBanner } from "@/components/live-status-banner";
 import PatientsVideoSection from "@/sections/global/atients-video";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
-import your_helth_img from "@/public/images/female-family/your-health.png"
 import why_us_img from "@/public/images/female-family/why-us.png"
 
 
 export const metadata: Metadata = {
-  title: "Female Family Doctor in Calgary | Accepting New Patients",
-  description: "See a female family doctor in Calgary today. Accepting new patients, open 7 days until 11 PM. Walk-ins welcome.",
+  title: "Female Family Doctor Calgary | Now Medical Clinic",
+  description: "Find a female family doctor in Calgary at Now Medical. Compassionate women's healthcare with experienced female physicians. Book your visit today.",
   keywords: ["female family doctor calgary", "lady doctor accepting new patients calgary", "women's health doctor", "female physician calgary"],
-  alternates: {
-    canonical: "https://nowmedical.ca/female-family-doctor-calgary"
-  }
 };
 
 export default function FemaleFamilyDoctorPage() {
@@ -158,13 +154,13 @@ export default function FemaleFamilyDoctorPage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] pt-8 pb-14">
+          <section className="bg-[#F1F9F4] py-[54px] ">
             <div className="container">
-              <div className="grid gap-4 lg:grid-cols-2 lg:gap-4 items-center">
+              <div className="grid gap-4 lg:grid-cols-2 lg:gap-12 items-center">
                 <div>
-                  <h1 className="font-bold text-[#299470] tracking-tight lg:text-6xl mb-4">
+                  <h1 className="font-bold text-[#299470] tracking-tight lg:text-6xl mb-[21px] ">
                     Female Family Doctor<br />
-                    <span className="text-[#303030]">  in Calgary Accepting New Patients Now</span>
+                    <span className="text-[#303030]">  in Calgary Accepting New  Patients Now</span>
                   </h1>
 
                   <p className="text-base text-foreground mb-4 font-bold">
@@ -200,12 +196,16 @@ export default function FemaleFamilyDoctorPage() {
                   </div>
                 </div>
 
-                <div className="flex justify-center items-center">
-                  <img
-                    src="/images/female-family/banner.png"
-                    alt="Female family doctor at Now Medical Clinic Calgary"
-                    className="w-full max-w-md"
-                  />
+                <div className="flex justify-center items-center ml-8 ">
+                  <iframe
+                    width="100%"
+                    height="500"
+                    src="https://www.youtube.com/embed/zeArmG81bAE?rel=0&modestbranding=1&showinfo=0"
+                    title="YouTube Shorts Video"
+                    frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                  </iframe>
                 </div>
               </div>
             </div>
@@ -248,7 +248,7 @@ export default function FemaleFamilyDoctorPage() {
             h2_color_1="text-[#303030]"
             h2_color_2="text-[#299470]"
             h2_sub_color="text-[#299470]"
-            py=""
+            py=" pt-[55px] pb-[64px] "
             IsDot={true}
             bg_color="bg-white"
             order="order-last"

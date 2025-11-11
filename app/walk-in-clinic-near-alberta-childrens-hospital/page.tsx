@@ -5,18 +5,17 @@ import Link from "next/link";
 import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
 import { LiveStatusBanner } from "@/components/live-status-banner";
-import { FindUsSection, WhyChooseSection } from "@/sections";
+import { WhyChooseSection } from "@/sections";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
 import hero_img from "@/public/images/major-sub/hero.png";
 import bg_img from "@/public/images/major-sub/alberta-comman-visit.png";
-import whyChoose_img from "@/public/images/major-sub/alberta-why-choose.png"; 
+import whyChoose_img from "@/public/images/major-sub/alberta-why-choose.png";
 
 
 export const metadata: Metadata = {
-  title: "Walk-In Clinic Near Alberta Children's Hospital | Open 7 Days",
-  description: "Family & pediatric walk-in care near Alberta Children's Hospital. Open 7 days until 11 PM.",
+  title: "Walk-In Clinic Near Alberta Children's Hospital",
+  description: "Now Medical walk-in clinic near Alberta Children's Hospital. Quick access to medical care—no appointment needed.",
   keywords: ["walk in clinic near alberta childrens hospital", "pediatric clinic calgary"],
-  alternates: { canonical: "https://nowmedical.ca/walk-in-clinic-near-alberta-childrens-hospital" }
 };
 
 export default function AlbertaChildrensHospitalPage() {
@@ -74,9 +73,9 @@ export default function AlbertaChildrensHospitalPage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white pt-8 pb-14">
+          <section className="bg-[#F1F9F4] to-white py-[54px] ">
             <div className="container">
-              <div className="grid gap-4 lg:grid-cols-2 lg:gap-4 items-center  ">
+              <div className="grid gap-4 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
                   <h1 className=" font-bold tracking-tight lg:text-6xl mb-4">
                     Walk-In Clinic Near <br /><span className="text-[#299470]">Alberta Children's Hospital</span> <br />Open 7 Days a Week
@@ -87,12 +86,16 @@ export default function AlbertaChildrensHospitalPage() {
 
                 </div>
 
-                <div className="flex justify-center items-center">
-                  <img
-                    src={hero_img.src}
-                    alt="Now Medical Clinic Calgary doctor"
-                    className="rounded-lg  "
-                  />
+                <div className="flex justify-center items-center ml-8 ">
+                  <iframe
+                    width="100%"
+                    height="500"
+                    src="https://www.youtube.com/embed/BUde4AOLH7Y?rel=0&modestbranding=1&showinfo=0"
+                    title="YouTube Shorts Video"
+                    frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                  </iframe>
                 </div>
               </div>
             </div>
@@ -122,7 +125,7 @@ export default function AlbertaChildrensHospitalPage() {
             h2_color_1='text-[#303030]'
             h2_color_2='text-[#299470]'
             h2_sub_color='text-[#303030]'
-            py=" pt-30 pb-22"
+            py=" py-[27px] "
             order="order-first"
             IsDot={false}
             bg_color="bg-[#F1F9F4]"
@@ -140,9 +143,10 @@ export default function AlbertaChildrensHospitalPage() {
           {/* CTA Banner */}
           <div className="mt-15">
             <BottomCallAction
-              title="Walk-In Clinic Near Alberta Children's Hospital | Family Care Open Late"
-              title_2=""
-              description="Need a walk-in clinic near Alberta Children's Hospital? Real family doctors, open 7 days until 11 PM for kids & families. Call 587-391-8188."
+              title="Walk-In Clinic Near Alberta Children’s "
+              title_2=" Hospital | Family Care Open Late "
+              description="Need a walk-in clinic near Alberta Children's Hospital? Real family doctors, open 7 days until 11 PM for kids & families. "
+              description_2="Call 587-391-8188."
             />
           </div>
 

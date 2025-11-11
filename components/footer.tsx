@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="bg-[#A7D3C4] border-t border-[#299470]/20">
       <div className="container pt-16">
-        <div className="flex flex-col md:flex-row gap-12 justify-between">
+        <div className="flex flex-col md:flex-row gap-12 overflow-hidden justify-between">
 
           <div className="flex gap-7">
             <div className="mb-4">

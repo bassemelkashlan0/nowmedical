@@ -4,15 +4,11 @@ import {
   FamilyHealthSection,
   HowToRegisterSection,
   WhyChooseSection,
-  ComprehensiveCareSection,
   DoctorsSection,
-  TestimonialsSection,
   FindUsSection,
-  CTABannerSection,
   WalkInHeroSection
 } from "@/sections";
-import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Heart, Baby, Activity, Shield, Stethoscope, Users } from "lucide-react";
+import { Heart, Baby, Activity, Shield, Stethoscope, Users } from "lucide-react";
 import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
 import Family_img from "@/public/images/family-doctor/why-us.png";
@@ -21,34 +17,9 @@ import PatientsVideoSection from "@/sections/global/atients-video";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
 
 export const metadata: Metadata = {
-  title: "Family Doctors Accepting New Patients Calgary | Now Medical",
-  description: "Our Calgary family doctors are accepting new patients. Male and female physicians available. Comprehensive family healthcare. Call 587-391-8188 to register.",
+  title: "Family Doctors Accepting New Patients Calgary | Now Medical    ",
+  description: "Looking for a family doctor in Calgary? Now Medical is accepting new patients. Book your appointment today for comprehensive family care.",
   keywords: ["family doctors accepting new patients calgary", "new family doctor calgary", "accepting new patients", "register family doctor calgary"],
-  alternates: {
-    canonical: "https://nowmedical.ca/family-doctors-accepting-new-patients"
-  },
-  openGraph: {
-    title: "Family Doctors Accepting New Patients Calgary | Now Medical",
-    description: "Our Calgary family doctors are accepting new patients. Male and female physicians available. Comprehensive family healthcare. Call 587-391-8188 to register.",
-    url: "https://nowmedical.ca/family-doctors-accepting-new-patients",
-    siteName: "Now Medical Clinic",
-    images: [
-      {
-        url: "https://nowmedical.ca/images/doctor-michael-patel.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Now Medical Clinic - Family Doctors Accepting New Patients Calgary"
-      }
-    ],
-    locale: "en_CA",
-    type: "website"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Family Doctors Accepting New Patients Calgary | Now Medical",
-    description: "Our Calgary family doctors are accepting new patients. Male and female physicians available.",
-    images: ["https://nowmedical.ca/images/doctor-michael-patel.jpg"]
-  }
 };
 
 export default function FamilyDoctorsPage() {

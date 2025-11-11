@@ -10,8 +10,7 @@ import BottomCallAction from "@/components/ui/bottom-call-acction";
 
 
 
-export default function DriversMedicalExamsInCalgaryScreen()
- {
+export default function DriversMedicalExamsInCalgaryScreen() {
 
     const whyChooseItems = [
         {
@@ -38,9 +37,9 @@ export default function DriversMedicalExamsInCalgaryScreen()
             <LiveStatusBanner />
             <main>
                 {/* Hero Section */}
-                <section className="bg-[#F1F9F4] to-white py-11 ">
+                <section className="bg-[#F1F9F4] to-white py-[54px]  ">
                     <div className="container">
-                        <div className="grid gap-12 lg:grid-cols-[57%_40%] lg:gap-16 items-center">
+                        <div className="grid gap-12 lg:grid-cols-[57%_40%] lg:gap-8 items-center">
                             <div>
                                 <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl mb-[21px] ">
                                     <span className="text-[#299470]">Driver’s Medical Exams in</span>
@@ -50,22 +49,24 @@ export default function DriversMedicalExamsInCalgaryScreen()
 
                                 <p className="text-base mb-4 text-[#303030] ">
                                     Need your <b>Driver’s Medical Certificate</b> renewed? <br />
-                                     At <b>Now Medical Clinic</b> , we make it simple — just <b>walk in 7 days a week until 11 PM.</b> <br />
-                                      Our doctors provide <b>Class 1, 2, 3, 4, and 6 commercial driver medical exams</b> for Alberta
-                                      <br /> licensing.
+                                    At <b>Now Medical Clinic</b> , we make it simple — just <b>walk in 7 days a week until 11 PM.</b> <br />
+                                    Our doctors provide <b>Class 1, 2, 3, 4, and 6 commercial driver medical exams</b> for Alberta
+                                    <br /> licensing.
                                 </p>
                                 <p className="text-base  mb-8 text-[#303030] ">
                                     No appointment needed. Fast, friendly, and fully licensed for <b>Transport Canada and Alberta <br /> Transportation</b> requirements.                                </p>
                             </div>
 
-                            <div className="relative">
-                                <div className="relative">
-                                    <img
-                                        src={hero_img.src}
-                                        alt="Medical team of three doctors"
-                                        className="w-full h-auto"
-                                    />
-                                </div>
+                            <div className="relative ">
+                                <iframe
+                                    width="100%"
+                                    height="500"
+                                    src="https://www.youtube.com/embed/zeArmG81bAE?rel=0&modestbranding=1&showinfo=0"
+                                    title="YouTube Shorts Video"
+                                    frameborder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
                             </div>
                         </div>
                     </div>
@@ -79,7 +80,7 @@ export default function DriversMedicalExamsInCalgaryScreen()
                     both_btn="flex pt-4 "
                     btn_1_text="Walk In for Driver’s Medical "
                     btn_1_icon={walk_cion}
-                    btn_1_link="#"
+                    btn_1_link="/walk-in-clinic-calgary"
                     btn_2_link="tel:403-457-2222"
                     btn_2_icon={call_icon}
                     btn_2_text="Call to Book Now"
@@ -88,17 +89,17 @@ export default function DriversMedicalExamsInCalgaryScreen()
 
                 {/* Mind Us  Section */}
                 <FindUsSection
-                 bgColor=" "
-                 IsShowBtn='hidden'
+                    bgColor=" "
+                    IsShowBtn='hidden'
                 />
 
                 {/* Bottom Call to Action Section */}
                 <div className="mt-14"></div>
-                <BottomCallAction 
+                <BottomCallAction
                     title="Driver’s Medical Calgary | Class 1, 2, 3, 4, 6 "
                     title_2="Exams | Walk In or Call"
                     description="Need a driver’s medical in Calgary? Walk in 7 days until 11 PM. Class 1–6 commercial driver exams. Fast, same-day forms. Call 587-391-8188."
-                />  
+                />
             </main>
             <Footer />
         </div>
