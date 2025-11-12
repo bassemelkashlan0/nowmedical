@@ -53,7 +53,7 @@ export default function RegistrationProcessSection({
         </div>
 
         <div className="text-center">
-          <Button size="lg" className="bg-[#4A9B8E] hover:bg-[#3d8375]">
+          <Button size="lg" className="bg-[#4A9B8E] hover:bg-[#3d8375] hidden">
             Register as New Patient
           </Button>
         </div>

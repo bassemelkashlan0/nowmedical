@@ -165,21 +165,12 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-3">
-          <Button asChild className="hidden lg:flex w-full text-sm xl:text-lg xl:w-[173px] bg-[#299470] hover:bg-[#2D7B6F] text-white px-3 xl:px-4">
-            <Link href="/contact" >
-              Contact Us
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="ml-1 !h-4 !w-4 xl:!h-[20px] xl:!w-[20px] flex-shrink-0 block text-white"
-              >
-                <path d="m6 9 6 6 6-6"></path>
-              </svg>
+          <Button asChild className="hidden lg:flex w-full text-sm xl:text-lg xl:w-[190px] bg-[#299470] hover:bg-[#2D7B6F] text-white px-3 xl:px-4">
+            <Link href="tel:587-391-8188" >
+              <img src="/icons/btn_phone-outline-icon.svg" alt="" className="w-5 h-5" />
+
+              Call 587-391-8188
+
             </Link>
           </Button>
 
@@ -240,7 +231,9 @@ export function Header() {
                 </Link>
                 <Link href="/contact" className="block w-full mt-2" onClick={() => setIsOpen(false)}>
                   <Button className="w-full bg-[#299470] hover:bg-[#2D7B6F] text-white">
-                    Contact Us
+                    <Link href="tel:587-391-8188">
+                      Call 587-391-8188
+                    </Link>
                   </Button>
                 </Link>
               </nav>

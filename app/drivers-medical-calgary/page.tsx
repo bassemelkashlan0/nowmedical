@@ -135,7 +135,7 @@ export default function DriversMedialPage() {
                 </ul>
                 <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
-                    <Link href="/walk-in-clinic-calgary"><img src="/images/driver-medical/walking-outline.svg" alt="Register as a new patient" className="w-5 h-5" />Walk In for Driver’s Medical</Link>
+                    <Link href="tel:587-391-8188"><img src="/images/driver-medical/walking-outline.svg" alt="Register as a new patient" className="w-5 h-5" />Walk In for Driver's Medical</Link>
                   </Button>
                   <Button
                     size="lg"

@@ -114,7 +114,7 @@ export default function BestClinicPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white" asChild>
-                    <Link href="/walk-in-clinic-calgary">Walk In Today</Link>
+                    <Link href="tel:587-391-8188">Walk In Today</Link>
                   </Button>
                   <Button
                     size="lg"

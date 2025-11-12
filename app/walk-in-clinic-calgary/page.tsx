@@ -196,7 +196,7 @@ export default function WalkInPage() {
                   className="bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-6 py-6 flex items-center gap-2"
                   asChild
                 >
-                  <Link href="#">
+                  <Link href="tel:587-391-8188">
                     <img
                       src="/icons/solar_walking-outline.svg"
                       alt=""
@@ -243,7 +243,7 @@ export default function WalkInPage() {
             image={Family_img}
             para=" We’re here when other clinics are closed and when you need care the most."
             full_bg_btn="inline-flex mt-4"
-            full_btn_link="/walk-in-clinic-calgary"
+            full_btn_link="tel:587-391-8188"
             full_btn_text="Skip the Wait Walk In Today"
             full_btn_icon="/icons/uil-arrow-up-right.svg"
             full_btn_icon_class=""

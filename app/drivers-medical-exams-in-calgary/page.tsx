@@ -78,9 +78,9 @@ export default function DriversMedicalExamsInCalgaryScreen() {
                     subtitle="Now Medical Clinic"
                     items={whyChooseItems}
                     both_btn="flex pt-4 "
-                    btn_1_text="Walk In for Driver’s Medical "
+                    btn_1_text="Walk In for Driver's Medical "
                     btn_1_icon={walk_cion}
-                    btn_1_link="/walk-in-clinic-calgary"
+                    btn_1_link="tel:587-391-8188"
                     btn_2_link="tel:403-457-2222"
                     btn_2_icon={call_icon}
                     btn_2_text="Call to Book Now"

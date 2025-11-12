@@ -178,7 +178,7 @@ export default function AboutPage() {
                       className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
                       asChild
                     >
-                      <Link href="/walk-in-clinic-calgary">Walk In Anytime No Appointment Needed<img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
+                      <Link href="tel:587-391-8188">Walk In Anytime No Appointment Needed<img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
                     </Button>
                   </div>
                 </div>
@@ -258,7 +258,7 @@ export default function AboutPage() {
               {/* Call-to-Action Button */}
               <div className="flex justify-center">
                 <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
-                  <Link href="/walk-in-clinic-calgary"><img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5" /> Call 587-391-8188 to Book or Walk In Today</Link>
+                  <Link href="tel:587-391-8188"><img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5" /> Call 587-391-8188 to Book or Walk In Today</Link>
                 </Button>
               </div>
             </div>

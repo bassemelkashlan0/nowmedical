@@ -87,7 +87,7 @@ export default function FoothillsHospitalPage() {
                   </p>
                   <div className="flex flex-col pt-9 sm:flex-row gap-4">
                     <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>
-                      <Link href="/walk-in-clinic-calgary"> <img src={walk_icon.src} alt="Register as a new patient" className="w-5 h-5" /> Walk In Now </Link>
+                      <Link href="tel:587-391-8188"> <img src={walk_icon.src} alt="Register as a new patient" className="w-5 h-5" /> Walk In Now </Link>
                     </Button>
 
                     <Button
@@ -165,7 +165,7 @@ export default function FoothillsHospitalPage() {
                   className="border border-[#299470] bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-[16px] py-[11px] flex items-center gap-[10px] cursor-pointer"
                   asChild
                 >
-                  <Link href="/walk-in-clinic-calgary">
+                  <Link href="tel:587-391-8188">
                     <img
                       src="/icons/solar_walking-outline.svg"
                       alt=""

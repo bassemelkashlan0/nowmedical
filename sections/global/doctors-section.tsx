@@ -190,9 +190,9 @@ export default function DoctorsSection({
                 key={index}
                 size="lg"
                 variant={button.variant || "default"}
-                className={button.className || (button.variant === "outline"
+                className={`${button.className || (button.variant === "outline"
                   ? "border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
-                  : "bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg")}
+                  : "bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg")} ${button.text && (button.text.includes("Register as a New Patient") || button.text.includes("Register as a new patient")) ? 'hidden' : ''}`}
                 asChild
               >
                 <Link href={button.link} className="flex items-center gap-2">
@@ -211,7 +211,7 @@ export default function DoctorsSection({
             ))
           ) : (
             <>
-              <Button size="lg" className="bg-[#299470] font-bold hover:bg-[#2D7B6F] text-white text-lg" asChild>
+              <Button size="lg" className="bg-[#299470] font-bold hover:bg-[#2D7B6F] text-white text-lg hidden" asChild>
                 <Link href="/walk-in-clinic-calgary">Register as a New Patient Today</Link>
               </Button>
               <Button

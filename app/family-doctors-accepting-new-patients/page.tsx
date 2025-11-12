@@ -212,7 +212,7 @@ export default function FamilyDoctorsPage() {
             buttons={[
               {
                 text: "Walk In Now",
-                link: "/walk-in-clinic-calgary",
+                link: "tel:587-391-8188",
                 icon: "/icons/solar_walking-outline.svg",
                 variant: "default",
               },
@@ -224,7 +224,7 @@ export default function FamilyDoctorsPage() {
               },
               {
                 text: "Call 587-391-8188",
-                link: "tel:587-387-7254",
+                link: "tel:587-391-8188",
                 icon: "/icons/solar_phone-outline.svg",
                 variant: "outline",
               }

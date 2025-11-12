@@ -164,7 +164,7 @@ export default function WhyChooseSection({
               className={"border-[#299470]  text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg  " + (btn_class ? ` ${btn_class}` : "hidden")}
               asChild
             >
-              <Link href="/walk-in-clinic-calgary">Walk In Now <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
+              <Link href="tel:587-391-8188">Walk In Now <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
             </Button>
 
             <Button className={"bg-[#299470] hover:bg-[#256358] text-white font-bold px-4 py-4 text-lg " + (full_bg_btn ? full_bg_btn : "hidden")}>
@@ -221,7 +221,7 @@ export default function WhyChooseSection({
                     {btn_1_text}
                   </Link>
                 </Button>
-                <Button variant="outline" className={`border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 px-4 py-4 text-lg font-bold ${btn_2_bg ? btn_2_bg : ''}`}>
+                <Button variant="outline" className={`border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 px-4 py-4 text-lg font-bold ${btn_2_bg ? btn_2_bg : ''} ${btn_2_text && (btn_2_text.includes("Register as a New Patient") || btn_2_text.includes("Register as a new patient")) ? 'hidden' : ''}`}>
                   <Link href={btn_2_link ? btn_2_link as string : "#"} className='flex'>
                     {!btn_2_iconAfter && (
                       <Image

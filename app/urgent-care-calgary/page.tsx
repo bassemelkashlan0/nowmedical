@@ -138,7 +138,7 @@ export default function UrgentCarePage() {
                 className="bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-6 py-6 flex items-center gap-2"
                 asChild
               >
-                <Link href="/walk-in-clinic-calgary">
+                <Link href="tel:587-391-8188">
                   <img
                     src="/icons/solar_walking-outline.svg"
                     alt=""

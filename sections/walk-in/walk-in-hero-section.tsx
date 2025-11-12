@@ -39,7 +39,7 @@ export default function WalkInHeroSection({
   buttons = [
     {
       text: "Walk In Now",
-      link: "/#",
+      link: "tel:587-391-8188",
       icon: "/icons/solar_walking-outline.svg",
       variant: "default" as const,
     },
@@ -94,12 +94,12 @@ export default function WalkInHeroSection({
                     key={index}
                     size="lg"
                     variant={button.variant || "default"}
-                    className={
+                    className={`${
                       button.className ||
                       (button.variant === "outline"
                         ? "border border-[#2E8B57] text-[#2E8B57] hover:bg-transparent bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
                         : "bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-6 py-6 flex items-center gap-2")
-                    }
+                    } ${button.text && (button.text.includes("Register as a New Patient") || button.text.includes("Register as a new patient")) ? 'hidden' : ''}`}
                     asChild
                   >
                     <Link href={button.link}  >

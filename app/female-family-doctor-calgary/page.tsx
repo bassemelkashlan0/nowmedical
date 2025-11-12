@@ -189,7 +189,7 @@ export default function FemaleFamilyDoctorPage() {
                       className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold"
                       asChild
                     >
-                      <Link href="/walk-in-clinic-calgary">
+                      <Link href="tel:587-391-8188">
                         Walk In Today
                         <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Today" className="w-5 h-5" />
                       </Link>
@@ -259,7 +259,7 @@ export default function FemaleFamilyDoctorPage() {
             btn_1_text="Call 587-391-8188"
             btn_2_text="Walk In"
             btn_2_icon="/icons/uil-arrow-up-right-grn.svg"
-            btn_2_link="/walk-in-clinic-calgary"
+            btn_2_link="tel:587-391-8188"
             btn_2_bg="bg-transparent"
             btn_2_iconAfter={true}
           />

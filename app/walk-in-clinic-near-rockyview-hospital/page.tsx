@@ -146,7 +146,7 @@ export default function RockyviewHospitalPage() {
                   className="border border-[#299470] bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-[16px] py-[11px] flex items-center gap-[10px] cursor-pointer"
                   asChild
                 >
-                  <Link href="/walk-in-clinic-calgary">
+                  <Link href="tel:587-391-8188">
                     <img
                       src="/icons/solar_walking-outline.svg"
                       alt=""

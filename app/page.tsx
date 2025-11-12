@@ -289,7 +289,7 @@ export default function HomePage() {
                     Real doctors. Real care. Open late every day
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button size="lg" className="bg-[#299470] text-bold hover:bg-[#2D7B6F] text-white text-lg" asChild>
+                    <Button size="lg" className="bg-[#299470] text-bold hover:bg-[#2D7B6F] text-white text-lg hidden" asChild>
                       <Link href="/contact">Register as a new patient<img src="/icons/uil-arrow-up-right.svg" alt="Register as a new patient" className="w-5 h-5" /></Link>
                     </Button>
                     <Button
@@ -298,7 +298,7 @@ export default function HomePage() {
                       className="border-[#299470] text-bold text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
                       asChild
                     >
-                      <Link href="/walk-in-clinic-calgary">Walk In Now <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
+                      <Link href="tel:587-391-8188">Walk In Now <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
                     </Button>
                   </div>
                 </div>
