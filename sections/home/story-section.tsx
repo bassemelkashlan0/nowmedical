@@ -21,7 +21,7 @@ export default function StorySection({
   sec_py
 }: StorySectionProps) {
   return (
-    <section className={" px-4 md:px-8 " + ( sec_py ? sec_py : " py-[54px] " ) }>
+    <section className={" px-4 md:px-8 " + (sec_py ? sec_py : " py-[54px] ")}>
       <div className="container">
 
 
@@ -35,9 +35,11 @@ export default function StorySection({
               />
             </div>
           )}
+
+
           <div className="space-y-4 pl-6">
             <h2 className={"text-5xl font-bold mb-4 " + (title_color ? title_color : " text-[#303030] ")}>
-              {title} 
+              {title}
 
               {typeof subtitle == 'string' ? (
                 <span className={sub_color ? sub_color : "text-[#299470]"}>

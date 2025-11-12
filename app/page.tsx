@@ -14,8 +14,7 @@ import {
   RegistrationProcessSection,
   LiveWaitTimesSection
 } from "@/sections";
-import { Phone, Users, Clock, Activity, Stethoscope, Brain, Heart, Baby, Shield } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Phone, Users, Clock, Stethoscope } from "lucide-react";
 import Link from "next/link";
 import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, generateAggregateRatingSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
@@ -322,7 +321,7 @@ export default function HomePage() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button size="lg" className="bg-[#299470] text-bold hover:bg-[#2D7B6F] text-white text-lg" asChild>
-                      <Link href="/walk-in-clinic-calgary">Register as a new patient<img src="/icons/uil-arrow-up-right.svg" alt="Register as a new patient" className="w-5 h-5" /></Link>
+                      <Link href="/contact">Register as a new patient<img src="/icons/uil-arrow-up-right.svg" alt="Register as a new patient" className="w-5 h-5" /></Link>
                     </Button>
                     <Button
                       size="lg"
@@ -330,7 +329,7 @@ export default function HomePage() {
                       className="border-[#299470] text-bold text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
                       asChild
                     >
-                      <Link href="/services">Walk In Now <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
+                      <Link href="/walk-in-clinic-calgary">Walk In Now <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
                     </Button>
                   </div>
                 </div>
@@ -569,7 +568,7 @@ export default function HomePage() {
             bottomText="Watch why Calgary trusts Now Medical Clinic for fast, professional care."
             testimonials={testimonials}
             customButtonText="See What Patients Are Saying"
-            customButtonLink="/testimonials"
+            customButtonLink="/reviews"
           />
 
 

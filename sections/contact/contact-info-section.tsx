@@ -1,6 +1,8 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+// import { Link } from 'lucide-react';
+import Link from 'next/link';
 
 interface ContactInfoSectionProps {
   address?: string;
@@ -107,34 +109,42 @@ export default function ContactInfoSection({
 
         <div className="flex pt-[6px] flex-col md:flex-row gap-4 justify-center items-center">
           <Button className="bg-[#299470] hover:bg-[#256358] text-white font-bold px-6 py-6 text-lg">
-            <Image
-              src="/icons/btn_phone-outline-icon.svg"
-              alt="Phone"
-              width={20}
-              height={20}
-              className="mr-2 "
-            />
-            Call 587-391-8188
+            <Link className='flex' href='tel:587-391-8188' >
+              <Image
+                src="/icons/btn_phone-outline-icon.svg"
+                alt="Phone"
+                width={20}
+                height={20}
+                className="mr-2 "
+              />
+              Call 587-391-8188
+            </Link>
           </Button>
+
           <Button variant="outline" className="border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 px-6 py-6 text-lg font-bold">
-            <Image
-              src="/icons/btn-walking-outline-icon.svg"
-              alt="Walk-in"
-              width={20}
-              height={20}
-              className="mr-2"
-            />
-            Walk-in Any Time (No Appointment Needed)
+            <Link className='flex' href='/walk-in-clinic-calgary' >
+              <Image
+                src="/icons/btn-walking-outline-icon.svg"
+                alt="Walk-in"
+                width={20}
+                height={20}
+                className="mr-2"
+              />
+              Walk-in Any Time (No Appointment Needed)
+            </Link>
           </Button>
+
           <Button variant="outline" className="border-1 border-[#299470] text-[#299470]  hover:bg-[#2D7B6F]/10 px-6 py-6 text-lg font-bold">
-            <Image
-              src="/icons/pin-outline-icon.svg"
-              alt="Location"
-              width={20}
-              height={20}
-              className="mr-2"
-            />
-            Get Directions on Google Map
+            <Link className='flex' target='_blank' href='https://share.google/CkrlunWzewWZjaPmv'>
+              <Image
+                src="/icons/pin-outline-icon.svg"
+                alt="Location"
+                width={20}
+                height={20}
+                className="mr-2"
+              />
+              Get Directions on Google Map
+            </Link>
           </Button>
         </div>
       </div>

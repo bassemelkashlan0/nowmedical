@@ -39,7 +39,7 @@ export default function ContactPage() {
 
       <main className="flex-1">
         {/* Hero Section with Banner */}
-        <section className="bg-[#F1F9F4] to-white py-11 ">
+        <section className="bg-[#F1F9F4] to-white py-[54px] ">
           <div className="container">
             <div className="grid gap-4 lg:grid-cols-[55%_44%] lg:gap-4 items-center ">
               <div>
@@ -55,11 +55,15 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <img
-                  src={hero_img.src}
-                  alt="Now Medical Clinic Calgary doctor"
-                  className="rounded-lg w-full"
-                />
+                <iframe
+                  width="100%"
+                  height="500"
+                  src="https://www.youtube.com/embed/zeArmG81bAE?rel=0&modestbranding=1&showinfo=0"
+                  title="YouTube Shorts Video"
+                  frameborder="0"
+                  allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
               </div>
             </div>
           </div>
@@ -123,7 +127,7 @@ export default function ContactPage() {
           btn_1_link="tel:587-391-8188"
           btn_1_icon="/icons/btn_phone-outline-icon.svg"
           btn_2_text="Start Direction"
-          btn_2_link="https://goo.gl/maps/NowMedicalClinicCalgary"
+          btn_2_link="https://share.google/CkrlunWzewWZjaPmv"
           btn_2_icon="/icons/pin-outline-icon.svg"
           both_btn="flex"
           bg_color="bg-[#F1F9F4] "

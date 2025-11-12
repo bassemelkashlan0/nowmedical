@@ -39,7 +39,7 @@ export default function WalkInHeroSection({
   buttons = [
     {
       text: "Walk In Now",
-      link: "/",
+      link: "/#",
       icon: "/icons/solar_walking-outline.svg",
       variant: "default" as const,
     },

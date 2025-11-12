@@ -220,7 +220,7 @@ export default function DoctorsSection({
                 className="border-[#299470] text-[#299470] font-bold hover:bg-[#299470]/10 bg-transparent text-lg"
                 asChild
               >
-                <Link href="/services">Meet Our Doctors <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
+                <Link href="/meet-our-doctors">Meet Our Doctors <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
               </Button>
             </>
           )}

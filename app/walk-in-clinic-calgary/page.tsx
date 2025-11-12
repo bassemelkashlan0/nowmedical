@@ -212,7 +212,7 @@ export default function WalkInPage() {
                   className="bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-6 py-6 flex items-center gap-2"
                   asChild
                 >
-                  <Link href="/services">
+                  <Link href="#">
                     <img
                       src="/icons/solar_walking-outline.svg"
                       alt=""
@@ -227,7 +227,7 @@ export default function WalkInPage() {
                   className="border border-white text-white hover:bg-transparent bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
                   asChild
                 >
-                  <Link href="/contact">
+                  <Link href="/https://share.google/CkrlunWzewWZjaPmv">
                     <img
                       src="/images/walk-in/flowbite_map-pin-outline.svg"
                       alt=""
@@ -325,7 +325,7 @@ export default function WalkInPage() {
                     className="border border-white text-white hover:bg-white/10 bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
                     asChild
                   >
-                    <Link href="/contact">
+                    <Link href="https://share.google/CkrlunWzewWZjaPmv">
                       <img
                         src="/images/walk-in/flowbite_map-pin-outline.svg"
                         alt=""
@@ -406,7 +406,7 @@ export default function WalkInPage() {
                   className="border border-[#299470] text-[#299470] hover:bg-[#299470]/10 font-bold text-lg px-6 py-6 flex items-center gap-2"
                   asChild
                 >
-                  <Link href="/patients-stories">
+                  <Link href="/patient-experience">
                     See Real Patent Stories
                     <img
                       src="/icons/uil-arrow-up-right-grn.svg"
