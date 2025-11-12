@@ -32,7 +32,7 @@ export async function GET(request: Request) {
     if (!channelId && videoId) {
       try {
         const videoResponse = await fetch(
-          `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${apiKey}`
+          `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=AIzaSyA0bhoP_9y8-LyvgW8FYpl-DcEaQEQpqkA`
         );
 
         if (videoResponse.ok) {

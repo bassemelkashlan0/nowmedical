@@ -47,11 +47,11 @@ export default function TestimonialsSection({
     review_1, review_2, review_3
   ]
   return (
-    <section className="py-[54px] px-4 md:px-8 bg-white">
+    <section className="py-10 lg:py-[54px]  bg-white">
       <div className="container  mx-auto">
         {showTitleAndSubtitle && (
           <>
-            <h2 className="text-5xl font-bold text-center  mb-4 text-[#4A9B8E]">
+            <h2 className="text-3xl lg:text-5xl font-bold text-center  mb-4 text-[#4A9B8E]">
               {title.split(" ")[0]}{" "}
               <span className="text-[#303030] ">{title.split(" ").slice(1).join(" ")}</span>
             </h2>
@@ -60,7 +60,7 @@ export default function TestimonialsSection({
           </>
         )}
 
-        <div className="grid md:grid-cols-3 gap-6 mb-6 md:px-5 ">
+        <div className="grid  sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mb-6 lg:px-5 ">
           {displayedTestimonials.map((testimonial, index) => (
             <Card key={index} className="p-6 justify-between h-full border border-[#4DA688]">
               <p className="text-[#303030] mb-6">{testimonial.text}</p>

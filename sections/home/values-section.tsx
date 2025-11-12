@@ -42,9 +42,9 @@ export default function ValuesSection({
   useListFormat = false
 }: ValuesSectionProps) {
   return (
-    <section className="py-[54px] px-4 md:px-8 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <h2 className={"text-5xl font-bold text-center mb-4 " + ( title_color ? title_color : " text-[#050505]  " )  } >
+    <section className=" py-10 lg:py-[54px]   bg-white">
+      <div className="container mx-auto">
+        <h2 className={"text-3xl lg:text-5xl font-bold text-center mb-4 " + ( title_color ? title_color : " text-[#050505]  " )  } >
           {title} <span className={ (sub_color ? sub_color : " text-[#299470]")}>{subtitle}</span>
         </h2>
         {description && (
@@ -53,7 +53,7 @@ export default function ValuesSection({
           </p>
         )}
 
-        <div className="grid md:grid-cols-3 gap-5 ">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5 ">
           {values.map((value, index) => (
             <Card key={index} className="p-4 text-start hover:shadow-lg hover:bg-[#EAF4F1] transition-shadow border-1 border-[#83C1AC] h-full flex flex-col">
               <div className="inline-flex mb-6">
@@ -77,7 +77,7 @@ export default function ValuesSection({
                   />
                 ) : null}
               </div>
-              <h3 className={`text-3xl font-medium text-[#050505] ${titleFontWeight} mb-4`}>{value.title}</h3>
+              <h3 className={` text-2xl lg:text-3xl font-medium text-[#050505] ${titleFontWeight} mb-4`}>{value.title}</h3>
               {useListFormat && Array.isArray(value.description) ? (
                 <ul className=" flex-grow space-y-2">
                   {value.description.map((item, idx) => (
@@ -95,13 +95,13 @@ export default function ValuesSection({
         </div>
 
         {buttonText && buttonLink && (
-          <div className="flex justify-center mt-6">
+          <div className="flex flex-wrap justify-center mt-6">
             <Button
               size="lg"
               className="bg-[#299470] hover:bg-[#256358] text-white font-bold px-6 py-6 text-lg"
               asChild
             >
-              <Link href={buttonLink} className="flex items-center gap-2">
+              <Link href={buttonLink} className="flex !text-wrap !whitespace-wrap items-center gap-2">
                 {buttonText}
                 {buttonIcon && (
                   typeof buttonIcon === 'string' ? (

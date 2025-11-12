@@ -6,11 +6,11 @@ export function Footer() {
   return (
     <footer className="bg-[#A7D3C4] border-t border-[#299470]/20">
       <div className="container pt-8 sm:pt-12 md:pt-16 px-4 sm:px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-8 sm:gap-10 lg:gap-12">
+        <div className=" flex flex-col lg:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6  lg:gap-12">
 
           {/* About & Brand Section */}
           <div className="sm:col-span-2 lg:col-span-2 xl:col-span-2">
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-7">
+            <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-7">
               <div className="mb-4 sm:mb-0 flex-shrink-0">
                 <Logo className="w-[120px] sm:w-[150px]" />
               </div>

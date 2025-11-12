@@ -96,9 +96,9 @@ export default function WhyChooseSection({
   col_gap,
 }: WhyChooseSectionProps) {
   return (
-    <section className={" px-4 md:px-8 " + (bg_color ? bg_color : "") + (py ? py : " py-4 md:py-[54px] ")}>
+    <section className={"  " + (bg_color ? bg_color : "") + (py ? py : " py-10 lg:py-[54px] ")}>
       <div className="container">
-        <div className={"grid md:grid-cols-2  items-center " + ( col_gap ? col_gap : " gap-18 ")}>
+        <div className={"grid lg:grid-cols-2  items-center " + ( col_gap ? col_gap : " gap-8 lg:gap-18 ")}>
           {image && (
             <div className="relative overflow-hidden">
               <img
@@ -110,7 +110,7 @@ export default function WhyChooseSection({
           )}
 
           <div className={(order ? order : "")}>
-            <h2 className={"text-5xl font-bold " + ( h2_py ? h2_py : " mb-4  ") }>
+            <h2 className={" text-3xl lg:text-5xl font-bold " + ( h2_py ? h2_py : " mb-4  ") }>
               <span className={" " + (h2_color_1 ? h2_color_1 : ' text-[#303030] ')}>   {title}  </span> <span className={' ' + (h2_color_2 ? h2_color_2 : " text-[#299470] ")}>{title_2}</span> <br /> <span className={(h2_sub_color ? h2_sub_color : "text-[#299470]")}>{subtitle}</span>
             </h2>
 

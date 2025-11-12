@@ -62,16 +62,16 @@ export default function WalkInHeroSection({
   className = ""
 }: WalkInHeroSectionProps) {
   return (
-    <section className={`${bgColor} py-[54px]  ${className}`}>
+    <section className={`${bgColor} py-10 lg:py-[54px]  ${className}`}>
       <div className="container">
-        <div className="grid justify-between gap-12 lg:grid-cols-[53%_46%]  lg:gap-12 items-center">
+        <div className="grid  gap-8 lg:grid-cols-2 lg:gap-12 items-center">
           {/* Left Section - Text Content (60-70% width) */}
           <div className="space-y-4">
-            <h1 className="text-6xl font-bold text-[#303030] mb-[21px] ">
+            <h1 className="text-3xl lg:text-6xl font-bold text-[#303030] mb-[21px] ">
               {title}
             </h1>
             {subtitle && (
-              <p className="text-3xl font-medium text-[#303030] mb-[21px] ">
+              <p className="text-2xl lg:text-3xl font-medium text-[#303030] mb-[21px] ">
                 {subtitle}
               </p>
             )}
@@ -119,7 +119,7 @@ export default function WalkInHeroSection({
           </div>
 
           {/* Right Section - Image with Graphics (30-40% width) */}
-          <div className="flex items-end justify-end ml-8 ">
+          <div className="flex items-end justify-end lg:ml-8 ">
             <iframe
               width="100%"
               height="500"

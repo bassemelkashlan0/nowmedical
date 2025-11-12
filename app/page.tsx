@@ -2,17 +2,11 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import {
-  HeroSection,
   WhyChooseSection,
   ConditionsSection,
   DoctorsSection,
   TestimonialsSection,
   FindUsSection,
-  CTABannerSection,
-  ValuesSection,
-  StorySection,
-  RegistrationProcessSection,
-  LiveWaitTimesSection
 } from "@/sections";
 import { Phone, Users, Clock, Stethoscope } from "lucide-react";
 import Link from "next/link";
@@ -24,31 +18,6 @@ export const metadata: Metadata = {
   title: "Walk-In Clinic Calgary | Open 7 Days Until 11 PM",
   description: "Calgary's trusted walk-in clinic. Real doctors, open daily until 11 PM. Walk-ins welcome — no appointment needed.",
   keywords: ["walk-in clinic calgary", "walk in clinic near me", "open late medical clinic", "family doctor calgary", "clinic near me"],
-  alternates: {
-    canonical: "https://nowmedical.ca"
-  },
-  openGraph: {
-    title: "Walk-In Clinic Calgary | Open 7 Days Until 11 PM",
-    description: "Calgary's trusted walk-in clinic. Real doctors, open daily until 11 PM. Walk-ins welcome — no appointment needed.",
-    url: "https://nowmedical.ca",
-    siteName: "Now Medical Clinic",
-    images: [
-      {
-        url: "https://nowmedical.ca/images/contact/doctor-patient-consultation.png",
-        width: 1200,
-        height: 630,
-        alt: "Now Medical Clinic - Walk-In Clinic Calgary"
-      }
-    ],
-    locale: "en_CA",
-    type: "website"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Walk-In Clinic Calgary | Open 7 Days Until 11 PM",
-    description: "Calgary's trusted walk-in clinic. Real doctors, open daily until 11 PM. Walk-ins welcome — no appointment needed.",
-    images: ["https://nowmedical.ca/images/contact/doctor-patient-consultation.png"]
-  }
 };
 
 export default function HomePage() {
@@ -299,9 +268,9 @@ export default function HomePage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white py-[54px] ">
+          <section className="bg-[#F1F9F4] to-white py-10 lg:py-[54px] ">
             <div className="container">
-              <div className="grid gap-12 lg:grid-cols-[53%_46%] lg:gap-14 items-center">
+              <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
                 <div>
                   <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl  mb-4 md:mb-[21px] ">
                     <span className="text-[#299470]">Walk-In & Family Doctor</span>
@@ -334,38 +303,28 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="relative">
-                  <div className="relative">
-                    {/* <img
-                      src="/images/landing/home-banner.png"
-                      alt="Medical team of three doctors"
-                      className="w-full h-auto"
-                    /> */}
-
-                    <iframe
-                      width="100%"
-                      height="500"
-                      src="https://www.youtube.com/embed/zeArmG81bAE?rel=0&modestbranding=1&showinfo=0"
-                      title="YouTube Shorts Video"
-                      frameborder="0"
-                      allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen>
-                    </iframe>
-
-
-                  </div>
+                <div className="relative lg:ml-8">
+                  <iframe
+                    width="100%"
+                    height="500"
+                    src="https://www.youtube.com/embed/zeArmG81bAE?rel=0&modestbranding=1&showinfo=0"
+                    title="YouTube Shorts Video"
+                    frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                  </iframe>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Quick Info Cards */}
-          <section className="py-9">
+          <section className=" py-8 lg:py-9">
             <div className="container">
-              <div className=" mx-auto bg-[#EEF8F2]   rounded-2xl px-4 md:px-12 py-8">
+              <div className=" mx-auto bg-[#EEF8F2]   rounded-2xl px-4 lg:px-12 py-5 lg:py-8">
                 <div className="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-[#CDEDE3] justify-center items-stretch">
                   {/* Card 1: Walk-In Visits */}
-                  <div className="flex-1 flex flex-col items-center justify-center px-4 py-6 text-center  border-r-2  border-[#9AD9BA80]  ">
+                  <div className="flex-1 flex flex-col items-center justify-center px-4 py-6 text-center  md:border-r-2  border-[#9AD9BA80]  ">
                     <div className="flex items-center justify-center mb-4">
                       {/* Placeholder icon */}
                       <span className="inline-flex h-[100px] w-[100px] rounded-full bg-[#4AB27F1A] items-center justify-center">
@@ -382,7 +341,7 @@ export default function HomePage() {
                     </p>
                   </div>
                   {/* Card 2: Family Doctors */}
-                  <div className="flex-1 flex flex-col items-center justify-center px-4 py-6 text-center border-r-2  border-[#9AD9BA80] ">
+                  <div className="flex-1 flex flex-col items-center justify-center px-4 py-6 text-center md:border-r-2  border-[#9AD9BA80] ">
                     <div className="flex items-center justify-center mb-4">
                       {/* Stethoscope icon placeholder */}
                       <span className="inline-flex h-[100px] w-[100px] rounded-full bg-[#4AB27F1A] items-center justify-center">
@@ -429,11 +388,11 @@ export default function HomePage() {
           />
 
           {/* Our Promises Section */}
-          <section className="py-8 bg-[#F1F9F4]">
+          <section className=" py-10 lg:py-8 bg-[#F1F9F4]">
             <div className="container">
-              <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center md:px-[59px] ">
+              <div className="grid gap-8 lg:gap-12 lg:grid-cols-2 lg:gap-16 items-center lg:px-[59px] ">
                 <div>
-                  <h2 className="text-5xl text-[#050505] font-bold mb-4">
+                  <h2 className="text-3xl lg:text-5xl text-[#050505] font-bold mb-4">
                     Our <span className="text-[#299470]">Promises</span>
                   </h2>
                   <div className="space-y-4 text-[#000000] ">
@@ -444,7 +403,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div>
+                <div className="order-first lg:order-last">
                   <img
                     src="/images/landing/our-promise.png"
                     alt="Our Promise"
@@ -465,10 +424,10 @@ export default function HomePage() {
           />
 
           {/* Walk-in Video Promo Section */}
-          <section className="py-[54px]  ">
+          <section className="py-10 lg:py-[54px]  ">
             <div className="container mx-auto max-w-[1170px] w-full flex flex-col items-center">
               {/* Headline with Green Text */}
-              <h2 className="text-5xl font-bold text-[#303030] text-center mb-4">
+              <h2 className="text-3xl lg:text-5xl font-bold text-[#303030] text-center mb-4">
                 Walk in today until <span className="text-[#299470]">11:00 Pm, Open 7 days</span>
               </h2>
               {/* Subheadline */}
@@ -490,10 +449,10 @@ export default function HomePage() {
           </section>
 
           {/* Family Doctors Accepting New Patients Section */}
-          <section className="bg-[#F1F9F4] pt-[54px] pb-0">
+          <section className="bg-[#F1F9F4] pt-10 lg:pt-[54px] pb-0">
             <div className="container mx-auto flex flex-col items-center">
               {/* Headline */}
-              <h2 className="text-5xl font-bold text-[#303030] text-center mb-4">
+              <h2 className="text-3xl lg:text-5xl font-bold text-[#303030] text-center mb-4">
                 Family Doctors Accepting <span className="text-[#299470]">New Patients</span>
               </h2>
               {/* Subheadline */}
@@ -511,7 +470,7 @@ export default function HomePage() {
                     {/* icon: users */}
                     <img src="/images/landing/new-patients.svg" alt="" />
                   </span>
-                  <h3 className="font-medium text-[#000000]  text-3xl mb-[10px] ">Male & Female Doctors</h3>
+                  <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">Male & Female Doctors</h3>
                   <p className="text-[#303030] text-base ">Choose a doctor you're comfortable with</p>
                 </div>
                 {/* Card 2: Multiple Languages */}
@@ -520,7 +479,7 @@ export default function HomePage() {
                     {/* icon: globe / languages */}
                     <img src="/images/landing/new-patients.svg" alt="" />
                   </span>
-                  <h3 className="font-medium text-[#000000]  text-3xl mb-[10px] ">Multiple languages</h3>
+                  <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">Multiple languages</h3>
                   <p className="text-[#303030] text-base">English, Spanish, French, Arabic, Urdu, Hindi</p>
                 </div>
                 {/* Card 3: Comprehensive Care */}
@@ -529,7 +488,7 @@ export default function HomePage() {
                     {/* icon: comprehensive care */}
                     <img src="/images/landing/new-patients.svg" alt="" />
                   </span>
-                  <h3 className="font-medium text-[#000000]  text-3xl mb-[10px] ">Comprehensive Care</h3>
+                  <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">Comprehensive Care</h3>
                   <p className="text-[#303030] text-base">Chronic conditions preventive health & more</p>
                 </div>
               </div>

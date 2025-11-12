@@ -111,9 +111,9 @@ export default function DoctorsSection({
   const doctorSlides = useCarousel ? groupDoctorsIntoSlides(allDoctors, 4) : [];
 
   return (
-    <section className={` px-4 md:px-8  ${bgColor} ` + (sec_py ? sec_py : "  py-[54px] ") }>
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-5xl font-bold text-[#299470] text-center mb-4">
+    <section className={`  ${bgColor} ` + (sec_py ? sec_py : "  py-10 lg:py-[54px] ") }>
+      <div className="  container mx-auto">
+        <h2 className="text-3xl lg:text-5xl font-bold text-[#299470] text-center mb-4">
           <span>
             <span className="text-[#303030]">
               {title.split(' ')[0]}
@@ -129,7 +129,7 @@ export default function DoctorsSection({
         {showCategories && femaleDoctors.length > 0 && (
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-6">Our Female Family Doctors</h3>
-            <div className="grid md:grid-cols-4 gap-5">
+            <div className="grid  sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
               {femaleDoctors.map(renderDoctorCard)}
             </div>
           </div>
@@ -138,14 +138,14 @@ export default function DoctorsSection({
         {showCategories && maleDoctors.length > 0 && (
           <div>
             <h3 className="text-2xl font-bold mb-6">Our Male Family Doctors</h3>
-            <div className="grid md:grid-cols-4 gap-6">
+            <div className="grid  sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
               {maleDoctors.map(renderDoctorCard)}
             </div>
           </div>
         )}
 
         {!showCategories && !useCarousel && (
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid  sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
             {allDoctors.map(renderDoctorCard)}
           </div>
         )}
@@ -156,7 +156,7 @@ export default function DoctorsSection({
               <CarouselContent>
                 {doctorSlides.map((slide, slideIndex) => (
                   <CarouselItem key={slideIndex}>
-                    <div className="grid md:grid-cols-4 gap-6">
+                    <div className="grid  sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
                       {slide.map((doctor, doctorIndex) =>
                         renderDoctorCard(doctor, slideIndex * 4 + doctorIndex)
                       )}
@@ -183,7 +183,7 @@ export default function DoctorsSection({
           </div>
         )}
 
-        <div className="flex gap-4 justify-center mt-8">
+        <div className="flex gap-4 flex-wrap justify-center mt-8">
           {customButtons ? (
             customButtons.map((button, index) => (
               <Button

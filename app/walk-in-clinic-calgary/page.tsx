@@ -9,7 +9,6 @@ import {
   DoctorsSection
 } from "@/sections";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
@@ -163,23 +162,7 @@ export default function WalkInPage() {
       language: "Spanish",
     }
   ];
-  const videoTestimonials = [
-    {
-      name: "Bessie Cooper",
-      image: "/images/about-us/bessie-cooper.png",
-      quote: "Finally a clinic open late that actually cares about patients."
-    },
-    {
-      name: "Jenny Wilson",
-      image: "/images/about-us/jenny-wilson.png",
-      quote: "Friendly staff, short wait times, and doctors who listen."
-    },
-    {
-      name: "Cameron Williamson",
-      image: "/images/about-us/cameron-williamson.png",
-      quote: "This clinic makes it easy for families — especially on weekends and holidays."
-    }
-  ];
+
 
   return (
     <>
@@ -195,8 +178,8 @@ export default function WalkInPage() {
 
 
           {/* Bottom Call to Action */}
-          <section className=" bg-[#195A44] max-w-[1240px] mx-auto rounded-[16px] my-10 md:my-15 ">
-            <div className="container  py-14 ">
+          <section className=" my-10 lg:my-15 mx-4 md:mx-12 ">
+            <div className="bg-[#195A44] max-w-[1240px] mx-auto rounded-[16px]  px-4  md:px-8 lg:px-18 py-10 lg:py-14 ">
               <div className="mx-auto">
                 <h2 className="text-2xl md:text-5xl font-bold text-[#FEFEFE] mb-[10px] ">
                   Near the Hospital? We’re a Fast Option
@@ -252,7 +235,7 @@ export default function WalkInPage() {
           {/*Family Medicine Section */}
           <WhyChooseSection
             bg_color="bg-[#F1F9F4]"
-            py=" pt-[141px] pb-[206px]  "
+            py=" pt-10 lg:pt-[141px] pb-10 lg:pb-[206px]  "
             title={<>Why Choose<br /></>}
             title_2="Our Walk-In Clinic"
             subtitle=""
@@ -278,72 +261,74 @@ export default function WalkInPage() {
             values={values}
             titleFontWeight="font-medium"
             useListFormat={true}
-            buttonText="Walk In Anytime No Appointment Needed"
+            buttonText={<> Walk In Anytime No Appointment Needed </>}
             buttonLink="/walk-in-clinic-calgary"
             buttonIcon="/icons/uil-arrow-up-right.svg"
             buttonIconClass=""
           />
 
           {/* Bottom Call to Action */}
-          <section className="bg-[#195A44] max-w-[1240px] mx-auto rounded-[16px] py-7 px-24 my-[60px]">
-            <div className="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-8 items-center">
-              {/* Left Column - Text and Buttons */}
-              <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#FEFEFE] ">
-                  Open When You Need Us Most
-                </h2>
+          <section className="my-10 lg:my-[60px] lg:px-8  px-4">
+            <div className="bg-[#195A44] max-w-[1240px] w-full mx-auto rounded-[16px] py-7 px-4 md:px-8 lg:px-24 ">
+              <div className="grid grid-cols-1 md:grid-cols-[65%_35%]  gap-8 items-center">
+                {/* Left Column - Text and Buttons */}
+                <div className="space-y-6">
+                  <h2 className="text-3xl text-center md:text-left  lg:text-5xl font-bold text-[#FEFEFE] ">
+                    Open When You Need Us Most
+                  </h2>
 
-                <div className="space-y-3 text-[#FEFEFE] text-base">
-                  <p>
-                    Walk in before or after work we’re open from <b>7:30 AM to 11:00 PM,</b> every day. <br />Our clinic stays open on weekends and holidays, so you never have to delay car
-                  </p>
-                  <p className="text-[#FEFEFE]  " >
-                    <b className="text-lg" >You don’t need to call ahead — just come in.</b><br />
-                    Our caring team will help you feel better fast.
-                  </p>
+                  <div className="space-y-3 text-[#FEFEFE] text-base text-center md:text-left">
+                    <p>
+                      Walk in before or after work we’re open from <b>7:30 AM to 11:00 PM,</b> every day. <br />Our clinic stays open on weekends and holidays, so you never have to delay car
+                    </p>
+                    <p className="text-[#FEFEFE]  " >
+                      <b className="text-lg" >You don’t need to call ahead — just come in.</b><br />
+                      Our caring team will help you feel better fast.
+                    </p>
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="flex  flex-wrap justify-center flex-row gap-4 pt-4">
+                    <Button
+                      size="lg"
+                      className="bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-6 py-6 flex items-center gap-2"
+                      asChild
+                    >
+                      <Link href="tel:587-391-8188">
+                        <img
+                          src="/images/walk-in/solar_phone.svg"
+                          alt=""
+                          className="w-5 h-5"
+                        />
+                        587-391-8188
+                      </Link>
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border border-white text-white hover:bg-white/10 bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
+                      asChild
+                    >
+                      <Link href="https://share.google/CkrlunWzewWZjaPmv">
+                        <img
+                          src="/images/walk-in/flowbite_map-pin-outline.svg"
+                          alt=""
+                          className="w-f h-5"
+                        />
+                        Get Direction
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
 
-                {/* Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Button
-                    size="lg"
-                    className="bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-6 py-6 flex items-center gap-2"
-                    asChild
-                  >
-                    <Link href="tel:587-391-8188">
-                      <img
-                        src="/images/walk-in/solar_phone.svg"
-                        alt=""
-                        className="w-5 h-5"
-                      />
-                      587-391-8188
-                    </Link>
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border border-white text-white hover:bg-white/10 bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
-                    asChild
-                  >
-                    <Link href="https://share.google/CkrlunWzewWZjaPmv">
-                      <img
-                        src="/images/walk-in/flowbite_map-pin-outline.svg"
-                        alt=""
-                        className="w-f h-5"
-                      />
-                      Get Direction
-                    </Link>
-                  </Button>
+                {/* Right Column - Illustration */}
+                <div className="flex items-center justify-center lg:justify-end">
+                  <img
+                    src="/images/walk-in/calendar-rafiki.png"
+                    alt="Calendar illustration showing availability"
+                    className="w-full h-auto max-w-[350px]"
+                  />
                 </div>
-              </div>
-
-              {/* Right Column - Illustration */}
-              <div className="flex items-center justify-center lg:justify-end">
-                <img
-                  src="/images/walk-in/calendar-rafiki.png"
-                  alt="Calendar illustration showing availability"
-                  className="w-full h-auto max-w-[350px]"
-                />
               </div>
             </div>
           </section>
@@ -367,8 +352,9 @@ export default function WalkInPage() {
           />
 
 
+
           {/* YouTube Videos Grid */}
-          <YouTubeVideosGrid 
+          <YouTubeVideosGrid
             maxResults={3}
             title="What **Patients** Are Saying"
             description="At Now Medical Clinic, our doctors treat a wide range of medical conditions so you can skip the ER and get real help today."

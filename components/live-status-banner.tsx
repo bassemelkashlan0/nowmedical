@@ -71,9 +71,9 @@ export function LiveStatusBanner() {
   }
 
   return (
-    <div className={`sticky w-full mx-auto top-16 sm:top-20 md:top-[82px] z-40 ${isActive ? "bg-[#A7D3C4]" : "bg-red-200"}`}>
+    <div className={`sticky w-full mx-auto top-[64.5px] sm:top-20 md:top-[82px] z-40 ${isActive ? "bg-[#A7D3C4]" : "bg-red-200"}`}>
       <div className="container py-3 sm:py-5 md:py-7 px-4 sm:px-6">
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-[24px]">
+        <div className="flex items-center justify-between md:justify-center gap-4 sm:gap-6 md:gap-[24px]">
           <div className="flex items-center gap-3 sm:gap-4 md:gap-[24px]">
             <div className={`w-6 h-6 sm:w-8 sm:h-8 md:w-[32px] md:h-[32px] flex items-center justify-center rounded-full flex-shrink-0 ${
               isActive ? "bg-[#4DA688]" : "bg-red-400"
@@ -106,6 +106,7 @@ export function LiveStatusBanner() {
               </span>
             </div>
           </div>
+
         </div>
       </div>
     </div>

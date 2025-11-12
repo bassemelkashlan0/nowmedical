@@ -29,7 +29,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-1 xl:gap-2">
+        <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
               <button className="flex items-center gap-1 text-sm xl:text-base text-[#242121] font-normal transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-2 xl:px-3 py-2">
@@ -165,7 +165,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-3">
-          <Button asChild className="hidden md:flex w-full text-sm xl:text-lg xl:w-[173px] bg-[#299470] hover:bg-[#2D7B6F] text-white px-3 xl:px-4">
+          <Button asChild className="hidden lg:flex w-full text-sm xl:text-lg xl:w-[173px] bg-[#299470] hover:bg-[#2D7B6F] text-white px-3 xl:px-4">
             <Link href="/contact" >
               Contact Us
               <svg
@@ -185,7 +185,7 @@ export function Header() {
 
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="md:hidden">
+            <SheetTrigger asChild className="lg:hidden">
               <Button variant="ghost" size="icon" className="h-9 w-9 sm:h-10 sm:w-10">
                 <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
                 <span className="sr-only">Toggle menu</span>
