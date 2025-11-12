@@ -14,6 +14,7 @@ import Link from "next/link";
 import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
 import { LiveStatusBanner } from "@/components/live-status-banner";
+import { YouTubeVideosGrid } from "@/components/youtube-videos-grid";
 
 
 export const metadata: Metadata = {
@@ -366,58 +367,17 @@ export default function WalkInPage() {
           />
 
 
-          {/* What Patients Say - Video Testimonials */}
-          <section className="py-[54px] bg-white">
-            <div className="container">
-              <div className="text-center mb-6  ">
-                <h2 className="text-5xl font-bold mb-4">
-                  What <span className="text-[#299470]">Patients</span> Are Saying
-                </h2>
-                <p className="text-xl text-[#303030] ">
-                  At Now Medical Clinic, our doctors treat a wide range of medical conditions  <br />
-                  so you can skip the ER and get real help today.
-                </p>
-              </div>
-
-              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
-                {videoTestimonials.map((testimonial, index) => (
-                  <Card key={index} className="p-0 overflow-hidden rounded hover:shadow-lg transition-shadow border-1 border-[#83C1AC] hover:bg-[#EAF4F1]">
-                    <CardContent className="p-0">
-                      <div className="relative aspect-video bg-gray-100">
-                        <img
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          className="w-full h-[290px] object-cover"
-                        />
-                      </div>
-                      <div className="py-4 px-4">
-                        <h3 className="font-bold text-lg text-[#303030] mb-2">{testimonial.name}</h3>
-                        <p className="text-base  text-[#050505] italic">"{testimonial.quote}"</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-              <div className="flex justify-center mt-6">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border border-[#299470] text-[#299470] hover:bg-[#299470]/10 font-bold text-lg px-6 py-6 flex items-center gap-2"
-                  asChild
-                >
-                  <Link href="/patient-experience">
-                    See Real Patent Stories
-                    <img
-                      src="/icons/uil-arrow-up-right-grn.svg"
-                      alt=""
-                      className="w-f h-5"
-                    />
-
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </section>
+          {/* YouTube Videos Grid */}
+          <YouTubeVideosGrid 
+            maxResults={3}
+            title="What **Patients** Are Saying"
+            description="At Now Medical Clinic, our doctors treat a wide range of medical conditions so you can skip the ER and get real help today."
+            showButton={true}
+            buttonText="See Real Patient Stories"
+            buttonLink="/patient-experience"
+            bgColor="bg-white"
+            className=""
+          />
 
 
           {/* Find Us */}

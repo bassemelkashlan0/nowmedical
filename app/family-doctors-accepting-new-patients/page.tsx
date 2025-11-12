@@ -15,6 +15,7 @@ import Family_img from "@/public/images/family-doctor/why-us.png";
 import ValuesSection from "@/sections/home/values-section";
 import PatientsVideoSection from "@/sections/global/atients-video";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
+import { YouTubeVideosGrid } from "@/components/youtube-videos-grid";
 
 export const metadata: Metadata = {
   title: "Family Doctors Accepting New Patients Calgary | Now Medical    ",
@@ -311,15 +312,14 @@ export default function FamilyDoctorsPage() {
           <HowToRegisterSection />
 
 
-          {/* What Patients Say */}
-          <PatientsVideoSection
-            heading_first="What"
-            heading_mid="Patients"
-            heading_last="Say"
-            description=" See what Calgary patients are saying about their experience with Now Medical Clinic."
-            Items={videoTestimonials}
-            btn_show=" flex"
-            btn_text=" See What Patients Are Saying"
+          {/* YouTube Videos Grid */}
+          <YouTubeVideosGrid 
+            maxResults={3}
+            title="What **Patients** Are Saying"
+            description="See what Calgary patients are saying about their experience with Now Medical Clinic."
+            showButton={false}
+            bgColor="bg-white"
+            className=""
           />
 
           {/* Find Us */}

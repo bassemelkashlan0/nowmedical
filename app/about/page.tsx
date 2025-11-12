@@ -16,6 +16,7 @@ import {
 import { StructuredData, generateOrganizationSchema, generateLocalBusinessSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
+import { YouTubeVideosGrid } from "@/components/youtube-videos-grid";
 
 export const metadata: Metadata = {
   title: "About Now Medical Clinic Calgary | Our Story & Mission",
@@ -281,39 +282,15 @@ export default function AboutPage() {
             imageAlt="Medical clinic reception area"
           />
 
-          {/* What Patients Say - Video Testimonials */}
-          <section className="py-20 bg-white">
-            <div className="container">
-              <div className="text-center mb-12">
-                <h2 className="text-5xl font-bold mb-4">
-                  What <span className="text-[#299470]">Patients</span> Say
-                </h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  See what Calgary patients are saying about their experience with Now Medical Clinic.
-                </p>
-              </div>
-
-              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
-                {videoTestimonials.map((testimonial, index) => (
-                  <Card key={index} className="p-0 overflow-hidden rounded hover:shadow-lg transition-shadow border-1 border-[#83C1AC] hover:bg-[#EAF4F1]">
-                    <CardContent className="p-0">
-                      <div className="relative aspect-video bg-gray-100">
-                        <img
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          className="w-full h-[290px] object-cover"
-                        />
-                      </div>
-                      <div className="py-4 px-4">
-                        <h3 className="font-semibold text-lg mb-2">{testimonial.name}</h3>
-                        <p className="text-sm text-muted-foreground italic">"{testimonial.quote}"</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </section>
+          {/* YouTube Videos Grid */}
+          <YouTubeVideosGrid 
+            maxResults={3}
+            title="What **Patients** Are Saying"
+            description="See what Calgary patients are saying about their experience with Now Medical Clinic."
+            showButton={false}
+            bgColor="bg-white"
+            className=""
+          />
 
           {/* Find Us */}
           <FindUsSection

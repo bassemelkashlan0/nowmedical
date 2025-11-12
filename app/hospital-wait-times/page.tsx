@@ -15,6 +15,7 @@ import PatientsVideoSection from "@/sections/global/atients-video";
 import SkipWait_img from "@/public/images/hospital-wait-times/wait-times-reception.png";
 import FamilyMedicine_img from "@/public/images/hospital-wait-times/why-us.png";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
+import { YouTubeVideosGrid } from "@/components/youtube-videos-grid";
 
 export const metadata: Metadata = {
   title: "Calgary Hospital Wait Times | Skip the ER - Walk-In Clinic Open Late",
@@ -356,6 +357,7 @@ export default function HospitalWaitTimesPage() {
             h2_sub_color="text-[#299470]"
           />
 
+<<<<<<< Updated upstream
           {/* What Patients Say */}
           <PatientsVideoSection
             bg_color="bg-[#EEF8F2]"
@@ -367,6 +369,18 @@ export default function HospitalWaitTimesPage() {
             btn_show=" flex"
             btn_text=" See What Patients Are Saying"
             btn_link="/patient-experience"
+=======
+          {/* YouTube Videos Grid */}
+          <YouTubeVideosGrid 
+            maxResults={3}
+            title="What **Patients** Are Saying"
+            description="See what Calgary patients are saying about their experience with Now Medical Clinic."
+            showButton={true}
+            buttonText="See Real Patient Stories"
+            buttonLink="/patient-experience"
+            bgColor="bg-[#EEF8F2]"
+            className=""
+>>>>>>> Stashed changes
           />
 
           {/* Nearby Hospitals */}

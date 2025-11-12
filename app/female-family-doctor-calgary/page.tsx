@@ -9,6 +9,7 @@ import { LiveStatusBanner } from "@/components/live-status-banner";
 import PatientsVideoSection from "@/sections/global/atients-video";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
 import why_us_img from "@/public/images/female-family/why-us.png"
+import { YouTubeVideosGrid } from "@/components/youtube-videos-grid";
 
 
 export const metadata: Metadata = {
@@ -299,16 +300,14 @@ export default function FemaleFamilyDoctorPage() {
             btn_1_bg="bg-[#299470]"
           />
 
-          {/* What Patients Say */}
-          <PatientsVideoSection
-            bg_color="bg-[#EEF8F2]"
-            heading_first="What"
-            heading_mid="Patients"
-            heading_last="Say"
-            description=" See what Calgary patients are saying about their experience with Now Medical Clinic."
-            Items={videoTestimonials}
-            // btn_show=" block"
-            btn_text=" See What Patients Are Saying"
+          {/* YouTube Videos Grid */}
+          <YouTubeVideosGrid 
+            maxResults={3}
+            title="What **Patients** Are Saying"
+            description="See what Calgary patients are saying about their experience with Now Medical Clinic."
+            showButton={false}
+            bgColor="bg-[#EEF8F2]"
+            className=""
           />
 
           {/* Find Us & Hours Section */}
