@@ -3,16 +3,10 @@ import { Footer } from "@/components/footer";
 import {
   LiveWaitTimesSection,
   ConditionsSection,
-  TestimonialsSection,
   NearbyHospitalsSection,
-  FindUsSection,
-  CTABannerSection,
   WhyChooseSection
 } from "@/sections";
 import hero_img from "@/public/images/hospital-wait-times/wait-times-banner.png"
-import whyUs_img from "@/public/images/hospital-wait-times/why-us.png"
-import { Button } from "@/components/ui/button";
-import { Check, Clock, Activity, Stethoscope, Brain, Heart, Baby, Shield } from "lucide-react";
 import Link from "next/link";
 import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
@@ -32,13 +26,6 @@ export const metadata: Metadata = {
 };
 
 export default function HospitalWaitTimesPage() {
-  const skipWaitBenefits = [
-    "Walk-in anytime during our 7:30 AM – 11:00 PM hours",
-    "See a doctor in under 30 minutes on average",
-    "No appointment needed",
-    "Experienced doctors for most medical conditions",
-    "Convenient location with free parking"
-  ];
 
   const conditions = [
     {
@@ -240,7 +227,7 @@ export default function HospitalWaitTimesPage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white pt-10 pb-[111px]  ">
+          <section className="bg-[#F1F9F4] to-white  md:py-[54px]  ">
             <div className="container">
               <div className="grid gap-4 lg:grid-cols-[59%_40%] lg:gap-4 items-center  ">
                 <div>
@@ -272,11 +259,15 @@ export default function HospitalWaitTimesPage() {
                 </div>
 
                 <div className="flex justify-center items-center">
-                  <img
-                    src={hero_img.src}
-                    alt="Now Medical Clinic Calgary doctor"
-                    className="rounded-lg  "
-                  />
+                    <iframe
+                      width="100%"
+                      height="500"
+                      src="https://www.youtube.com/embed/zeArmG81bAE?rel=0&modestbranding=1&showinfo=0"
+                      title="YouTube Shorts Video"
+                      frameborder="0"
+                      allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+                    </iframe>
                 </div>
               </div>
             </div>
@@ -353,7 +344,6 @@ export default function HospitalWaitTimesPage() {
             bg_color="bg-[#F1F9F4]"
           />
 
-          {/* Why Calgarians Choose Us */}
 
           {/*Family Medicine Section */}
           <WhyChooseSection
@@ -376,6 +366,7 @@ export default function HospitalWaitTimesPage() {
             Items={videoTestimonials}
             btn_show=" flex"
             btn_text=" See What Patients Are Saying"
+            btn_link="/patient-experience"
           />
 
           {/* Nearby Hospitals */}

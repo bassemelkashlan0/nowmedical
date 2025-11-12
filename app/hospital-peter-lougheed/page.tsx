@@ -173,7 +173,7 @@ export default function HospitalPeterLougheed() {
                                         className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold"
                                         asChild
                                     >
-                                        <Link href="#"> <img src={location_icon.src} alt="Walk In Now" className="w-5 h-5" /> Get Direction </Link>
+                                        <Link href="https://share.google/CkrlunWzewWZjaPmv"> <img src={location_icon.src} alt="Walk In Now" className="w-5 h-5" /> Get Direction </Link>
                                     </Button>
                                 </div>
 

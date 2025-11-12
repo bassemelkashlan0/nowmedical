@@ -153,9 +153,9 @@ export default function AboutPage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] py-16">
+          <section className="bg-[#F1F9F4] py-10 md:py-[54px] ">
             <div className="container">
-              <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+              <div className="grid gap-12 lg:grid-cols-2 lg:gap-12 items-center">
                 <div>
                   <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl mb-[21px] ">
                     Real Doctors. Real Care.
@@ -169,7 +169,7 @@ export default function AboutPage() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
-                      <Link href="/walk-in-clinic-calgary"><img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5" />Call 587-391-8188</Link>
+                      <Link href="tel:587-391-8188"><img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5" />Call 587-391-8188</Link>
                     </Button>
                     <Button
                       size="lg"
@@ -182,12 +182,16 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                <div>
-                  <img
-                    src="/images/about-us/about-banner.png"
-                    alt="Now Medical Clinic Calgary doctor"
-                    className="rounded-lg w-full"
-                  />
+                <div className="md:ml-8">
+                  <iframe
+                    width="100%"
+                    height="500"
+                    src="https://www.youtube.com/embed/X0BcuE-6Kuw?rel=0&modestbranding=1&showinfo=0"
+                    title="YouTube Shorts Video"
+                    frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                  </iframe>
                 </div>
               </div>
             </div>

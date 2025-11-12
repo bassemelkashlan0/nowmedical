@@ -26,7 +26,7 @@ export default function StorySection({
 
 
         <div className="grid md:grid-cols-2 gap-18 items-center justify-center">
-          {images[0] && (
+          {images[0] ? (
             <div className="relative overflow-hidden">
               <img
                 src={images[0]}
@@ -34,7 +34,20 @@ export default function StorySection({
                 className="w-full h-full object-cover"
               />
             </div>
+          ) : (
+            <div className="relative overflow-hidden">
+              <iframe
+                width="100%"
+                height="500"
+                src="https://www.youtube.com/embed/X0BcuE-6Kuw?rel=0&modestbranding=1&showinfo=0"
+                title="YouTube Shorts Video"
+                frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
           )}
+
 
 
           <div className="space-y-4 pl-6">

@@ -135,23 +135,23 @@ export function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="min-w-[220px]">
               <DropdownMenuItem asChild>
-                <Link href="/services" className={pathname === '/services' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                <Link href="/all-services" className={pathname === '/all-services' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                   All Services
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/drivers-medical-calgary" className={pathname === '/drivers-medical-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                <Link href="/drivers-medical-exams-in-calgary" className={pathname === '/drivers-medical-exams-in-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
                   Driver's Medical Exams
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/services#flu-shots">Flu Shots & Vaccines</Link>
+                <Link href="/all-services#flu-shots">Flu Shots & Vaccines</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/services#prescriptions">Prescription Renewals</Link>
+                <Link href="/all-services#prescriptions">Prescription Renewals</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/services#forms">Medical Forms / Sick Notes</Link>
+                <Link href="/all-services#forms">Medical Forms / Sick Notes</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -225,7 +225,7 @@ export function Header() {
                 </div>
                 <div className="border-b pb-2">
                   <p className="text-sm font-semibold text-muted-foreground mb-2">Services</p>
-                  <Link href="/services" className={`block py-1 text-sm ${pathname === '/services' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/all-services" className={`block py-1 text-sm ${pathname === '/services' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     All Services
                   </Link>
                   <Link href="/drivers-medical-calgary" className={`block py-1 text-sm ${pathname === '/drivers-medical-calgary' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>

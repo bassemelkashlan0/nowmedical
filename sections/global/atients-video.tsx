@@ -17,6 +17,7 @@ interface PatientsVideoSectionProps {
     Items: videoTestimonials[];
     btn_show?: string;
     btn_text?: string;
+    btn_link?: string;
     bg_color?: string;
 }
 
@@ -30,7 +31,8 @@ export default function PatientsVideoSection(
         Items,
         btn_show,
         btn_text = " See What Patients Are Saying ",
-        bg_color
+        bg_color,
+        btn_link
     }: PatientsVideoSectionProps
 ) {
 
@@ -75,7 +77,7 @@ export default function PatientsVideoSection(
                             className={" mx-auto border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold "}
                             asChild
                         >
-                            <Link href="#">  {btn_text ? btn_text : "See What Patients Are Saying  "}  <img src={Arrow_icon.src} alt="Walk In Now" className="w-5 h-5" /> </Link>
+                            <Link href={ btn_link ? btn_link :  "/patient-experience"}>  {btn_text ? btn_text : "See What Patients Are Saying  "}  <img src={Arrow_icon.src} alt="Walk In Now" className="w-5 h-5" /> </Link>
                         </Button>
                     </div>
 

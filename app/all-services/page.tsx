@@ -173,9 +173,9 @@ export default function OurServicesPage() {
             <LiveStatusBanner />
             <main >
                 {/* Hero Section with Banner */}
-                <section className="bg-[#F1F9F4] to-white pt-8 pb-14">
+                <section className="bg-[#F1F9F4] to-white py-[54px] ">
                     <div className="container">
-                        <div className="grid gap-4 lg:grid-cols-[50%_48%] lg:gap-4 items-center  ">
+                        <div className="grid gap-4 lg:grid-cols-2 lg:gap-12 items-center  ">
                             <div>
                                 <h1 className="text-[#299470] font-bold tracking-tight lg:text-6xl mb-[21px] ">
                                     Complete Medical Care
@@ -188,7 +188,7 @@ export default function OurServicesPage() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 pt-12">
                                     <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>
-                                        <Link href="/walk-in-clinic-calgary"> <img src={phone_icon.src} alt="Register as a new patient" className="w-5 h-5" /> Call 587-391-8188 to Register</Link>
+                                        <Link href="tel:587-391-8188"> <img src={phone_icon.src} alt="Register as a new patient" className="w-5 h-5" /> Call 587-391-8188 to Register</Link>
                                     </Button>
 
                                     <Button
@@ -197,17 +197,21 @@ export default function OurServicesPage() {
                                         className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent font-bold text-base"
                                         asChild
                                     >
-                                        <Link href="/services">Walk In Now <img src="icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
+                                        <Link href="/walk-in-clinic-calgary">Walk In Now <img src="icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
                                     </Button>
                                 </div>
                             </div>
 
-                            <div className="flex justify-end items-center">
-                                <img
-                                    src={hero_img.src}
-                                    alt="Now Medical Clinic Calgary doctor"
-                                    className="rounded-lg  "
-                                />
+                            <div className="flex justify-end items-center ml-8 ">
+                                <iframe
+                                    width="100%"
+                                    height="500"
+                                    src="https://www.youtube.com/embed/zeArmG81bAE?rel=0&modestbranding=1&showinfo=0"
+                                    title="YouTube Shorts Video"
+                                    frameborder="0"
+                                    allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
                             </div>
                         </div>
                     </div>
@@ -224,7 +228,7 @@ export default function OurServicesPage() {
                     full_bg_btn="inline-flex mt-9"
                     full_btn_icon="/icons/solar_walking-outline.svg"
                     full_btn_text="Walk In Open 7 Days a Week Until 11 PM"
-                    full_btn_link="#"
+                    full_btn_link="/walk-in-clinic-calgary"
                     IsDot={true}
                 />
 
@@ -244,7 +248,7 @@ export default function OurServicesPage() {
                     btn_1_link="tel:587-391-8188"
                     btn_1_text="Call 587-391-8188"
                     btn_2_icon="/icons/solar_phone-outline.svg"
-                    btn_2_link="#"
+                    btn_2_link="/walk-in-clinic-calgary"
                     btn_2_text="Register as a New Patient"
                     order="order-first"
                     IsDot={true}
@@ -264,7 +268,7 @@ export default function OurServicesPage() {
                     para_2="Services include:"
                     both_btn="flex pt-7"
                     btn_1_icon="/icons/solar_walking-outline.svg"
-                    btn_1_link="#"
+                    btn_1_link="/walk-in-clinic-calgary"
                     btn_1_text="Walk In Now"
                     btn_2_icon="/icons/solar_phone-outline.svg"
                     btn_2_link="tel:587-391-8188"
@@ -291,7 +295,7 @@ export default function OurServicesPage() {
                     btn_1_link="tel:587-391-8188"
                     btn_1_text="Call 587-391-8188"
                     btn_2_icon="/icons/solar_phone-outline.svg"
-                    btn_2_link="#"
+                    btn_2_link="/walk-in-clinic-calgary"
                     btn_2_text="Register as a New Patient"
                     order="order-first"
                     IsDot={true}
@@ -311,7 +315,7 @@ export default function OurServicesPage() {
                     para_2="We treat:"
                     both_btn="flex pt-2"
                     btn_1_icon="/icons/solar_walking-outline.svg"
-                    btn_1_link="#"
+                    btn_1_link="/walk-in-clinic-calgary"
                     btn_1_text="Walk In Now"
                     btn_2_icon="/icons/solar_phone-outline.svg"
                     btn_2_link="tel:587-391-8188"
@@ -337,7 +341,7 @@ export default function OurServicesPage() {
                     image={Vaccionation_img.src}
                     both_btn="flex pt-7"
                     btn_1_icon="/icons/solar_walking-outline.svg"
-                    btn_1_link="#"
+                    btn_1_link="/walk-in-clinic-calgary"
                     btn_1_text="Walk In Now"
                     btn_2_icon="/icons/solar_phone-outline.svg"
                     btn_2_link="tel:587-391-8188"
@@ -357,7 +361,7 @@ export default function OurServicesPage() {
                     image={Precscription_img.src}
                     both_btn="flex pt-2"
                     btn_1_icon="/icons/solar_walking-outline.svg"
-                    btn_1_link="#"
+                    btn_1_link="/walk-in-clinic-calgary"
                     btn_1_text="Walk In Now"
                     btn_2_icon="/icons/solar_phone-outline.svg"
                     btn_2_link="tel:587-391-8188"
@@ -376,7 +380,7 @@ export default function OurServicesPage() {
                     image={whychoose_img.src}
                     both_btn="flex pt-2"
                     btn_1_icon="/icons/solar_walking-outline.svg"
-                    btn_1_link="#"
+                    btn_1_link="/walk-in-clinic-calgary"
                     btn_1_text="Walk In Now"
                     btn_2_icon="/icons/solar_phone-outline.svg"
                     btn_2_link="tel:587-391-8188"

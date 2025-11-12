@@ -23,88 +23,6 @@ export const metadata: Metadata = {
 };
 
 export default function FamilyDoctorsPage() {
-  const whyChooseItems = [
-    {
-      text: "Board-Certified family doctors trained in family medicine",
-      icon: <Stethoscope className="w-5 h-5" />
-    },
-    {
-      text: "Welcoming patients of all ages — from infants to seniors",
-      icon: <Users className="w-5 h-5" />
-    },
-    {
-      text: "Comprehensive family health services under one roof",
-      icon: <Heart className="w-5 h-5" />
-    },
-    {
-      text: "Same-day walk-in appointments available for urgent matters",
-      icon: <Activity className="w-5 h-5" />
-    }
-  ];
-
-  const comprehensiveCare = [
-    {
-      title: "Preventive & Routine Care",
-      description: "Annual physical exams, health screenings, and preventive care",
-      items: [
-        "Annual physical examinations",
-        "Chronic disease screening",
-        "Travel medicine and vaccines"
-      ],
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      title: "Women's Health",
-      description: "Comprehensive care for women at all life stages",
-      items: [
-        "Pap smears and cervical cancer screening",
-        "Birth control and family planning",
-        "Pregnancy testing and prenatal care"
-      ],
-      icon: <Heart className="w-8 h-8" />
-    },
-    {
-      title: "Children's Health",
-      description: "Pediatric care for infants, children, and teens",
-      items: [
-        "Well-child visits and development tracking",
-        "Childhood immunizations",
-        "School and sports physicals"
-      ],
-      icon: <Baby className="w-8 h-8" />
-    },
-    {
-      title: "Men's Health",
-      description: "Healthcare services tailored to men's needs",
-      items: [
-        "Prostate screening and PSA tests",
-        "Testosterone management",
-        "Sports medicine and fitness advice"
-      ],
-      icon: <Activity className="w-8 h-8" />
-    },
-    {
-      title: "Chronic Conditions",
-      description: "Ongoing management of chronic illnesses",
-      items: [
-        "Diabetes management (Type 1 & Type 2)",
-        "Blood pressure and cholesterol control",
-        "Asthma and COPD care"
-      ],
-      icon: <Stethoscope className="w-8 h-8" />
-    },
-    {
-      title: "Mental Health",
-      description: "Support for mental health and wellness",
-      items: [
-        "Anxiety and depression management",
-        "Stress management counseling",
-        "Referrals to mental health specialists"
-      ],
-      icon: <Heart className="w-8 h-8" />
-    }
-  ];
-
   const femaleDoctors = [
     {
       name: "Dr. Madiha",
@@ -332,7 +250,7 @@ export default function FamilyDoctorsPage() {
             btn_1_link="tel:587-391-8188"
             btn_1_text="Call 587-391-8188"
             btn_2_icon="/icons/solar_phone-outline.svg"
-            btn_2_link="#"
+            btn_2_link="/walk-in-clinic-calgary-"
             btn_2_text="Register as a New Patient"
             btn_2_bg="bg-transparent"
             order="order-first"
