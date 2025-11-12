@@ -19,20 +19,13 @@ export async function GET(request: Request) {
     const videoId = searchParams.get('videoId') || process.env.YOUTUBE_VIDEO_ID;
     const maxResults = parseInt(searchParams.get('maxResults') || '50');
     
-    const apiKey = process.env.YOUTUBE_API_KEY;
-    
-    if (!apiKey) {
-      return NextResponse.json(
-        { error: 'YouTube API key is not configured' },
-        { status: 500 }
-      );
-    }
+    const apiKey = 'AIzaSyA0bhoP_9y8-LyvgW8FYpl-DcEaQEQpqkA';
 
     // If video ID is provided, get channel ID from the video
     if (!channelId && videoId) {
       try {
         const videoResponse = await fetch(
-          `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=AIzaSyA0bhoP_9y8-LyvgW8FYpl-DcEaQEQpqkA`
+          `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${apiKey}`
         );
 
         if (videoResponse.ok) {
