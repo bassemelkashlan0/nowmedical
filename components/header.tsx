@@ -166,7 +166,7 @@ export function Header() {
 
         <div className="flex items-center gap-2 sm:gap-3">
           <Button asChild className="hidden lg:flex w-full text-sm xl:text-lg xl:w-[190px] bg-[#299470] hover:bg-[#2D7B6F] text-white px-3 xl:px-4">
-            <Link href="tel:587-391-8188" >
+            <Link href="tel:587-391-8188" className="text-center "  >
               <img src="/icons/btn_phone-outline-icon.svg" alt="" className="w-5 h-5" />
 
               Call 587-391-8188
@@ -182,8 +182,8 @@ export function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px] p-4 sm:p-6">
-              <nav className="flex flex-col gap-4">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] p-4 sm:p-6 flex flex-col overflow-hidden">
+              <nav className="flex flex-col gap-4 overflow-y-auto flex-1 pr-2 -mr-2">
                 <div className="border-b pb-2">
                   <p className="text-sm font-semibold text-muted-foreground mb-2">Walk-In Clinic</p>
                   <Link href="/walk-in-clinic-calgary" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-calgary' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
@@ -195,8 +195,32 @@ export function Header() {
                   <Link href="/late-night-clinic" className={`block py-1 text-sm ${pathname === '/late-night-clinic' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Late-Night Clinic
                   </Link>
+                  <Link href="/24-hour-walk-in-clinic-calgary" className={`block py-1 text-sm ${pathname === '/24-hour-walk-in-clinic-calgary' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    24-Hour / Extended Hours
+                  </Link>
                   <Link href="/walk-in-clinic-weekends" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-weekends' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Weekend Clinic
+                  </Link>
+                </div>
+                <div className="border-b pb-2">
+                  <p className="text-sm font-semibold text-muted-foreground mb-2">Near Major Hospitals</p>
+                  <Link href="/hospital-peter-lougheed" className={`block py-1 text-sm ${pathname === '/hospital-peter-lougheed' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Near Peter Lougheed Hospital
+                  </Link>
+                  <Link href="/walk-in-clinic-near-foothills-hospital" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-near-foothills-hospital' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Near Foothills Hospital
+                  </Link>
+                  <Link href="/walk-in-clinic-near-rockyview-hospital" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-near-rockyview-hospital' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Near Rockyview Hospital
+                  </Link>
+                  <Link href="/walk-in-clinic-near-alberta-childrens-hospital" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-near-alberta-childrens-hospital' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Near Alberta Children's Hospital
+                  </Link>
+                  <Link href="/walk-in-clinic-near-south-health-campus" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-near-south-health-campus' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Near South Health Campus
+                  </Link>
+                  <Link href="/walk-in-clinic-near-sheldon-m-chumir-health-centre" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-near-sheldon-m-chumir-health-centre' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Near Sheldon M. Chumir Centre
                   </Link>
                 </div>
                 <div className="border-b pb-2">
@@ -213,11 +237,20 @@ export function Header() {
                 </div>
                 <div className="border-b pb-2">
                   <p className="text-sm font-semibold text-muted-foreground mb-2">Services</p>
-                  <Link href="/all-services" className={`block py-1 text-sm ${pathname === '/services' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/all-services" className={`block py-1 text-sm ${pathname === '/all-services' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     All Services
                   </Link>
-                  <Link href="/drivers-medical-calgary" className={`block py-1 text-sm ${pathname === '/drivers-medical-calgary' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
-                    Driver's Medical
+                  <Link href="/drivers-medical-exams-in-calgary" className={`block py-1 text-sm ${pathname === '/drivers-medical-exams-in-calgary' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Driver's Medical Exams
+                  </Link>
+                  <Link href="/all-services#flu-shots" className={`block py-1 text-sm ${pathname === '/all-services#flu-shots' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Flu Shots & Vaccines
+                  </Link>
+                  <Link href="/all-services#prescriptions" className={`block py-1 text-sm ${pathname === '/all-services#prescriptions' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Prescription Renewals
+                  </Link>
+                  <Link href="/all-services#forms" className={`block py-1 text-sm ${pathname === '/all-services#forms' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Medical Forms / Sick Notes
                   </Link>
                 </div>
                 <Link href="/best-walk-in-clinic-calgary" className={`text-sm font-medium ${pathname === '/best-walk-in-clinic-calgary' ? 'text-[#299470] font-bold' : ''}`} onClick={() => setIsOpen(false)}>
@@ -231,7 +264,9 @@ export function Header() {
                 </Link>
                 <Link href="/contact" className="block w-full mt-2" onClick={() => setIsOpen(false)}>
                   <Button className="w-full bg-[#299470] hover:bg-[#2D7B6F] text-white">
-                    <Link href="tel:587-391-8188">
+                    <Link href="tel:587-391-8188" className=" flex gap-2 items-center ">
+                    <img src="/icons/btn_phone-outline-icon.svg" alt="" className="w-5 h-5" />
+
                       Call 587-391-8188
                     </Link>
                   </Button>
