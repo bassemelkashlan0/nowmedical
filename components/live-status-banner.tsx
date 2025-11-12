@@ -60,9 +60,9 @@ export function LiveStatusBanner() {
 
   if (loading) {
     return (
-      <div className="bg-[#A7D3C4] z-40 sticky w-full mx-auto top-[82px]">
-        <div className="container py-7">
-          <div className="flex items-center justify-center gap-[24px] text-sm">
+      <div className="bg-[#A7D3C4] z-40 sticky w-full mx-auto top-16 sm:top-20 md:top-[82px]">
+        <div className="container py-3 sm:py-5 md:py-7 px-4 sm:px-6">
+          <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm">
             <div className="text-[#050505]">Loading status...</div>
           </div>
         </div>
@@ -71,15 +71,15 @@ export function LiveStatusBanner() {
   }
 
   return (
-    <div className={ " sticky w-full mx-auto top-[82px] z-40   " +   (isActive ? "bg-[#A7D3C4]" : "bg-red-200 ")}>
-      <div className="container py-7">
-        <div className="flex items-center justify-center gap-[24px] text-sm">
-          <div className="flex items-center  gap-[24px]">
-            <div className={`w-[32px] h-[32px] flex items-center justify-center rounded-full ${
+    <div className={`sticky w-full mx-auto top-16 sm:top-20 md:top-[82px] z-40 ${isActive ? "bg-[#A7D3C4]" : "bg-red-200"}`}>
+      <div className="container py-3 sm:py-5 md:py-7 px-4 sm:px-6">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-[24px]">
+          <div className="flex items-center gap-3 sm:gap-4 md:gap-[24px]">
+            <div className={`w-6 h-6 sm:w-8 sm:h-8 md:w-[32px] md:h-[32px] flex items-center justify-center rounded-full flex-shrink-0 ${
               isActive ? "bg-[#4DA688]" : "bg-red-400"
             }`}>
               <div
-                className={`h-[22px] w-[22px] rounded-full ${
+                className={`h-4 w-4 sm:h-5 sm:w-5 md:h-[22px] md:w-[22px] rounded-full ${
                   isActive
                     ? "bg-[#195A44] animate-pulse"
                     : "bg-red-600"
@@ -87,19 +87,21 @@ export function LiveStatusBanner() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-medium block text-3xl text-[#050505]">Walk-in Live Status</span>
-              <span className=" block sm:inline text-base text-[#050505]">
+              <span className="font-medium block text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#050505] leading-tight">
+                Walk-in Live Status
+              </span>
+              <span className="block text-xs sm:text-sm md:text-base text-[#050505]">
                 Walk-in is {isActive ? "OPEN NOW" : "CLOSED"}
               </span>
             </div>
           </div>
 
-          <div className="flex items-center  gap-[24px]">
-            <div className="flex flex-col">
-              <span className="font-medium block text-3xl text-[#050505]">
+          <div className="flex items-center gap-3 sm:gap-4 md:gap-[24px]">
+            <div className="flex flex-col text-center sm:text-left">
+              <span className="font-medium block text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#050505] leading-tight">
                 {formatTime(currentTime)}
               </span>
-              <span className=" block sm:inline text-base text-[#050505]">
+              <span className="block text-xs sm:text-sm md:text-base text-[#050505]">
                 {formatDate(currentTime)}
               </span>
             </div>

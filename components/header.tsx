@@ -22,18 +22,18 @@ export function Header() {
   const pathname = usePathname()
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-[#EAF4F1] backdrop-blur supports-[backdrop-filter]:bg-[#EAF4F1]">
-      <div className="container flex md:h-[81px] items-center justify-between">
-        <Link href="/" className="flex items-center">
-          <Logo className="" />
+    <header className="sticky top-0 left-0 right-0 z-50 w-full border-b bg-[#EAF4F1] backdrop-blur supports-[backdrop-filter]:bg-[#EAF4F1]/95 shadow-sm" style={{ transform: 'translateZ(0)', willChange: 'transform' }}>
+      <div className="container flex h-16 sm:h-20 md:h-[81px] items-center justify-between px-4 sm:px-6 relative">
+        <Link href="/" className="flex items-center flex-shrink-0">
+          <Logo className="w-[100px] sm:w-[120px] md:w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-2">
+        <nav className="hidden md:flex items-center gap-1 xl:gap-2">
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-1 text-base text-[#242121] font-normal transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-3 py-2">
-                Walk-In Clinic <ChevronDown className="h-4 w-4" />
+              <button className="flex items-center gap-1 text-sm xl:text-base text-[#242121] font-normal transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-2 xl:px-3 py-2">
+                Walk-In Clinic <ChevronDown className="h-3 w-3 xl:h-4 xl:w-4" />
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="min-w-[240px]">
@@ -104,8 +104,8 @@ export function Header() {
 
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-1 text-base text-[#242121] font-normal transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-3 py-2">
-                Family Doctor <ChevronDown className="h-4 w-4" />
+              <button className="flex items-center gap-1 text-sm xl:text-base text-[#242121] font-normal transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-2 xl:px-3 py-2">
+                Family Doctor <ChevronDown className="h-3 w-3 xl:h-4 xl:w-4" />
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="min-w-[260px]">
@@ -129,8 +129,8 @@ export function Header() {
 
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-1 text-base text-[#242121] font-normal transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-3 py-2">
-                Services <ChevronDown className="h-4 w-4" />
+              <button className="flex items-center gap-1 text-sm xl:text-base text-[#242121] font-normal transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-2 xl:px-3 py-2">
+                Services <ChevronDown className="h-3 w-3 xl:h-4 xl:w-4" />
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="min-w-[220px]">
@@ -156,7 +156,7 @@ export function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <button className="flex items-center gap-1 text-base text-[#242121] font-normal transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-3 py-2">
+          <button className="flex items-center gap-1 text-sm xl:text-base text-[#242121] font-normal transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-2 xl:px-3 py-2">
             <Link href='/reviews' >
               Reviews
             </Link>
@@ -164,11 +164,10 @@ export function Header() {
 
         </nav>
 
-        <div className="flex items-center gap-3">
-          <Button asChild className="hidden w-full text-lg md:w-[173px] md:flex bg-[#299470] hover:bg-[#2D7B6F] text-white">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <Button asChild className="hidden md:flex w-full text-sm xl:text-lg xl:w-[173px] bg-[#299470] hover:bg-[#2D7B6F] text-white px-3 xl:px-4">
             <Link href="/contact" >
               Contact Us
-              {/* <ChevronDown className="ml-1 h-[20px] w-[20px]" /> */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -177,24 +176,22 @@ export function Header() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="ml-1 !h-[20px] !w-[20px] flex-shrink-0 block text-white"
+                className="ml-1 !h-4 !w-4 xl:!h-[20px] xl:!w-[20px] flex-shrink-0 block text-white"
               >
                 <path d="m6 9 6 6 6-6"></path>
               </svg>
-
-
             </Link>
           </Button>
 
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon">
-                <Menu className="h-5 w-5" />
+              <Button variant="ghost" size="icon" className="h-9 w-9 sm:h-10 sm:w-10">
+                <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] p-4 sm:p-6">
               <nav className="flex flex-col gap-4">
                 <div className="border-b pb-2">
                   <p className="text-sm font-semibold text-muted-foreground mb-2">Walk-In Clinic</p>
@@ -241,8 +238,10 @@ export function Header() {
                 <Link href="/faq" className={`text-sm font-medium ${pathname === '/faq' ? 'text-[#299470] font-bold' : ''}`} onClick={() => setIsOpen(false)}>
                   FAQ
                 </Link>
-                <Link href="/contact" className={`text-sm font-medium ${pathname === '/contact' ? 'text-[#299470] font-bold' : ''}`} onClick={() => setIsOpen(false)}>
-                  Contact
+                <Link href="/contact" className="block w-full mt-2" onClick={() => setIsOpen(false)}>
+                  <Button className="w-full bg-[#299470] hover:bg-[#2D7B6F] text-white">
+                    Contact Us
+                  </Button>
                 </Link>
               </nav>
             </SheetContent>

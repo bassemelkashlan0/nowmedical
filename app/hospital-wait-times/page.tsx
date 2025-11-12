@@ -357,19 +357,6 @@ export default function HospitalWaitTimesPage() {
             h2_sub_color="text-[#299470]"
           />
 
-<<<<<<< Updated upstream
-          {/* What Patients Say */}
-          <PatientsVideoSection
-            bg_color="bg-[#EEF8F2]"
-            heading_first="What"
-            heading_mid="Patients"
-            heading_last="Say"
-            description=" See what Calgary patients are saying about their experience with Now Medical Clinic."
-            Items={videoTestimonials}
-            btn_show=" flex"
-            btn_text=" See What Patients Are Saying"
-            btn_link="/patient-experience"
-=======
           {/* YouTube Videos Grid */}
           <YouTubeVideosGrid 
             maxResults={3}
@@ -380,7 +367,6 @@ export default function HospitalWaitTimesPage() {
             buttonLink="/patient-experience"
             bgColor="bg-[#EEF8F2]"
             className=""
->>>>>>> Stashed changes
           />
 
           {/* Nearby Hospitals */}
