@@ -62,7 +62,7 @@ export default function UrgentCarePage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white py-[54px] ">
+          <section className="bg-[#F1F9F4] to-white py-10 py-[54px] ">
             <div className="container">
               <div className="grid gap-4 lg:grid-cols-[53%_46%] lg:gap-4 items-center  ">
                 <div>

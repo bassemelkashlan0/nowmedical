@@ -73,7 +73,7 @@ export default function SouthHealthCampusPage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white py-[54px] ">
+          <section className="bg-[#F1F9F4] to-white py-10 md:py-[54px] ">
             <div className="container">
               <div className="grid gap-4 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
@@ -86,7 +86,7 @@ export default function SouthHealthCampusPage() {
 
                 </div>
 
-                <div className="flex justify-center items-center ml-8 ">
+                <div className="flex justify-center items-center md:ml-8 ">
                   <iframe
                     width="100%"
                     height="500"
@@ -134,40 +134,7 @@ export default function SouthHealthCampusPage() {
           {/* Map Section */}
           <FindUsSection
             bgColor="bg-white"
-            customButtons={
-              <>
-                <Button
-                  size="lg"
-                  className="border border-[#299470] bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-[16px] py-[11px] flex items-center gap-[10px] cursor-pointer"
-                  asChild
-                >
-                  <Link href="/walk-in-clinic-calgary">
-                    <img
-                      src="/icons/solar_walking-outline.svg"
-                      alt=""
-                      className="w-5 h-5"
-                    />
-                    Walk In Today
-                  </Link>
-                </Button>
-
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-white font-bold text-lg px-[16px] py-[11px] flex items-center gap-[10px] cursor-pointer"
-                  asChild
-                >
-                  <Link href="https://share.google/CkrlunWzewWZjaPmv" target="_blank" rel="noopener noreferrer">
-                    <img
-                      src="/icons/pin-outline-icon.svg"
-                      alt=""
-                      className="w-5 h-5"
-                    />
-                    Get Direction
-                  </Link>
-                </Button>
-              </>
-            }
+            customButtons={ " "}
           />
           <div className="mt-15"></div>
           {/* CTA Banner */}

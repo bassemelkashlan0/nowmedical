@@ -37,7 +37,7 @@ export default function DriversMedicalExamsInCalgaryScreen() {
             <LiveStatusBanner />
             <main>
                 {/* Hero Section */}
-                <section className="bg-[#F1F9F4] to-white py-[54px]  ">
+                <section className="bg-[#F1F9F4] to-white py-10 md:py-[54px]  ">
                     <div className="container">
                         <div className="grid gap-12 lg:grid-cols-[57%_40%] lg:gap-8 items-center">
                             <div>

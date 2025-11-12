@@ -74,7 +74,7 @@ export default function FoothillsHospitalPage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white py-[54px] " >
+          <section className="bg-[#F1F9F4] to-white  py-10 md:py-[54px] " >
             <div className="container">
               <div className="grid gap-4 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
@@ -105,13 +105,13 @@ export default function FoothillsHospitalPage() {
                       className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold"
                       asChild
                     >
-                      <Link href="#"> <img src={location_icon.src} alt="Walk In Now" className="w-5 h-5" /> Get Direction </Link>
+                      <Link href="https://share.google/CkrlunWzewWZjaPmv"> <img src={location_icon.src} alt="Walk In Now" className="w-5 h-5" /> Get Direction </Link>
                     </Button>
                   </div>
 
                 </div>
 
-                <div className="flex justify-center items-center ml-8 ">
+                <div className="flex justify-center items-center md:ml-8 ">
                   <iframe
                     width="100%"
                     height="500"

@@ -194,8 +194,8 @@ export default function WalkInPage() {
 
 
           {/* Bottom Call to Action */}
-          <section className=" py-15 ">
-            <div className="container bg-[#195A44] rounded-[20px] py-14 ">
+          <section className=" bg-[#195A44] max-w-[1240px] mx-auto rounded-[16px] my-10 md:my-15 ">
+            <div className="container  py-14 ">
               <div className="mx-auto">
                 <h2 className="text-2xl md:text-5xl font-bold text-[#FEFEFE] mb-[10px] ">
                   Near the Hospital? We’re a Fast Option

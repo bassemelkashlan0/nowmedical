@@ -80,7 +80,7 @@ export default function WeekendClinicPage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white pt-8 pb-14">
+          <section className="bg-[#F1F9F4] to-white py-10 md:py-[54px] ">
             <div className="container">
               <div className="grid gap-4 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
@@ -104,7 +104,7 @@ export default function WeekendClinicPage() {
 
                 </div>
 
-                <div className="flex justify-center items-center ml-8 ">
+                <div className="flex justify-center items-center md:ml-8 ">
                   <iframe
                     width="100%"
                     height="500"
@@ -206,8 +206,8 @@ export default function WeekendClinicPage() {
           <div className="mt-15"></div>
           {/* CTA Banner */}
           <BottomCallAction
-            title='Weekend Walk-In Clinic Calgary | Open Saturdays, Sundays & Holidays Until 11 PM'
-            title_2=""
+            title='Weekend Walk-In Clinic Calgary | Open '
+            title_2=" Saturdays, Sundays & Holidays Until 11 PM "
             description={<>Need a weekend doctor in Calgary? We're open Saturdays, Sundays & holidays until 11 PM, Real family doctors, short waits, free parking. Call 587-391-8188.</>}
           />
 

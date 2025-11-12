@@ -87,7 +87,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/drivers-medical-calgary" className="text-[#303030] hover:text-[#299470]">
+                <Link href="/drivers-medical-exams-in-calgary" className="text-[#303030] hover:text-[#299470]">
                   Driver's Medical Exams
                 </Link>
               </li>
@@ -103,7 +103,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/best-walk-in-clinic-calgary" className="text-[#303030] hover:text-[#299470]">
+                <Link href="/walk-in-clinic-calgary" className="text-[#303030] hover:text-[#299470]">
                   Why Choose Us (4.8★)
                 </Link>
               </li>
@@ -118,7 +118,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-[#303030] hover:text-[#299470]">
+                <Link href="/all-services" className="text-[#303030] hover:text-[#299470]">
                   All Services
                 </Link>
               </li>

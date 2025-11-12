@@ -77,7 +77,7 @@ export default function RockyviewHospitalPage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white py-[54px] ">
+          <section className="bg-[#F1F9F4] to-white py-10 md:py-[54px] ">
             <div className="container">
               <div className="grid gap-4 lg:grid-cols-2 lg:gap-12  items-center  ">
                 <div>
@@ -91,7 +91,7 @@ export default function RockyviewHospitalPage() {
 
                 </div>
 
-                <div className="flex justify-center items-center ml-8">
+                <div className="flex justify-center items-center md:ml-8">
                   <iframe
                     width="100%"
                     height="500"
