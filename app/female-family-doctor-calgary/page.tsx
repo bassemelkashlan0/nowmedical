@@ -188,7 +188,7 @@ export default function FemaleFamilyDoctorPage() {
                       className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold"
                       asChild
                     >
-                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                      <Link href="/walk-in-clinic-calgary" className="flex items-center gap-2">
                         Walk In Today
                         <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Today" className="w-5 h-5" />
                       </Link>
@@ -259,7 +259,7 @@ export default function FemaleFamilyDoctorPage() {
             btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
             btn_2_text="Walk In"
             btn_2_icon="/icons/btn-walking-outline-icon.svg"
-            btn_2_link="tel:587-391-8188"
+            btn_2_link="/walk-in-clinic-calgary"
             btn_2_bg="bg-transparent"
           />
 
@@ -283,7 +283,7 @@ export default function FemaleFamilyDoctorPage() {
             btn_1_icon="/icons/btn_phone-outline-icon.svg"
             btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
             btn_2_text="Walk In Now"
-            btn_2_link="tel:587-391-8188"
+            btn_2_link="/walk-in-clinic-calgary"
             btn_2_icon="/icons/btn-walking-outline-icon.svg"
           />
 
@@ -306,7 +306,7 @@ export default function FemaleFamilyDoctorPage() {
             btn_1_icon="/icons/btn_phone-outline-icon.svg"
             btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
             btn_2_text="Walk In Now"
-            btn_2_link="tel:587-391-8188"
+            btn_2_link="/walk-in-clinic-calgary"
             btn_2_icon="/icons/btn-walking-outline-icon.svg"
           />
 

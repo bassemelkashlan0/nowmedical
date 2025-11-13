@@ -103,7 +103,7 @@ export default function RockyviewHospitalPage() {
                       className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold"
                       asChild
                     >
-                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                      <Link href="/walk-in-clinic-calgary" className="flex items-center gap-2">
                         <img src="/icons/btn-walking-outline-icon.svg" alt="Walk In" className="w-5 h-5" />
                         Walk In Now
                       </Link>
@@ -144,7 +144,7 @@ export default function RockyviewHospitalPage() {
             btn_1_icon="/icons/btn_phone-outline-icon.svg"
             btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
             btn_2_text="Walk In Now"
-            btn_2_link="tel:587-391-8188"
+            btn_2_link="/walk-in-clinic-calgary"
             btn_2_icon="/icons/btn-walking-outline-icon.svg"
           />
 
@@ -168,7 +168,7 @@ export default function RockyviewHospitalPage() {
             btn_1_icon="/icons/btn_phone-outline-icon.svg"
             btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
             btn_2_text="Walk In Now"
-            btn_2_link="tel:587-391-8188"
+            btn_2_link="/walk-in-clinic-calgary"
             btn_2_icon="/icons/btn-walking-outline-icon.svg"
           />
 
@@ -177,6 +177,17 @@ export default function RockyviewHospitalPage() {
             bgColor="bg-white"
             customButtons={
               <>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
+                  asChild
+                >
+                  <Link href="/walk-in-clinic-calgary" className="flex items-center gap-2">
+                    <img src="/icons/solar_walking-outline.svg" alt="Phone" className="w-5 h-5" />
+                    Walk In Now
+                  </Link>
+                </Button>
                 <Button
                   size="lg"
                   variant="outline"
@@ -189,8 +200,9 @@ export default function RockyviewHospitalPage() {
                   </Link>
                 </Button>
                 <Button
+                  variant="outline"
                   size="lg"
-                  className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
+                  className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
                   asChild
                 >
                   <Link
@@ -199,13 +211,15 @@ export default function RockyviewHospitalPage() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
                   >
-                    Get Direction on Google Map
-                    <img src="/icons/uil-arrow-up-right.svg" alt="" className="w-5 h-5 brightness-0 invert" />
+                    <img src="/icons/pin-outline-icon.svg" alt="" className="w-5 h-5 " />
+                    Get Direction
                   </Link>
                 </Button>
               </>
             }
           />
+
+
           <div className="mt-15"></div>
           {/* CTA Banner */}
           <BottomCallAction

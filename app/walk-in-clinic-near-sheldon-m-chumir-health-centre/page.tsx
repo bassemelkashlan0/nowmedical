@@ -45,7 +45,7 @@ export default function SheldonChumirPage() {
                     </Link>
                   </Button>
                   <Button size="lg" variant="outline" className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent" asChild>
-                    <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                    <Link href="/walk-in-clinic-calgary" className="flex items-center gap-2">
                       <img src="/icons/btn-walking-outline-icon.svg" alt="Walk In" className="w-5 h-5" />
                       Walk In Now
                     </Link>

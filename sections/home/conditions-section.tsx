@@ -84,7 +84,7 @@ export default function ConditionsSection({
               </Link>
             </Button>
             <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] font-bold text-white text-lg" asChild>
-              <Link className='!text-wrap whitespace-wrap' href="tel:587-391-8188">Walk In Anytime- Real Doctors Real care<img src="/icons/uil-arrow-up-right.svg" alt="Register as a new patient" className="w-5 h-5" /></Link>
+              <Link className='!text-wrap whitespace-wrap' href="/walk-in-clinic-calgary">Walk In Anytime- Real Doctors Real care<img src="/icons/uil-arrow-up-right.svg" alt="Register as a new patient" className="w-5 h-5" /></Link>
             </Button>
           </div>
           <p className='text-[12px] pt-4 text-[#6E6E6E]'>Open Until 11 PM, 7 Days a week Including weekends and Holidays</p>

@@ -217,7 +217,7 @@ export default function FamilyDoctorsPage() {
             buttons={[
               {
                 text: "Walk In Now",
-                link: "tel:587-391-8188",
+                link: "/walk-in-clinic-calgary",
                 icon: "/icons/solar_walking-outline.svg",
                 variant: "default",
               },

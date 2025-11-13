@@ -181,7 +181,7 @@ export default function AboutPage() {
                       className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
                       asChild
                     >
-                      <Link href="tel:587-391-8188">Walk In Anytime No Appointment Needed<img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
+                      <Link href="/walk-in-clinic-calgary">Walk In Anytime No Appointment Needed<img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
                     </Button>
                   </div>
                 </div>

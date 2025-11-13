@@ -211,7 +211,7 @@ export default function WalkInPage() {
                   className="border border-white text-white hover:bg-white/10 bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
                   asChild
                 >
-                  <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                  <Link href="/walk-in-clinic-calgary" className="flex items-center gap-2">
                     <img
                       src="/icons/solar_walking-outline.svg"
                       alt=""
@@ -263,7 +263,7 @@ export default function WalkInPage() {
             btn_1_icon="/icons/btn_phone-outline-icon.svg"
             btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
             btn_2_text="Skip the Wait Walk In Today"
-            btn_2_link="tel:587-391-8188"
+            btn_2_link="/walk-in-clinic-calgary"
             btn_2_icon="/icons/uil-arrow-up-right-grn.svg"
             btn_2_iconAfter={true}
             order="order-first"
@@ -399,17 +399,6 @@ export default function WalkInPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
-                  asChild
-                >
-                  <Link href="/walk-in-clinic-calgary" className="flex items-center gap-2">
-                    <img src="/icons/solar_walking-outline.svg"  alt="Phone" className="w-5 h-5" />
-                    Walk In Now
-                  </Link>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
                   className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
                   asChild
                 >
@@ -419,9 +408,8 @@ export default function WalkInPage() {
                   </Link>
                 </Button>
                 <Button
-                  variant="outline"
                   size="lg"
-                  className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
+                  className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
                   asChild
                 >
                   <Link
@@ -430,8 +418,8 @@ export default function WalkInPage() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
                   >
-                    <img src="/icons/pin-outline-icon.svg" alt="" className="w-5 h-5 " />
-                    Get Direction
+                    Get Direction on Google Map
+                    <img src="/icons/uil-arrow-up-right.svg" alt="" className="w-5 h-5 brightness-0 invert" />
                   </Link>
                 </Button>
               </>

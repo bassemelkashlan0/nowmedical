@@ -92,7 +92,7 @@ export default function FindUsSection({
               </div>
             )}
             {customButtons ? (
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <div className="flex  flex-wrap flex-row gap-4 pt-4">
                 {customButtons}
               </div>
             ) : (

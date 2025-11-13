@@ -308,7 +308,7 @@ export default function HomePage() {
                       className="border-[#299470] text-bold text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
                       asChild
                     >
-                      <Link href="tel:587-391-8188">Walk In Now <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
+                      <Link href="/walk-in-clinic-calgary">Walk In Now <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
                     </Button>
                   </div>
                 </div>
@@ -400,7 +400,7 @@ export default function HomePage() {
             btn_1_icon="/icons/btn_phone-outline-icon.svg"
             btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
             btn_2_text="Walk In Now"
-            btn_2_link="tel:587-391-8188"
+            btn_2_link="/walk-in-clinic-calgary"
             btn_2_icon="/icons/uil-arrow-up-right-grn.svg"
           />
 
