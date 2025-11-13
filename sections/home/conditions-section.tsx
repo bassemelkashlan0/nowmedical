@@ -71,9 +71,22 @@ export default function ConditionsSection({
           ))}
         </div>
         <div className='w-full text-center justify-center pt-6'>
-          <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] font-bold text-white text-lg" asChild>
-            <Link className='!text-wrap whitespace-wrap' href="tel:587-391-8188">Walk In Anytime- Real Doctors Real care<img src="/icons/uil-arrow-up-right.svg" alt="Register as a new patient" className="w-5 h-5" /></Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent font-bold text-lg" 
+              asChild
+            >
+              <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                Call: 587-391-8188
+              </Link>
+            </Button>
+            <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] font-bold text-white text-lg" asChild>
+              <Link className='!text-wrap whitespace-wrap' href="tel:587-391-8188">Walk In Anytime- Real Doctors Real care<img src="/icons/uil-arrow-up-right.svg" alt="Register as a new patient" className="w-5 h-5" /></Link>
+            </Button>
+          </div>
           <p className='text-[12px] pt-4 text-[#6E6E6E]'>Open Until 11 PM, 7 Days a week Including weekends and Holidays</p>
         </div>
       </div>

@@ -294,6 +294,16 @@ export default function HomePage() {
                     </Button>
                     <Button
                       size="lg"
+                      className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg font-bold"
+                      asChild
+                    >
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
+                        Call: 587-391-8188
+                      </Link>
+                    </Button>
+                    <Button
+                      size="lg"
                       variant="outline"
                       className="border-[#299470] text-bold text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
                       asChild
@@ -379,12 +389,19 @@ export default function HomePage() {
           <WhyChooseSection
             title="Why Calgary Trusts"
             h2_color_1=" text-[#050505] "
-            para="We’re here when other clinics are closed and when you need care the most."
+            para="We're here when other clinics are closed and when you need care the most."
             para_color=" text-[#000000] "
             subtitle="Now Medical Clinic"
             items={whyChooseItems}
             image="/images/landing/why-calgary-trusts.png"
-            btn_class="inline-flex"
+            both_btn="flex pt-4"
+            btn_1_text="Call: 587-391-8188"
+            btn_1_link="tel:587-391-8188"
+            btn_1_icon="/icons/btn_phone-outline-icon.svg"
+            btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+            btn_2_text="Walk In Now"
+            btn_2_link="tel:587-391-8188"
+            btn_2_icon="/icons/uil-arrow-up-right-grn.svg"
           />
 
           {/* Our Promises Section */}
@@ -397,9 +414,22 @@ export default function HomePage() {
                   </h2>
                   <div className="space-y-4 text-[#000000] ">
                     <p>
-                      When you or your loved ones need care, you shouldn’t wait days for an appointment. <br />At Now Medical Clinic, our doctors are ready 7 days a week — weekends and holidays <br />included, offering fast, compassionate, professional care for all Calgary residents.<br /> No Appointment Needed
+                      When you or your loved ones need care, you shouldn't wait days for an appointment. <br />At Now Medical Clinic, our doctors are ready 7 days a week — weekends and holidays <br />included, offering fast, compassionate, professional care for all Calgary residents.<br /> No Appointment Needed
                       <br /> Because your health matters now — not later.
                     </p>
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-4 mt-8 ">
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
+                      asChild
+                    >
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                        Call: 587-391-8188
+                      </Link>
+                    </Button>
                   </div>
                 </div>
 
@@ -449,7 +479,7 @@ export default function HomePage() {
           </section>
 
           {/* Family Doctors Accepting New Patients Section */}
-          <section className="bg-[#F1F9F4] pt-10 lg:pt-[54px] pb-0">
+          <section className="bg-[#F1F9F4] pt-10 lg:pt-[54px] pb-10">
             <div className="container mx-auto flex flex-col items-center">
               {/* Headline */}
               <h2 className="text-3xl lg:text-5xl font-bold text-[#303030] text-center mb-4">
@@ -463,7 +493,7 @@ export default function HomePage() {
                 Our caring Male and Female Doctors are accepting new patients in Calgary for long-term, comprehensive care. Get matched with <br /> a doctor who listens, understands, and builds lasting relationships with your family.
               </div>
               {/* Cards Row */}
-              <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5">
+              <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
                 {/* Card 1: Male & Female Doctors */}
                 <div className="rounded-xl border border-[#83C1AC] bg-white shadow-sm flex flex-col items-center justify-between px-5 py-5 text-center hover:shadow-lg transition">
                   <span className="inline-flex h-14 w-14 items-center justify-center mb-6">
@@ -513,6 +543,22 @@ export default function HomePage() {
             maleDoctors={maleDoctors}
             showCategories={false}
             useCarousel={true}
+            customButtons={[
+              {
+                text: "Call: 587-391-8188",
+                link: "tel:587-391-8188",
+                icon: "/icons/btn_phone-outline-icon.svg",
+                variant: "default",
+                className: "bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg"
+              },
+              {
+                text: "Meet Our Doctors",
+                link: "/meet-our-doctors",
+                icon: "/icons/uil-arrow-up-right-grn.svg",
+                variant: "outline",
+                className: "border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
+              }
+            ]}
           />
 
           {/* Patient Experience */}
@@ -529,10 +575,41 @@ export default function HomePage() {
             customButtonText="See What Patients Are Saying"
             customButtonLink="/reviews"
           />
-
+         
 
           {/* Find Us Section */}
-          <FindUsSection />
+          <FindUsSection 
+            customButtons={
+              <>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
+                  asChild
+                >
+                  <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                    <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                    Call: 587-391-8188
+                  </Link>
+                </Button>
+                <Button
+                  size="lg"
+                  className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
+                  asChild
+                >
+                  <Link 
+                    href="https://share.google/CkrlunWzewWZjaPmv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    Get Direction on Google Map
+                    <img src="/icons/uil-arrow-up-right.svg" alt="" className="w-5 h-5 brightness-0 invert" />
+                  </Link>
+                </Button>
+              </>
+            }
+          />
 
           {/* CTA Banner */}
           {/* <CTABannerSection

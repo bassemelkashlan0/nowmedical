@@ -4,6 +4,8 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Star, ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import review_1 from '@/public/images/landing/review_1.png'
 import review_2 from '@/public/images/landing/review_2.png'
 import review_3 from '@/public/images/landing/review_3.png'
@@ -96,25 +98,39 @@ export default function TestimonialsSection({
         <div className="text-center">
           {!hideBottomText && <p className="text-[#000000] mb-6">{bottomText}</p>}
 
-          {showAllToggle ? (
-            <button
-              onClick={() => setShowAll(!showAll)}
-              className="inline-flex items-center gap-2 px-6 py-2 border border-[#4A9B8E] text-[#4A9B8E] font-bold hover:bg-[#EAF4F1] transition-colors cursor-pointer"
-            >
-              {showAll ? "Show Less" : "Show All"}
-              <img src="/icons/uil-arrow-up-right-grn.svg" alt="" className="w-5 h-5" />
-            </button>
-          ) : (
-            customButtonText && (
-              <a
-                href={customButtonLink || "#"}
-                className="inline-flex items-center text-lg justify-center px-6 py-2 border border-[#299470] text-[#299470] font-bold hover:bg-[#EAF4F1] transition-colors"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            {showAllToggle ? (
+              <button
+                onClick={() => setShowAll(!showAll)}
+                className="inline-flex items-center gap-2 px-6 py-2 border border-[#4A9B8E] text-[#4A9B8E] font-bold hover:bg-[#EAF4F1] transition-colors cursor-pointer"
               >
-                {customButtonText}
-                <ArrowUpRight className="w-4 h-4 ml-2" />
-              </a>
-            )
-          )}
+                {showAll ? "Show Less" : "Show All"}
+                <img src="/icons/uil-arrow-up-right-grn.svg" alt="" className="w-5 h-5" />
+              </button>
+            ) : (
+              <>
+                <Button
+                  size="lg"
+                  className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg font-bold"
+                  asChild
+                >
+                  <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                    <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
+                    Call: 587-391-8188
+                  </Link>
+                </Button>
+                {customButtonText && (
+                  <a
+                    href={customButtonLink || "#"}
+                    className="inline-flex items-center text-lg justify-center px-6 py-2 border border-[#299470] text-[#299470] font-bold hover:bg-[#EAF4F1] transition-colors"
+                  >
+                    {customButtonText}
+                    <ArrowUpRight className="w-4 h-4 ml-2" />
+                  </a>
+                )}
+              </>
+            )}
+          </div>
         </div>
       </div>
     </section>

@@ -6,8 +6,8 @@ export default function HowToRegisterSection() {
   const steps = [
     {
       icon: "/images/family-doctor/register-new-patient.svg",
-      title: "Click on Register as a New Patient",
-      description: "Start your registration by clicking the button below and filling out the short form."
+      title: "Call 587-391-8188 ",
+      description: "Extension 4  Follow The Instructions to Register with a Family doctor"
     },
     {
       icon: "/images/family-doctor/submit-your-request.svg",
