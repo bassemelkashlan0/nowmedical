@@ -1,4 +1,6 @@
 import { ReactNode } from 'react';
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface StorySectionProps {
   title?: string | ReactNode;
@@ -64,6 +66,19 @@ export default function StorySection({
                 {paragraph}
               </p>
             ))}
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
+                asChild
+              >
+                <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                  <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                  Call: 587-391-8188
+                </Link>
+              </Button>
+            </div>
           </div>
 
 

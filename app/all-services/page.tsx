@@ -189,7 +189,10 @@ export default function OurServicesPage() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 pt-12">
                                     <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>
-                                        <Link href="tel:587-391-8188"> <img src={phone_icon.src} alt="Register as a new patient" className="w-5 h-5" /> Call 587-391-8188 to Register</Link>
+                                        <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                                            <img src={phone_icon.src} alt="Phone" className="w-5 h-5 brightness-0 invert" />
+                                            Call: 587-391-8188
+                                        </Link>
                                     </Button>
 
                                     <Button
@@ -198,7 +201,10 @@ export default function OurServicesPage() {
                                         className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent font-bold text-base"
                                         asChild
                                     >
-                                        <Link href="tel:587-391-8188">Walk In Now <img src="icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
+                                        <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                                            Walk In Now
+                                            <img src="icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" />
+                                        </Link>
                                     </Button>
                                 </div>
                             </div>
@@ -226,10 +232,14 @@ export default function OurServicesPage() {
                     para=" Common walk-in visits include: "
                     items={PopulerServices}
                     image={Populer_img.src}
-                    full_bg_btn="inline-flex mt-9"
-                    full_btn_icon="/icons/solar_walking-outline.svg"
-                    full_btn_text="Walk In Open 7 Days a Week Until 11 PM"
-                    full_btn_link="tel:587-391-8188"
+                    both_btn="flex pt-7"
+                    btn_1_text="Call: 587-391-8188"
+                    btn_1_link="tel:587-391-8188"
+                    btn_1_icon="/icons/btn_phone-outline-icon.svg"
+                    btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+                    btn_2_text="Walk In Open 7 Days a Week Until 11 PM"
+                    btn_2_link="tel:587-391-8188"
+                    btn_2_icon="/icons/btn-walking-outline-icon.svg"
                     IsDot={true}
                 />
 
@@ -247,7 +257,8 @@ export default function OurServicesPage() {
                     both_btn="flex pt-7"
                     btn_1_icon="/icons/btn_phone-outline-icon.svg"
                     btn_1_link="tel:587-391-8188"
-                    btn_1_text="Call 587-391-8188"
+                    btn_1_text="Call: 587-391-8188"
+                    btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
                     btn_2_icon="/icons/solar_phone-outline.svg"
                     btn_2_link="/walk-in-clinic-calgary"
                     btn_2_text="Register as a New Patient"
@@ -260,20 +271,21 @@ export default function OurServicesPage() {
 
                 {/* Women Helth's Section  */}
                 <WhyChooseSection
-                    title="Women’s"
+                    title="Women's"
                     title_2=" Health"
                     subtitle=""
                     items={WomenHelth}
                     image={Women_helth_img.src}
-                    para=" Our female family doctors provide private and compassionate care for all women’s health needs."
+                    para=" Our female family doctors provide private and compassionate care for all women's health needs."
                     para_2="Services include:"
                     both_btn="flex pt-7"
-                    btn_1_icon="/icons/solar_walking-outline.svg"
+                    btn_1_text="Call: 587-391-8188"
                     btn_1_link="tel:587-391-8188"
-                    btn_1_text="Walk In Now"
-                    btn_2_icon="/icons/solar_phone-outline.svg"
+                    btn_1_icon="/icons/btn_phone-outline-icon.svg"
+                    btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+                    btn_2_text="Walk In Now"
                     btn_2_link="tel:587-391-8188"
-                    btn_2_text="Call 587-391-8188"
+                    btn_2_icon="/icons/btn-walking-outline-icon.svg"
                     IsDot={true}
                     h2_color_1="text-[#299470]"
                     h2_color_2="text-[#303030]"
@@ -294,7 +306,8 @@ export default function OurServicesPage() {
                     both_btn="flex pt-7"
                     btn_1_icon="/icons/btn_phone-outline-icon.svg"
                     btn_1_link="tel:587-391-8188"
-                    btn_1_text="Call 587-391-8188"
+                    btn_1_text="Call: 587-391-8188"
+                    btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
                     btn_2_icon="/icons/solar_phone-outline.svg"
                     btn_2_link="/walk-in-clinic-calgary"
                     btn_2_text="Register as a New Patient"
@@ -315,12 +328,13 @@ export default function OurServicesPage() {
                     para="Private, judgment-free, and confidential. Our doctors offer sexual health consultations and testing in a comfortable environment."
                     para_2="We treat:"
                     both_btn="flex pt-2"
-                    btn_1_icon="/icons/solar_walking-outline.svg"
+                    btn_1_text="Call: 587-391-8188"
                     btn_1_link="tel:587-391-8188"
-                    btn_1_text="Walk In Now"
-                    btn_2_icon="/icons/solar_phone-outline.svg"
+                    btn_1_icon="/icons/btn_phone-outline-icon.svg"
+                    btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+                    btn_2_text="Walk In Now"
                     btn_2_link="tel:587-391-8188"
-                    btn_2_text="Call 587-391-8188"
+                    btn_2_icon="/icons/btn-walking-outline-icon.svg"
                     IsDot={true}
                     h2_color_1="text-[#299470]"
                     h2_color_2="text-[#303030]"
@@ -341,12 +355,13 @@ export default function OurServicesPage() {
                     items={Vaccinations}
                     image={Vaccionation_img.src}
                     both_btn="flex pt-7"
-                    btn_1_icon="/icons/solar_walking-outline.svg"
+                    btn_1_text="Call: 587-391-8188"
                     btn_1_link="tel:587-391-8188"
-                    btn_1_text="Walk In Now"
-                    btn_2_icon="/icons/solar_phone-outline.svg"
+                    btn_1_icon="/icons/btn_phone-outline-icon.svg"
+                    btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+                    btn_2_text="Walk In Now"
                     btn_2_link="tel:587-391-8188"
-                    btn_2_text="Call 587-391-8188"
+                    btn_2_icon="/icons/btn-walking-outline-icon.svg"
                     order="order-first"
                     IsDot={true}
 
@@ -361,12 +376,13 @@ export default function OurServicesPage() {
                     items={prescriptionServices}
                     image={Precscription_img.src}
                     both_btn="flex pt-2"
-                    btn_1_icon="/icons/solar_walking-outline.svg"
+                    btn_1_text="Call: 587-391-8188"
                     btn_1_link="tel:587-391-8188"
-                    btn_1_text="Walk In Now"
-                    btn_2_icon="/icons/solar_phone-outline.svg"
+                    btn_1_icon="/icons/btn_phone-outline-icon.svg"
+                    btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+                    btn_2_text="Walk In Now"
                     btn_2_link="tel:587-391-8188"
-                    btn_2_text="Call 587-391-8188"
+                    btn_2_icon="/icons/btn-walking-outline-icon.svg"
                     IsDot={true}
                     h2_color_1="text-[#299470]"
                     h2_color_2="text-[#303030]"
@@ -380,12 +396,13 @@ export default function OurServicesPage() {
                     items={whyChooseItems}
                     image={whychoose_img.src}
                     both_btn="flex pt-2"
-                    btn_1_icon="/icons/solar_walking-outline.svg"
+                    btn_1_text="Call: 587-391-8188"
                     btn_1_link="tel:587-391-8188"
-                    btn_1_text="Walk In Now"
-                    btn_2_icon="/icons/solar_phone-outline.svg"
+                    btn_1_icon="/icons/btn_phone-outline-icon.svg"
+                    btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+                    btn_2_text="Walk In Now"
                     btn_2_link="tel:587-391-8188"
-                    btn_2_text="Call 587-391-8188"
+                    btn_2_icon="/icons/btn-walking-outline-icon.svg"
                     order="order-first"
 
                 />
@@ -403,6 +420,36 @@ export default function OurServicesPage() {
                 {/* Find Us Section */}
                 <FindUsSection
                     bgColor=" "
+                    customButtons={
+                      <>
+                        <Button
+                          size="lg"
+                          variant="outline"
+                          className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
+                          asChild
+                        >
+                          <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                            <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                            Call: 587-391-8188
+                          </Link>
+                        </Button>
+                        <Button
+                          size="lg"
+                          className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
+                          asChild
+                        >
+                          <Link 
+                            href="https://share.google/CkrlunWzewWZjaPmv"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2"
+                          >
+                            Get Direction on Google Map
+                            <img src="/icons/uil-arrow-up-right.svg" alt="" className="w-5 h-5 brightness-0 invert" />
+                          </Link>
+                        </Button>
+                      </>
+                    }
                 />
                 <div className="mt-14"></div>
                 {/* Call to Action Section  */}

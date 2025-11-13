@@ -1,13 +1,11 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { LiveStatusBanner } from "@/components/live-status-banner";
-import hero_img from "@/public/images/drivers-medical-exams/drivers-medical-exams-hero.png";
 import { FindUsSection, WhyChooseSection } from "@/sections";
-import walk_cion from "@/public/icons/solar_walking-outline.svg";
-import call_icon from "@/public/icons/solar_phone-outline.svg";
 import why_choose_img from "@/public/images/drivers-medical-exams/Image.png";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
-
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 
 export default function DriversMedicalExamsInCalgaryScreen() {
@@ -55,6 +53,27 @@ export default function DriversMedicalExamsInCalgaryScreen() {
                                 </p>
                                 <p className="text-base  mb-8 text-[#303030] ">
                                     No appointment needed. Fast, friendly, and fully licensed for <b>Transport Canada and Alberta <br /> Transportation</b> requirements.                                </p>
+                                
+                                <div className="flex flex-col sm:flex-row gap-4">
+                                    <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>
+                                        <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                                            <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
+                                            Call: 587-391-8188
+                                        </Link>
+                                    </Button>
+
+                                    <Button
+                                        size="lg"
+                                        variant="outline"
+                                        className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold"
+                                        asChild
+                                    >
+                                        <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                                            <img src="/icons/btn-walking-outline-icon.svg" alt="Walk In" className="w-5 h-5" />
+                                            Walk In Now
+                                        </Link>
+                                    </Button>
+                                </div>
                             </div>
 
                             <div className="relative ">
@@ -78,19 +97,49 @@ export default function DriversMedicalExamsInCalgaryScreen() {
                     subtitle="Now Medical Clinic"
                     items={whyChooseItems}
                     both_btn="flex pt-4 "
-                    btn_1_text="Walk In for Driver's Medical "
-                    btn_1_icon={walk_cion}
+                    btn_1_text="Call: 587-391-8188"
+                    btn_1_icon="/icons/btn_phone-outline-icon.svg"
                     btn_1_link="tel:587-391-8188"
-                    btn_2_link="tel:403-457-2222"
-                    btn_2_icon={call_icon}
-                    btn_2_text="Call to Book Now"
+                    btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+                    btn_2_text="Walk In for Driver's Medical"
+                    btn_2_icon="/icons/btn-walking-outline-icon.svg"
+                    btn_2_link="tel:587-391-8188"
                     image={why_choose_img.src}
                 />
 
                 {/* Mind Us  Section */}
                 <FindUsSection
                     bgColor=" "
-                    IsShowBtn='hidden'
+                    customButtons={
+                      <>
+                        <Button
+                          size="lg"
+                          variant="outline"
+                          className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
+                          asChild
+                        >
+                          <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                            <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                            Call: 587-391-8188
+                          </Link>
+                        </Button>
+                        <Button
+                          size="lg"
+                          className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
+                          asChild
+                        >
+                          <Link
+                            href="https://share.google/CkrlunWzewWZjaPmv"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2"
+                          >
+                            Get Direction on Google Map
+                            <img src="/icons/uil-arrow-up-right.svg" alt="" className="w-5 h-5 brightness-0 invert" />
+                          </Link>
+                        </Button>
+                      </>
+                    }
                 />
 
                 {/* Bottom Call to Action Section */}

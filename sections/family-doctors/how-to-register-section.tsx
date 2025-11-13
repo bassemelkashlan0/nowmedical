@@ -98,7 +98,7 @@ export default function HowToRegisterSection() {
                 height={20}
                 className=""
               />
-              Call 587-391-8188
+              Call: 587-391-8188
             </Link>
           </Button>
         </div>

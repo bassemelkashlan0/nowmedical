@@ -180,7 +180,35 @@ export default function WhyChooseSection({
               </Link>
             </Button>
 
-            {singleButton ? (
+            {/* Special case: Skip the Wait Walk In Today section - always show call button */}
+            {(title === "Skip the Wait" && title_2 === "Walk In Today") ? (
+              <div className="pt-4">
+                <div className="flex mb-4">
+                  <Button className="bg-[#299470] hover:bg-[#2D7B6F] text-white font-bold px-4 py-4 text-lg">
+                    <Link href="tel:587-391-8188" className='flex items-center'>
+                      <Image
+                        src="/icons/btn_phone-outline-icon.svg"
+                        alt="Phone"
+                        width={20}
+                        height={20}
+                        className="mr-3 brightness-0 invert"
+                      />
+                      Call: 587-391-8188
+                    </Link>
+                  </Button>
+                </div>
+                {address && (
+                  <div className="flex items-center gap-2  inline-flex">
+                    <img
+                      src="/images/hospital-wait-times/flowbite_map-pin-outline.svg"
+                      alt="Location"
+                      className="w-5 h-5"
+                    />
+                    <span className="text-lg text-[#299470] font-bold">{address}</span>
+                  </div>
+                )}
+              </div>
+            ) : singleButton ? (
               <div className="pt-4">
                 <div className="flex mb-4">
                   <Button variant={btn_1_bg ? "default" : "outline"} className={`${btn_1_bg ? btn_1_bg : 'border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 bg-transparent'} px-4 py-4 text-lg font-bold ${btn_1_bg ? 'text-white hover:opacity-90' : ''}`}>
@@ -209,27 +237,27 @@ export default function WhyChooseSection({
               </div>
             ) : (
               <div className={"  flex-col md:flex-row gap-4  items-center  " + (both_btn ? both_btn : "hidden pt-4")}>
-                <Button className="bg-[#299470] hover:bg-[#256358] text-white font-bold px-4 py-4 text-lg">
-                  <Link href={btn_1_link ? btn_1_link as string : "#"} className='flex' >
+                <Button className={`${btn_1_bg ? btn_1_bg : 'bg-[#299470] hover:bg-[#256358]'} text-white font-bold px-4 py-4 text-lg`}>
+                  <Link href={btn_1_link ? btn_1_link as string : "#"} className='flex items-center' >
                     <Image
                       src={btn_1_icon ? btn_1_icon as string : "/icons/btn_phone-outline-icon.svg"}
                       alt="Phone"
                       width={20}
                       height={20}
-                      className="mr-3 "
+                      className={`mr-3 ${btn_1_bg ? 'brightness-0 invert' : ''}`}
                     />
                     {btn_1_text}
                   </Link>
                 </Button>
-                <Button variant="outline" className={`border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 px-4 py-4 text-lg font-bold ${btn_2_bg ? btn_2_bg : ''} ${btn_2_text && (btn_2_text.includes("Register as a New Patient") || btn_2_text.includes("Register as a new patient")) ? 'hidden' : ''}`}>
-                  <Link href={btn_2_link ? btn_2_link as string : "#"} className='flex'>
+                <Button variant="outline" className={`border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 bg-transparent px-4 py-4 text-lg font-bold ${btn_2_bg ? btn_2_bg : ''} ${btn_2_text && (btn_2_text.includes("Register as a New Patient") || btn_2_text.includes("Register as a new patient")) ? 'hidden' : ''}`}>
+                  <Link href={btn_2_link ? btn_2_link as string : "#"} className='flex items-center'>
                     {!btn_2_iconAfter && (
                       <Image
                         src={btn_2_icon ? btn_2_icon as string : "/icons/btn_phone-outline-icon.svg"}
                         alt="Phone"
                         width={20}
                         height={20}
-                        className="mr-3 "
+                        className="mr-3"
                       />
                     )}
                     {btn_2_text}
@@ -239,7 +267,7 @@ export default function WhyChooseSection({
                         alt="Phone"
                         width={20}
                         height={20}
-                        className="ml-3 "
+                        className="ml-3"
                       />
                     )}
                   </Link>

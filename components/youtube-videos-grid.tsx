@@ -208,23 +208,41 @@ export function YouTubeVideosGrid({
           </div>
         )}
 
-        {/* Custom Button (if showButton is true) */}
-        {showButton && (
-          <div className="text-center mt-8">
-            <Link href={buttonLink}>
+        {/* Buttons - Show both call button and custom button together */}
+        {((showButton && buttonText && buttonLink) || (bgColor && bgColor !== "bg-transparent" && bgColor.trim() !== "")) && (
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+            {/* Call Button - Show first with background if custom button is transparent */}
+            {(bgColor && bgColor !== "bg-transparent" && bgColor.trim() !== "") && (
+              <Button
+                size="lg"
+                className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg font-bold"
+                asChild
+              >
+                <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                  <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
+                  Call: 587-391-8188
+                </Link>
+              </Button>
+            )}
+            
+            {/* Custom Button (if showButton is true) */}
+            {showButton && buttonText && buttonLink && (
               <Button
                 variant="outline"
                 size="lg"
-                className="border-[#299470] text-lg font-bold text-[#299470] hover:bg-[#299470]/10"
+                className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
+                asChild
               >
-                <span>{buttonText}</span>
-                <img 
-                  src="/icons/uil-arrow-up-right-grn.svg" 
-                  alt="" 
-                  className="w-5 h-5 ml-2"
-                />
+                <Link href={buttonLink} className="flex items-center gap-2">
+                  <span>{buttonText}</span>
+                  <img 
+                    src="/icons/uil-arrow-up-right-grn.svg" 
+                    alt="" 
+                    className="w-5 h-5"
+                  />
+                </Link>
               </Button>
-            </Link>
+            )}
           </div>
         )}
       </div>

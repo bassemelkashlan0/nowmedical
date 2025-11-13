@@ -114,18 +114,21 @@ export default function BestClinicPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white" asChild>
-                    <Link href="tel:587-391-8188">Walk In Today</Link>
+                    <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                      <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
+                      Call: 587-391-8188
+                    </Link>
                   </Button>
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-[#299470] text-[#299470] hover:bg-[#299470]/10"
+                    className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent"
                     asChild
                   >
-                    <a href="tel:587-391-8188">
-                      <Phone className="mr-2 h-5 w-5" />
-                      587-391-8188
-                    </a>
+                    <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                      <img src="/icons/btn-walking-outline-icon.svg" alt="Walk In" className="w-5 h-5" />
+                      Walk In Today
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -191,7 +194,38 @@ export default function BestClinicPage() {
           />
 
           {/* Find Us */}
-          <FindUsSection />
+          <FindUsSection
+            customButtons={
+              <>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
+                  asChild
+                >
+                  <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                    <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                    Call: 587-391-8188
+                  </Link>
+                </Button>
+                <Button
+                  size="lg"
+                  className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
+                  asChild
+                >
+                  <Link
+                    href="https://share.google/CkrlunWzewWZjaPmv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    Get Direction on Google Map
+                    <img src="/icons/uil-arrow-up-right.svg" alt="" className="w-5 h-5 brightness-0 invert" />
+                  </Link>
+                </Button>
+              </>
+            }
+          />
 
           {/* CTA */}
           <CTABannerSection

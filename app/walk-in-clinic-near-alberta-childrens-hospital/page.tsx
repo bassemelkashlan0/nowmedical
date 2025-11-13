@@ -84,6 +84,26 @@ export default function AlbertaChildrensHospitalPage() {
                   <p className="text-base  text-foreground mb-4">
                     Visiting or living near <b>Alberta Children's Hospital</b> and need quick, medical care? Our family doctors at <b>Now Medical Clinic</b> provide gentle, professional care for <b>children and families</b>, open until <b>11 PM daily</b>.</p>
 
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
+                        Call: 587-391-8188
+                      </Link>
+                    </Button>
+
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold"
+                      asChild
+                    >
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/btn-walking-outline-icon.svg" alt="Walk In" className="w-5 h-5" />
+                        Walk In Now
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
 
                 <div className="flex justify-center items-center ml-8 ">
@@ -113,6 +133,14 @@ export default function AlbertaChildrensHospitalPage() {
             h2_sub_color='text-[#303030]'
             IsDot={true}
             order="order-last"
+            both_btn="flex pt-7"
+            btn_1_text="Call: 587-391-8188"
+            btn_1_link="tel:587-391-8188"
+            btn_1_icon="/icons/btn_phone-outline-icon.svg"
+            btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+            btn_2_text="Walk In Now"
+            btn_2_link="tel:587-391-8188"
+            btn_2_icon="/icons/btn-walking-outline-icon.svg"
           />
 
           {/* Why choose us Section */}
@@ -130,13 +158,14 @@ export default function AlbertaChildrensHospitalPage() {
             IsDot={false}
             bg_color="bg-[#F1F9F4]"
             both_btn="flex mt-13"
-            btn_1_text="587-391-8188"
+            btn_1_text="Call: 587-391-8188"
             btn_1_link="tel:587-391-8188"
             btn_1_icon="/icons/btn_phone-outline-icon.svg"
-            btn_2_text="587-391-8188"
+            btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+            btn_2_text="Walk In Now"
             btn_2_link="tel:587-391-8188"
-            btn_2_icon="/icons/pin-outline-icon.svg"
-            btn_2_bg="bg-transparent border border-[#299470] text-[#299470] hover:bg-[#299470]/10"
+            btn_2_icon="/icons/btn-walking-outline-icon.svg"
+            btn_2_bg="bg-transparent"
           />
 
 

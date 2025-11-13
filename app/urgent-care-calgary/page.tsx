@@ -74,11 +74,30 @@ export default function UrgentCarePage() {
 
                   <p className="text-base  text-[#000000] mb-4">
                     Need medical care now? <br />
-                    Skip long hospital waits — visit <b>Now Medical Clinic,</b> Calgary’s trusted <b>urgent care alternative,</b> <br />
+                    Skip long hospital waits — visit <b>Now Medical Clinic,</b> Calgary's trusted <b>urgent care alternative,</b> <br />
                     <b>open daily until 11 PM,</b> including <b>weekends and holidays.</b>
                   </p>
 
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
+                        Call: 587-391-8188
+                      </Link>
+                    </Button>
 
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold"
+                      asChild
+                    >
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/btn-walking-outline-icon.svg" alt="Walk In" className="w-5 h-5" />
+                        Walk In Now
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
 
                 <div className="flex justify-center items-center">
@@ -104,6 +123,14 @@ export default function UrgentCarePage() {
             py=" py-[69px] "
             items={whatWeTreat}
             image={bg_img.src}
+            both_btn="flex pt-7"
+            btn_1_text="Call: 587-391-8188"
+            btn_1_link="tel:587-391-8188"
+            btn_1_icon="/icons/btn_phone-outline-icon.svg"
+            btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+            btn_2_text="Walk In Now"
+            btn_2_link="tel:587-391-8188"
+            btn_2_icon="/icons/btn-walking-outline-icon.svg"
           />
 
           {/* why choose  */}
@@ -118,6 +145,14 @@ export default function UrgentCarePage() {
             order="order-first"
             bg_color="bg-[#F1F9F4] "
             py=" pt-30 pb-22"
+            both_btn="flex pt-7"
+            btn_1_text="Call: 587-391-8188"
+            btn_1_link="tel:587-391-8188"
+            btn_1_icon="/icons/btn_phone-outline-icon.svg"
+            btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+            btn_2_text="Walk In Now"
+            btn_2_link="tel:587-391-8188"
+            btn_2_icon="/icons/btn-walking-outline-icon.svg"
           />
 
           {/* Bottom Call to Action */}
@@ -138,39 +173,38 @@ export default function UrgentCarePage() {
                 className="bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-6 py-6 flex items-center gap-2"
                 asChild
               >
-                <Link href="tel:587-391-8188">
+                <Link href="tel:587-391-8188" className="flex items-center gap-2">
                   <img
-                    src="/icons/solar_walking-outline.svg"
-                    alt=""
+                    src="/icons/btn_phone-outline-icon.svg"
+                    alt="Phone"
+                    className="w-5 h-5 brightness-0 invert"
+                  />
+                  Call: 587-391-8188
+                </Link>
+              </Button>
+
+              <Button
+                size="lg"
+                variant="outline"
+                className="border border-white text-white hover:bg-white/10 bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
+                asChild
+              >
+                <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                  <img
+                    src="/icons/btn-walking-outline-icon.svg"
+                    alt="Walk In"
                     className="w-5 h-5"
                   />
                   Walk In Now
                 </Link>
               </Button>
-
               <Button
                 size="lg"
                 variant="outline"
-                className="border border-white text-white hover:bg-transparent bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
+                className="border border-white text-white hover:bg-white/10 bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
                 asChild
               >
-                <Link href="tel:587-391-8188">
-                  <img
-                    src="/images/walk-in/solar_phone.svg"
-                    alt=""
-                    className="w-5 h-5"
-                  />
-                  587-391-8188
-                </Link>
-
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border border-white text-white hover:bg-transparent bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
-                asChild
-              >
-                <Link href="https://share.google/CkrlunWzewWZjaPmv">
+                <Link href="https://share.google/CkrlunWzewWZjaPmv" className="flex items-center gap-2">
                   <img
                     src="/images/walk-in/flowbite_map-pin-outline.svg"
                     alt=""
@@ -184,6 +218,36 @@ export default function UrgentCarePage() {
 
           {/* Map Section */}
           <FindUsSection
+            customButtons={
+              <>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
+                  asChild
+                >
+                  <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                    <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                    Call: 587-391-8188
+                  </Link>
+                </Button>
+                <Button
+                  size="lg"
+                  className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
+                  asChild
+                >
+                  <Link
+                    href="https://share.google/CkrlunWzewWZjaPmv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    Get Direction on Google Map
+                    <img src="/icons/uil-arrow-up-right.svg" alt="" className="w-5 h-5 brightness-0 invert" />
+                  </Link>
+                </Button>
+              </>
+            }
           />
           <div className="mt-15"></div>
           {/* CTA Banner */}

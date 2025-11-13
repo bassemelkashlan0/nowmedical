@@ -74,10 +74,29 @@ export default function TwentyFourHourClinicPage() {
                   </h1>
 
                   <p className="text-base  text-foreground mb-4">
-                    Looking for a <b>24-hour walk-in clinic in Calgary?</b><br />Now Medical Clinic is one of <b>Calgary’s latest-open medical clinics — 7:30 AM to 11 PM, every day including weekends and holidays.</b><br /> We’re your trusted <b>after-hours alternative to 24-hour clinics,</b> offering <b>real doctors, shorter waits, and free parking.</b>
+                    Looking for a <b>24-hour walk-in clinic in Calgary?</b><br />Now Medical Clinic is one of <b>Calgary's latest-open medical clinics — 7:30 AM to 11 PM, every day including weekends and holidays.</b><br /> We're your trusted <b>after-hours alternative to 24-hour clinics,</b> offering <b>real doctors, shorter waits, and free parking.</b>
                   </p>
 
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
+                        Call: 587-391-8188
+                      </Link>
+                    </Button>
 
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold"
+                      asChild
+                    >
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/btn-walking-outline-icon.svg" alt="Walk In" className="w-5 h-5" />
+                        Walk In Now
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
 
                 <div className="flex justify-center items-center pl-8 ">
@@ -112,6 +131,14 @@ export default function TwentyFourHourClinicPage() {
             h2_color_2='text-[#303030]'
             h2_sub_color='text-[#299470]'
             para_after={<>We're here 7 days a week — perfect for anyone searching for <b>"24-hour urgent care"</b> or <b>"after-hours medical clinic."</b></>}
+            both_btn="flex pt-7"
+            btn_1_text="Call: 587-391-8188"
+            btn_1_link="tel:587-391-8188"
+            btn_1_icon="/icons/btn_phone-outline-icon.svg"
+            btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+            btn_2_text="Walk In Now"
+            btn_2_link="tel:587-391-8188"
+            btn_2_icon="/icons/btn-walking-outline-icon.svg"
           />
 
           {/* why choose  */}
@@ -126,6 +153,14 @@ export default function TwentyFourHourClinicPage() {
             order="order-first"
             bg_color="bg-[#F1F9F4] "
             py=" py-[149px] "
+            both_btn="flex pt-7"
+            btn_1_text="Call: 587-391-8188"
+            btn_1_link="tel:587-391-8188"
+            btn_1_icon="/icons/btn_phone-outline-icon.svg"
+            btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+            btn_2_text="Walk In Now"
+            btn_2_link="tel:587-391-8188"
+            btn_2_icon="/icons/btn-walking-outline-icon.svg"
           />
 
           {/* Map Section */}
@@ -135,48 +170,28 @@ export default function TwentyFourHourClinicPage() {
               <>
                 <Button
                   size="lg"
-                  className="border border-[#299470] bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-[16px] py-[11px] flex items-center gap-[10px] cursor-pointer"
+                  variant="outline"
+                  className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
                   asChild
                 >
-                  <Link href="tel:587-391-8188">
-                    <img
-                      src="/icons/solar_walking-outline.svg"
-                      alt=""
-                      className="w-5 h-5"
-                    />
-                    Walk In Now
+                  <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                    <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                    Call: 587-391-8188
                   </Link>
                 </Button>
-
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="border border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-white font-bold text-lg px-[16px] py-[11px] flex items-center gap-[10px] cursor-pointer"
+                  className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
                   asChild
                 >
-                  <Link href="tel:587-391-8188">
-                    <img
-                      src="/icons/solar_phone-outline.svg"
-                      alt=""
-                      className="w-5 h-5"
-                    />
-                    587-391-8188
-                  </Link>
-                </Button>
-
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-white font-bold text-lg px-[16px] py-[11px] flex items-center gap-[10px] cursor-pointer"
-                  asChild
-                >
-                  <Link href="https://share.google/CkrlunWzewWZjaPmv" target="_blank" rel="noopener noreferrer">
-                    <img
-                      src="/icons/pin-outline-icon.svg"
-                      alt=""
-                      className="w-5 h-5"
-                    />
-                    Get Direction
+                  <Link
+                    href="https://share.google/CkrlunWzewWZjaPmv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    Get Direction on Google Map
+                    <img src="/icons/uil-arrow-up-right.svg" alt="" className="w-5 h-5 brightness-0 invert" />
                   </Link>
                 </Button>
               </>

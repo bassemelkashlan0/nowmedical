@@ -196,7 +196,22 @@ export default function WalkInPage() {
                   className="bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-6 py-6 flex items-center gap-2"
                   asChild
                 >
-                  <Link href="tel:587-391-8188">
+                  <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                    <img
+                      src="/icons/btn_phone-outline-icon.svg"
+                      alt="Phone"
+                      className="w-5 h-5 brightness-0 invert"
+                    />
+                    Call: 587-391-8188
+                  </Link>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border border-white text-white hover:bg-white/10 bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
+                  asChild
+                >
+                  <Link href="tel:587-391-8188" className="flex items-center gap-2">
                     <img
                       src="/icons/solar_walking-outline.svg"
                       alt=""
@@ -208,10 +223,10 @@ export default function WalkInPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border border-white text-white hover:bg-transparent bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
+                  className="border border-white text-white hover:bg-white/10 bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
                   asChild
                 >
-                  <Link href="/https://share.google/CkrlunWzewWZjaPmv">
+                  <Link href="https://share.google/CkrlunWzewWZjaPmv" className="flex items-center gap-2">
                     <img
                       src="/images/walk-in/flowbite_map-pin-outline.svg"
                       alt=""
@@ -241,12 +256,16 @@ export default function WalkInPage() {
             subtitle=""
             items={FamilyMadicine}
             image={Family_img}
-            para=" We’re here when other clinics are closed and when you need care the most."
-            full_bg_btn="inline-flex mt-4"
-            full_btn_link="tel:587-391-8188"
-            full_btn_text="Skip the Wait Walk In Today"
-            full_btn_icon="/icons/uil-arrow-up-right.svg"
-            full_btn_icon_class=""
+            para=" We're here when other clinics are closed and when you need care the most."
+            both_btn="flex pt-4"
+            btn_1_text="Call: 587-391-8188"
+            btn_1_link="tel:587-391-8188"
+            btn_1_icon="/icons/btn_phone-outline-icon.svg"
+            btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+            btn_2_text="Skip the Wait Walk In Today"
+            btn_2_link="tel:587-391-8188"
+            btn_2_icon="/icons/uil-arrow-up-right-grn.svg"
+            btn_2_iconAfter={true}
             order="order-first"
             h2_color_1="text-[#299470]"
             h2_color_2="text-[#303030]"
@@ -288,19 +307,19 @@ export default function WalkInPage() {
                   </div>
 
                   {/* Buttons */}
-                  <div className="flex  flex-wrap justify-center flex-row gap-4 pt-4">
+                  <div className="flex  flex-wrap  flex-row gap-4 pt-4">
                     <Button
                       size="lg"
                       className="bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-6 py-6 flex items-center gap-2"
                       asChild
                     >
-                      <Link href="tel:587-391-8188">
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
                         <img
-                          src="/images/walk-in/solar_phone.svg"
-                          alt=""
-                          className="w-5 h-5"
+                          src="/icons/btn_phone-outline-icon.svg"
+                          alt="Phone"
+                          className="w-5 h-5 brightness-0 invert"
                         />
-                        587-391-8188
+                        Call: 587-391-8188
                       </Link>
                     </Button>
                     <Button
@@ -313,7 +332,7 @@ export default function WalkInPage() {
                         <img
                           src="/images/walk-in/flowbite_map-pin-outline.svg"
                           alt=""
-                          className="w-f h-5"
+                          className="w-5 h-5"
                         />
                         Get Direction
                       </Link>
@@ -342,11 +361,18 @@ export default function WalkInPage() {
             showCategories={false}
             useCarousel={true}
             customButtons={[
+
+              {
+                text: "Call: 587-391-8188",
+                link: "tel:587-391-8188",
+                icon: "/icons/btn_phone-outline-icon.svg",
+                variant: "default"
+              },
               {
                 text: "Meet Our Doctors",
                 link: "/meet-our-doctors",
-                icon: "/icons/uil-arrow-up-right.svg",
-                variant: "default"
+                icon: "/icons/uil-arrow-up-right-grn.svg",
+                variant: "outline"
               }
             ]}
           />
@@ -367,7 +393,50 @@ export default function WalkInPage() {
 
 
           {/* Find Us */}
-          <FindUsSection />
+          <FindUsSection
+            customButtons={
+              <>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
+                  asChild
+                >
+                  <Link href="/walk-in-clinic-calgary" className="flex items-center gap-2">
+                    <img src="/icons/solar_walking-outline.svg"  alt="Phone" className="w-5 h-5" />
+                    Walk In Now
+                  </Link>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
+                  asChild
+                >
+                  <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                    <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                    Call: 587-391-8188
+                  </Link>
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
+                  asChild
+                >
+                  <Link
+                    href="https://share.google/CkrlunWzewWZjaPmv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    <img src="/icons/pin-outline-icon.svg" alt="" className="w-5 h-5 " />
+                    Get Direction
+                  </Link>
+                </Button>
+              </>
+            }
+          />
 
         </main>
 

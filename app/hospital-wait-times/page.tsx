@@ -8,6 +8,7 @@ import {
 } from "@/sections";
 import hero_img from "@/public/images/hospital-wait-times/wait-times-banner.png"
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
 import { text } from "stream/consumers";
@@ -252,11 +253,30 @@ export default function HospitalWaitTimesPage() {
                       They simply need to see a <b>real doctor fast</b> for infections, fever, minor injuries, or medication renewals.
                     </p>
                     <p className="text-base  text-[#303030] mb-4">
-                      That’s exactly why <b>Now Medical Clinic </b> exists.
+                      That's exactly why <b>Now Medical Clinic </b> exists.
                     </p>
                   </div>
 
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
+                        Call: 587-391-8188
+                      </Link>
+                    </Button>
 
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold"
+                      asChild
+                    >
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/btn-walking-outline-icon.svg" alt="Walk In" className="w-5 h-5" />
+                        Walk In Now
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
 
                 <div className="flex justify-center items-center">
@@ -283,11 +303,7 @@ export default function HospitalWaitTimesPage() {
             para="At Now Medical Clinic, you don't need an appointment or a referral. Our doctors see walk-in patients 7 days a week until 11:00 PM, including weekends and holidays."
             items={skipWaitItems}
             image={SkipWait_img.src}
-            singleButton={true}
             itemsAsParagraph={true}
-            btn_1_icon="/icons/solar_phone-outline.svg"
-            btn_1_link="tel:587-391-8188"
-            btn_1_text="Call 587-391-8188"
             address="Address:2520 23 St NE #19, AB T2E 8L2"
             h2_color_1="text-[#303030]"
             h2_color_2="text-[#299470]"
@@ -322,6 +338,20 @@ export default function HospitalWaitTimesPage() {
                       compassionate care.
                     </p>
                   </div>
+
+                  <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
+                      asChild
+                    >
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                        Call: 587-391-8188
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
 
                 <div>
@@ -355,6 +385,14 @@ export default function HospitalWaitTimesPage() {
             items={familyMedicineItems}
             image={FamilyMedicine_img.src}
             h2_sub_color="text-[#299470]"
+            both_btn="flex pt-7"
+            btn_1_text="Call: 587-391-8188"
+            btn_1_link="tel:587-391-8188"
+            btn_1_icon="/icons/btn_phone-outline-icon.svg"
+            btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+            btn_2_text="Walk In Now"
+            btn_2_link="tel:587-391-8188"
+            btn_2_icon="/icons/btn-walking-outline-icon.svg"
           />
 
           {/* YouTube Videos Grid */}
@@ -382,6 +420,7 @@ export default function HospitalWaitTimesPage() {
             ]}
             image="/images/hospital-wait-times/wait-times-near.png"
           />
+          
 
           {/* Skip Line */}
           <section className="py-5 bg-[#EEF8F2] ">
@@ -398,8 +437,23 @@ export default function HospitalWaitTimesPage() {
                     </p>
                     <p className="text-base text-[#303030] ">
                       <b>Walk in today or call 587-391-8188</b> to speak with our team. <br />
-                      We’re open <b>7 days a week until 11 PM,</b> including weekends and holidays.
+                      We're open <b>7 days a week until 11 PM,</b> including weekends and holidays.
                     </p>
+
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
+                      asChild
+                    >
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                        Call: 587-391-8188
+                      </Link>
+                    </Button>
 
                   </div>
                 </div>

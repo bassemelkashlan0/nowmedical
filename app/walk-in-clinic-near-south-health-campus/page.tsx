@@ -84,6 +84,26 @@ export default function SouthHealthCampusPage() {
                   <p className="text-base  text-foreground mb-4">
                     If you're south Calgary and don't need the emergency department, visit <b>Now Medical Clinic</b> for fast, emergency care from real doctors. We're open <b>7 days a week until 11 PM</b>, serving patients city-wide.</p>
 
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
+                        Call: 587-391-8188
+                      </Link>
+                    </Button>
+
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold"
+                      asChild
+                    >
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/btn-walking-outline-icon.svg" alt="Walk In" className="w-5 h-5" />
+                        Walk In Now
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
 
                 <div className="flex justify-center items-center md:ml-8 ">
@@ -113,6 +133,14 @@ export default function SouthHealthCampusPage() {
             h2_sub_color='text-[#303030]'
             IsDot={true}
             order="order-last"
+            both_btn="flex pt-7"
+            btn_1_text="Call: 587-391-8188"
+            btn_1_link="tel:587-391-8188"
+            btn_1_icon="/icons/btn_phone-outline-icon.svg"
+            btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+            btn_2_text="Walk In Now"
+            btn_2_link="tel:587-391-8188"
+            btn_2_icon="/icons/btn-walking-outline-icon.svg"
           />
 
           {/* Why choose us Section */}
@@ -129,12 +157,49 @@ export default function SouthHealthCampusPage() {
             order="order-first"
             IsDot={false}
             bg_color="bg-[#F1F9F4]"
+            both_btn="flex pt-7"
+            btn_1_text="Call: 587-391-8188"
+            btn_1_link="tel:587-391-8188"
+            btn_1_icon="/icons/btn_phone-outline-icon.svg"
+            btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+            btn_2_text="Walk In Now"
+            btn_2_link="tel:587-391-8188"
+            btn_2_icon="/icons/btn-walking-outline-icon.svg"
           />
 
           {/* Map Section */}
           <FindUsSection
             bgColor="bg-white"
-            customButtons={ " "}
+            customButtons={
+              <>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
+                  asChild
+                >
+                  <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                    <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                    Call: 587-391-8188
+                  </Link>
+                </Button>
+                <Button
+                  size="lg"
+                  className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
+                  asChild
+                >
+                  <Link
+                    href="https://share.google/CkrlunWzewWZjaPmv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    Get Direction on Google Map
+                    <img src="/icons/uil-arrow-up-right.svg" alt="" className="w-5 h-5 brightness-0 invert" />
+                  </Link>
+                </Button>
+              </>
+            }
           />
           <div className="mt-15"></div>
           {/* CTA Banner */}

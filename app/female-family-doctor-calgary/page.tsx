@@ -176,11 +176,10 @@ export default function FemaleFamilyDoctorPage() {
 
                   <div className="flex flex-col pt-9 sm:flex-row gap-4">
                     <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>
-                      <Link href="tel:587-391-8188">
-                        <img src="/icons/btn_phone-outline-icon.svg" alt="Call to register" className="w-5 h-5" />
-                        Call 587-391-8188 to Register
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
+                        Call: 587-391-8188
                       </Link>
-
                     </Button>
 
                     <Button
@@ -189,7 +188,7 @@ export default function FemaleFamilyDoctorPage() {
                       className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold"
                       asChild
                     >
-                      <Link href="tel:587-391-8188">
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
                         Walk In Today
                         <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Today" className="w-5 h-5" />
                       </Link>
@@ -254,14 +253,14 @@ export default function FemaleFamilyDoctorPage() {
             bg_color="bg-white"
             order="order-last"
             both_btn="flex pt-4"
+            btn_1_text="Call: 587-391-8188"
             btn_1_icon="/icons/btn_phone-outline-icon.svg"
             btn_1_link="tel:587-391-8188"
-            btn_1_text="Call 587-391-8188"
+            btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
             btn_2_text="Walk In"
-            btn_2_icon="/icons/uil-arrow-up-right-grn.svg"
+            btn_2_icon="/icons/btn-walking-outline-icon.svg"
             btn_2_link="tel:587-391-8188"
             btn_2_bg="bg-transparent"
-            btn_2_iconAfter={true}
           />
 
           {/* Family & Children's Care Section */}
@@ -278,6 +277,14 @@ export default function FemaleFamilyDoctorPage() {
             IsDot={true}
             bg_color="bg-[#F1F9F4]"
             order="order-first"
+            both_btn="flex pt-7"
+            btn_1_text="Call: 587-391-8188"
+            btn_1_link="tel:587-391-8188"
+            btn_1_icon="/icons/btn_phone-outline-icon.svg"
+            btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+            btn_2_text="Walk In Now"
+            btn_2_link="tel:587-391-8188"
+            btn_2_icon="/icons/btn-walking-outline-icon.svg"
           />
 
           {/* Why Women Choose Now Medical Clinic Section */}
@@ -293,11 +300,14 @@ export default function FemaleFamilyDoctorPage() {
             IsDot={false}
             bg_color="bg-white"
             order="order-last"
-            singleButton={true}
-            btn_1_icon="/icons/btn_phone-outline-icon.svg"
+            both_btn="flex pt-7"
+            btn_1_text="Call: 587-391-8188"
             btn_1_link="tel:587-391-8188"
-            btn_1_text="Call 587-391-8188 Speak to Our Team and Register Today"
-            btn_1_bg="bg-[#299470]"
+            btn_1_icon="/icons/btn_phone-outline-icon.svg"
+            btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+            btn_2_text="Walk In Now"
+            btn_2_link="tel:587-391-8188"
+            btn_2_icon="/icons/btn-walking-outline-icon.svg"
           />
 
           {/* YouTube Videos Grid */}
@@ -314,6 +324,36 @@ export default function FemaleFamilyDoctorPage() {
           <FindUsSection
             bgColor="bg-white"
             showFreeParking={true}
+            customButtons={
+              <>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
+                  asChild
+                >
+                  <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                    <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                    Call: 587-391-8188
+                  </Link>
+                </Button>
+                <Button
+                  size="lg"
+                  className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
+                  asChild
+                >
+                  <Link
+                    href="https://share.google/CkrlunWzewWZjaPmv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    Get Direction on Google Map
+                    <img src="/icons/uil-arrow-up-right.svg" alt="" className="w-5 h-5 brightness-0 invert" />
+                  </Link>
+                </Button>
+              </>
+            }
           />
 
           {/* CTA Banner */}

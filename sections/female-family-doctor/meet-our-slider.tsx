@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselApi } from '@/components/ui/carousel';
 import { DotIcon } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Image from "next/image";
 
 interface Doctor {
   name: string;
@@ -68,6 +71,14 @@ export default function MeetOurSlider({
                 </li>
               ))}
             </ul>
+            <div>
+              <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>
+                <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                  <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
+                  Call: 587-391-8188
+                </Link>
+              </Button>
+            </div>
           </div>
 
           {/* Right Section - Doctor Image with Slider */}

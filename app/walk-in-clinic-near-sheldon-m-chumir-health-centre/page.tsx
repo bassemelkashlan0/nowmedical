@@ -38,11 +38,23 @@ export default function SheldonChumirPage() {
                   <strong>Skip the ER wait.</strong> Walk in for non-emergency care — open 7 days until 11 PM.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="bg-[#299470]" asChild>
-                    <Link href="/contact"><Navigation className="mr-2 h-5 w-5" />Get Directions</Link>
+                  <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white" asChild>
+                    <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                      <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
+                      Call: 587-391-8188
+                    </Link>
                   </Button>
-                  <Button size="lg" variant="outline" className="border-[#299470] text-[#299470]" asChild>
-                    <a href="tel:587-391-8188"><Phone className="mr-2 h-5 w-5" />587-391-8188</a>
+                  <Button size="lg" variant="outline" className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent" asChild>
+                    <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                      <img src="/icons/btn-walking-outline-icon.svg" alt="Walk In" className="w-5 h-5" />
+                      Walk In Now
+                    </Link>
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent" asChild>
+                    <Link href="https://share.google/CkrlunWzewWZjaPmv" className="flex items-center gap-2">
+                      <Navigation className="h-5 w-5" />
+                      Get Directions
+                    </Link>
                   </Button>
                 </div>
               </div>

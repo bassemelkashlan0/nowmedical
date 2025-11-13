@@ -196,14 +196,23 @@ export default function DoctorsSection({
                 asChild
               >
                 <Link href={button.link} className="flex items-center gap-2">
-                  {button.text}
-                  {button.icon && (
+                  {button.icon && button.text.includes("Call:") && (
                     <Image
                       src={button.icon}
                       alt=""
                       width={20}
                       height={20}
-                      className=""
+                      className={button.variant === "default" ? "brightness-0 invert" : ""}
+                    />
+                  )}
+                  {button.text}
+                  {button.icon && !button.text.includes("Call:") && (
+                    <Image
+                      src={button.icon}
+                      alt=""
+                      width={20}
+                      height={20}
+                      className={button.variant === "outline" ? "" : ""}
                     />
                   )}
                 </Link>

@@ -89,6 +89,26 @@ export default function RockyviewHospitalPage() {
                     Need a doctor near <b>Rockyview General Hospital ?</b>  </p>
                   <p className="text-base  text-foreground mb-4">Walk in to <b>Now Medical Clinic</b> with real family doctors open <b>7 days a week until 11 PM,</b> including <b>weekends and holidays.</b></p>
 
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
+                        Call: 587-391-8188
+                      </Link>
+                    </Button>
+
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold"
+                      asChild
+                    >
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/btn-walking-outline-icon.svg" alt="Walk In" className="w-5 h-5" />
+                        Walk In Now
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
 
                 <div className="flex justify-center items-center md:ml-8">
@@ -118,6 +138,14 @@ export default function RockyviewHospitalPage() {
             h2_sub_color='text-[#303030]'
             IsDot={true}
             order="order-last"
+            both_btn="flex pt-7"
+            btn_1_text="Call: 587-391-8188"
+            btn_1_link="tel:587-391-8188"
+            btn_1_icon="/icons/btn_phone-outline-icon.svg"
+            btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+            btn_2_text="Walk In Now"
+            btn_2_link="tel:587-391-8188"
+            btn_2_icon="/icons/btn-walking-outline-icon.svg"
           />
 
           {/* Why Now Medical Clinic */}
@@ -134,6 +162,14 @@ export default function RockyviewHospitalPage() {
             order="order-first"
             IsDot={false}
             bg_color="bg-[#F1F9F4]"
+            both_btn="flex pt-7"
+            btn_1_text="Call: 587-391-8188"
+            btn_1_link="tel:587-391-8188"
+            btn_1_icon="/icons/btn_phone-outline-icon.svg"
+            btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
+            btn_2_text="Walk In Now"
+            btn_2_link="tel:587-391-8188"
+            btn_2_icon="/icons/btn-walking-outline-icon.svg"
           />
 
           {/* Map Section */}
@@ -143,32 +179,28 @@ export default function RockyviewHospitalPage() {
               <>
                 <Button
                   size="lg"
-                  className="border border-[#299470] bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-[16px] py-[11px] flex items-center gap-[10px] cursor-pointer"
+                  variant="outline"
+                  className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
                   asChild
                 >
-                  <Link href="tel:587-391-8188">
-                    <img
-                      src="/icons/solar_walking-outline.svg"
-                      alt=""
-                      className="w-5 h-5"
-                    />
-                    Walk In Today
+                  <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                    <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                    Call: 587-391-8188
                   </Link>
                 </Button>
-
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="border border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-white font-bold text-lg px-[16px] py-[11px] flex items-center gap-[10px] cursor-pointer"
+                  className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
                   asChild
                 >
-                  <Link href="https://share.google/CkrlunWzewWZjaPmv" target="_blank" rel="noopener noreferrer">
-                    <img
-                      src="/icons/pin-outline-icon.svg"
-                      alt=""
-                      className="w-5 h-5"
-                    />
-                    Get Direction
+                  <Link
+                    href="https://share.google/CkrlunWzewWZjaPmv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    Get Direction on Google Map
+                    <img src="/icons/uil-arrow-up-right.svg" alt="" className="w-5 h-5 brightness-0 invert" />
                   </Link>
                 </Button>
               </>

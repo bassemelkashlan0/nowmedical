@@ -1,3 +1,7 @@
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+
 interface Hospital {
   name: string;
 }
@@ -46,9 +50,24 @@ export default function NearbyHospitalsSection({
               ))}
             </ul>
 
-            <p className="text-base text-gray-700">
+            <p className="text-base text-gray-700 mb-6">
               {conclusionText}
             </p>
+
+            {/* Call Button */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
+                asChild
+              >
+                <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                  <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                  Call: 587-391-8188
+                </Link>
+              </Button>
+            </div>
           </div>
  
           {image && (

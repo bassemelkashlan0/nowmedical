@@ -1,5 +1,7 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import {
   FamilyHealthSection,
   HowToRegisterSection,
@@ -16,6 +18,7 @@ import ValuesSection from "@/sections/home/values-section";
 import PatientsVideoSection from "@/sections/global/atients-video";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
 import { YouTubeVideosGrid } from "@/components/youtube-videos-grid";
+import { LiveStatusBanner } from "@/components/live-status-banner";
 
 export const metadata: Metadata = {
   title: "Family Doctors Accepting New Patients Calgary | Now Medical    ",
@@ -195,6 +198,8 @@ export default function FamilyDoctorsPage() {
 
       <div className="flex min-h-screen flex-col">
         <Header />
+        {/* Live Status Banner */}
+        <LiveStatusBanner />
 
         <main className="flex-1">
           {/* Hero Section */}
@@ -223,7 +228,7 @@ export default function FamilyDoctorsPage() {
                 variant: "outline",
               },
               {
-                text: "Call 587-391-8188",
+                text: "Call: 587-391-8188",
                 link: "tel:587-391-8188",
                 icon: "/icons/solar_phone-outline.svg",
                 variant: "outline",
@@ -249,7 +254,8 @@ export default function FamilyDoctorsPage() {
             both_btn="flex pt-0"
             btn_1_icon="/icons/btn_phone-outline-icon.svg"
             btn_1_link="tel:587-391-8188"
-            btn_1_text="Call 587-391-8188"
+            btn_1_text="Call: 587-391-8188"
+            btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
             btn_2_icon="/icons/solar_phone-outline.svg"
             btn_2_link="/walk-in-clinic-calgary-"
             btn_2_text="Register as a New Patient"
@@ -276,7 +282,7 @@ export default function FamilyDoctorsPage() {
             bgColor="bg-white"
             customButtons={[
               {
-                text: "Call 587-391-8188",
+                text: "Call: 587-391-8188",
                 link: "tel:587-391-8188",
                 icon: "/icons/btn_phone-outline-icon.svg",
                 variant: "default",
@@ -323,7 +329,39 @@ export default function FamilyDoctorsPage() {
           />
 
           {/* Find Us */}
-          <FindUsSection bgColor="bg-white" />
+          <FindUsSection 
+            bgColor="bg-white"
+            customButtons={
+              <>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
+                  asChild
+                >
+                  <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                    <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                    Call: 587-391-8188
+                  </Link>
+                </Button>
+                <Button
+                  size="lg"
+                  className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
+                  asChild
+                >
+                  <Link 
+                    href="https://share.google/CkrlunWzewWZjaPmv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    Get Direction on Google Map
+                    <img src="/icons/uil-arrow-up-right.svg" alt="" className="w-5 h-5 brightness-0 invert" />
+                  </Link>
+                </Button>
+              </>
+            }
+          />
 
           <div className="mt-[54px]"></div>
           {/* Bottom section  */}

@@ -115,9 +115,9 @@ export default function ContactInfoSection({
                 alt="Phone"
                 width={20}
                 height={20}
-                className="mr-2 "
+                className="mr-2 brightness-0 invert"
               />
-              Call 587-391-8188
+              Call: 587-391-8188
             </Link>
           </Button>
 

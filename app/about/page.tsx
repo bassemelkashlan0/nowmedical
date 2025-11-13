@@ -169,8 +169,11 @@ export default function AboutPage() {
                     We’re proud to be the only clinic in Calgary that <b>opens 7 days a week — until 11 PM</b>, including <b>weekends and holidays</b>.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
-                      <Link href="tel:587-391-8188"><img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5" />Call 587-391-8188</Link>
+                    <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg font-bold" asChild>
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
+                        Call: 587-391-8188
+                      </Link>
                     </Button>
                     <Button
                       size="lg"
@@ -257,8 +260,16 @@ export default function AboutPage() {
 
               {/* Call-to-Action Button */}
               <div className="flex justify-center">
-                <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg" asChild>
-                  <Link href="tel:587-391-8188"><img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5" /> Call 587-391-8188 to Book or Walk In Today</Link>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold" 
+                  asChild
+                >
+                  <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                    <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                    Call: 587-391-8188
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -296,6 +307,36 @@ export default function AboutPage() {
           <FindUsSection
             bgColor=" "
             dairection='https://share.google/CkrlunWzewWZjaPmv'
+            customButtons={
+              <>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
+                  asChild
+                >
+                  <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                    <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                    Call: 587-391-8188
+                  </Link>
+                </Button>
+                <Button
+                  size="lg"
+                  className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
+                  asChild
+                >
+                  <Link 
+                    href="https://share.google/CkrlunWzewWZjaPmv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    Get Direction on Google Map
+                    <img src="/icons/uil-arrow-up-right.svg" alt="" className="w-5 h-5 brightness-0 invert" />
+                  </Link>
+                </Button>
+              </>
+            }
           />
           <div className="mt-15"></div>
           {/* CTA Banner */}
