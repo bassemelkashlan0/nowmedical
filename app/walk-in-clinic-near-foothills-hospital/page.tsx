@@ -74,18 +74,18 @@ export default function FoothillsHospitalPage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white  py-10 md:py-[54px] " >
+          <section className="bg-[#F1F9F4] to-white py-10 lg:py-[54px] " >
             <div className="container">
-              <div className="grid gap-4 lg:grid-cols-2 lg:gap-12 items-center  ">
+              <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
-                  <h1 className=" font-bold tracking-tight lg:text-6xl mb-4">
+                  <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4">
                     Walk-In Clinic Near <br /><span className="text-[#299470]">Foothills Medical Centre</span> <br />Open 7 Days Until 11 PM
                   </h1>
 
                   <p className="text-base  text-foreground mb-4">
                     Need medical care and want to skip long ER waits? Walk in and see a real family doctor today <strong>No Appointment needed.</strong>
                   </p>
-                  <div className="flex flex-col pt-9 sm:flex-row gap-4">
+                  <div className="flex flex-wrap flex-row pt-9  gap-4">
                     <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>
                       <Link href="tel:587-391-8188" className="flex items-center gap-2">
                         <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
@@ -120,7 +120,7 @@ export default function FoothillsHospitalPage() {
 
                 </div>
 
-                <div className="flex justify-center items-center md:ml-8 ">
+                <div className="flex justify-center items-center lg:ml-8 ">
                   <iframe
                     width="100%"
                     height="500"

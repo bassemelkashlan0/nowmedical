@@ -2,7 +2,6 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { LiveStatusBanner } from "@/components/live-status-banner";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import {
   MissionSection,
@@ -11,7 +10,6 @@ import {
   ValuesSection,
   StorySection,
   FindUsSection,
-  CTABannerSection
 } from "@/sections";
 import { StructuredData, generateOrganizationSchema, generateLocalBusinessSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
@@ -101,23 +99,6 @@ export default function AboutPage() {
     }
   ];
 
-  const videoTestimonials = [
-    {
-      name: "Bessie Cooper",
-      image: "/images/about-us/bessie-cooper.png",
-      quote: "Finally a clinic open late that actually cares about patients."
-    },
-    {
-      name: "Jenny Wilson",
-      image: "/images/about-us/jenny-wilson.png",
-      quote: "Friendly staff, short wait times, and doctors who listen."
-    },
-    {
-      name: "Cameron Williamson",
-      image: "/images/about-us/cameron-williamson.png",
-      quote: "This clinic makes it easy for families — especially on weekends and holidays."
-    }
-  ];
 
   const differences = [
     "Open 7 days a week until 11 PM (including weekends & holidays)",
@@ -154,11 +135,11 @@ export default function AboutPage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] py-10 md:py-[54px] ">
+          <section className="bg-[#F1F9F4] py-10 lg:py-[54px] ">
             <div className="container">
-              <div className="grid gap-12 lg:grid-cols-2 lg:gap-12 items-center">
+              <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
                 <div>
-                  <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl mb-[21px] ">
+                  <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4 lg:mb-[21px] ">
                     Real Doctors. Real Care.
                     <br />
                     <span className="text-[#299470]">Open Late Every Day</span>
@@ -168,7 +149,7 @@ export default function AboutPage() {
                     <br />
                     We’re proud to be the only clinic in Calgary that <b>opens 7 days a week — until 11 PM</b>, including <b>weekends and holidays</b>.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex flex-wrap flex-row gap-4">
                     <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg font-bold" asChild>
                       <Link href="tel:587-391-8188" className="flex items-center gap-2">
                         <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
@@ -178,15 +159,18 @@ export default function AboutPage() {
                     <Button
                       size="lg"
                       variant="outline"
-                      className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
+                      className="md:whitespace-nowrap md:h-[49px] !whitespace-normal !h-auto min-h-[49px] w-full md:w-auto border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent p-[14px] px-4 text-lg font-bold"
                       asChild
                     >
-                      <Link href="/walk-in-clinic-calgary">Walk In Anytime No Appointment Needed<img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
+                      <Link href="/walk-in-clinic-calgary" className="flex md:flex-nowrap md:whitespace-nowrap flex-wrap !whitespace-normal items-center justify-center text-center w-full md:gap-0 gap-2 md:py-0 py-1">
+                        <span className="md:whitespace-nowrap break-words">Walk In Anytime No Appointment Needed</span>
+                        <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5 flex-shrink-0" />
+                      </Link>
                     </Button>
                   </div>
                 </div>
 
-                <div className="md:ml-8">
+                <div className="lg:ml-8">
                   <iframe
                     width="100%"
                     height="500"
@@ -226,13 +210,13 @@ export default function AboutPage() {
           />
 
           {/* Meet Our Doctors */}
-          <section className="py-[54px] bg-[#F1F9F4] ">
+          <section className=" py-10 lg:py-[54px] bg-[#F1F9F4] ">
             <div className="container">
               <div className="text-center mb-8 ">
-                <h2 className="text-5xl text-[#303030] font-bold mb-4">
+                <h2 className="text-3xl lg:text-5xl text-[#303030] font-bold mb-4">
                   Meet <span className="text-[#299470]">Our Doctors</span>
                 </h2>
-                <p className="text-lg text-[#303030] leading-relaxed max-w-4xl mx-auto">
+                <p className="text-base lg:text-lg text-[#303030] leading-relaxed max-w-4xl mx-auto">
                   Our team of experienced family doctors brings diverse backgrounds and shared dedication to patient care. Our doctors collaborate to ensure continuity of care, whether you walk in for an urgent concern or visit regularly as a registered patient.
                 </p>
               </div>

@@ -12,9 +12,9 @@ export default function BottomCallAction({ title, title_2, description, descript
 
     return (
         <>
-            <section className="bg-[#195A44] max-w-[1240px] mx-auto rounded-[16px] py-[54px] px-18 mb-10 md:mb-[60px]">
-                <div className="mx-auto">
-                    <h2 className=" text-4xl  md:text-5xl font-bold  mb-2 text-[#fefefe]">
+            <section className=" mx-4 lg:mx-0 ">
+                <div className=" container mx-auto bg-[#195A44] rounded-[16px] py-4 lg:py-10 lg:py-[54px] px-4 lg:px-6 lg:px-18 mb-10 lg:mb-[60px] ">
+                    <h2 className=" text-3xl  lg:text-5xl font-bold  mb-2 text-[#fefefe]">
                         {title} <br />
                         {title_2}
                     </h2>

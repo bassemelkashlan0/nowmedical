@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export default function MissionSection() {
   return (
-    <section className="py-[54px] bg-[#F1F9F4]">
+    <section className=" py-10 lg:py-[54px] bg-[#F1F9F4]">
       <div className="container">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           <div>
-            <h2 className="text-5xl font-bold mb-4 ">
+            <h2 className="text-3xl lg:text-5xl font-bold mb-4 ">
               Our <span className="text-[#299470]">Mission</span>
             </h2>
             <div className="space-y-4 text-[#303030]  ">
@@ -18,7 +18,7 @@ export default function MissionSection() {
               We know that illness doesn't wait for office hours.<br/>That's why our doors <b>stay open from 7:30 AM to 11:00 PM</b>, every single day, <br/><b>including weekends and holidays</b>.<br/> Our mission is simple: when Calgary needs care — we're here.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+            <div className="flex flex-wrap flex-row gap-4 mt-8">
               <Button
                 size="lg"
                 variant="outline"

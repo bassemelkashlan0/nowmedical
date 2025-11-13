@@ -155,11 +155,11 @@ export default function FemaleFamilyDoctorPage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] py-10 md:py-[54px] ">
+          <section className="bg-[#F1F9F4] py-10 lg:py-[54px] ">
             <div className="container">
-              <div className="grid gap-4 lg:grid-cols-2 lg:gap-12 items-center">
+              <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
                 <div>
-                  <h1 className="font-bold text-[#299470] tracking-tight lg:text-6xl mb-[21px] ">
+                  <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#299470] tracking-tight mb-4 lg:mb-[21px] ">
                     Female Family Doctor<br />
                     <span className="text-[#303030]">  in Calgary Accepting New  Patients Now</span>
                   </h1>
@@ -196,7 +196,7 @@ export default function FemaleFamilyDoctorPage() {
                   </div>
                 </div>
 
-                <div className="flex justify-center items-center md:ml-8 ">
+                <div className="flex justify-center items-center lg:ml-8 ">
                   <iframe
                     width="100%"
                     height="500"
@@ -248,7 +248,7 @@ export default function FemaleFamilyDoctorPage() {
             h2_color_1="text-[#303030]"
             h2_color_2="text-[#299470]"
             h2_sub_color="text-[#299470]"
-            py=" pt-[55px] pb-[64px] "
+            py=" py-10 lg:pt-[55px] lg:pb-[64px] "
             IsDot={true}
             bg_color="bg-white"
             order="order-last"

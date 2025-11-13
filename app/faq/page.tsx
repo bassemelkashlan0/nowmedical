@@ -157,7 +157,7 @@ export default function PatientsPage() {
           />
 
           {/* CTA Banner */}
-          <div className="mb-[159px]" >
+          <div className=" lg:mb-[159px] mb-10" >
             <p className="text-[#303030] text-sm text-center font-medium " >Need help right now? Walk in today — we’re open until 11 PM every day for your convenience.</p>
           </div>
 

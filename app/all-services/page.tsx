@@ -174,11 +174,11 @@ export default function OurServicesPage() {
             <LiveStatusBanner />
             <main >
                 {/* Hero Section with Banner */}
-                <section className="bg-[#F1F9F4] to-white py-[54px] ">
+                <section className="bg-[#F1F9F4] to-white py-10 lg:py-[54px] ">
                     <div className="container">
-                        <div className="grid gap-4 lg:grid-cols-2 lg:gap-12 items-center  ">
+                        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center  ">
                             <div>
-                                <h1 className="text-[#299470] font-bold tracking-tight lg:text-6xl mb-[21px] ">
+                                <h1 className="text-4xl lg:text-5xl xl:text-6xl text-[#299470] font-bold tracking-tight mb-4 lg:mb-[21px] ">
                                     Complete Medical Care
                                     <br />
                                     <span className="text-[#303030]">Walk-In & Family Doctors
@@ -209,7 +209,7 @@ export default function OurServicesPage() {
                                 </div>
                             </div>
 
-                            <div className="flex justify-end items-center ml-8 ">
+                            <div className="flex justify-end items-center lg:ml-8 ">
                                 <iframe
                                     width="100%"
                                     height="500"

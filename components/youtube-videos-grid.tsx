@@ -136,7 +136,7 @@ export function YouTubeVideosGrid({
         {(title || description) && (
           <div className="text-center mb-12 max-w-4xl mx-auto">
             {title && (
-              <h2 className="text-4xl md:text-5xl font-bold text-[#303030] mb-4">
+              <h2 className="text-3xl lg:text-5xl font-bold text-[#303030] mb-4">
                 {title.split(/(\*\*[^*]+\*\*)/g).map((part, index) => {
                   if (part.startsWith('**') && part.endsWith('**')) {
                     const text = part.replace(/\*\*/g, '');

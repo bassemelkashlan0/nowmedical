@@ -5,7 +5,6 @@ import { Carousel, CarouselContent, CarouselItem, CarouselApi } from '@/componen
 import { DotIcon } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Image from "next/image";
 
 interface Doctor {
   name: string;
@@ -47,12 +46,12 @@ export default function MeetOurSlider({
   const currentDoctor = doctors[current - 1] || doctors[0];
 
   return (
-    <section className={`${bgColor} py-16 px-4 md:px-8`}>
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-18 items-center">
+    <section className={`${bgColor}  lg:py-16 py-10`}>
+      <div className="container w-full">
+        <div className="grid md:grid-cols-2 w-full gap-18 items-center">
           {/* Left Section - Text Content */}
-          <div className="order-2 md:order-1">
-            <h2 className="text-5xl font-bold mb-8">
+          <div className="order-2 w-full overflow-hidden md:order-1">
+            <h2 className="text-3xl lg:text-5xl font-bold mb-8">
               <span className="text-[#303030]">{title}</span>{' '}
               <span className="text-[#299470]">{title_2}</span>
             </h2>
@@ -82,7 +81,7 @@ export default function MeetOurSlider({
           </div>
 
           {/* Right Section - Doctor Image with Slider */}
-          <div className="order-1 md:order-2 flex flex-col items-center">
+          <div className="order-1 md:order-2 flex w-full overflow-hidden flex-col items-center">
             <Carousel setApi={setApi} className="w-full max-w-md">
               <CarouselContent>
                 {doctors.map((doctor, index) => (
@@ -91,9 +90,9 @@ export default function MeetOurSlider({
                       {/* Circular Image Frame with Dotted Background */}
                       <div className="relative mb-6 flex items-center justify-center">
                         {/* Outer circular background with dots */}
-                        <div className="absolute inset-0 bg-[#F1F9F4] flex items-center justify-center">
+                        <div className="absolute w-full inset-0 bg-[#F1F9F4] flex items-center justify-center">
                           {/* Dotted Pattern Background */}
-                          <div 
+                          <div
                             className="absolute inset-0 opacity-60"
                           />
                         </div>

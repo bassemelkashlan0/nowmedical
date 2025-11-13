@@ -41,11 +41,11 @@ export default function ContactPage() {
 
       <main className="flex-1">
         {/* Hero Section with Banner */}
-        <section className="bg-[#F1F9F4] to-white py-[54px] ">
+        <section className="bg-[#F1F9F4] to-white py-10 lg:py-[54px] ">
           <div className="container">
-            <div className="grid gap-4 lg:grid-cols-[55%_44%] lg:gap-4 items-center ">
+            <div className="grid gap-8 lg:grid-cols-2 lg:gap-12  items-center ">
               <div>
-                <h1 className="text-[#299470] font-bold tracking-tight lg:text-6xl mb-[21px] ">
+                <h1 className="text-4xl lg:text-5xl xl:text-6xl text-[#299470] font-bold tracking-tight mb-4 lg:mb-[21px] ">
                   Contact Now
                   <br />
                   <span className="text-[#303030]">Medical Clinic in Calgary <br /> Open 7 Days Until 11 PM</span>
@@ -82,9 +82,9 @@ export default function ContactPage() {
         <ContactInfoSection />
 
         {/* <FindUsSection /> */}
-        <section className={"py-[54px] "}>
+        <section className={"py-10 lg:py-[54px] "}>
           <div className="container mx-auto ">
-            <h2 className="text-5xl font-bold text-[#303030] text-center mb-8 ">
+            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-[#303030] text-center mb-4 lg:mb-8 ">
               <span className="text-[#299470]">Find Us</span> &amp; On the Map
             </h2>
             <div className="flex  items-center">
@@ -135,7 +135,7 @@ export default function ContactPage() {
           bg_color="bg-[#F1F9F4]"
           order="order-first"
           h2_py=' mb-6 '
-          py=" pt-[54px] pb-10 "
+          py=" py-10 lg:pt-[54px] lg:pb-10 "
           singleButton={true}
           btn_1_text="Call: 587-391-8188"
           btn_1_link="tel:587-391-8188"
@@ -157,7 +157,7 @@ export default function ContactPage() {
           both_btn="flex"
           bg_color="bg-[#F1F9F4] "
           // order="order-First"
-          py=' pb-[54px] '
+          py=' py-10 lg:pb-[54px] '
           col_gap=" gap-14 "
 
         />

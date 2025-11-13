@@ -48,7 +48,7 @@ export default function StorySection({
             </div>
           )}
 
-          <div className="space-y-4 pl-6">
+          <div className="space-y-4 lg:pl-6">
             <h2 className={"text-3xl lg:text-5xl font-bold mb-4 " + (title_color ? title_color : " text-[#303030] ")}>
               {title}
 
@@ -66,7 +66,7 @@ export default function StorySection({
                 {paragraph}
               </p>
             ))}
-            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+            <div className="flex flex-wrap flex-row gap-4 mt-8">
               <Button
                 size="lg"
                 variant="outline"

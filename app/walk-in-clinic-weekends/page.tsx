@@ -80,11 +80,11 @@ export default function WeekendClinicPage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white py-10 md:py-[54px] ">
+          <section className="bg-[#F1F9F4] to-white py-10 lg:py-[54px] ">
             <div className="container">
-              <div className="grid gap-4 lg:grid-cols-2 lg:gap-12 items-center  ">
+              <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
-                  <h1 className=" font-bold text-[#303030] tracking-tight lg:text-6xl mb-4">
+                  <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#303030] tracking-tight mb-4">
                     <span className="text-[#299470] " >Weekend Walk-In Clinic Calgary </span>
                     Open Saturdays, Sundays & Holidays
                   </h1>
@@ -101,7 +101,7 @@ export default function WeekendClinicPage() {
                     Skip the hospital wait. See a real doctor this weekend.
                   </p>
 
-                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                  <div className="flex flex-wrap flex-row gap-4 pt-4">
                     <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>
                       <Link href="tel:587-391-8188" className="flex items-center gap-2">
                         <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
@@ -123,7 +123,7 @@ export default function WeekendClinicPage() {
                   </div>
                 </div>
 
-                <div className="flex justify-center items-center md:ml-8 ">
+                <div className="flex justify-center items-center lg:ml-8 ">
                   <iframe
                     width="100%"
                     height="500"

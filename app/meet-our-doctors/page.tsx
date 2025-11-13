@@ -121,10 +121,10 @@ export default function DoctorsPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-[#F1F9F4]  pt-[62px] pb-[61px] ">
+        <section className="bg-[#F1F9F4] py-10 lg:pt-[62px] lg:pb-[61px] ">
           <div className="container">
             <div className="max-w-3xl">
-              <h1 className="text-6xl text-[#303030] font-bold mb-4">
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl text-[#303030] font-bold mb-4">
                 Meet <span className="text-[#299470]">Our Doctors</span>
               </h1>
             </div>

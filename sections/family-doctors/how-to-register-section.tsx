@@ -22,10 +22,10 @@ export default function HowToRegisterSection() {
   ];
 
   return (
-    <section className="py-[54px] px-4 md:px-8 bg-[#EEF8F2]">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-10 lg:py-[54px] px-4 md:px-8 bg-[#EEF8F2]">
+      <div className="container mx-auto">
         <div className="text-center mb-6">
-          <h2 className="text-5xl text-[#303030] font-bold mb-4">
+          <h2 className="text-3xl lg:text-5xl text-[#303030] font-bold mb-4">
             How to <span className="text-[#299470]">Register</span>
           </h2>
           <p className="text-base text-[#000000] ">
@@ -33,7 +33,7 @@ export default function HowToRegisterSection() {
           </p>
         </div>
 
-        <div className="relative grid gap-4 md:gap-8 md:grid-cols-3 max-w-6xl mx-auto mb-12">
+        <div className="relative grid gap-4 md:gap-8 md:grid-cols-3  mx-auto mb-12">
           {steps.map((step, index) => (
             <div key={index} className="relative text-center">
               {/* Dotted line connector with arrow - only show between steps */}
@@ -59,14 +59,14 @@ export default function HowToRegisterSection() {
               </div>
               
               {/* Content */}
-              <h3 className="text-3xl text-[#313131] font-medium mb-[14px] ">{step.title}</h3>
+              <h3 className="text-2xl lg:text-3xl text-[#313131] font-medium mb-[14px] ">{step.title}</h3>
               <p className="text-base leading-relaxed text-[#313131]">{step.description}</p>
             </div>
           ))}
         </div>
 
         {/* Call to Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-wrap flex-row gap-4 justify-center items-center">
           <Button
             size="lg"
             className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg font-medium px-6 py-3 font-bold hidden"

@@ -15,7 +15,7 @@ export default function FamilyHealthSection() {
           </div>
 
           <div>
-            <h2 className="text-5xl font-bold mb-7 text-[#299470]">
+            <h2 className=" text-3xl lg:text-5xl font-bold mb-7 text-[#299470]">
               Your Family's Health, In<br /><span className="text-[#303030]"> Good Hands</span>
             </h2>
             <div className="space-y-4 text-muted-[#303030]">

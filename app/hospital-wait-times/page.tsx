@@ -6,7 +6,6 @@ import {
   NearbyHospitalsSection,
   WhyChooseSection
 } from "@/sections";
-import hero_img from "@/public/images/hospital-wait-times/wait-times-banner.png"
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, CLINIC_DATA } from "@/lib/structured-data";
@@ -17,6 +16,7 @@ import SkipWait_img from "@/public/images/hospital-wait-times/wait-times-recepti
 import FamilyMedicine_img from "@/public/images/hospital-wait-times/why-us.png";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
 import { YouTubeVideosGrid } from "@/components/youtube-videos-grid";
+import { LiveStatusBanner } from "@/components/live-status-banner";
 
 export const metadata: Metadata = {
   title: "Calgary Hospital Wait Times | Skip the ER - Walk-In Clinic Open Late",
@@ -226,12 +226,14 @@ export default function HospitalWaitTimesPage() {
 
       <div className="flex min-h-screen flex-col">
         <Header />
+        {/* Live Status Banner */}
+        <LiveStatusBanner />
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white  md:py-[54px]  ">
+          <section className="bg-[#F1F9F4] to-white py-10 md:py-[54px]  ">
             <div className="container">
-              <div className="grid gap-4 lg:grid-cols-[59%_40%] lg:gap-4 items-center  ">
+              <div className="grid gap-8 lg:grid-cols-[59%_40%] lg:gap-8 items-center  ">
                 <div>
                   <h1 className=" font-bold tracking-tight lg:text-6xl mb-4">
                     Tired of Long Hospital Wait Times <span className="text-[#299470] " >Visit Now Medical Clinic </span>

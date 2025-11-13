@@ -35,11 +35,11 @@ export default function DriversMedicalExamsInCalgaryScreen() {
             <LiveStatusBanner />
             <main>
                 {/* Hero Section */}
-                <section className="bg-[#F1F9F4] to-white py-10 md:py-[54px]  ">
+                <section className="bg-[#F1F9F4] to-white py-10 lg:py-[54px]  ">
                     <div className="container">
-                        <div className="grid gap-12 lg:grid-cols-[57%_40%] lg:gap-8 items-center">
+                        <div className="grid gap-8 lg:grid-cols-[57%_40%] lg:gap-12 items-center">
                             <div>
-                                <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl mb-[21px] ">
+                                <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4 lg:mb-[21px] ">
                                     <span className="text-[#299470]">Driver’s Medical Exams in</span>
                                     <br />
                                     <span className="text-[#303030]">Calgary Walk In or Call Today</span>

@@ -62,17 +62,17 @@ export default function UrgentCarePage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white py-10 py-[54px] ">
+          <section className="bg-[#F1F9F4] to-white py-10 lg:py-[54px] ">
             <div className="container">
-              <div className="grid gap-4 lg:grid-cols-[53%_46%] lg:gap-4 items-center  ">
+              <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
-                  <h1 className=" font-bold tracking-tight lg:text-6xl mb-[21px] ">
+                  <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4 lg:mb-[21px] ">
                     <span className="text-[#299470] " >Urgent Care in Calgary </span> <br />
                     Walk-In Clinic Open <br />
                     Late 7 Days a Week
                   </h1>
 
-                  <p className="text-base  text-[#000000] mb-4">
+                  <p className="text-base text-[#000000] mb-4">
                     Need medical care now? <br />
                     Skip long hospital waits — visit <b>Now Medical Clinic,</b> Calgary's trusted <b>urgent care alternative,</b> <br />
                     <b>open daily until 11 PM,</b> including <b>weekends and holidays.</b>
@@ -100,7 +100,7 @@ export default function UrgentCarePage() {
                   </div>
                 </div>
 
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center lg:ml-8">
                   <iframe
                     width="100%"
                     height="500"
@@ -120,7 +120,7 @@ export default function UrgentCarePage() {
             title="What"
             title_2="We Treat"
             subtitle=""
-            py=" py-[69px] "
+            py=" py-10 lg:py-[69px] "
             items={whatWeTreat}
             image={bg_img.src}
             both_btn="flex pt-7"
@@ -144,7 +144,7 @@ export default function UrgentCarePage() {
             h2_color_2='text-[#303030]'
             order="order-first"
             bg_color="bg-[#F1F9F4] "
-            py=" pt-30 pb-22"
+            py=" py-10 lg:pt-30 lg:pb-22"
             both_btn="flex pt-7"
             btn_1_text="Call: 587-391-8188"
             btn_1_link="tel:587-391-8188"
@@ -156,63 +156,65 @@ export default function UrgentCarePage() {
           />
 
           {/* Bottom Call to Action */}
-          <section className="bg-[#195A44] max-w-[1240px] mx-auto rounded-[16px] p-12 my-[60px]">
-            <div className="mx-auto">
-              <h2 className="text-2xl md:text-5xl font-bold text-white mb-3">
-                Near the Hospital? We’re a Fast Option
-              </h2>
+          <section className=" mx-4 lg:mx-0 ">
+            <div className="container bg-[#195A44]  rounded-[16px] p-6 lg:p-12 my-10 lg:my-[60px]">
+              <div className="">
+                <h2 className="text-3xl lg:text-5xl font-bold text-white mb-3">
+                  Near the Hospital? We're a Fast Option
+                </h2>
 
-              <p className="text-white text-base md:text-lg">
-                Coming from a hospital area and don’t need the ER? Walk in for same-day care with shorter waits <b>open late, 7 days a week</b>.
-              </p>
-            </div>
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-12">
-              <Button
-                size="lg"
-                className="bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-6 py-6 flex items-center gap-2"
-                asChild
-              >
-                <Link href="tel:587-391-8188" className="flex items-center gap-2">
-                  <img
-                    src="/icons/btn_phone-outline-icon.svg"
-                    alt="Phone"
-                    className="w-5 h-5 brightness-0 invert"
-                  />
-                  Call: 587-391-8188
-                </Link>
-              </Button>
+                <p className="text-white text-base lg:text-lg">
+                  Coming from a hospital area and don't need the ER? Walk in for same-day care with shorter waits <b>open late, 7 days a week</b>.
+                </p>
+              </div>
+              {/* Buttons */}
+              <div className="flex flex-wrap flex-row gap-4 pt-6 lg:pt-12">
+                <Button
+                  size="lg"
+                  className="bg-[#299470] hover:bg-[#2E8B57]/90 text-white font-bold text-lg px-6 py-6 flex items-center gap-2"
+                  asChild
+                >
+                  <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                    <img
+                      src="/icons/btn_phone-outline-icon.svg"
+                      alt="Phone"
+                      className="w-5 h-5 brightness-0 invert"
+                    />
+                    Call: 587-391-8188
+                  </Link>
+                </Button>
 
-              <Button
-                size="lg"
-                variant="outline"
-                className="border border-white text-white hover:bg-white/10 bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
-                asChild
-              >
-                <Link href="/walk-in-clinic-calgary" className="flex items-center gap-2">
-                  <img
-                    src="/icons/btn-walking-outline-icon.svg"
-                    alt="Walk In"
-                    className="w-5 h-5"
-                  />
-                  Walk In Now
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border border-white text-white hover:bg-white/10 bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
-                asChild
-              >
-                <Link href="https://share.google/CkrlunWzewWZjaPmv" className="flex items-center gap-2">
-                  <img
-                    src="/images/walk-in/flowbite_map-pin-outline.svg"
-                    alt=""
-                    className="w-5 h-5"
-                  />
-                  Get Direction
-                </Link>
-              </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border border-white text-white hover:bg-white/10 bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
+                  asChild
+                >
+                  <Link href="/walk-in-clinic-calgary" className="flex items-center gap-2">
+                    <img
+                      src="/icons/btn-walking-outline-icon.svg"
+                      alt="Walk In"
+                      className="w-5 h-5"
+                    />
+                    Walk In Now
+                  </Link>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border border-white text-white hover:bg-white/10 bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
+                  asChild
+                >
+                  <Link href="https://share.google/CkrlunWzewWZjaPmv" className="flex items-center gap-2">
+                    <img
+                      src="/images/walk-in/flowbite_map-pin-outline.svg"
+                      alt=""
+                      className="w-5 h-5"
+                    />
+                    Get Direction
+                  </Link>
+                </Button>
+              </div>
             </div>
           </section>
 

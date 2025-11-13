@@ -10,7 +10,6 @@ import {
   FindUsSection,
   WalkInHeroSection
 } from "@/sections";
-import { Heart, Baby, Activity, Shield, Stethoscope, Users } from "lucide-react";
 import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
 import Family_img from "@/public/images/family-doctor/why-us.png";
@@ -83,26 +82,6 @@ export default function FamilyDoctorsPage() {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Sanny Cooper",
-      avatar: "/images/placeholder-user.jpg",
-      rating: 5,
-      text: "Really good experience at this walk-in clinic. The clinic runs smoothly, staff were friendly, and it's very convenient."
-    },
-    {
-      name: "Bill Grabovac",
-      avatar: "/images/placeholder-user.jpg",
-      rating: 5,
-      text: "Fast service! Well managed medical clinic! The Dr was knowledgeable. Very Happy with the service we received. A+"
-    },
-    {
-      name: "Jetta Lush",
-      avatar: "/images/placeholder-user.jpg",
-      rating: 5,
-      text: "Hours are wonderful, employees were warm and welcoming. Super fast efficient, doctor was warm and thorough."
-    }
-  ];
 
   const localBusinessSchema = generateLocalBusinessSchema({
     ...CLINIC_DATA,
@@ -174,23 +153,7 @@ export default function FamilyDoctorsPage() {
       image: "/images/family-doctor/chronic-conditions.svg"
     }
   ];
-  const videoTestimonials = [
-    {
-      name: "Bessie Cooper",
-      image: "/images/about-us/bessie-cooper.png",
-      quote: "Finally a clinic open late that actually cares about patients."
-    },
-    {
-      name: "Jenny Wilson",
-      image: "/images/about-us/jenny-wilson.png",
-      quote: "Friendly staff, short wait times, and doctors who listen."
-    },
-    {
-      name: "Cameron Williamson",
-      image: "/images/about-us/cameron-williamson.png",
-      quote: "This clinic makes it easy for families — especially on weekends and holidays."
-    }
-  ];
+
   return (
     <>
       <StructuredData data={localBusinessSchema} />
@@ -237,7 +200,7 @@ export default function FamilyDoctorsPage() {
             image="/images/family-doctor/family-doctor-banner.png"
             imageAlt="Experienced family doctor accepting new patients in Calgary providing comprehensive care"
             bgColor="bg-[#F1F9F4]"
-            className="py-8"
+            className="py-10 lg:py-[54px]"
           />
 
           {/* Family Health Section */}
@@ -274,7 +237,7 @@ export default function FamilyDoctorsPage() {
                 Our team of caring physicians provides a full range of family medicine from preventive care to chronic condition <br /> management. Each doctor combines medical expertise with compassion and approachability.
               </>
             }
-            sec_py=" py-[65px] "
+            sec_py=" py-10 lg:py-[65px] "
             femaleDoctors={femaleDoctors}
             maleDoctors={maleDoctors}
             showCategories={false}

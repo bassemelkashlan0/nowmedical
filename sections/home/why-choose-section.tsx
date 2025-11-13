@@ -185,7 +185,7 @@ export default function WhyChooseSection({
               <div className="pt-4">
                 <div className="flex mb-4">
                   <Button className="bg-[#299470] hover:bg-[#2D7B6F] text-white font-bold px-4 py-4 text-lg">
-                    <Link href="tel:587-391-8188" className='flex items-center'>
+                    <Link href="tel:587-391-8188" className='flex !text-wrap !whitespace-wrap items-center'>
                       <Image
                         src="/icons/btn_phone-outline-icon.svg"
                         alt="Phone"
@@ -212,7 +212,7 @@ export default function WhyChooseSection({
               <div className="pt-4">
                 <div className="flex mb-4">
                   <Button variant={btn_1_bg ? "default" : "outline"} className={`${btn_1_bg ? btn_1_bg : 'border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 bg-transparent'} px-4 py-4 text-lg font-bold ${btn_1_bg ? 'text-white hover:opacity-90' : ''}`}>
-                    <Link href={btn_1_link ? btn_1_link as string : "#"} className='flex items-center'>
+                    <Link href={btn_1_link ? btn_1_link as string : "#"} className='flex !text-wrap !whitespace-wrap items-center'>
                       <Image
                         src={btn_1_icon ? btn_1_icon as string : "/icons/btn_phone-outline-icon.svg"}
                         alt="Phone"
@@ -236,9 +236,9 @@ export default function WhyChooseSection({
                 )}
               </div>
             ) : (
-              <div className={"  flex-col md:flex-row gap-4  items-center  " + (both_btn ? both_btn : "hidden pt-4")}>
-                <Button className={`${btn_1_bg ? btn_1_bg : 'bg-[#299470] hover:bg-[#256358]'} text-white font-bold px-4 py-4 text-lg`}>
-                  <Link href={btn_1_link ? btn_1_link as string : "#"} className='flex items-center' >
+              <div className={"  flex-wrap md:flex-nowrap flex-row gap-4  items-center  " + (both_btn ? both_btn : "hidden pt-4")}>
+                <Button variant="outline" className={`${btn_1_bg ? btn_1_bg : 'bg-[#299470] hover:bg-[#256358]'} text-white font-bold px-4 py-4 text-lg border-1  border-[#299470] `}>
+                  <Link href={btn_1_link ? btn_1_link as string : "#"} className='flex !text-wrap !whitespace-wrap items-center' >
                     <Image
                       src={btn_1_icon ? btn_1_icon as string : "/icons/btn_phone-outline-icon.svg"}
                       alt="Phone"
@@ -249,25 +249,30 @@ export default function WhyChooseSection({
                     {btn_1_text}
                   </Link>
                 </Button>
-                <Button variant="outline" className={`border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 bg-transparent px-4 py-4 text-lg font-bold ${btn_2_bg ? btn_2_bg : ''} ${btn_2_text && (btn_2_text.includes("Register as a New Patient") || btn_2_text.includes("Register as a new patient")) ? 'hidden' : ''}`}>
-                  <Link href={btn_2_link ? btn_2_link as string : "#"} className='flex items-center'>
-                    {!btn_2_iconAfter && (
+                <Button variant="outline" className={`${btn_2_text && btn_2_text.length > 25 ? 'md:whitespace-nowrap md:h-[49px]  !whitespace-normal !h-auto min-h-[49px]' : ''} ${btn_2_text && btn_2_text.length > 25 ? 'w-full md:w-auto' : ''} border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 bg-transparent p-[14px] px-4 text-lg font-bold ${btn_2_bg ? btn_2_bg : ''} ${btn_2_text && (btn_2_text.includes("Register as a New Patient") || btn_2_text.includes("Register as a new patient")) ? 'hidden' : ''}`}>
+                  <Link href={btn_2_link ? btn_2_link as string : "#"} className={`flex ${btn_2_text && btn_2_text.length > 25 ? 'md:flex-nowrap md:whitespace-nowrap flex-wrap !whitespace-normal' : ''} items-center justify-center text-center ${btn_2_text && btn_2_text.length > 25 ? 'w-full md:gap-0 gap-2 md:py-0 py-1' : ''}`}>
+                    {!btn_2_iconAfter && btn_2_icon && (
                       <Image
-                        src={btn_2_icon ? btn_2_icon as string : "/icons/btn_phone-outline-icon.svg"}
-                        alt="Phone"
+                        src={btn_2_icon as string}
+                        alt="Walk In"
                         width={20}
                         height={20}
-                        className="mr-3"
+                        className={btn_2_text && btn_2_text.length > 25 ? "md:mr-3 flex-shrink-0" : "mr-3"}
                       />
                     )}
-                    {btn_2_text}
-                    {btn_2_iconAfter && (
+                    {btn_2_text && btn_2_text.length > 25 ? (
+                      <span className="md:whitespace-nowrap break-words leading-none
+line-height-1">{btn_2_text}</span>
+                    ) : (
+                      btn_2_text
+                    )}
+                    {btn_2_iconAfter && btn_2_icon && (
                       <Image
-                        src={btn_2_icon ? btn_2_icon as string : "/icons/btn_phone-outline-icon.svg"}
-                        alt="Phone"
+                        src={btn_2_icon as string}
+                        alt="Walk In"
                         width={20}
                         height={20}
-                        className="ml-3"
+                        className={btn_2_text && btn_2_text.length > 25 ? "md:ml-3 flex-shrink-0" : "ml-3"}
                       />
                     )}
                   </Link>

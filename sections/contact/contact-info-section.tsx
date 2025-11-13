@@ -20,9 +20,9 @@ export default function ContactInfoSection({
   hours = "7:30 AM - 11:00 PM (Everyday / 7 Days a Week, Weekends & Holidays Included)"
 }: ContactInfoSectionProps) {
   return (
-    <section className="py-[54px]  px-4 bg-white">
+    <section className="py-10 lg:py-[54px]  px-4 bg-white">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-2xl md:text-5xl font-bold text-center mb-6 text-[#303030]">
+        <h2 className="text-3xl lg:text-5xl font-bold text-center mb-6 text-[#303030]">
           Clinic <span className="text-[#299470]">Contact Information</span>
         </h2>
 
@@ -107,7 +107,7 @@ export default function ContactInfoSection({
           </p>
         </div>
 
-        <div className="flex pt-[6px] flex-col md:flex-row gap-4 justify-center items-center">
+        <div className="flex pt-[6px] flex-wrap flex-row gap-4 justify-center items-center">
           <Button className="bg-[#299470] hover:bg-[#256358] text-white font-bold px-6 py-6 text-lg">
             <Link className='flex' href='tel:587-391-8188' >
               <Image
@@ -121,16 +121,16 @@ export default function ContactInfoSection({
             </Link>
           </Button>
 
-          <Button variant="outline" className="border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 px-6 py-6 text-lg font-bold">
-            <Link className='flex' href='/walk-in-clinic-calgary' >
+          <Button variant="outline" className="md:whitespace-nowrap md:h-[49px] !whitespace-normal !h-auto min-h-[49px] w-full md:w-auto border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 p-[14px] px-6 text-lg font-bold">
+            <Link className='flex md:flex-nowrap md:whitespace-nowrap flex-wrap !whitespace-normal items-center justify-center text-center w-full md:gap-0 gap-2 md:py-0 py-1' href='/walk-in-clinic-calgary' >
               <Image
                 src="/icons/btn-walking-outline-icon.svg"
                 alt="Walk-in"
                 width={20}
                 height={20}
-                className="mr-2"
+                className="md:mr-2 flex-shrink-0"
               />
-              Walk-in Any Time (No Appointment Needed)
+              <span className="md:whitespace-nowrap break-words">Walk-in Any Time (No Appointment Needed)</span>
             </Link>
           </Button>
 

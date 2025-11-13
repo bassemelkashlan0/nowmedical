@@ -90,9 +90,9 @@ export default function ReviewsPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-[#F1F9F4] py-15">
+        <section className="bg-[#F1F9F4] py-10 lg:py-[54px]">
           <div className="container">
-              <h1 className="text-5xl md:text-5xl font-bold">
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold">
                 Over <span className="text-[#299470]">Reviews</span>
               </h1>
           </div>

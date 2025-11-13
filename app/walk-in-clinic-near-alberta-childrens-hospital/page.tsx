@@ -73,11 +73,11 @@ export default function AlbertaChildrensHospitalPage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white py-[54px] ">
+          <section className="bg-[#F1F9F4] to-white py-10 lg:py-[54px] ">
             <div className="container">
-              <div className="grid gap-4 lg:grid-cols-2 lg:gap-12 items-center  ">
+              <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
-                  <h1 className=" font-bold tracking-tight lg:text-6xl mb-4">
+                  <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4">
                     Walk-In Clinic Near <br /><span className="text-[#299470]">Alberta Children's Hospital</span> <br />Open 7 Days a Week
                   </h1>
 
@@ -106,7 +106,7 @@ export default function AlbertaChildrensHospitalPage() {
                   </div>
                 </div>
 
-                <div className="flex justify-center items-center ml-8 ">
+                <div className="flex justify-center items-center lg:ml-8 ">
                   <iframe
                     width="100%"
                     height="500"
@@ -153,7 +153,7 @@ export default function AlbertaChildrensHospitalPage() {
             h2_color_1='text-[#303030]'
             h2_color_2='text-[#299470]'
             h2_sub_color='text-[#303030]'
-            py=" py-[27px] "
+            py=" py-10 lg:py-[27px] "
             order="order-first"
             IsDot={false}
             bg_color="bg-[#F1F9F4]"

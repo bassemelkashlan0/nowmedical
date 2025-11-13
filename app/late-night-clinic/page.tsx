@@ -59,11 +59,11 @@ export default function LateNightClinicPage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] to-white py-[54px] ">
+          <section className="bg-[#F1F9F4] to-white py-10 lg:py-[54px] ">
             <div className="container">
-              <div className="grid gap-4 lg:grid-cols-2 lg:gap-12 items-center  ">
+              <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
-                  <h1 className=" font-bold text-[#303030] tracking-tight lg:text-6xl mb-[21px]  ">
+                  <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#303030] tracking-tight mb-4 lg:mb-[21px]  ">
                     <span className="text-[#299470] " >Late-Night Walk-In Clinic in Calgary </span>
                     Open Until 11 PM, 7 Days a Week
                   </h1>
@@ -98,7 +98,7 @@ export default function LateNightClinicPage() {
                   </div>
                 </div>
 
-                <div className="flex justify-center items-center ml-8 ">
+                <div className="flex justify-center items-center lg:ml-8 ">
                   <iframe
                     width="100%"
                     height="500"
@@ -116,7 +116,7 @@ export default function LateNightClinicPage() {
 
           {/* why choose  */}
           <WhyChooseSection
-            py=' py-[69px] '
+            py=' py-10 lg:py-[69px] '
             title="Why Choose"
             subtitle="Our Late-Night Clinic"
             items={whyChoose}
@@ -147,7 +147,7 @@ export default function LateNightClinicPage() {
             h2_sub_color='text-[#303030]'
             order="order-first"
             bg_color="bg-[#F1F9F4] "
-            py=" py-[149px] "
+            py=" py-10 lg:py-[149px] "
             both_btn="flex pt-7"
             btn_1_text="Call: 587-391-8188"
             btn_1_link="tel:587-391-8188"

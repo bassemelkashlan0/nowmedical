@@ -43,7 +43,7 @@ export default function FindUsSection({
             </div>
           </div>
           {/* Info */}
-          <div className="w-full md:w-1/2 flex flex-col gap-6 justify-center md:pl-12 ">
+          <div className="w-full md:w-1/2 flex flex-col gap-4 justify-center md:pl-12 ">
             {/* Address */}
             <div className="flex items-start gap-5 mb-2">
               <span className="mt-1">

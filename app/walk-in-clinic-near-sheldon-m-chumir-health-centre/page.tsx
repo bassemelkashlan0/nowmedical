@@ -24,13 +24,13 @@ export default function SheldonChumirPage() {
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
-          <section className="bg-gradient-to-b from-[#E8F5F3] to-white py-16">
+          <section className="bg-gradient-to-b from-[#E8F5F3] to-white py-10 lg:py-[54px]">
             <div className="container">
               <div className="max-w-4xl mx-auto text-center">
                 <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm mb-4">
                   <MapPin className="h-4 w-4" />Serving Calgary
                 </div>
-                <h1 className="text-4xl font-bold lg:text-5xl mb-6">
+                <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 lg:mb-6">
                   <span className="text-foreground">Walk-In Clinic Near</span><br />
                   <span className="text-[#299470]">Sheldon M. Chumir Health Centre</span>
                 </h1>
@@ -60,7 +60,7 @@ export default function SheldonChumirPage() {
               </div>
             </div>
           </section>
-          <section className="py-16 bg-white">
+          <section className="py-10 lg:py-[54px] bg-white">
             <div className="container">
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-3xl font-bold mb-8 text-center">Why Choose Our Clinic?</h2>

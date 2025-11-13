@@ -30,7 +30,7 @@ export default function FAQSection({
 }: FAQSectionProps) {
   return (
     <>
-      <section className=" overflow-hidden pt-[92px] pb-[83px] px-4 md:px-8 bg-[#F1F9F4] relative">
+      <section className=" overflow-hidden py-10 lg:pt-[92px] lg:pb-[83px] px-4 md:px-8 bg-[#F1F9F4] relative">
         <div className="container">
           <div className="grid gap-12 lg:grid-cols-[53%_47%] lg:gap-16 items-center">
             <div>
@@ -58,12 +58,12 @@ export default function FAQSection({
         </div>
       </section>
 
-      <section className="py-8 px-4 md:px-8">
+      <section className="py-10 lg:py-[54px] px-4 md:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-10 bg-white rounded-lg">
             {categories.map((category, categoryIndex) => (
               <div key={categoryIndex}>
-                <h3 className="text-4xl text-[#303030] font-bold mb-6">
+                <h3 className="text-3xl lg:text-4xl xl:text-5xl text-[#303030] font-bold mb-4 lg:mb-6">
                   {category.category}
                 </h3>
 

@@ -97,6 +97,11 @@ export function Header() {
                       Near Sheldon M. Chumir Centre
                     </Link>
                   </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/hospital-wait-times" className={pathname === '/hospital-wait-times' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                      Hospital Wait Times
+                    </Link>
+                  </DropdownMenuItem>
                 </DropdownMenuSubContent>
               </DropdownMenuSub>
             </DropdownMenuContent>
@@ -221,6 +226,9 @@ export function Header() {
                   </Link>
                   <Link href="/walk-in-clinic-near-sheldon-m-chumir-health-centre" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-near-sheldon-m-chumir-health-centre' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Near Sheldon M. Chumir Centre
+                  </Link>
+                  <Link href="/hospital-wait-times" className={`block py-1 text-sm ${pathname === '/hospital-wait-times' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Hospital Wait Times
                   </Link>
                 </div>
                 <div className="border-b pb-2">

@@ -67,7 +67,7 @@ export default function WalkInHeroSection({
         <div className="grid  gap-8 lg:grid-cols-2 lg:gap-12 items-center">
           {/* Left Section - Text Content (60-70% width) */}
           <div className="space-y-4">
-            <h1 className="text-3xl lg:text-6xl font-bold text-[#303030] mb-[21px] ">
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#303030] mb-4 lg:mb-[21px] ">
               {title}
             </h1>
             {subtitle && (
