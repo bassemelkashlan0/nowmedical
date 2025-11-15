@@ -21,6 +21,7 @@ export function LiveStatusBanner() {
   const [currentTime, setCurrentTime] = useState(new Date())
   const [isActive, setIsActive] = useState(true)
   const [loading, setLoading] = useState(true)
+  const [chatbotReady, setChatbotReady] = useState(false)
 
   // Fetch status from API
   useEffect(() => {
@@ -57,21 +58,295 @@ export function LiveStatusBanner() {
     return () => clearInterval(timer)
   }, [])
 
+  // Monitor chatbot initialization
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    const checkChatbotReady = () => {
+      // Check if VG is available
+      if (window.VG?.open) {
+        setChatbotReady(true)
+        return true
+      }
+
+      // Check if chatbot button exists in DOM - try multiple selectors
+      const selectors = [
+        '[data-vg-widget]',
+        '[class*="vg-"]',
+        '[id*="vg-"]',
+        '[id*="VG-"]',
+        '[class*="chat-widget"]',
+        '[class*="chatbot-button"]',
+        '[class*="vg-widget"]',
+        'button[class*="vg"]',
+        '[data-vg]'
+      ]
+
+      for (const selector of selectors) {
+        const elements = document.querySelectorAll(selector)
+        if (elements.length > 0) {
+          setChatbotReady(true)
+          return true
+        }
+      }
+
+      return false
+    }
+
+    // Check immediately
+    if (checkChatbotReady()) {
+      return
+    }
+
+    // Use MutationObserver to watch for chatbot elements being added
+    const observer = new MutationObserver(() => {
+      if (checkChatbotReady()) {
+        observer.disconnect()
+      }
+    })
+
+    // Observe the entire document for changes
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      attributes: false,
+    })
+
+    // Poll for chatbot ready as backup
+    const interval = setInterval(() => {
+      if (checkChatbotReady()) {
+        clearInterval(interval)
+        observer.disconnect()
+      }
+    }, 500)
+
+    // Listen for script load
+    const script = document.querySelector('script[src*="vg_bundle.js"]') as HTMLScriptElement | null
+    if (script && script.src) {
+      const handleScriptLoad = () => {
+        // Wait a bit for VG to initialize after script loads
+        setTimeout(() => {
+          checkChatbotReady()
+        }, 1000)
+        script?.removeEventListener('load', handleScriptLoad)
+      }
+      
+      // Always add event listener (it's safe even if already loaded)
+      script.addEventListener('load', handleScriptLoad)
+      
+      // Also try after delays in case load event doesn't fire or script is already loaded
+      setTimeout(() => {
+        checkChatbotReady()
+      }, 1000)
+      setTimeout(() => {
+        checkChatbotReady()
+      }, 3000)
+    }
+
+    // Also listen for custom events that might be fired by the chatbot
+    const handleVGReady = () => {
+      setChatbotReady(true)
+      observer.disconnect()
+    }
+    window.addEventListener('vg-ready', handleVGReady)
+    window.addEventListener('VGReady', handleVGReady)
+    window.addEventListener('vg:ready', handleVGReady)
+
+    // Cleanup after 30 seconds
+    const timeout = setTimeout(() => {
+      observer.disconnect()
+      clearInterval(interval)
+    }, 30000)
+
+    return () => {
+      clearInterval(interval)
+      clearTimeout(timeout)
+      observer.disconnect()
+      window.removeEventListener('vg-ready', handleVGReady)
+      window.removeEventListener('VGReady', handleVGReady)
+      window.removeEventListener('vg:ready', handleVGReady)
+    }
+  }, [])
+
   // Note: Chatbot initialization is handled globally in app/layout.tsx via GlobalChatbot component
   // This component only provides a button to open the chatbot
 
   const handleLiveChatClick = () => {
-    // Trigger the chatbot to open
-    if (typeof window !== 'undefined' && window.VG?.open) {
-      window.VG.open()
-    } else {
-      // If chatbot not ready yet, wait a bit and try again
-      setTimeout(() => {
-        if (window.VG?.open) {
+    if (typeof window === 'undefined') return
+
+    console.log('Live Chat button clicked - attempting to open chatbot...')
+    console.log('window.VG:', window.VG)
+    console.log('window.VG_CONFIG:', window.VG_CONFIG)
+
+    // Try multiple methods to open the chatbot
+    const tryOpenChatbot = () => {
+      // Method 1: Use window.VG.open() if available
+      if (window.VG?.open && typeof window.VG.open === 'function') {
+        try {
+          console.log('Trying window.VG.open()...')
           window.VG.open()
+          return true
+        } catch (error) {
+          console.error('Error calling window.VG.open():', error)
         }
-      }, 500)
+      }
+
+      // Method 1b: Try other VG methods
+      if (window.VG) {
+        const vgMethods = ['show', 'toggle', 'openChat', 'openWidget', 'launch']
+        for (const method of vgMethods) {
+          if (typeof (window.VG as any)[method] === 'function') {
+            try {
+              console.log(`Trying window.VG.${method}()...`)
+              ;(window.VG as any)[method]()
+              return true
+            } catch (error) {
+              console.error(`Error calling window.VG.${method}():`, error)
+            }
+          }
+        }
+      }
+
+      // Method 2: Search for ALL possible chatbot elements
+      const allSelectors = [
+        '[data-vg-widget]',
+        '[data-vg]',
+        '[class*="vg-"]',
+        '[class*="VG-"]',
+        '[id*="vg-"]',
+        '[id*="VG-"]',
+        '[class*="chat-widget"]',
+        '[class*="chatbot-button"]',
+        '[class*="vg-widget"]',
+        'button[class*="vg"]',
+        'div[class*="vg"]',
+        '[role="button"][class*="vg"]',
+        'button[aria-label*="chat" i]',
+        'button[aria-label*="message" i]',
+        '[role="button"][aria-label*="chat" i]',
+        '.vg-widget-button',
+        '#vg-widget-button',
+        '[data-testid*="chat"]',
+        '[data-testid*="vg"]',
+      ]
+
+      for (const selector of allSelectors) {
+        try {
+          const elements = document.querySelectorAll(selector)
+          elements.forEach((element) => {
+            const el = element as HTMLElement
+            console.log(`Found element with selector "${selector}":`, el)
+            // Try clicking
+            el.click()
+            // Also try dispatching events
+            el.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }))
+            el.dispatchEvent(new MouseEvent('mousedown', { bubbles: true, cancelable: true }))
+            el.dispatchEvent(new MouseEvent('mouseup', { bubbles: true, cancelable: true }))
+          })
+          if (elements.length > 0) {
+            return true
+          }
+        } catch (error) {
+          console.error(`Error with selector "${selector}":`, error)
+        }
+      }
+
+      // Method 3: Search in VG_OVERLAY_CONTAINER and all its children
+      const overlayContainer = document.getElementById('VG_OVERLAY_CONTAINER')
+      if (overlayContainer) {
+        console.log('Found VG_OVERLAY_CONTAINER:', overlayContainer)
+        // Find all clickable elements
+        const clickableElements = overlayContainer.querySelectorAll('button, [role="button"], div[onclick], a, [tabindex="0"]')
+        clickableElements.forEach((el) => {
+          const element = el as HTMLElement
+          console.log('Found clickable element in container:', element)
+          element.click()
+          element.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }))
+        })
+        if (clickableElements.length > 0) {
+          return true
+        }
+      }
+
+      // Method 4: Search for iframes (chatbot might be in iframe)
+      const iframes = document.querySelectorAll('iframe')
+      iframes.forEach((iframe) => {
+        try {
+          const iframeSrc = iframe.src || iframe.getAttribute('src') || ''
+          if (iframeSrc.includes('vg') || iframeSrc.includes('chat') || iframeSrc.includes('convo')) {
+            console.log('Found potential chatbot iframe:', iframe)
+            // Try to access iframe content (might be blocked by CORS)
+            try {
+              const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document
+              if (iframeDoc) {
+                const iframeButton = iframeDoc.querySelector('button, [role="button"]') as HTMLElement
+                if (iframeButton) {
+                  iframeButton.click()
+                  return true
+                }
+              }
+            } catch (e) {
+              console.log('Cannot access iframe content (CORS):', e)
+            }
+          }
+        } catch (error) {
+          console.error('Error checking iframe:', error)
+        }
+      })
+
+      // Method 5: Try dispatching custom events
+      try {
+        window.dispatchEvent(new CustomEvent('vg-open'))
+        window.dispatchEvent(new CustomEvent('VG-open'))
+        window.dispatchEvent(new CustomEvent('open-chat'))
+        window.dispatchEvent(new CustomEvent('chatbot-open'))
+      } catch (error) {
+        console.error('Error dispatching custom events:', error)
+      }
+
+      // Method 6: Try to find elements by position (bottom-right corner)
+      const allElements = document.querySelectorAll('*')
+      for (const el of allElements) {
+        const element = el as HTMLElement
+        const rect = element.getBoundingClientRect()
+        const isBottomRight = rect.bottom > window.innerHeight - 100 && rect.right > window.innerWidth - 100
+        if (isBottomRight && (element.tagName === 'BUTTON' || element.getAttribute('role') === 'button')) {
+          console.log('Found potential chatbot button in bottom-right:', element)
+          element.click()
+          return true
+        }
+      }
+
+      return false
     }
+
+    // Try immediately
+    if (tryOpenChatbot()) {
+      console.log('Chatbot opened successfully!')
+      return
+    }
+
+    // If not ready, wait and retry
+    const checkAndOpen = (attempts = 0) => {
+      if (attempts > 30) {
+        // After 15 seconds (30 * 500ms), give up
+        console.warn('Chatbot failed to load after multiple attempts')
+        console.log('Available window.VG:', window.VG)
+        console.log('All elements with "vg" in class/id:', document.querySelectorAll('[class*="vg"], [id*="vg"]'))
+        return
+      }
+
+      if (tryOpenChatbot()) {
+        console.log('Chatbot opened successfully after retry!')
+        return
+      }
+
+      // Check again after 500ms
+      setTimeout(() => checkAndOpen(attempts + 1), 500)
+    }
+
+    // Start checking
+    checkAndOpen()
   }
 
   const formatTime = (date: Date) => {
