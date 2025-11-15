@@ -93,8 +93,8 @@ export function Header() {
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/walk-in-clinic-near-sheldon-m-chumir-health-centre" className={pathname === '/walk-in-clinic-near-sheldon-m-chumir-health-centre' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
-                      Near Sheldon M. Chumir Centre
+                    <Link href="/walk-in-clinic-near-sheldon-Childrens-health-centre" className={pathname === '/walk-in-clinic-near-sheldon-Childrens-health-centre' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                      Near Sheldon Children's Health Centre
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
@@ -224,8 +224,8 @@ export function Header() {
                   <Link href="/walk-in-clinic-near-south-health-campus" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-near-south-health-campus' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Near South Health Campus
                   </Link>
-                  <Link href="/walk-in-clinic-near-sheldon-m-chumir-health-centre" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-near-sheldon-m-chumir-health-centre' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
-                    Near Sheldon M. Chumir Centre
+                  <Link href="/walk-in-clinic-near-sheldon-Childrens-health-centre" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-near-sheldon-Childrens-health-centre' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    Near Sheldon Children's Health Centre
                   </Link>
                   <Link href="/hospital-wait-times" className={`block py-1 text-sm ${pathname === '/hospital-wait-times' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Hospital Wait Times

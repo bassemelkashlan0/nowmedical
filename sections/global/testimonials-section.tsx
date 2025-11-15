@@ -68,8 +68,9 @@ export default function TestimonialsSection({
               <p className="text-[#303030] mb-6">{testimonial.text}</p>
               <div className="flex  items-center gap-3">
                 <Avatar className="h-[51px] w-[51px] ">
-                  <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
-                  <img src={testimonial.avatar} alt="img" />
+                  <AvatarImage className="!object-cover"
+                   src={testimonial.avatar} alt={testimonial.name} />
+                  <img src={testimonial.avatar} className="!object-cover" alt="img" />
                   <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                 </Avatar>
                 <div>

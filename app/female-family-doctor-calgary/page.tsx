@@ -30,7 +30,7 @@ export default function FemaleFamilyDoctorPage() {
     },
     {
       name: "Dr. Madiha",
-      avatar: "/images/female-doctor-illustration-avatar.jpg",
+      avatar: "/images/female-family/slide-one.png",
       specialty: "Family Medicine",
       description: "Experienced in women's health, family practice, and children's care.",
       phone: "587-391-8188",
@@ -38,7 +38,7 @@ export default function FemaleFamilyDoctorPage() {
     },
     {
       name: "Dr. Ebele",
-      avatar: "/images/female-doctor-illustration-avatar.jpg",
+      avatar: "/images/female-family/slide-one.png",
       specialty: "Family Medicine",
       description: "Dedicated to providing compassionate women's healthcare.",
       phone: "587-391-8188",
@@ -200,7 +200,7 @@ export default function FemaleFamilyDoctorPage() {
                   <iframe
                     width="100%"
                     height="500"
-                    src="https://www.youtube.com/embed/zeArmG81bAE?rel=0&modestbranding=1&showinfo=0"
+                    src="https://www.youtube.com/embed/IpTEkX4lRWQ?rel=0&modestbranding=1&showinfo=0"
                     title="YouTube Shorts Video"
                     frameborder="0"
                     allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

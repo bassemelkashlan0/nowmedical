@@ -17,7 +17,7 @@ export function Footer() {
               <div className="flex-1">
                 <h3 className="font-bold text-base sm:text-lg mb-3 sm:mb-4 text-[#303030]">About & Brand</h3>
                 <p className="text-sm sm:text-base text-[#303030] mb-2">Now Medical Clinic</p>
-                <p className="text-sm sm:text-base text-[#303030] mb-2 sm:mb-0">Open 7 Days • Until 11:00 PM<br/> Real Family Doctors | Walk-Ins Welcome</p>
+                <p className="text-sm sm:text-base text-[#303030] mb-2 sm:mb-0">Open 7 Days • Until 11:00 PM<br /> Real Family Doctors | Walk-Ins Welcome</p>
                 <div className="my-4">
                   <p className="text-sm sm:text-base text-[#303030] mb-2">Address</p>
                   <p className="text-sm sm:text-base text-[#303030]">2520 23 St NE #19, Calgary, AB T2E 8L2</p>
@@ -50,7 +50,7 @@ export function Footer() {
                 </div>
                 <div className="mt-4">
                   <p className="text-sm sm:text-base text-[#303030] mb-2">Hours</p>
-                  <p className="text-sm sm:text-base text-[#303030]">7:30 AM — 11:00 PM (Weekends &<br/> Holidays Included)</p>
+                  <p className="text-sm sm:text-base text-[#303030]">7:30 AM — 11:00 PM (Weekends &<br /> Holidays Included)</p>
                 </div>
               </div>
             </div>
@@ -157,19 +157,20 @@ export function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-end gap-3 sm:gap-4 mt-6 sm:mt-8 md:mt-10">
           <span className="text-sm sm:text-base text-[#303030]">follow us:</span>
           <div className="flex items-center gap-2 sm:gap-[10px]">
-            <a href="#" className="text-[#299470] hover:text-[#2D7B6F] transition-colors" aria-label="Pinterest">
-              <span className="sr-only">Pinterest</span>
-              <img src='/images/landing/map_footer.svg' alt="Pinterest" className="w-6 h-6 sm:w-auto sm:h-auto" />
-            </a>
-            <a href="#" className="text-[#299470] hover:text-[#2D7B6F] transition-colors" aria-label="Facebook">
+            <a href="https://www.facebook.com/nowmedical.ca" target="_blank" rel="noopener noreferrer" className="text-[#299470] hover:text-[#2D7B6F] transition-colors" aria-label="Facebook">
               <img src='/images/landing/fackbook_footer.svg' alt="Facebook" className="w-6 h-6 sm:w-auto sm:h-auto" />
             </a>
-            <a href="#" className="text-[#299470] hover:text-[#2D7B6F] transition-colors" aria-label="Instagram">
-              <img src='/images/landing/insta_footer.svg' alt="Instagram" className="w-6 h-6 sm:w-auto sm:h-auto" />
+            <a href="https://www.tiktok.com/@nowmedicalcalgary" target="_blank" rel="noopener noreferrer" className="text-[#299470] hover:text-[#2D7B6F] transition-colors" aria-label="TikTok">
+              <img src='/images/landing/tiktok_footer.svg' alt="TikTok" className="w-6 h-6 sm:w-auto sm:h-auto" />
             </a>
-            <a href="#" className="text-[#299470] hover:text-[#2D7B6F] transition-colors" aria-label="YouTube">
+             <a href="https://www.youtube.com/@NowMedicalClinic" target="_blank" rel="noopener noreferrer" className="text-[#299470] hover:text-[#2D7B6F] transition-colors" aria-label="YouTube">
               <img src='/images/landing/youtube_footer.svg' alt="YouTube" className="w-6 h-6 sm:w-auto sm:h-auto" />
             </a>
+            <a href="https://www.instagram.com/nowmedical.ca" target="_blank" rel="noopener noreferrer" className="text-[#299470] hover:text-[#2D7B6F] transition-colors" aria-label="Instagram">
+              <img src='/images/landing/insta_footer.svg' alt="Instagram" className="w-6 h-6 sm:w-auto sm:h-auto" />
+            </a>
+           
+
           </div>
         </div>
 

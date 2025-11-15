@@ -2,6 +2,21 @@
 
 import { useEffect, useState } from "react"
 
+// Extend Window interface for chatbot
+declare global {
+  interface Window {
+    VG_CONFIG?: {
+      ID: string
+      region: string
+      render: string
+      stylesheets?: string[]
+    }
+    VG?: {
+      open?: () => void
+    }
+  }
+}
+
 export function LiveStatusBanner() {
   const [currentTime, setCurrentTime] = useState(new Date())
   const [isActive, setIsActive] = useState(true)
@@ -42,6 +57,16 @@ export function LiveStatusBanner() {
     return () => clearInterval(timer)
   }, [])
 
+  // Note: Chatbot initialization is handled globally in app/layout.tsx
+  // This component only provides a button to open the chatbot
+
+  const handleLiveChatClick = () => {
+    // Trigger the chatbot to open
+    if (typeof window !== 'undefined' && window.VG?.open) {
+      window.VG.open()
+    }
+  }
+
   const formatTime = (date: Date) => {
     return date.toLocaleTimeString("en-US", {
       hour: "2-digit",
@@ -51,7 +76,7 @@ export function LiveStatusBanner() {
   }
 
   const formatDate = (date: Date) => {
-    return date.toLocaleDateString("en-US", {
+    return date.toLocaleDateString("en-GB", {
       day: "2-digit",
       month: "2-digit",
       year: "numeric",
@@ -105,6 +130,28 @@ export function LiveStatusBanner() {
                 {formatDate(currentTime)}
               </span>
             </div>
+            <button
+              onClick={handleLiveChatClick}
+              className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 bg-[#195A44] hover:bg-[#144636] text-white rounded-lg sm:rounded-xl font-medium text-xs sm:text-sm md:text-base transition-colors duration-200 shadow-sm hover:shadow-md"
+              aria-label="Open Live Chat"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                />
+              </svg>
+              <span className="hidden sm:inline">Live Chat</span>
+              <span className="sm:hidden">Chat</span>
+            </button>
           </div>
 
         </div>

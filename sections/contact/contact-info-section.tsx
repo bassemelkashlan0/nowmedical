@@ -15,7 +15,7 @@ interface ContactInfoSectionProps {
 export default function ContactInfoSection({
   address = "2520 23 St NE #19, Calgary, AB T2E 8L2",
   phone = "587-391-8188",
-  fax = "587-391-7254",
+  fax = "587-387-7254",
   email = "clinic@nowmedical.ca",
   hours = "7:30 AM - 11:00 PM (Everyday / 7 Days a Week, Weekends & Holidays Included)"
 }: ContactInfoSectionProps) {

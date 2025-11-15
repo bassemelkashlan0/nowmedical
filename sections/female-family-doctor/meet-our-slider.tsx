@@ -109,11 +109,11 @@ export default function MeetOurSlider({
                       {/* Doctor Details */}
                       <div className="text-center mb-6">
                         <p className="text-4xl font-bold text-[#303030] mb-2">
-                          {doctor.specialty}
+                          {/* {doctor.specialty} */}
                         </p>
                         <p className="text-2xl font-medium text-[#303030]">
-                          {doctor.name}
-                          {doctor.language && ` (${doctor.language})`}
+                          {/* {doctor.name} */}
+                          {/* {doctor.language && ` (${doctor.language})`} */}
                         </p>
                       </div>
                     </div>

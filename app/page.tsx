@@ -145,65 +145,61 @@ export default function HomePage() {
 
   const femaleDoctors = [
     {
-      name: "Dr. Madiha",
+      name: "Dr. Madiha Badshah",
       avatar: "/images/landing/dr-madiha.png",
       specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
+      description: "Accepting New Patients",
     },
     {
-      name: "Dr. Vanessa",
+      name: "Dr. Vanessa Marezana",
       avatar: "/images/landing/dr-ebele.png",
       specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
+      description: "Accepting New Patients",
     },
     {
-      name: "Dr. Ebele",
+      name: "Dr. Ebele Madubuko",
       avatar: "/images/landing/dr-ebele.png",
       specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
+      description: "Accepting New Patients",
     },
     {
-      name: "Dr. Madiha",
+      name: "Dr. Prabhjot Bedi",
       avatar: "/images/landing/dr-madiha.png",
       specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
+      description: "Accepting New Patients",
     }
   ];
 
   const maleDoctors = [
     {
-      name: "Dr. Michael",
+      name: "Dr. Wael Saleh",
       avatar: "/images/landing/dr-michael.png",
       specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
-      language: "Spanish",
+      description: "Accepting New Patients",
     },
     {
-      name: "Dr. Michael",
+      name: "Dr. Rai Khan",
       avatar: "/images/landing/dr-michael.png",
       specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
-      language: "Spanish",
+      description: "Accepting New Patients",
     },
     {
-      name: "Dr. Michael",
+      name: "Dr. Tive Egbonoje",
       avatar: "/images/landing/dr-michael.png",
       specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
-      language: "Spanish",
+      description: "Accepting New Patients",
     },
     {
-      name: "Dr. Michael",
+      name: "Dr. Olasunkanmi Akinremi",
       avatar: "/images/landing/dr-michael.png",
       specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
-      language: "Spanish",
+      description: "Accepting New Patients",
     },
     {
-      name: "Dr. Michael",
+      name: "Dr. Michael Ghisel",
       avatar: "/images/landing/dr-michael.png",
       specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
+      description: "Accepting New Patients",
       language: "Spanish",
     }
   ];
@@ -277,7 +273,7 @@ export default function HomePage() {
                     <br />
                     <span className="text-[#299470]">Clinic in Calgary</span>
                     <br />
-                    <span className="text-foreground">Open 7 Days Until 11 PM</span>
+                    <span className="text-[#303030] ">Open 7 Days Until 11 PM</span>
                   </h1>
                   <p className=" text-muted-foreground mb-4 md:mb-[21px]">
                     <span className="font-bold text-[#303030] text-[36px]/10 ">Including weekends and holidays</span>
@@ -345,9 +341,9 @@ export default function HomePage() {
                         </span>
                       </span>
                     </div>
-                    <h3 className="font-bold text-[26px] mb-2 mt-8 text-[#303030] ">Walk - In Visits</h3>
+                    <h3 className="font-bold text-[26px] mb-2 mt-8 text-[#303030] ">Walk-In Visits</h3>
                     <p className="text-base font-normal  text-[#000000] ">
-                      No appoint ment needed. See real doctors 7<br /> days a week even on holidays.
+                      No appointment needed. See real doctors 7<br /> days a week even on holidays.
                     </p>
                   </div>
                   {/* Card 2: Family Doctors */}
@@ -466,14 +462,15 @@ export default function HomePage() {
               </p>
               {/* Video Player (with custom poster) */}
               <div className="w-full aspect-video bg-[#299470] rounded-lg shadow overflow-hidden flex items-center justify-center relative">
-                <video
-                  className="w-full h-full object-cover"
-                  poster="/images/landing/video-thumb.png"
-                  controls
-                >
-                  <source src="/videos/nowmedical-intro.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+              <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/IpTEkX4lRWQ?rel=0&modestbranding=1&showinfo=0"
+                    title="YouTube Shorts Video"
+                    frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                  </iframe>
               </div>
             </div>
           </section>
