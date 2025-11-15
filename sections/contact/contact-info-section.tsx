@@ -28,7 +28,7 @@ export default function ContactInfoSection({
 
         <div className="mb-6">
           <div className="grid md:grid-cols-2 gap-4 md:gap-4 mb-[42px] ">
-            <Card className="border-1 border-[#83C1AC] rounded-[6px] p-0 ">
+            <Card className="border-1 bg-white border-[#83C1AC] rounded-[6px] p-0 ">
               <div className="p-4 flex items-start gap-6">
                 <div className="rounded-lg flex-shrink-0">
                   <Image
@@ -45,7 +45,7 @@ export default function ContactInfoSection({
               </div>
             </Card>
 
-            <Card className="border-1 border-[#83C1AC] rounded-[6px] p-0">
+            <Card className="border-1 bg-white border-[#83C1AC] rounded-[6px] p-0">
               <div className="p-4 flex items-start gap-6">
                 <div className="rounded-lg flex-shrink-0">
                   <Image
@@ -64,7 +64,7 @@ export default function ContactInfoSection({
           </div>
 
           <div className=" grid md:grid-cols-2 gap-4 md:gap-4 ">
-            <Card className="border-1 border-[#83C1AC] rounded-[6px] p-0">
+            <Card className="border-1 bg-white border-[#83C1AC] rounded-[6px] p-0">
               <div className="p-4 flex items-start gap-6">
                 <div className="rounded-lg flex-shrink-0">
                   <Image
@@ -81,7 +81,7 @@ export default function ContactInfoSection({
               </div>
             </Card>
 
-            <Card className="border-1 border-[#83C1AC] rounded-[6px] p-0">
+            <Card className="border-1 bg-white border-[#83C1AC] rounded-[6px] p-0">
               <div className="p-4 flex items-start gap-6">
                 <div className="rounded-lg flex-shrink-0">
                   <Image

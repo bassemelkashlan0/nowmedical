@@ -28,57 +28,62 @@ export const metadata: Metadata = {
 export default function FamilyDoctorsPage() {
   const femaleDoctors = [
     {
-      name: "Dr. Madiha",
-      avatar: "/images/family-doctor/dr-madiha.png",
+      name: "Dr. Madiha Badshah",
+      avatar: "/images/landing/dr-madiha.png",
       specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
-      phone: "587-391-8188",
-      specialtyClassName: "text-base font-normal",
-      nameClassName: "text-2xl",
-      descriptionClassName: "text-base text-foreground"
+      description: "Accepting New Patients",
     },
     {
-      name: "Dr. Vanessa",
-      avatar: "/images/family-doctor/dr-ebele.png",
+      name: "Dr. Vanessa Marezana",
+      avatar: "/images/landing/dr-ebele.png",
       specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
-      phone: "587-391-8188",
-      specialtyClassName: "text-base font-normal",
-      nameClassName: "text-2xl",
-      descriptionClassName: "text-base text-foreground"
+      description: "Accepting New Patients",
     },
     {
-      name: "Dr. Ebele",
-      avatar: "/images/family-doctor/dr-ebele.png",
+      name: "Dr. Ebele Madubuko",
+      avatar: "/images/landing/dr-ebele.png",
       specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
-      phone: "587-391-8188",
-      specialtyClassName: "text-base font-normal",
-      nameClassName: "text-2xl",
-      descriptionClassName: "text-base text-foreground"
+      description: "Accepting New Patients",
+    },
+    {
+      name: "Dr. Prabhjot Bedi",
+      avatar: "/images/landing/dr-madiha.png",
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
     }
   ];
 
   const maleDoctors = [
     {
-      name: "Dr. Michael",
-      avatar: "/images/family-doctor/dr-michael.png",
+      name: "Dr. Wael Saleh",
+      avatar: "/images/landing/dr-michael.png",
       specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
-      phone: "587-391-8188",
-      specialtyClassName: "text-base font-normal",
-      nameClassName: "text-2xl",
-      descriptionClassName: "text-base text-foreground"
+      description: "Accepting New Patients",
     },
     {
-      name: "Dr. Bedi",
-      avatar: "/images/family-doctor/dr-michael.png",
+      name: "Dr. Rai Khan",
+      avatar: "/images/landing/dr-michael.png",
       specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
-      phone: "587-391-8188",
-      specialtyClassName: "text-base font-normal",
-      nameClassName: "text-2xl",
-      descriptionClassName: "text-base text-foreground"
+      description: "Accepting New Patients",
+    },
+    {
+      name: "Dr. Tive Egbonoje",
+      avatar: "/images/landing/dr-michael.png",
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
+    },
+    {
+      name: "Dr. Olasunkanmi Akinremi",
+      avatar: "/images/landing/dr-michael.png",
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
+    },
+    {
+      name: "Dr. Michael Ghisel",
+      avatar: "/images/landing/dr-michael.png",
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
+      language: "Spanish",
     }
   ];
 
