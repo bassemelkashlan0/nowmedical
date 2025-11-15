@@ -64,7 +64,7 @@ export default function TestimonialsSection({
 
         <div className="grid  sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mb-6 lg:px-5 ">
           {displayedTestimonials.map((testimonial, index) => (
-            <Card key={index} className="p-6 justify-between h-full border border-[#4DA688]">
+            <Card key={index} className="bg-white p-6 justify-between h-full border border-[#4DA688]">
               <p className="text-[#303030] mb-6">{testimonial.text}</p>
               <div className="flex  items-center gap-3">
                 <Avatar className="h-[51px] w-[51px] ">

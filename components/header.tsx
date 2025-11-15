@@ -29,76 +29,76 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+        <nav className="hidden text-[#242121] lg:flex items-center gap-1 xl:gap-2">
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
               <button className="flex items-center gap-1 text-sm xl:text-base text-[#242121] font-normal transition-colors hover:text-[#299470] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#299470] rounded-sm px-2 xl:px-3 py-2">
                 Walk-In Clinic <ChevronDown className="h-3 w-3 xl:h-4 xl:w-4" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="start" className="min-w-[240px]">
+            <DropdownMenuContent align="start" className="min-w-[240px] text-[#242121] bg-white border-0">
               <DropdownMenuItem asChild>
-                <Link href="/walk-in-clinic-calgary" className={pathname === '/walk-in-clinic-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                <Link href="/walk-in-clinic-calgary" className={pathname === '/walk-in-clinic-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                   Walk-In Clinic Calgary
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/urgent-care-calgary" className={pathname === '/urgent-care-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                <Link href="/urgent-care-calgary" className={pathname === '/urgent-care-calgary' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                   Urgent Care Calgary
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/late-night-clinic" className={pathname === '/late-night-clinic' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                <Link href="/late-night-clinic" className={pathname === '/late-night-clinic' ? 'bg-[#299470]/10 hover:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ' text-[#242121] hover:bg-[#f5f5f5]/10 foces:bg-[#f5f5f5]/10'}>
                   Late-Night Clinic
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/24-hour-walk-in-clinic-calgary" className={pathname === '/24-hour-walk-in-clinic-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                <Link href="/24-hour-walk-in-clinic-calgary" className={pathname === '/24-hour-walk-in-clinic-calgary' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                   24-Hour / Extended Hours
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/walk-in-clinic-weekends" className={pathname === '/walk-in-clinic-weekends' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                <Link href="/walk-in-clinic-weekends" className={pathname === '/walk-in-clinic-weekends' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                   Weekend & Holiday Clinic
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuSub>
                 <DropdownMenuSubTrigger>
                   Near Major Hospitals
-                </DropdownMenuSubTrigger>
-                <DropdownMenuSubContent className="min-w-[280px]">
+                </DropdownMenuSubTrigger> 
+                <DropdownMenuSubContent className="min-w-[280px] text-[#242121] bg-white border-0">
                   <DropdownMenuItem asChild>
-                    <Link href="/hospital-peter-lougheed" className={pathname === '/walk-in-clinic-near-peter-lougheed-hospital' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                    <Link href="/hospital-peter-lougheed" className={pathname === '/walk-in-clinic-near-peter-lougheed-hospital' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                       Near Peter Lougheed Hospital
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/walk-in-clinic-near-foothills-hospital" className={pathname === '/walk-in-clinic-near-foothills-hospital' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                    <Link href="/walk-in-clinic-near-foothills-hospital" className={pathname === '/walk-in-clinic-near-foothills-hospital' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                       Near Foothills Hospital
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/walk-in-clinic-near-rockyview-hospital" className={pathname === '/walk-in-clinic-near-rockyview-hospital' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                    <Link href="/walk-in-clinic-near-rockyview-hospital" className={pathname === '/walk-in-clinic-near-rockyview-hospital' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                       Near Rockyview Hospital
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/walk-in-clinic-near-alberta-childrens-hospital" className={pathname === '/walk-in-clinic-near-alberta-childrens-hospital' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                    <Link href="/walk-in-clinic-near-alberta-childrens-hospital" className={pathname === '/walk-in-clinic-near-alberta-childrens-hospital' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                       Near Alberta Children's Hospital
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/walk-in-clinic-near-south-health-campus" className={pathname === '/walk-in-clinic-near-south-health-campus' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                    <Link href="/walk-in-clinic-near-south-health-campus" className={pathname === '/walk-in-clinic-near-south-health-campus' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                       Near South Health Campus
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/walk-in-clinic-near-sheldon-Childrens-health-centre" className={pathname === '/walk-in-clinic-near-sheldon-Childrens-health-centre' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                    <Link href="/walk-in-clinic-near-sheldon-Childrens-health-centre" className={pathname === '/walk-in-clinic-near-sheldon-Childrens-health-centre' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                       Near Sheldon Children's Health Centre
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/hospital-wait-times" className={pathname === '/hospital-wait-times' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                    <Link href="/hospital-wait-times" className={pathname === '/hospital-wait-times' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                       Hospital Wait Times
                     </Link>
                   </DropdownMenuItem>
@@ -113,19 +113,19 @@ export function Header() {
                 Family Doctor <ChevronDown className="h-3 w-3 xl:h-4 xl:w-4" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="start" className="min-w-[260px]">
+            <DropdownMenuContent align="start" className="min-w-[260px] text-[#242121] bg-white border-0">
               <DropdownMenuItem asChild>
-                <Link href="/family-doctors-accepting-new-patients" className={pathname === '/family-doctors-accepting-new-patients' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                <Link href="/family-doctors-accepting-new-patients" className={pathname === '/family-doctors-accepting-new-patients' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                   Family Doctors Accepting New Patients
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/female-family-doctor-calgary" className={pathname === '/female-family-doctor-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                <Link href="/female-family-doctor-calgary" className={pathname === '/female-family-doctor-calgary' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                   Female Family Doctor Calgary
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/meet-our-doctors" className={pathname === '/meet-our-doctors' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                <Link href="/meet-our-doctors" className={pathname === '/meet-our-doctors' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                   Meet Our Doctors
                 </Link>
               </DropdownMenuItem>
@@ -138,25 +138,25 @@ export function Header() {
                 Services <ChevronDown className="h-3 w-3 xl:h-4 xl:w-4" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="start" className="min-w-[220px]">
+            <DropdownMenuContent align="start" className="min-w-[220px] text-[#242121] bg-white border-0">
               <DropdownMenuItem asChild>
-                <Link href="/all-services" className={pathname === '/all-services' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                <Link href="/all-services" className={pathname === '/all-services' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 hover:bg-[#f5f5f5]/10 hover:text-[#242121] text-[#242121] font-normal text-[#242121]' : ''}>
                   All Services
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/drivers-medical-exams-in-calgary" className={pathname === '/drivers-medical-exams-in-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                <Link href="/drivers-medical-exams-in-calgary" className={pathname === '/drivers-medical-exams-in-calgary' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 hover:bg-[#f5f5f5]/10 hover:text-[#242121] text-[#242121] font-normal text-[#242121] text-[#242121]' : ''}>
                   Driver's Medical Exams
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/all-services#flu-shots">Flu Shots & Vaccines</Link>
+                <Link href="/all-services#flu-shots" className={pathname === '/all-services#flu-shots' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 hover:bg-[#f5f5f5]/10 hover:text-[#242121] text-[#242121] font-normal text-[#242121] text-[#242121]' : ''}>Flu Shots & Vaccines</Link>
+                </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/all-services#prescriptions" className={pathname === '/all-services#prescriptions' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 hover:bg-[#f5f5f5]/10 hover:text-[#242121] text-[#242121] font-normal text-[#242121] text-[#242121]' : 'text-[#242121]'}>Prescription Renewals</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/all-services#prescriptions">Prescription Renewals</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/all-services#forms">Medical Forms / Sick Notes</Link>
+                <Link href="/all-services#forms" className={pathname === '/all-services#forms' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 hover:bg-[#f5f5f5]/10 hover:text-[#242121] text-[#242121] font-normal text-[#242121] text-[#242121]' : 'text-[#242121]'}>Medical Forms / Sick Notes</Link> 
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { Sora } from "next/font/google"
 import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
-import { Chatbot } from "@/components/chatbot"
+import { GlobalChatbot } from "@/components/global-chatbot"
 import "../styles/globals.css"
 
 const sora = Sora({ 
@@ -119,7 +119,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${fsJoey.variable} ${sora.variable} font-sans antialiased`}>
         {children}
-        <Chatbot />
+        <GlobalChatbot />
         <Analytics />
       </body>
     </html>

@@ -72,7 +72,7 @@ export default function DoctorsSection({
   }, [api]);
 
   const renderDoctorCard = (doctor: Doctor, index: number) => (
-    <Card key={index} className={`overflow-hidden p-0 gap-0 shadow-[0px_10px_14px_0px_#0000000D] mb-4 ${doctor.cardClassName || ''}`}>
+    <Card key={index} className={`overflow-hidden bg-white p-0 gap-0 shadow-[0px_10px_14px_0px_#0000000D] mb-4 ${doctor.cardClassName || ''}`}>
       <div className="aspect-square bg-[#EAF4F1] relative">
         <img
           src={doctor.avatar}
@@ -80,9 +80,9 @@ export default function DoctorsSection({
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="p-4">
+      <div className="p-4 bg-white">
         <p className={`text-m text-[#050505] font-medium mb-2 ${doctor.specialtyClassName || ''}`}>{doctor.specialty}</p>
-        <h3 className={`text-2xl font-medium mb-3 ${doctor.nameClassName || ''}`}>
+        <h3 className={`text-2xl text-[#303030] font-medium mb-3 ${doctor.nameClassName || ''}`}>
           {doctor.name}
           {doctor.language && (
             <span className="text-sm font-normal text-gray-500 ml-2">
@@ -90,7 +90,7 @@ export default function DoctorsSection({
             </span>
           )}
         </h3>
-        <p className={`${doctor.descriptionClassName || ''}`}>{doctor.description}</p>
+        <p className={`text-[#303030] ${doctor.descriptionClassName || ''}`}>{doctor.description}</p>
         {/* <Button className="w-full bg-[#4A9B8E] hover:bg-[#3d8375]">
           <Phone className="w-4 h-4 mr-2" />
           Call 587-391-8188
