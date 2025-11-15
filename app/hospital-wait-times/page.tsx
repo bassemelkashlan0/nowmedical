@@ -235,7 +235,7 @@ export default function HospitalWaitTimesPage() {
             <div className="container">
               <div className="grid gap-8 lg:grid-cols-[59%_40%] lg:gap-8 items-center  ">
                 <div>
-                  <h1 className=" font-bold tracking-tight lg:text-6xl mb-4">
+                  <h1 className=" font-bold text-[#303030] tracking-tight lg:text-6xl mb-4">
                     Tired of Long Hospital Wait Times <span className="text-[#299470] " >Visit Now Medical Clinic </span>
                     Open 7 Days Until 11 PM
                   </h1>
@@ -326,7 +326,7 @@ export default function HospitalWaitTimesPage() {
                   <h2 className="text-5xl text-[#303030] font-bold mb-4">
                     <span className="text-[#299470]">Open Late</span>, Open Weekends, Open on Holidays
                   </h2>
-                  <div className="space-y-4 text-foreground">
+                  <div className="space-y-4 text-[#303030]">
                     <p className="text-base">
                       We’re one of Calgary’s <b>only medical clinics open until 11 PM every day,</b> <br />
                       including Saturdays, Sundays, and holidays.

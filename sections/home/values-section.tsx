@@ -55,7 +55,7 @@ export default function ValuesSection({
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5 ">
           {values.map((value, index) => (
-            <Card key={index} className="p-4 text-start hover:shadow-lg hover:bg-[#EAF4F1] transition-shadow border-1 border-[#83C1AC] h-full flex flex-col">
+            <Card key={index} className="p-4 bg-white text-start hover:shadow-lg hover:bg-[#EAF4F1] transition-shadow border-1 border-[#83C1AC] h-full flex flex-col">
               <div className="inline-flex mb-6">
                 {value.icon ? (
                   typeof value.icon === 'string' ? (

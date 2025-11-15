@@ -159,18 +159,18 @@ export default function FemaleFamilyDoctorPage() {
             <div className="container">
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
                 <div>
-                  <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#299470] tracking-tight mb-4 lg:mb-[21px] ">
+                  <h1 className="text-4xl text-[#303030] lg:text-5xl xl:text-6xl font-bold text-[#299470] tracking-tight mb-4 lg:mb-[21px] ">
                     Female Family Doctor<br />
                     <span className="text-[#303030]">  in Calgary Accepting New  Patients Now</span>
                   </h1>
 
-                  <p className="text-base text-foreground mb-4 font-bold">
+                  <p className="text-base text-[#303030] mb-4 font-bold">
                     Looking for a compassionate, experienced female physician?
                   </p>
-                  <p className="text-base text-foreground mb-4">
+                  <p className="text-base text-[#303030] mb-4">
                     At <b>Now Medical Clinic,</b> our <b>female family doctors</b> provide personalized care for women, children, and families with same-day access and flexible hours.
                   </p>
-                  <p className="text-base text-foreground mb-4 font-bold">
+                  <p className="text-base text-[#303030] mb-4 font-bold">
                     Comfort, understanding, and expert care from doctors who truly listen.
                   </p>
 

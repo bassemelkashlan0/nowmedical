@@ -77,11 +77,11 @@ export default function SouthHealthCampusPage() {
             <div className="container">
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
-                  <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4">
+                  <h1 className="text-4xl text-[#303030] lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4">
                     Walk-In Clinic Near <br /><span className="text-[#299470]">South Health Campus</span> <br />Open Late Every Day
                   </h1>
 
-                  <p className="text-base  text-foreground mb-4">
+                  <p className="text-base text-[#303030] mb-4">
                     If you're south Calgary and don't need the emergency department, visit <b>Now Medical Clinic</b> for fast, emergency care from real doctors. We're open <b>7 days a week until 11 PM</b>, serving patients city-wide.</p>
 
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">

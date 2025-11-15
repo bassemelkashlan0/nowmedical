@@ -184,7 +184,7 @@ export default function OurServicesPage() {
                                     <span className="text-[#303030]">Walk-In & Family Doctors
                                         in Calgary</span>
                                 </h1>
-                                <p className="text-base text-muted-foreground mb-1">
+                                <p className="text-base text-[#303030] mb-1">
                                     From everyday illnesses to long-term family care, our doctors provide <b>comprehensive, compassionate medical services</b> open <b>7 days a week until 11 PM,</b> including <b>weekends and holidays.</b>
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 pt-12">

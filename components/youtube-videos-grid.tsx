@@ -160,7 +160,7 @@ export function YouTubeVideosGrid({
           {displayedVideos.map((video) => (
             <Card
               key={video.id}
-              className="p-0 overflow-hidden rounded hover:shadow-lg transition-shadow border-1 border-[#83C1AC] hover:bg-[#EAF4F1] cursor-pointer"
+              className="bg-white p-0 overflow-hidden rounded hover:shadow-lg transition-shadow border-1 border-[#83C1AC] hover:bg-[#EAF4F1] cursor-pointer"
               onClick={() => handleVideoClick(video.videoUrl)}
             >
               <CardContent className="p-0">

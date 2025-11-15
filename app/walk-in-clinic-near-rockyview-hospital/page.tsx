@@ -81,13 +81,13 @@ export default function RockyviewHospitalPage() {
             <div className="container">
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12  items-center  ">
                 <div>
-                  <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4">
+                  <h1 className="text-4xl text-[#303030] lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4">
                     Walk-In Clinic Near <br /><span className="text-[#299470]">Rockyview Hospital</span> <br />Open 7 Days Until 11 PM
                   </h1>
 
-                  <p className="text-base  text-foreground mb-4">
+                  <p className="text-base text-[#303030] mb-4">
                     Need a doctor near <b>Rockyview General Hospital ?</b>  </p>
-                  <p className="text-base  text-foreground mb-4">Walk in to <b>Now Medical Clinic</b> with real family doctors open <b>7 days a week until 11 PM,</b> including <b>weekends and holidays.</b></p>
+                  <p className="text-base text-[#303030] mb-4">Walk in to <b>Now Medical Clinic</b> with real family doctors open <b>7 days a week until 11 PM,</b> including <b>weekends and holidays.</b></p>
 
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
                     <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>

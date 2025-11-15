@@ -77,14 +77,14 @@ export default function SheldonChildrensHealthCentrePage() {
             <div className="container">
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
-                  <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4">
+                  <h1 className="text-4xl text-[#303030] lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4">
                     Walk-In Clinic Near <br /><span className="text-[#299470]">Sheldon Children's Health Centre</span> <br />Open 7 Days Until 11 PM
                   </h1>
 
-                  <p className="text-base  text-foreground mb-4">
+                  <p className="text-base text-[#303030] mb-4">
                     Need medical care near <b>Sheldon Children's Health Centre?</b> Walk in and see a real family doctor today <strong>No Appointment needed.</strong>
                   </p>
-                  <p className="text-base  text-foreground mb-4">
+                  <p className="text-base text-[#303030] mb-4">
                     Located just minutes from downtown Calgary, <b>Now Medical Clinic</b> offers fast, convenient walk-in care and family doctor services. Skip the long hospital wait times and see a doctor quickly.
                   </p>
                   <div className="flex flex-wrap flex-row pt-9  gap-4">

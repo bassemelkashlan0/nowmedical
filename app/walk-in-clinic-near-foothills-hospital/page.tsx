@@ -78,11 +78,11 @@ export default function FoothillsHospitalPage() {
             <div className="container">
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
-                  <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4">
+                  <h1 className="text-4xl text-[#303030] lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4">
                     Walk-In Clinic Near <br /><span className="text-[#299470]">Foothills Medical Centre</span> <br />Open 7 Days Until 11 PM
                   </h1>
 
-                  <p className="text-base  text-foreground mb-4">
+                  <p className="text-base text-[#303030] mb-4">
                     Need medical care and want to skip long ER waits? Walk in and see a real family doctor today <strong>No Appointment needed.</strong>
                   </p>
                   <div className="flex flex-wrap flex-row pt-9  gap-4">

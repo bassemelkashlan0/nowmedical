@@ -92,7 +92,7 @@ export default function ReviewsPage() {
         {/* Hero Section */}
         <section className="bg-[#F1F9F4] py-10 lg:py-[54px]">
           <div className="container">
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold">
+              <h1 className="text-4xl text-[#303030] lg:text-5xl xl:text-6xl font-bold">
                 Over <span className="text-[#299470]">Reviews</span>
               </h1>
           </div>

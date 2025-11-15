@@ -169,7 +169,7 @@ export default function FamilyDoctorsPage() {
           <WalkInHeroSection
             title={
               <>
-                <span className="text-foreground">Family Doctors</span>
+                <span className="text-[#303030]">Family Doctors</span>
                 <br />
                 <span className="text-[#299470]">in Calgary Accepting New Patients Now</span>
               </>

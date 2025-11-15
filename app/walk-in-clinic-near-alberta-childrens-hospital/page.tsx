@@ -77,11 +77,11 @@ export default function AlbertaChildrensHospitalPage() {
             <div className="container">
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
-                  <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4">
+                  <h1 className="text-4xl text-[#303030] lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4">
                     Walk-In Clinic Near <br /><span className="text-[#299470]">Alberta Children's Hospital</span> <br />Open 7 Days a Week
                   </h1>
 
-                  <p className="text-base  text-foreground mb-4">
+                  <p className="text-base text-[#303030] mb-4">
                     Visiting or living near <b>Alberta Children's Hospital</b> and need quick, medical care? Our family doctors at <b>Now Medical Clinic</b> provide gentle, professional care for <b>children and families</b>, open until <b>11 PM daily</b>.</p>
 
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">

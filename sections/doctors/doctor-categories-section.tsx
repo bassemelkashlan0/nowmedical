@@ -59,7 +59,7 @@ export default function DoctorCategoriesSection({
   }, [maleApi]);
 
   const renderDoctorCard = (doctor: Doctor, index: number) => (
-    <Card key={index} className="overflow-hidden p-0 gap-0 shadow-[0px_10px_14px_0px_#0000000D]">
+    <Card key={index} className="bg-white overflow-hidden p-0 gap-0 shadow-[0px_10px_14px_0px_#0000000D]">
       <div className="aspect-square bg-[#EAF4F1] relative rounded-t-lg overflow-hidden">
         <img
           src={doctor.avatar}

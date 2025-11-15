@@ -68,12 +68,12 @@ export default function TwentyFourHourClinicPage() {
             <div className="container">
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
-                  <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4 lg:mb-[21px] ">
+                  <h1 className="text-4xl text-[#303030] lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4 lg:mb-[21px] ">
                     <span className="text-[#299470] " >24-Hour Walk-In Clinic Calgary </span>
                     (Open Until 11 PM Daily)
                   </h1>
 
-                  <p className="text-base  text-foreground mb-4">
+                  <p className="text-base mb-4 text-[#303030]">
                     Looking for a <b>24-hour walk-in clinic in Calgary?</b><br />Now Medical Clinic is one of <b>Calgary's latest-open medical clinics — 7:30 AM to 11 PM, every day including weekends and holidays.</b><br /> We're your trusted <b>after-hours alternative to 24-hour clinics,</b> offering <b>real doctors, shorter waits, and free parking.</b>
                   </p>
 
