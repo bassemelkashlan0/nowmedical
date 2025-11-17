@@ -48,10 +48,10 @@ export function GlobalChatbot() {
       const setButtonDimensions = () => {
         const chatbotButton = document.querySelector('#vg_chat_toggle') as HTMLButtonElement
         if (chatbotButton) {
-          // Set width and height to 70px on the button
-          if (chatbotButton.style.width !== '70px' || chatbotButton.style.height !== '70px') {
-            chatbotButton.style.width = '70px'
-            chatbotButton.style.height = '70px'
+          // Set width and height to 80px on the button
+          if (chatbotButton.style.width !== '80px' || chatbotButton.style.height !== '80px') {
+            chatbotButton.style.width = '80px'
+            chatbotButton.style.height = '80px'
           }
         }
       }
@@ -69,15 +69,18 @@ export function GlobalChatbot() {
           if (!isCustomImage) {
             chatbotImage.src = customImagePath
             chatbotImage.alt = 'Chat Widget Image'
-            // Set width and height to 70px
-            chatbotImage.style.width = '70px'
-            chatbotImage.style.height = '70px'
+            // Set width and height to 80px
+            chatbotImage.style.width = '80px'
+            chatbotImage.style.height = '80px'
+            // Set border-radius to 0
+            chatbotImage.style.borderRadius = '0'
             return true
           }
-          // Also ensure width and height are set even if image is already custom
-          if (chatbotImage.style.width !== '70px' || chatbotImage.style.height !== '70px') {
-            chatbotImage.style.width = '70px'
-            chatbotImage.style.height = '70px'
+          // Also ensure width, height, and border-radius are set even if image is already custom
+          if (chatbotImage.style.width !== '80px' || chatbotImage.style.height !== '80px' || chatbotImage.style.borderRadius !== '0') {
+            chatbotImage.style.width = '80px'
+            chatbotImage.style.height = '80px'
+            chatbotImage.style.borderRadius = '0'
           }
         }
         // Also set button dimensions
