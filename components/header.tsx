@@ -182,92 +182,92 @@ export function Header() {
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="lg:hidden">
-              <Button variant="ghost" size="icon" className="h-9 w-9 sm:h-10 sm:w-10">
-                <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
+              <Button variant="ghost" size="icon" className="h-12 w-12 sm:h-10 sm:w-10 text-[#242121]">
+                <img src="/icons/bars-menu.svg" alt="" className="w-10 h-10" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px] p-4 sm:p-6 flex flex-col overflow-hidden">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] p-4 sm:p-6 flex flex-col overflow-hidden bg-white">
               <nav className="flex flex-col gap-4 overflow-y-auto flex-1 pr-2 -mr-2">
                 <div className="border-b pb-2">
                   <p className="text-sm font-semibold text-muted-foreground mb-2">Walk-In Clinic</p>
-                  <Link href="/walk-in-clinic-calgary" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-calgary' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/walk-in-clinic-calgary" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic-calgary' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Walk-In Clinic Calgary
                   </Link>
-                  <Link href="/urgent-care-calgary" className={`block py-1 text-sm ${pathname === '/urgent-care-calgary' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/urgent-care-calgary" className={`block py-1 text-sm text-[#299470] ${pathname === '/urgent-care-calgary' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Urgent Care
                   </Link>
-                  <Link href="/late-night-clinic" className={`block py-1 text-sm ${pathname === '/late-night-clinic' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/late-night-clinic" className={`block py-1 text-sm text-[#299470] ${pathname === '/late-night-clinic' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Late-Night Clinic
                   </Link>
-                  <Link href="/24-hour-walk-in-clinic-calgary" className={`block py-1 text-sm ${pathname === '/24-hour-walk-in-clinic-calgary' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/24-hour-walk-in-clinic-calgary" className={`block py-1 text-sm text-[#299470] ${pathname === '/24-hour-walk-in-clinic-calgary' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     24-Hour / Extended Hours
                   </Link>
-                  <Link href="/walk-in-clinic-weekends" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-weekends' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/walk-in-clinic-weekends" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic-weekends' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Weekend Clinic
                   </Link>
                 </div>
                 <div className="border-b pb-2">
                   <p className="text-sm font-semibold text-muted-foreground mb-2">Near Major Hospitals</p>
-                  <Link href="/hospital-peter-lougheed" className={`block py-1 text-sm ${pathname === '/hospital-peter-lougheed' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/hospital-peter-lougheed" className={`block py-1 text-sm text-[#299470] ${pathname === '/hospital-peter-lougheed' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Near Peter Lougheed Hospital
                   </Link>
-                  <Link href="/walk-in-clinic-near-foothills-hospital" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-near-foothills-hospital' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/walk-in-clinic-near-foothills-hospital" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic-near-foothills-hospital' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Near Foothills Hospital
                   </Link>
-                  <Link href="/walk-in-clinic-near-rockyview-hospital" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-near-rockyview-hospital' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/walk-in-clinic-near-rockyview-hospital" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic-near-rockyview-hospital' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Near Rockyview Hospital
                   </Link>
-                  <Link href="/walk-in-clinic-near-alberta-childrens-hospital" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-near-alberta-childrens-hospital' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/walk-in-clinic-near-alberta-childrens-hospital" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic-near-alberta-childrens-hospital' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Near Alberta Children's Hospital
                   </Link>
-                  <Link href="/walk-in-clinic-near-south-health-campus" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-near-south-health-campus' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/walk-in-clinic-near-south-health-campus" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic-near-south-health-campus' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Near South Health Campus
                   </Link>
-                  <Link href="/walk-in-clinic-near-sheldon-Childrens-health-centre" className={`block py-1 text-sm ${pathname === '/walk-in-clinic-near-sheldon-Childrens-health-centre' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/walk-in-clinic-near-sheldon-Childrens-health-centre" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic-near-sheldon-Childrens-health-centre' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Near Sheldon Children's Health Centre
                   </Link>
-                  <Link href="/hospital-wait-times" className={`block py-1 text-sm ${pathname === '/hospital-wait-times' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/hospital-wait-times" className={`block py-1 text-sm text-[#299470] ${pathname === '/hospital-wait-times' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Hospital Wait Times
                   </Link>
                 </div>
                 <div className="border-b pb-2">
                   <p className="text-sm font-semibold text-muted-foreground mb-2">Family Doctor</p>
-                  <Link href="/family-doctors-accepting-new-patients" className={`block py-1 text-sm ${pathname === '/family-doctors-accepting-new-patients' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/family-doctors-accepting-new-patients" className={`block py-1 text-sm text-[#299470] ${pathname === '/family-doctors-accepting-new-patients' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Accepting New Patients
                   </Link>
-                  <Link href="/female-family-doctor-calgary" className={`block py-1 text-sm ${pathname === '/female-family-doctor-calgary' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/female-family-doctor-calgary" className={`block py-1 text-sm text-[#299470] ${pathname === '/female-family-doctor-calgary' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Female Family Doctor
                   </Link>
-                  <Link href="/meet-our-doctors" className={`block py-1 text-sm ${pathname === '/meet-our-doctors' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/meet-our-doctors" className={`block py-1 text-sm text-[#299470] ${pathname === '/meet-our-doctors' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Meet Our Doctors
                   </Link>
                 </div>
                 <div className="border-b pb-2">
                   <p className="text-sm font-semibold text-muted-foreground mb-2">Services</p>
-                  <Link href="/all-services" className={`block py-1 text-sm ${pathname === '/all-services' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/all-services" className={`block py-1 text-sm text-[#299470] ${pathname === '/all-services' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     All Services
                   </Link>
-                  <Link href="/drivers-medical-exams-in-calgary" className={`block py-1 text-sm ${pathname === '/drivers-medical-exams-in-calgary' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/drivers-medical-exams-in-calgary" className={`block py-1 text-sm text-[#299470] ${pathname === '/drivers-medical-exams-in-calgary' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Driver's Medical Exams
                   </Link>
-                  <Link href="/all-services#flu-shots" className={`block py-1 text-sm ${pathname === '/all-services#flu-shots' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/all-services#flu-shots" className={`block py-1 text-sm text-[#299470] ${pathname === '/all-services#flu-shots' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Flu Shots & Vaccines
                   </Link>
-                  <Link href="/all-services#prescriptions" className={`block py-1 text-sm ${pathname === '/all-services#prescriptions' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/all-services#prescriptions" className={`block py-1 text-sm text-[#299470] ${pathname === '/all-services#prescriptions' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Prescription Renewals
                   </Link>
-                  <Link href="/all-services#forms" className={`block py-1 text-sm ${pathname === '/all-services#forms' ? 'text-[#299470] font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/all-services#forms" className={`block py-1 text-sm text-[#299470] ${pathname === '/all-services#forms' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Medical Forms / Sick Notes
                   </Link>
                 </div>
-                <Link href="/best-walk-in-clinic-calgary" className={`text-sm font-medium ${pathname === '/best-walk-in-clinic-calgary' ? 'text-[#299470] font-bold' : ''}`} onClick={() => setIsOpen(false)}>
+                <Link href="/best-walk-in-clinic-calgary" className={`text-sm font-medium text-[#299470] ${pathname === '/best-walk-in-clinic-calgary' ? ' font-bold' : ''}`} onClick={() => setIsOpen(false)}>
                   Why Choose Us
                 </Link>
-                <Link href="/reviews" className={`text-sm font-medium ${pathname === '/reviews' ? 'text-[#299470] font-bold' : ''}`} onClick={() => setIsOpen(false)}>
+                <Link href="/reviews" className={`text-sm font-medium text-[#299470] ${pathname === '/reviews' ? ' font-bold' : ''}`} onClick={() => setIsOpen(false)}>
                   Reviews
                 </Link>
-                <Link href="/faq" className={`text-sm font-medium ${pathname === '/faq' ? 'text-[#299470] font-bold' : ''}`} onClick={() => setIsOpen(false)}>
+                <Link href="/faq" className={`text-sm font-medium text-[#299470] ${pathname === '/faq' ? ' font-bold' : ''}`} onClick={() => setIsOpen(false)}>
                   FAQ
                 </Link>
                 <Link href="/contact" className="block w-full mt-2" onClick={() => setIsOpen(false)}>
