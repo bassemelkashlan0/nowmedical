@@ -22,7 +22,7 @@ export function Header() {
   const pathname = usePathname()
 
   return (
-    <header className="sticky top-0 left-0 right-0 z-50 w-full border-b bg-[#EAF4F1] backdrop-blur supports-[backdrop-filter]:bg-[#EAF4F1]/95 shadow-sm" style={{ transform: 'translateZ(0)', willChange: 'transform' }}>
+    <header className="sticky top-0 left-0 right-0 z-50 w-full border-0 bg-[#EAF4F1] backdrop-blur supports-[backdrop-filter]:bg-[#EAF4F1]/95 shadow-sm" style={{ transform: 'translateZ(0)', willChange: 'transform' }}>
       <div className="container flex h-16 sm:h-20 md:h-[81px] items-center justify-between px-4 sm:px-6 relative">
         <Link href="/" className="flex items-center flex-shrink-0">
           <Logo className="w-[100px] sm:w-[120px] md:w-auto" />

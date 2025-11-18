@@ -76,6 +76,10 @@ export const metadata: Metadata = {
     default: "Walk-In Clinic Calgary | Open 7 Days Until 11 PM | Now Medical Clinic",
     template: "%s | Now Medical Clinic"
   },
+  icons: {
+    icon: "/fevicon.png",
+  },
+
   description: "Calgary's trusted walk-in clinic. Real doctors, open daily until 11 PM. Walk-ins welcome — no appointment needed.",
   keywords: ["walk-in clinic calgary", "family doctor calgary", "urgent care calgary", "clinic near me", "open late clinic", "weekend walk-in clinic"],
   authors: [{ name: "Now Medical Clinic" }],
