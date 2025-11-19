@@ -14,6 +14,7 @@ declare global {
     VG?: {
       open?: () => void
     }
+    __VG_SCRIPT_LOADED?: boolean
   }
 }
 
@@ -64,13 +65,14 @@ export function LiveStatusBanner() {
 
     const checkChatbotReady = () => {
       // Check if VG is available
-      if (window.VG?.open) {
+      if (window.VG?.open || window.VG) {
         setChatbotReady(true)
         return true
       }
 
       // Check if chatbot button exists in DOM - try multiple selectors
       const selectors = [
+        '#vg_chat_toggle',
         '[data-vg-widget]',
         '[class*="vg-"]',
         '[id*="vg-"]',
@@ -79,14 +81,19 @@ export function LiveStatusBanner() {
         '[class*="chatbot-button"]',
         '[class*="vg-widget"]',
         'button[class*="vg"]',
-        '[data-vg]'
+        '[data-vg]',
+        '.vg-open-btn--img'
       ]
 
       for (const selector of selectors) {
-        const elements = document.querySelectorAll(selector)
-        if (elements.length > 0) {
-          setChatbotReady(true)
-          return true
+        try {
+          const elements = document.querySelectorAll(selector)
+          if (elements.length > 0) {
+            setChatbotReady(true)
+            return true
+          }
+        } catch (e) {
+          // Ignore selector errors
         }
       }
 
@@ -109,10 +116,11 @@ export function LiveStatusBanner() {
     observer.observe(document.body, {
       childList: true,
       subtree: true,
-      attributes: false,
+      attributes: true,
+      attributeFilter: ['id', 'class', 'src']
     })
 
-    // Poll for chatbot ready as backup
+    // Poll for chatbot ready as backup (increased duration)
     const interval = setInterval(() => {
       if (checkChatbotReady()) {
         clearInterval(interval)
@@ -120,28 +128,61 @@ export function LiveStatusBanner() {
       }
     }, 500)
 
-    // Listen for script load
-    const script = document.querySelector('script[src*="vg_bundle.js"]') as HTMLScriptElement | null
-    if (script && script.src) {
-      const handleScriptLoad = () => {
-        // Wait a bit for VG to initialize after script loads
+    // Listen for script load - handle both existing and new scripts
+    const setupScriptListener = () => {
+      const script = document.querySelector('script[src*="vg_bundle.js"]') as HTMLScriptElement | null
+      
+      if (script) {
+        // Check if script is already loaded
+        const isScriptLoaded = window.__VG_SCRIPT_LOADED || window.VG !== undefined
+        
+        if (isScriptLoaded) {
+          // Script already loaded, check for VG after a delay
+          setTimeout(() => {
+            checkChatbotReady()
+          }, 1000)
+          setTimeout(() => {
+            checkChatbotReady()
+          }, 3000)
+        } else {
+          // Script is loading, add event listener
+          const handleScriptLoad = () => {
+            // Wait a bit for VG to initialize after script loads
+            setTimeout(() => {
+              checkChatbotReady()
+            }, 1000)
+            setTimeout(() => {
+              checkChatbotReady()
+            }, 3000)
+            script?.removeEventListener('load', handleScriptLoad)
+          }
+          script.addEventListener('load', handleScriptLoad)
+          
+          // Also check if script loads before event fires
+          setTimeout(() => {
+            if (window.VG || window.__VG_SCRIPT_LOADED) {
+              checkChatbotReady()
+            }
+          }, 2000)
+        }
+      } else {
+        // Script not found yet, check periodically
+        const scriptCheckInterval = setInterval(() => {
+          const foundScript = document.querySelector('script[src*="vg_bundle.js"]') as HTMLScriptElement | null
+          if (foundScript) {
+            clearInterval(scriptCheckInterval)
+            setupScriptListener()
+          }
+        }, 500)
+
+        // Stop checking after 30 seconds
         setTimeout(() => {
-          checkChatbotReady()
-        }, 1000)
-        script?.removeEventListener('load', handleScriptLoad)
+          clearInterval(scriptCheckInterval)
+        }, 30000)
       }
-
-      // Always add event listener (it's safe even if already loaded)
-      script.addEventListener('load', handleScriptLoad)
-
-      // Also try after delays in case load event doesn't fire or script is already loaded
-      setTimeout(() => {
-        checkChatbotReady()
-      }, 1000)
-      setTimeout(() => {
-        checkChatbotReady()
-      }, 3000)
     }
+
+    setupScriptListener()
 
     // Also listen for custom events that might be fired by the chatbot
     const handleVGReady = () => {
@@ -152,11 +193,11 @@ export function LiveStatusBanner() {
     window.addEventListener('VGReady', handleVGReady)
     window.addEventListener('vg:ready', handleVGReady)
 
-    // Cleanup after 30 seconds
+    // Extended cleanup timeout (60 seconds instead of 30)
     const timeout = setTimeout(() => {
       observer.disconnect()
       clearInterval(interval)
-    }, 30000)
+    }, 60000)
 
     return () => {
       clearInterval(interval)
@@ -396,7 +437,7 @@ export function LiveStatusBanner() {
                 Walk-in Live Status
               </span>
               <span className="block text-xs sm:text-sm md:text-base text-[#050505]">
-                Walk-in is {isActive ? <span className="font-bold text-xl  text-[#195A44] ml-1 underline">OPEN NOW</span> : <span className="font-bold text-xl  text-red-600 ml-1 underline">CLOSED</span>}
+                 {isActive ? <span className="font-bold text-xl  text-[#195A44] ml-1 underline">OPEN NOW</span> : <span className="font-bold text-xl  text-red-600 ml-1 underline">CLOSED</span>}
               </span>
             </div>
           </div>  

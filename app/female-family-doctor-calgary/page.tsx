@@ -6,7 +6,6 @@ import Link from "next/link";
 import { StructuredData, generatePhysicianSchema, generateFAQSchema, generateLocalBusinessSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
 import { LiveStatusBanner } from "@/components/live-status-banner";
-import PatientsVideoSection from "@/sections/global/atients-video";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
 import why_us_img from "@/public/images/female-family/why-us.png"
 import { YouTubeVideosGrid } from "@/components/youtube-videos-grid";
@@ -43,24 +42,6 @@ export default function FemaleFamilyDoctorPage() {
       description: "Dedicated to providing compassionate women's healthcare.",
       phone: "587-391-8188",
       language: "English"
-    }
-  ];
-
-  const videoTestimonials = [
-    {
-      name: "Bessie Cooper",
-      image: "/images/patients-say/bessie-cooper.png",
-      quote: "Finally a clinic open late that actually cares about patients."
-    },
-    {
-      name: "Jenny Wilson",
-      image: "/images/patients-say/jenny-wilson.png",
-      quote: "Friendly staff, short wait times, and doctors who listen."
-    },
-    {
-      name: "Cameron Williamson",
-      image: "/images/patients-say/cameron-williamson.png",
-      quote: "This clinic makes it easy for families — especially on weekends and holidays."
     }
   ];
 
@@ -159,7 +140,7 @@ export default function FemaleFamilyDoctorPage() {
             <div className="container">
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
                 <div>
-                  <h1 className="text-4xl text-[#303030] lg:text-5xl xl:text-6xl font-bold text-[#299470] tracking-tight mb-4 lg:mb-[21px] ">
+                  <h1 className="text-4xl text-[#299470] lg:text-5xl xl:text-6xl font-bold text-[#299470] tracking-tight mb-4 lg:mb-[21px] ">
                     Female Family Doctor<br />
                     <span className="text-[#303030]">  in Calgary Accepting New  Patients Now</span>
                   </h1>
