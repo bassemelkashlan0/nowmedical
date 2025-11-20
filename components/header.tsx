@@ -38,7 +38,7 @@ export function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="min-w-[240px] text-[#242121] bg-white border-0">
               <DropdownMenuItem asChild>
-                <Link href="/walk-in-clinic-calgary" className={pathname === '/walk-in-clinic-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal text-[#242121]' : ''}>
+                <Link href="/walk-in-clinic" className={pathname === '/walk-in-clinic' ? 'bg-[#299470]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                   Walk-In Clinic Calgary
                 </Link>
               </DropdownMenuItem>
@@ -145,7 +145,7 @@ export function Header() {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/drivers-medical-exams-in-calgary" className={pathname === '/drivers-medical-exams-in-calgary' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 hover:bg-[#f5f5f5]/10 hover:text-[#242121] text-[#242121] font-normal text-[#242121] text-[#242121]' : ''}>
+                <Link href="/driver-medical-exam" className={pathname === '/driver-medical-exam' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 hover:bg-[#f5f5f5]/10 hover:text-[#242121] text-[#242121] font-normal text-[#242121] text-[#242121]' : ''}>
                   Driver's Medical Exams
                 </Link>
               </DropdownMenuItem>
