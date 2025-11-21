@@ -27,6 +27,85 @@ export function GlobalChatbot() {
   useEffect(() => {
     if (typeof window === 'undefined') return
 
+    // Aggressively prevent chatbot from adding dark class to HTML and body elements
+    const preventDarkMode = () => {
+      const htmlElement = document.documentElement
+      const bodyElement = document.body
+      
+      // Remove dark class from HTML element
+      if (htmlElement.classList.contains('dark')) {
+        htmlElement.classList.remove('dark')
+      }
+      
+      // Remove dark class from body element (in case it's added there)
+      if (bodyElement && bodyElement.classList.contains('dark')) {
+        bodyElement.classList.remove('dark')
+      }
+    }
+
+    // Override classList.add to prevent adding 'dark' class
+    const originalHtmlAdd = document.documentElement.classList.add.bind(document.documentElement.classList)
+    const originalBodyAdd = document.body.classList.add.bind(document.body.classList)
+    
+    document.documentElement.classList.add = function(...tokens: string[]) {
+      const filtered = tokens.filter(token => token !== 'dark')
+      if (filtered.length > 0) {
+        return originalHtmlAdd(...filtered)
+      }
+      return undefined
+    }
+    
+    document.body.classList.add = function(...tokens: string[]) {
+      const filtered = tokens.filter(token => token !== 'dark')
+      if (filtered.length > 0) {
+        return originalBodyAdd(...filtered)
+      }
+      return undefined
+    }
+
+    // Monitor for dark class being added to HTML and body elements
+    const htmlObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          preventDarkMode()
+        }
+      })
+    })
+
+    const bodyObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          preventDarkMode()
+        }
+      })
+    })
+
+    // Start observing HTML and body elements for class changes
+    htmlObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    })
+    
+    bodyObserver.observe(document.body, {
+      attributes: true,
+      attributeFilter: ['class']
+    })
+
+    // Check immediately and very frequently (every 50ms for first 5 seconds, then every 200ms)
+    preventDarkMode()
+    let checkCount = 0
+    let slowCheckInterval: NodeJS.Timeout | null = null
+    const darkModeCheckInterval = setInterval(() => {
+      preventDarkMode()
+      checkCount++
+      // After 5 seconds (100 checks at 50ms), reduce frequency
+      if (checkCount > 100) {
+        clearInterval(darkModeCheckInterval)
+        // Continue checking but less frequently
+        slowCheckInterval = setInterval(preventDarkMode, 200)
+      }
+    }, 50)
+
     // Set chatbot configuration (do this first, before script loads)
     window.VG_CONFIG = {
       ID: "sQFliDe4sWM8z8bf", // YOUR AGENT ID
@@ -333,13 +412,22 @@ export function GlobalChatbot() {
     // Cleanup
     return () => {
       observer.disconnect()
+      htmlObserver.disconnect()
+      bodyObserver.disconnect()
       imageObservers.forEach(imgObserver => imgObserver.disconnect())
       buttonObservers.forEach(btnObserver => btnObserver.disconnect())
       clearInterval(intervalId)
+      clearInterval(darkModeCheckInterval)
+      if (slowCheckInterval) {
+        clearInterval(slowCheckInterval)
+      }
       delayedChecks.forEach(timeout => clearTimeout(timeout))
       if (scriptLoadTimeoutRef.current) {
         clearTimeout(scriptLoadTimeoutRef.current)
       }
+      // Restore original classList.add methods
+      document.documentElement.classList.add = originalHtmlAdd
+      document.body.classList.add = originalBodyAdd
     }
   }, [])
 

@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
+@custom-variant dark (&:is(.dark *));
+
 /* @custom-variant dark (&:is(.dark *)); */
 
 :root {
@@ -132,7 +134,6 @@
     max-width: 1320px;
   }
 }
-
 
 @media only screen and (min-width: 1440px) {
   .container {
