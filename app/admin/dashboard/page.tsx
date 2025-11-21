@@ -114,7 +114,7 @@ export default function AdminDashboardPage() {
           </Button>
         </div>
 
-        <Card>
+        <Card className="bg-white">
           <CardHeader>
             <CardTitle>Walk-in Live Status</CardTitle>
             <CardDescription>

@@ -110,7 +110,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'ADD-YOUR-GOOGLE-SEARCH-CONSOLE-CODE-HERE',
+    google: "AidnHmuErYZJwn9izLxLIYD-flhpMD63ls7Qyt_KrpY",
   },
 }
 
@@ -121,7 +121,104 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-site-verification" content="AidnHmuErYZJwn9izLxLIYD-flhpMD63ls7Qyt_KrpY" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5Q2BMHLR');`,
+          }}
+        />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11186441600" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-11186441600');`,
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `gtag('config', 'AW-11186441600/-XO-CJuj7eIZEICbjtYp', {
+'phone_conversion_number': '587-391-8188'
+});`,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Now Medical Clinic",
+              url: "https://nowmedical.ca/",
+              logo: "https://nowmedical.ca/fevicon.png",
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+1-587-391-8188",
+                contactType: "customer service",
+                areaServed: "CA",
+                availableLanguage: "en",
+              },
+              sameAs: "https://nowmedical.ca/",
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Now Medical Clinic",
+              image: "https://nowmedical.ca/img/logo.svg",
+              url: "https://nowmedical.ca/",
+              telephone: "+1-587-391-8188",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "2520 23 ST NE #19",
+                addressLocality: "Calgary",
+                addressRegion: "AB",
+                postalCode: "T2E 8L2",
+                addressCountry: "CA",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 51.067117,
+                longitude: -114.116798,
+              },
+              openingHoursSpecification: {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday",
+                ],
+                opens: "07:30",
+                closes: "23:00",
+              },
+              sameAs: "https://nowmedical.ca/",
+            }),
+          }}
+        />
+      </head>
       <body className={`${fsJoey.variable} ${sora.variable} font-sans antialiased`}>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5Q2BMHLR"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         {children}
         <GlobalChatbot />
         <Analytics />
