@@ -122,7 +122,7 @@ export default function ContactInfoSection({
           </Button>
 
           <Button variant="outline" className="md:whitespace-nowrap md:h-[49px] !whitespace-normal !h-auto min-h-[49px] w-full md:w-auto border-1 border-[#299470] text-[#299470] hover:bg-[#2D7B6F]/10 p-[14px] px-6 text-lg font-bold">
-            <Link className='flex md:flex-nowrap md:whitespace-nowrap flex-wrap !whitespace-normal items-center justify-center text-center w-full md:gap-0 gap-2 md:py-0 py-1' href='/walk-in-clinic-calgary' >
+            <Link className='flex md:flex-nowrap md:whitespace-nowrap flex-wrap !whitespace-normal items-center justify-center text-center w-full md:gap-0 gap-2 md:py-0 py-1' href='/walk-in-clinic' >
               <Image
                 src="/icons/btn-walking-outline-icon.svg"
                 alt="Walk-in"

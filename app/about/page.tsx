@@ -162,7 +162,7 @@ export default function AboutPage() {
                       className="md:whitespace-nowrap md:h-[49px] !whitespace-normal !h-auto min-h-[49px] w-full md:w-auto border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent p-[14px] px-4 text-lg font-bold"
                       asChild
                     >
-                      <Link href="/walk-in-clinic-calgary" className="flex md:flex-nowrap md:whitespace-nowrap flex-wrap !whitespace-normal items-center justify-center text-center w-full md:gap-0 gap-2 md:py-0 py-1">
+                      <Link href="/walk-in-clinic" className="flex md:flex-nowrap md:whitespace-nowrap flex-wrap !whitespace-normal items-center justify-center text-center w-full md:gap-0 gap-2 md:py-0 py-1">
                         <span className="md:whitespace-nowrap break-words">Walk In Anytime No Appointment Needed</span>
                         <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5 flex-shrink-0" />
                       </Link>

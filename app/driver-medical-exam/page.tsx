@@ -68,7 +68,7 @@ export default function DriversMedicalExamsInCalgaryScreen() {
                                         className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold"
                                         asChild
                                     >
-                                        <Link href="/walk-in-clinic-calgary" className="flex items-center gap-2">
+                                        <Link href="/walk-in-clinic" className="flex items-center gap-2">
                                             <img src="/icons/btn-walking-outline-icon.svg" alt="Walk In" className="w-5 h-5" />
                                             Walk In Now
                                         </Link>
@@ -103,7 +103,7 @@ export default function DriversMedicalExamsInCalgaryScreen() {
                     btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
                     btn_2_text="Walk In for Driver's Medical"
                     btn_2_icon="/icons/btn-walking-outline-icon.svg"
-                    btn_2_link="/walk-in-clinic-calgary"
+                    btn_2_link="/walk-in-clinic"
                     image={why_choose_img.src}
                 />
 

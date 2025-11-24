@@ -185,7 +185,7 @@ export default function FamilyDoctorsPage() {
             buttons={[
               {
                 text: "Walk In Now",
-                link: "/walk-in-clinic-calgary",
+                link: "/walk-in-clinic",
                 icon: "/icons/solar_walking-outline.svg",
                 variant: "default",
               },
@@ -225,7 +225,7 @@ export default function FamilyDoctorsPage() {
             btn_1_text="Call: 587-391-8188"
             btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
             btn_2_icon="/icons/solar_phone-outline.svg"
-            btn_2_link="/walk-in-clinic-calgary-"
+            btn_2_link="/walk-in-clinic"
             btn_2_text="Register as a New Patient"
             btn_2_bg="bg-transparent"
             order="order-first"
@@ -258,7 +258,7 @@ export default function FamilyDoctorsPage() {
               },
               {
                 text: "Register as a New Patient",
-                link: "/walk-in-clinic-calgary",
+                link: "/walk-in-clinic",
                 icon: "/icons/solar_phone-outline.svg",
                 variant: "outline",
                 className: "border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"

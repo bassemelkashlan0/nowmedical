@@ -49,7 +49,7 @@ export function SiteHeader() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="min-w-[200px]">
               <DropdownMenuItem asChild>
-                <Link href="/walk-in-clinic-calgary">Walk-In Clinic Calgary</Link>
+                <Link href="/walk-in-clinic">Walk-In Clinic Calgary</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <Link href="/urgent-care-calgary">Urgent Care Calgary</Link>
@@ -121,7 +121,7 @@ export function SiteHeader() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col gap-4">
-                <Link href="/walk-in-clinic-calgary" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
+                <Link href="/walk-in-clinic" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
                   Walk-In Clinic
                 </Link>
                 <Link

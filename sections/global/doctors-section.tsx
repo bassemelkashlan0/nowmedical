@@ -221,7 +221,7 @@ export default function DoctorsSection({
           ) : (
             <>
               <Button size="lg" className="bg-[#299470] font-bold hover:bg-[#2D7B6F] text-white text-lg hidden" asChild>
-                <Link href="/walk-in-clinic-calgary">Register as a New Patient Today</Link>
+                <Link href="/walk-in-clinic">Register as a New Patient Today</Link>
               </Button>
               <Button
                 size="lg"

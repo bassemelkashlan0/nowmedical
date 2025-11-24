@@ -58,7 +58,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link
-                  href="/walk-in-clinic-calgary"
+                  href="/walk-in-clinic"
                   className="text-muted-foreground transition-colors hover:text-primary"
                 >
                   Walk-In Clinic Calgary
@@ -79,7 +79,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link
-                  href="/walk-in-clinic-weekends"
+                  href="/walk-in-clinicweekends"
                   className="text-muted-foreground transition-colors hover:text-primary"
                 >
                   Weekend Walk-In Clinic

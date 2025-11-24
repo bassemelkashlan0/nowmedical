@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description: "Visit our Walk-In Clinic in Calgary for same-day medical care. Get quick, professional treatment for your health concerns—no appointment needed.",
   keywords: ["walk-in clinic calgary", "walk in clinic near me", "open 7 days clinic", "no appointment needed", "calgary walk-in"],
   alternates: {
-    canonical: "https://nowmedical.ca/walk-in-clinic-calgary"
+    canonical: "https://nowmedical.ca/walk-in-clinic"
   }
 };
 
@@ -211,7 +211,7 @@ export default function WalkInPage() {
                   className="border border-white text-white hover:bg-white/10 bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
                   asChild
                 >
-                  <Link href="/walk-in-clinic-calgary" className="flex items-center gap-2">
+                  <Link href="/walk-in-clinic" className="flex items-center gap-2">
                     <img
                       src="/icons/solar_walking-outline.svg"
                       alt=""
@@ -263,7 +263,7 @@ export default function WalkInPage() {
             btn_1_icon="/icons/btn_phone-outline-icon.svg"
             btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
             btn_2_text="Skip the Wait Walk In Today"
-            btn_2_link="/walk-in-clinic-calgary"
+            btn_2_link="/walk-in-clinic"
             btn_2_icon="/icons/uil-arrow-up-right-grn.svg"
             btn_2_iconAfter={true}
             order="order-first"
@@ -281,7 +281,7 @@ export default function WalkInPage() {
             titleFontWeight="font-medium"
             useListFormat={true}
             buttonText={<> Walk In Anytime No Appointment Needed </>}
-            buttonLink="/walk-in-clinic-calgary"
+            buttonLink="/walk-in-clinic"
             buttonIcon="/icons/uil-arrow-up-right.svg"
             buttonIconClass=""
           />

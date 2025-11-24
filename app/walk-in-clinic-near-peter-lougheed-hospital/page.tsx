@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: "Non-emergency care near Peter Lougheed Hospital. Walk in anytime — open 7 days until 11 PM. Avoid ER wait times.",
   keywords: ["walk in clinic near peter lougheed hospital", "clinic near peter lougheed", "non emergency clinic calgary"],
   alternates: {
-    canonical: "https://nowmedical.ca/walk-in-clinic-near-peter-lougheed-hospital"
+    canonical: "https://nowmedical.ca/walk-in-clinicnear-peter-lougheed-hospital"
   }
 };
 

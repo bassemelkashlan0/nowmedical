@@ -78,10 +78,15 @@ export default function DoctorCategoriesSection({
           )}
         </h3>
         <p className="text-sm text-[#050505] mb-3">{doctor.description}</p>
-        <Button className="w-full bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg">
-          <Phone className="w-4 h-4 mr-2" />
-          Call {doctor.phone || '587-391-8188'}
-        </Button>
+        <a 
+          href={`tel:+1${(doctor.phone || '587-391-8188').replace(/\D/g, '')}`}
+          className="block w-full cursor-pointer"
+        >
+          <Button className="w-full bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg">
+            <Phone className="w-4 h-4 mr-2" />
+            Call {doctor.phone || '587-391-8188'}
+          </Button>
+        </a>
       </div>
     </Card>
   );

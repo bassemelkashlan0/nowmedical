@@ -72,7 +72,7 @@ export default function HowToRegisterSection() {
             className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg font-medium px-6 py-3 font-bold hidden"
             asChild
           >
-            <Link href="/walk-in-clinic-calgary" className="flex items-center ">
+            <Link href="/walk-in-clinic" className="flex items-center ">
               <Image
                 src="/icons/btn_phone-outline-icon.svg"
                 alt=""

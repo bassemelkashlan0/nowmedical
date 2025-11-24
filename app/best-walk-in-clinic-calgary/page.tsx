@@ -231,7 +231,7 @@ export default function BestClinicPage() {
           <CTABannerSection
             title="Experience Calgary's Best Walk-In Clinic. Visit us today!"
             primaryButtonText="Walk In Today"
-            primaryButtonLink="/walk-in-clinic-calgary"
+            primaryButtonLink="/walk-in-clinic"
           />
         </main>
 

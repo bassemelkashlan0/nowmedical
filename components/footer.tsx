@@ -66,7 +66,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/walk-in-clinic-calgary" className="text-[#303030] hover:text-[#299470] transition-colors">
+                <Link href="/walk-in-clinic" className="text-[#303030] hover:text-[#299470] transition-colors">
                   Walk-In Clinic Calgary
                 </Link>
               </li>
@@ -86,7 +86,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/walk-in-clinic-weekends" className="text-[#303030] hover:text-[#299470] transition-colors">
+                <Link href="/walk-in-clinicweekends" className="text-[#303030] hover:text-[#299470] transition-colors">
                   Weekend & Holiday Clinic
                 </Link>
               </li>
@@ -108,7 +108,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/walk-in-clinic-calgary" className="text-[#303030] hover:text-[#299470] transition-colors">
+                <Link href="/walk-in-clinic" className="text-[#303030] hover:text-[#299470] transition-colors">
                   Why Choose Us (4.8★)
                 </Link>
               </li>
