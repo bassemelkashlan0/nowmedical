@@ -172,6 +172,13 @@ export default function HomePage() {
 
   const maleDoctors = [
     {
+      name: "Dr. Michael Ghisel",
+      avatar: "/images/landing/dr-michael.png",
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
+      language: "Spanish",
+    },
+    {
       name: "Dr. Wael Saleh",
       avatar: "/images/landing/dr-michael.png",
       specialty: "Family Doctors",
@@ -195,13 +202,6 @@ export default function HomePage() {
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
-    {
-      name: "Dr. Michael Ghisel",
-      avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-      language: "Spanish",
-    }
   ];
 
   const testimonials = [
@@ -462,15 +462,15 @@ export default function HomePage() {
               </p>
               {/* Video Player (with custom poster) */}
               <div className="w-full aspect-video bg-[#299470] rounded-lg shadow overflow-hidden flex items-center justify-center relative">
-              <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/IpTEkX4lRWQ?rel=0&modestbranding=1&showinfo=0"
-                    title="YouTube Shorts Video"
-                    frameborder="0"
-                    allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                  </iframe>
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/IpTEkX4lRWQ?rel=0&modestbranding=1&showinfo=0"
+                  title="YouTube Shorts Video"
+                  frameborder="0"
+                  allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
               </div>
             </div>
           </section>
@@ -572,10 +572,10 @@ export default function HomePage() {
             customButtonText="See What Patients Are Saying"
             customButtonLink="/reviews"
           />
-         
+
 
           {/* Find Us Section */}
-          <FindUsSection 
+          <FindUsSection
             customButtons={
               <>
                 <Button
@@ -594,7 +594,7 @@ export default function HomePage() {
                   className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
                   asChild
                 >
-                  <Link 
+                  <Link
                     href="https://share.google/CkrlunWzewWZjaPmv"
                     target="_blank"
                     rel="noopener noreferrer"

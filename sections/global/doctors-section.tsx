@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Phone } from 'lucide-react';
 import Link from "next/link";
 import Image from 'next/image';
-import { Carousel, CarouselContent, CarouselItem, CarouselApi } from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem, CarouselApi, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
 import { useState, useEffect, ReactNode } from 'react';
 
 interface Doctor {
@@ -58,17 +58,31 @@ export default function DoctorsSection({
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
 
-  const allDoctors = [...femaleDoctors, ...maleDoctors];
+  // Safely combine doctors arrays, handling edge cases
+  const allDoctors = [
+    ...(femaleDoctors || []), 
+    ...(maleDoctors || [])
+  ]; // Female first, then male
 
   useEffect(() => {
     if (!api) return;
 
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
+    const updateCurrent = () => {
+      const snapList = api.scrollSnapList();
+      setCount(snapList.length);
+      const selectedIndex = api.selectedScrollSnap();
+      setCurrent(selectedIndex + 1);
+    };
 
-    api.on('select', () => {
-      setCurrent(api.selectedScrollSnap() + 1);
-    });
+    updateCurrent();
+
+    api.on('select', updateCurrent);
+    api.on('reInit', updateCurrent);
+
+    return () => {
+      api.off('select', updateCurrent);
+      api.off('reInit', updateCurrent);
+    };
   }, [api]);
 
   const renderDoctorCard = (doctor: Doctor, index: number) => (
@@ -101,6 +115,7 @@ export default function DoctorsSection({
 
   // Group doctors into slides - showing 4 doctors per slide for desktop view
   const groupDoctorsIntoSlides = (doctors: Doctor[], itemsPerSlide: number = 4) => {
+    if (!doctors || doctors.length === 0) return [];
     const slides: Doctor[][] = [];
     for (let i = 0; i < doctors.length; i += itemsPerSlide) {
       slides.push(doctors.slice(i, i + itemsPerSlide));
@@ -108,7 +123,7 @@ export default function DoctorsSection({
     return slides;
   };
 
-  const doctorSlides = useCarousel ? groupDoctorsIntoSlides(allDoctors, 4) : [];
+  const doctorSlides = useCarousel ? groupDoctorsIntoSlides(allDoctors, 3) : [];
 
   return (
     <section className={`  ${bgColor} ` + (sec_py ? sec_py : "  py-10 lg:py-[54px] ") }>
@@ -129,7 +144,7 @@ export default function DoctorsSection({
         {showCategories && femaleDoctors.length > 0 && (
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-6">Our Female Family Doctors</h3>
-            <div className="grid  sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+            <div className="grid  sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-8">
               {femaleDoctors.map(renderDoctorCard)}
             </div>
           </div>
@@ -138,32 +153,43 @@ export default function DoctorsSection({
         {showCategories && maleDoctors.length > 0 && (
           <div>
             <h3 className="text-2xl font-bold mb-6">Our Male Family Doctors</h3>
-            <div className="grid  sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+            <div className="grid  sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-8">
               {maleDoctors.map(renderDoctorCard)}
             </div>
           </div>
         )}
 
         {!showCategories && !useCarousel && (
-          <div className="grid  sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+          <div className="grid  sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-8">
             {allDoctors.map(renderDoctorCard)}
           </div>
         )}
 
         {!showCategories && useCarousel && (
           <div className="relative">
-            <Carousel setApi={setApi} className="w-full">
-              <CarouselContent>
+            <Carousel 
+              setApi={setApi} 
+              className="w-full"
+              opts={{
+                loop: true,
+                align: 'start',
+                skipSnaps: false,
+                dragFree: false,
+              }}
+            >
+              <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 z-10 bg-white border-2 border-[#299470] text-[#299470] hover:bg-[#299470] hover:text-white shadow-lg" />
+              <CarouselContent className="ml-0">
                 {doctorSlides.map((slide, slideIndex) => (
-                  <CarouselItem key={slideIndex}>
-                    <div className="grid  sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+                  <CarouselItem key={slideIndex} className="pl-0 basis-full min-w-full">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-8 w-full">
                       {slide.map((doctor, doctorIndex) =>
-                        renderDoctorCard(doctor, slideIndex * 4 + doctorIndex)
+                        renderDoctorCard(doctor, slideIndex * 3 + doctorIndex)
                       )}
                     </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
+              <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 z-10 bg-white border-2 border-[#299470] text-[#299470] hover:bg-[#299470] hover:text-white shadow-lg" />
             </Carousel>
             {/* Pagination Dots */}
             <div className="flex justify-center gap-2 mt-8">

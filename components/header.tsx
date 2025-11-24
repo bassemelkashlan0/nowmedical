@@ -140,7 +140,7 @@ export function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="min-w-[220px] text-[#242121] bg-white border-0">
               <DropdownMenuItem asChild>
-                <Link href="/all-services" className={pathname === '/all-services' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 hover:bg-[#f5f5f5]/10 hover:text-[#242121] text-[#242121] font-normal text-[#242121]' : ''}>
+                <Link href="/services" className={pathname === '/services' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 hover:bg-[#f5f5f5]/10 hover:text-[#242121] text-[#242121] font-normal text-[#242121]' : ''}>
                   All Services
                 </Link>
               </DropdownMenuItem>
@@ -150,13 +150,13 @@ export function Header() {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/all-services#flu-shots" className={pathname === '/all-services#flu-shots' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 hover:bg-[#f5f5f5]/10 hover:text-[#242121] text-[#242121] font-normal text-[#242121] text-[#242121]' : ''}>Flu Shots & Vaccines</Link>
+                <Link href="/services#flu-shots" className={pathname === '/services#flu-shots' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 hover:bg-[#f5f5f5]/10 hover:text-[#242121] text-[#242121] font-normal text-[#242121] text-[#242121]' : ''}>Flu Shots & Vaccines</Link>
                 </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/all-services#prescriptions" className={pathname === '/all-services#prescriptions' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 hover:bg-[#f5f5f5]/10 hover:text-[#242121] text-[#242121] font-normal text-[#242121] text-[#242121]' : 'text-[#242121]'}>Prescription Renewals</Link>
+                <Link href="/services#prescriptions" className={pathname === '/services#prescriptions' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 hover:bg-[#f5f5f5]/10 hover:text-[#242121] text-[#242121] font-normal text-[#242121] text-[#242121]' : 'text-[#242121]'}>Prescription Renewals</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/all-services#forms" className={pathname === '/all-services#forms' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 hover:bg-[#f5f5f5]/10 hover:text-[#242121] text-[#242121] font-normal text-[#242121] text-[#242121]' : 'text-[#242121]'}>Medical Forms / Sick Notes</Link> 
+                <Link href="/services#forms" className={pathname === '/services#forms' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 hover:bg-[#f5f5f5]/10 hover:text-[#242121] text-[#242121] font-normal text-[#242121] text-[#242121]' : 'text-[#242121]'}>Medical Forms / Sick Notes</Link> 
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -245,19 +245,19 @@ export function Header() {
                 </div>
                 <div className="border-b pb-2">
                   <p className="text-sm font-semibold text-muted-foreground mb-2">Services</p>
-                  <Link href="/all-services" className={`block py-1 text-sm text-[#299470] ${pathname === '/all-services' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/services" className={`block py-1 text-sm text-[#299470] ${pathname === '/services' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     All Services
                   </Link>
                   <Link href="/drivers-medical-exams-in-calgary" className={`block py-1 text-sm text-[#299470] ${pathname === '/drivers-medical-exams-in-calgary' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Driver's Medical Exams
                   </Link>
-                  <Link href="/all-services#flu-shots" className={`block py-1 text-sm text-[#299470] ${pathname === '/all-services#flu-shots' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/services#flu-shots" className={`block py-1 text-sm text-[#299470] ${pathname === '/services#flu-shots' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Flu Shots & Vaccines
                   </Link>
-                  <Link href="/all-services#prescriptions" className={`block py-1 text-sm text-[#299470] ${pathname === '/all-services#prescriptions' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/services#prescriptions" className={`block py-1 text-sm text-[#299470] ${pathname === '/services#prescriptions' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Prescription Renewals
                   </Link>
-                  <Link href="/all-services#forms" className={`block py-1 text-sm text-[#299470] ${pathname === '/all-services#forms' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/services#forms" className={`block py-1 text-sm text-[#299470] ${pathname === '/services#forms' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Medical Forms / Sick Notes
                   </Link>
                 </div>

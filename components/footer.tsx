@@ -86,12 +86,12 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/walk-in-clinicweekends" className="text-[#303030] hover:text-[#299470] transition-colors">
+                <Link href="/walk-in-clinic-weekends" className="text-[#303030] hover:text-[#299470] transition-colors">
                   Weekend & Holiday Clinic
                 </Link>
               </li>
               <li>
-                <Link href="/drivers-medical-exams-in-calgary" className="text-[#303030] hover:text-[#299470] transition-colors">
+                <Link href="/driver-medical-exam" className="text-[#303030] hover:text-[#299470] transition-colors">
                   Driver's Medical Exams
                 </Link>
               </li>

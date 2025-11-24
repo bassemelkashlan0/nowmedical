@@ -100,68 +100,64 @@ export default function WalkInPage() {
   ]);
   const femaleDoctors = [
     {
-      name: "Dr. Madiha",
+      name: "Dr. Madiha Badshah",
       avatar: "/images/landing/dr-madiha.png",
       specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
+      description: "Accepting New Patients",
     },
     {
-      name: "Dr. Vanessa",
+      name: "Dr. Vanessa Marezana",
       avatar: "/images/landing/dr-ebele.png",
       specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
+      description: "Accepting New Patients",
     },
     {
-      name: "Dr. Ebele",
+      name: "Dr. Ebele Madubuko",
       avatar: "/images/landing/dr-ebele.png",
       specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
+      description: "Accepting New Patients",
     },
     {
-      name: "Dr. Madiha",
+      name: "Dr. Prabhjot Bedi",
       avatar: "/images/landing/dr-madiha.png",
       specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
+      description: "Accepting New Patients",
     }
   ];
 
-  const maleDoctors = [
-    {
-      name: "Dr. Michael",
-      avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
-      language: "Spanish",
-    },
-    {
-      name: "Dr. Michael",
-      avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
-      language: "Spanish",
-    },
-    {
-      name: "Dr. Michael",
-      avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
-      language: "Spanish",
-    },
-    {
-      name: "Dr. Michael",
-      avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
-      language: "Spanish",
-    },
-    {
-      name: "Dr. Michael",
-      avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
-      language: "Spanish",
-    }
+  const maleDoctors = [{
+    name: "Dr. Michael Ghisel",
+    avatar: "/images/landing/dr-michael.png",
+    specialty: "Family Doctors",
+    description: "Accepting New Patients",
+    language: "Spanish",
+  },
+  {
+    name: "Dr. Wael Saleh",
+    avatar: "/images/landing/dr-michael.png",
+    specialty: "Family Doctors",
+    description: "Accepting New Patients",
+  },
+  {
+    name: "Dr. Rai Khan",
+    avatar: "/images/landing/dr-michael.png",
+    specialty: "Family Doctors",
+    description: "Accepting New Patients",
+  },
+  {
+    name: "Dr. Tive Egbonoje",
+    avatar: "/images/landing/dr-michael.png",
+    specialty: "Family Doctors",
+    description: "Accepting New Patients",
+  },
+  {
+    name: "Dr. Olasunkanmi Akinremi",
+    avatar: "/images/landing/dr-michael.png",
+    specialty: "Family Doctors",
+    description: "Accepting New Patients",
+  }
   ];
+
 
 
   return (

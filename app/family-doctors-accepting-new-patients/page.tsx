@@ -55,6 +55,13 @@ export default function FamilyDoctorsPage() {
 
   const maleDoctors = [
     {
+      name: "Dr. Michael Ghisel",
+      avatar: "/images/landing/dr-michael.png",
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
+      language: "Spanish",
+    },
+    {
       name: "Dr. Wael Saleh",
       avatar: "/images/landing/dr-michael.png",
       specialty: "Family Doctors",
@@ -78,13 +85,6 @@ export default function FamilyDoctorsPage() {
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
-    {
-      name: "Dr. Michael Ghisel",
-      avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-      language: "Spanish",
-    }
   ];
 
 
@@ -287,7 +287,7 @@ export default function FamilyDoctorsPage() {
 
 
           {/* YouTube Videos Grid */}
-          <YouTubeVideosGrid 
+          <YouTubeVideosGrid
             maxResults={3}
             title="What **Patients** Are Saying"
             description="See what Calgary patients are saying about their experience with Now Medical Clinic."
@@ -297,7 +297,7 @@ export default function FamilyDoctorsPage() {
           />
 
           {/* Find Us */}
-          <FindUsSection 
+          <FindUsSection
             bgColor="bg-white"
             customButtons={
               <>
@@ -317,7 +317,7 @@ export default function FamilyDoctorsPage() {
                   className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
                   asChild
                 >
-                  <Link 
+                  <Link
                     href="https://share.google/CkrlunWzewWZjaPmv"
                     target="_blank"
                     rel="noopener noreferrer"

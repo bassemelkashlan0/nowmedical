@@ -1,6 +1,6 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { 
+import {
   DoctorCategoriesSection,
 } from "@/sections";
 import { StructuredData, generatePhysicianSchema, generateLocalBusinessSchema, CLINIC_DATA } from "@/lib/structured-data";
@@ -45,6 +45,13 @@ export default function DoctorsPage() {
 
   const maleDoctors = [
     {
+      name: "Dr. Michael Ghisel",
+      avatar: "/images/landing/dr-michael.png",
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
+      language: "Spanish",
+    },
+    {
       name: "Dr. Wael Saleh",
       avatar: "/images/landing/dr-michael.png",
       specialty: "Family Doctors",
@@ -68,13 +75,7 @@ export default function DoctorsPage() {
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
-    {
-      name: "Dr. Michael Ghisel",
-      avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-      language: "Spanish",
-    }
+
   ];
 
 
@@ -99,29 +100,29 @@ export default function DoctorsPage() {
       {physicianSchemas.map((schema, index) => (
         <StructuredData key={index} data={schema} />
       ))}
-      
+
       <div className="flex min-h-screen flex-col">
         <Header />
 
-      <main className="flex-1">
-        {/* Hero Section */}
-        <section className="bg-[#F1F9F4] py-10 lg:pt-[62px] lg:pb-[61px] ">
-          <div className="container">
-            <div className="max-w-3xl">
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl text-[#303030] font-bold mb-4">
-                Meet <span className="text-[#299470]">Our Doctors</span>
-              </h1>
+        <main className="flex-1">
+          {/* Hero Section */}
+          <section className="bg-[#F1F9F4] py-10 lg:pt-[62px] lg:pb-[61px] ">
+            <div className="container">
+              <div className="max-w-3xl">
+                <h1 className="text-4xl lg:text-5xl xl:text-6xl text-[#303030] font-bold mb-4">
+                  Meet <span className="text-[#299470]">Our Doctors</span>
+                </h1>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Doctors Categories */}
-        <DoctorCategoriesSection
-          femaleDoctors={femaleDoctors}
-          maleDoctors={maleDoctors}
-        />
+          {/* Doctors Categories */}
+          <DoctorCategoriesSection
+            femaleDoctors={femaleDoctors}
+            maleDoctors={maleDoctors}
+          />
 
-      </main>
+        </main>
 
         <Footer />
       </div>
