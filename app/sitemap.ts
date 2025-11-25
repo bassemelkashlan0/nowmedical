@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '', priority: 1.0, changeFrequency: 'weekly' as const },
     { url: '/reviews', priority: 1.0, changeFrequency: 'weekly' as const },
     { url: '/contact', priority: 1.0, changeFrequency: 'monthly' as const },
-    { url: '/walk-in-clinic-calgary', priority: 1.0, changeFrequency: 'weekly' as const },
+    { url: '/walk-in-clinic', priority: 1.0, changeFrequency: 'weekly' as const },
     { url: '/meet-our-doctors', priority: 1.0, changeFrequency: 'monthly' as const },
     { url: '/urgent-care-calgary', priority: 1.0, changeFrequency: 'weekly' as const },
     { url: '/late-night-clinic', priority: 1.0, changeFrequency: 'weekly' as const },
