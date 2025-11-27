@@ -2,6 +2,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import {
   DoctorCategoriesSection,
+  WalkInHeroSection,
 } from "@/sections";
 import { StructuredData, generatePhysicianSchema, generateLocalBusinessSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
@@ -106,15 +107,41 @@ export default function DoctorsPage() {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="bg-[#F1F9F4] py-10 lg:pt-[62px] lg:pb-[61px] ">
-            <div className="container">
-              <div className="max-w-3xl">
-                <h1 className="text-4xl lg:text-5xl xl:text-6xl text-[#303030] font-bold mb-4">
-                  Meet <span className="text-[#299470]">Our Doctors</span>
-                </h1>
-              </div>
-            </div>
-          </section>
+          <WalkInHeroSection
+            title={
+              <>
+                <span className="text-[#303030]">Meet </span>
+                <span className="text-[#299470]">Our Doctors</span>
+              </>
+            }
+            subtitle="Searching for a trustworthy family doctor?"
+            description={<><b>Now Medical Clinic</b> has both <b>male and female</b> doctors currently taking new patients in Calgary. We’re available <b>seven days a week, open late until 11 PM</b> to support your ongoing health needs.</>}
+            additionalText=""
+            buttons={[
+              {
+                text: "Walk In Now",
+                link: "/walk-in-clinic",
+                icon: "/icons/solar_walking-outline.svg",
+                variant: "default",
+              },
+              {
+                text: "Register as a New Patient",
+                link: "tel:587-391-8188",
+                icon: "/icons/uil-arrow-up-right-grn.svg",
+                variant: "outline",
+              },
+              {
+                text: "Call: 587-391-8188",
+                link: "tel:587-391-8188",
+                icon: "/icons/solar_phone-outline.svg",
+                variant: "outline",
+              }
+            ]}
+            image="/images/family-doctor/family-doctor-banner.png"
+            imageAlt="Experienced family doctor accepting new patients in Calgary providing comprehensive care"
+            bgColor="bg-[#F1F9F4]"
+            className="py-10 lg:py-[54px]"
+          />
 
           {/* Doctors Categories */}
           <DoctorCategoriesSection
