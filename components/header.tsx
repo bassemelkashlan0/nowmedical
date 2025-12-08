@@ -73,27 +73,27 @@ export function Header() {
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/walk-in-clinicnear-foothills-hospital" className={pathname === '/walk-in-clinicnear-foothills-hospital' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
+                    <Link href="/walk-in-clinic-near-foothills-hospital" className={pathname === '/walk-in-clinic-near-foothills-hospital' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                       Near Foothills Hospital
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/walk-in-clinicnear-rockyview-hospital" className={pathname === '/walk-in-clinicnear-rockyview-hospital' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
+                    <Link href="/walk-in-clinic-near-rockyview-hospital" className={pathname === '/walk-in-clinic-near-rockyview-hospital' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                       Near Rockyview Hospital
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/walk-in-clinicnear-alberta-childrens-hospital" className={pathname === '/walk-in-clinicnear-alberta-childrens-hospital' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
+                    <Link href="/walk-in-clinic-near-alberta-childrens-hospital" className={pathname === '/walk-in-clinic-near-alberta-childrens-hospital' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                       Near Alberta Children's Hospital
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/walk-in-clinicnear-south-health-campus" className={pathname === '/walk-in-clinicnear-south-health-campus' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
+                    <Link href="/walk-in-clinic-near-south-health-campus" className={pathname === '/walk-in-clinic-near-south-health-campus' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                       Near South Health Campus
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/walk-in-clinicnear-sheldon-Childrens-health-centre" className={pathname === '/walk-in-clinicnear-sheldon-Childrens-health-centre' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
+                    <Link href="/walk-in-clinic-near-sheldon-Childrens-health-centre" className={pathname === '/walk-in-clinic-near-sheldon-Childrens-health-centre' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                       Near Sheldon Children's Health Centre
                     </Link>
                   </DropdownMenuItem>
@@ -203,7 +203,7 @@ export function Header() {
                   <Link href="/24-hour-walk-in-clinic-calgary" className={`block py-1 text-sm text-[#299470] ${pathname === '/24-hour-walk-in-clinic-calgary' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     24-Hour / Extended Hours
                   </Link>
-                  <Link href="/walk-in-clinicweekends" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinicweekends' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/walk-in-clinic-weekends" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic-weekends' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Weekend Clinic
                   </Link>
                 </div>
@@ -212,19 +212,19 @@ export function Header() {
                   <Link href="/hospital-peter-lougheed" className={`block py-1 text-sm text-[#299470] ${pathname === '/hospital-peter-lougheed' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Near Peter Lougheed Hospital
                   </Link>
-                  <Link href="/walk-in-clinicnear-foothills-hospital" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinicnear-foothills-hospital' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/walk-in-clinic-near-foothills-hospital" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic-near-foothills-hospital' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Near Foothills Hospital
                   </Link>
-                  <Link href="/walk-in-clinicnear-rockyview-hospital" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinicnear-rockyview-hospital' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/walk-in-clinic-near-rockyview-hospital" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic-near-rockyview-hospital' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Near Rockyview Hospital
                   </Link>
-                  <Link href="/walk-in-clinicnear-alberta-childrens-hospital" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinicnear-alberta-childrens-hospital' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/walk-in-clinic-near-alberta-childrens-hospital" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic-near-alberta-childrens-hospital' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Near Alberta Children's Hospital
                   </Link>
-                  <Link href="/walk-in-clinicnear-south-health-campus" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinicnear-south-health-campus' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/walk-in-clinic-near-south-health-campus" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic-near-south-health-campus' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Near South Health Campus
                   </Link>
-                  <Link href="/walk-in-clinicnear-sheldon-Childrens-health-centre" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinicnear-sheldon-Childrens-health-centre' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/walk-in-clinic-near-sheldon-Childrens-health-centre" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic-near-sheldon-Childrens-health-centre' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Near Sheldon Children's Health Centre
                   </Link>
                   <Link href="/hospital-wait-times" className={`block py-1 text-sm text-[#299470] ${pathname === '/hospital-wait-times' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
@@ -248,7 +248,7 @@ export function Header() {
                   <Link href="/services" className={`block py-1 text-sm text-[#299470] ${pathname === '/services' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     All Services
                   </Link>
-                  <Link href="/drivers-medical-exams-in-calgary" className={`block py-1 text-sm text-[#299470] ${pathname === '/drivers-medical-exams-in-calgary' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                  <Link href="/driver-medical-exam" className={`block py-1 text-sm text-[#299470] ${pathname === '/driver-medical-exam' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Driver's Medical Exams
                   </Link>
                   <Link href="/services#flu-shots" className={`block py-1 text-sm text-[#299470] ${pathname === '/services#flu-shots' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
@@ -261,15 +261,12 @@ export function Header() {
                     Medical Forms / Sick Notes
                   </Link>
                 </div>
-                <Link href="/best-walk-in-clinic-calgary" className={`text-sm font-medium text-[#299470] ${pathname === '/best-walk-in-clinic-calgary' ? ' font-bold' : ''}`} onClick={() => setIsOpen(false)}>
-                  Why Choose Us
-                </Link>
                 <Link href="/reviews" className={`text-sm font-medium text-[#299470] ${pathname === '/reviews' ? ' font-bold' : ''}`} onClick={() => setIsOpen(false)}>
                   Reviews
                 </Link>
                 <Link href="/faq" className={`text-sm font-medium text-[#299470] ${pathname === '/faq' ? ' font-bold' : ''}`} onClick={() => setIsOpen(false)}>
                   FAQ
-                </Link>
+                </Link> 
                 <Link href="/contact" className="block w-full mt-2" onClick={() => setIsOpen(false)}>
                   <Button className="w-full bg-[#299470] hover:bg-[#2D7B6F] text-white">
                     <Link href="tel:587-391-8188" className=" flex gap-2 items-center ">
