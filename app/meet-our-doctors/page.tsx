@@ -114,8 +114,8 @@ export default function DoctorsPage() {
                 <span className="text-[#299470]">Our Doctors</span>
               </>
             }
-            subtitle="Searching for a trustworthy family doctor?"
-            description={<><b>Now Medical Clinic</b> has both <b>male and female</b> doctors currently taking new patients in Calgary. We’re available <b>seven days a week, open late until 11 PM</b> to support your ongoing health needs.</>}
+            subtitle={<><span className="text-[#303030]">Female and Male Family Doctors</span><br/><span className="text-[#299470]">ACCEPTING NEW PATIENTS</span><br/>Searching for a trustworthy family doctor?<br/> </>}
+            description={<><b>Now Medical Clinic</b> has both <b>male and female</b> doctors currently Accepting New Patients in Calgary. We’re available <b>seven days a week, open late until 11 PM</b> to support your ongoing health needs.</>}
             additionalText=""
             buttons={[
               {
