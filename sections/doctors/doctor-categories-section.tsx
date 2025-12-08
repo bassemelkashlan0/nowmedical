@@ -77,7 +77,7 @@ export default function DoctorCategoriesSection({
             </span>
           )}
         </h3>
-        <p className="text-sm text-[#050505] mb-3">{doctor.description}</p>
+        <p className="text-sm text-[#050505] mb-3 min-h-[20px]">{doctor.description}</p>
         <a 
           href={`tel:+1${(doctor.phone || '587-391-8188').replace(/\D/g, '')}`}
           className="block w-full cursor-pointer"

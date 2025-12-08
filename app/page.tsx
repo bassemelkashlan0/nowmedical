@@ -154,7 +154,7 @@ export default function HomePage() {
       name: "Dr. Vanessa Marezana",
       avatar: "/images/landing/dr-ebele.png",
       specialty: "Family Doctors",
-      description: "Accepting New Patients",
+      // description: "Accepting New Patients",
     },
     {
       name: "Dr. Ebele Madubuko",

@@ -28,7 +28,7 @@ export default function DoctorsPage() {
       name: "Dr. Vanessa Marezana",
       avatar: "/images/landing/dr-ebele.png",
       specialty: "Family Doctors",
-      description: "Accepting New Patients",
+      description: " ",
     },
     {
       name: "Dr. Ebele Madubuko",
@@ -114,7 +114,7 @@ export default function DoctorsPage() {
                 <span className="text-[#299470]">Our Doctors</span>
               </>
             }
-            subtitle={<><span className="text-[#303030]">Female and Male Family Doctors</span><br/><span className="text-[#299470]">ACCEPTING NEW PATIENTS</span><br/>Searching for a trustworthy family doctor?<br/> </>}
+            subtitle={<><span className="text-[#000000] font-bold">Female and Male Family Doctors</span><br/><span className="text-[#299470] font-bold ">ACCEPTING NEW PATIENTS</span><br/>Searching for a  family doctor?<br/> </>}
             description={<><b>Now Medical Clinic</b> has both <b>male and female</b> doctors currently Accepting New Patients in Calgary. We’re available <b>seven days a week, open late until 11 PM</b> to support your ongoing health needs.</>}
             additionalText=""
             buttons={[
