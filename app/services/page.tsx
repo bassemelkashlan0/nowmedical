@@ -32,7 +32,6 @@ export default function ServicesPage() {
       features: [
         "Annual physical examinations",
         "Chronic disease management",
-        "Prescription refills",
         "Health counseling",
         "Referrals to specialists"
       ],
@@ -90,7 +89,6 @@ export default function ServicesPage() {
       icon: "/images/hospital-wait-times/women-health.svg",
       items: [
         "Pregnancy testing and prenatal care",
-        "Birth control and family planning",
         "Pap smears and screening",
         "Menopause management"
       ]
@@ -133,7 +131,6 @@ export default function ServicesPage() {
       description: "Comprehensive healthcare for women at all stages",
       items: [
         "Pap smears and screening",
-        "Birth control counseling",
         "Pregnancy testing"
       ],
       icon: <Heart className="w-8 h-8" />

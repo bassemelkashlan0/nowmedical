@@ -152,9 +152,9 @@ export function Header() {
               <DropdownMenuItem asChild>
                 <Link href="/services#flu-shots" className={pathname === '/services#flu-shots' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 hover:bg-[#f5f5f5]/10 hover:text-[#242121] text-[#242121] font-normal text-[#242121] text-[#242121]' : ''}>Flu Shots & Vaccines</Link>
                 </DropdownMenuItem>
-              <DropdownMenuItem asChild>
+              {/* <DropdownMenuItem asChild>
                 <Link href="/services#prescriptions" className={pathname === '/services#prescriptions' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 hover:bg-[#f5f5f5]/10 hover:text-[#242121] text-[#242121] font-normal text-[#242121] text-[#242121]' : 'text-[#242121]'}>Prescription Renewals</Link>
-              </DropdownMenuItem>
+              </DropdownMenuItem> */}
               <DropdownMenuItem asChild>
                 <Link href="/services#forms" className={pathname === '/services#forms' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 hover:bg-[#f5f5f5]/10 hover:text-[#242121] text-[#242121] font-normal text-[#242121] text-[#242121]' : 'text-[#242121]'}>Medical Forms / Sick Notes</Link> 
               </DropdownMenuItem>

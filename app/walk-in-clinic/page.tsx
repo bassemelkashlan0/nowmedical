@@ -75,12 +75,12 @@ export default function WalkInPage() {
       title: "Skin & Allergy Care",
       description: ["Rashes, hives, eczema, acne, mild allergic reactions"],
       image: "/images/walk-in/skin-allergy-care.svg"
-    },
-    {
-      title: "Prescriptions & Renewals",
-      description: ["Medication refills", "Chronic condition management (diabetes, blood pressure)", "Birth control renewals"],
-      image: "/images/walk-in/prescriptions-renewals.svg"
     }
+    // {
+    //   title: "Prescriptions & Renewals",
+    //   description: ["Medication refills", "Chronic condition management (diabetes, blood pressure)", "Birth control renewals"],
+    //   image: "/images/walk-in/prescriptions-renewals.svg"
+    // }
   ];
   // Structured Data
   const localBusinessSchema = generateLocalBusinessSchema(CLINIC_DATA);

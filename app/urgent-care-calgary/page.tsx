@@ -32,9 +32,9 @@ export default function UrgentCarePage() {
     {
       text: "Cuts, burns, or insect bites"
     },
-    {
-      text: "Prescription renewals and follow-ups"
-    },
+    // {
+    //   text: "Prescription renewals and follow-ups"
+    // },
   ]
   const whyChoose = [
     {

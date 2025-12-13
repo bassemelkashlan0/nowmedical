@@ -41,9 +41,6 @@ export default function SouthHealthCampusPage() {
     },
     {
       text: "Rashes, skin infections, minor injuries"
-    },
-    {
-      text: "Prescription refills & medical notes"
     }
   ];
 

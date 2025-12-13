@@ -45,9 +45,6 @@ export default function RockyviewHospitalPage() {
     },
     {
       text: "UTIs, skin rashes, mild allergic reactions"
-    },
-    {
-      text: "Prescription renewals & medical forms"
     }
   ];
 
@@ -115,7 +112,7 @@ export default function RockyviewHospitalPage() {
                   <iframe
                     width="100%"
                     height="500"
-                    src="https://www.youtube.com/embed/X0BcuE-6Kuw?rel=0&modestbranding=1&showinfo=0"
+                    src="https://www.youtube.com/embed/kp-G-j-DRhg?rel=0&modestbranding=1&showinfo=0"
                     title="YouTube Shorts Video"
                     frameborder="0"
                     allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

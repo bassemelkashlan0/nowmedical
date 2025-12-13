@@ -39,7 +39,8 @@ export default function HomePage() {
       icon: <Phone className="w-5 h-5" />
     },
     {
-      text: "Short Waits & Same-Day Prescriptions",
+      // text: "Short Waits & Same-Day Prescriptions",
+      text: "Short Waits",
       icon: <Phone className="w-5 h-5" />
     },
     {
@@ -109,7 +110,7 @@ export default function HomePage() {
       icon: "/images/landing/womens-health.svg",
       items: [
         "Pregnancy testing and prenatal care",
-        "Birth control and family planning",
+        // "Birth control and family planning",
         "Menstrual irregularities and PMS",
         "Menopause management and HRT",
         "Pap smears and cervical cancer screening",

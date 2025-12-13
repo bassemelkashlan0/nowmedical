@@ -47,8 +47,8 @@ export default function PatientsPage() {
       category: "Women's Health Questions",
       questions: [
         {
-          question: "Do you offer Pap tests and birth control consultations?",
-          answer: "Yes, we offer Pap tests, birth control, birth control consultations, pregnancy tests, etc. Our female doctors provide comprehensive women's health services."
+          question: "Do you offer pap tests?",
+          answer: "Yes, we offer Pap tests. Our female doctors provide comprehensive women's health services."
         },
         {
           question: "Can I see a female doctor for a walk in visit?",
@@ -83,12 +83,12 @@ export default function PatientsPage() {
       ]
     },
     {
-      category: "Prescriptions & Forms",
+      category: "Forms",
       questions: [
-        {
-          question: "Can I renew my prescription here?",
-          answer: "Yes, our doctors can renew prescriptions. Please bring your current medication or prescription information."
-        },
+        // {
+        //   question: "Can I renew my prescription here?",
+        //   answer: "Yes, our doctors can renew prescriptions. Please bring your current medication or prescription information."
+        // },
         {
           question: "Can I get a sick note or medical forms?",
           answer: "Yes, we can provide sick notes, medical certificates, and complete various medical forms. There is a fee for this service."

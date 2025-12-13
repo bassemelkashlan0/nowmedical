@@ -43,7 +43,7 @@ export default function SheldonChildrensHealthCentrePage() {
       text: "UTIs, rashes, skin concerns, pink eye"
     },
     {
-      text: "Prescription renewals, work/school notes"
+      text: "Work/school notes"
     }
   ];
 

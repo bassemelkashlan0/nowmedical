@@ -89,14 +89,14 @@ export default function AboutPage() {
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
       phone: "587-391-8188"
-    },
-    {
-      name: "Dr. Bedi",
-      avatar: "/images/about-us/dr-vanessa.png",
-      specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
-      phone: "587-391-8188"
     }
+    // {
+    //   name: "Dr. Bedi",
+    //   avatar: "/images/about-us/dr-vanessa.png",
+    //   specialty: "Family Doctors",
+    //   description: "Experienced in family practice and children's care.",
+    //   phone: "587-391-8188"
+    // }
   ];
 
 

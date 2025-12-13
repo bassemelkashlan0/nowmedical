@@ -31,9 +31,6 @@ export default function LateNightClinicPage() {
     },
     {
       text: "Sprains, strains, back or joint pain"
-    },
-    {
-      text: " Prescription renewals or medical notes"
     }
   ]
   const whyChoose = [
