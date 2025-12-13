@@ -44,10 +44,10 @@ export default function WeekendClinicPage() {
     },
     {
       text: "Sprains, back pain, muscle aches"
-    },
-    {
-      text: "Prescription renewals or medical forms"
     }
+    // {
+    //   text: "Prescription renewals or medical forms"
+    // }
   ];
 
   const faqSchema = generateFAQSchema([
