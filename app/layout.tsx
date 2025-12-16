@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Sora } from "next/font/google"
 import localFont from "next/font/local"
-import { Analytics } from "@vercel/analytics/next"
 import { GlobalChatbot } from "@/components/global-chatbot"
 import "../styles/globals.css"
 
@@ -242,7 +241,6 @@ gtag('config', 'AW-11186441600');`,
         </noscript>
         {children}
         <GlobalChatbot />
-        <Analytics />
       </body>
     </html>
   )
