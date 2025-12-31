@@ -283,12 +283,10 @@ export default function HomePage() {
                     Skip the hospital wait. See a Real doctor Today — No Appointment Needed. Fast, friendly care for you and your family, Open on Weekends and Holidays, serving all areas of Calgary.
                   </p>
                   <p className="text-lg font-bold text-[#050505] mb-8 md:mb-[52px] ">
-                    Real doctors. Real care. Open late every day
+                    Real doctors. Real care. Open late every day <br />
+                    Address: 2520 23 St NE #19, Calgary, AB T2E 8L2
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button size="lg" className="bg-[#299470] text-bold hover:bg-[#2D7B6F] text-white text-lg hidden" asChild>
-                      <Link href="/contact">Register as a new patient<img src="/icons/uil-arrow-up-right.svg" alt="Register as a new patient" className="w-5 h-5" /></Link>
-                    </Button>
                     <Button
                       size="lg"
                       className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg font-bold"
@@ -299,13 +297,26 @@ export default function HomePage() {
                         Call: 587-391-8188
                       </Link>
                     </Button>
+                    <Button size="lg"
+                      variant="outline"
+                      className="border-[#299470] text-bold text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
+                      asChild>
+                      <Link href="https://share.google/CkrlunWzewWZjaPmv" className="flex items-center gap-2">
+                        <img
+                          src="/icons/pin-outline-icon.svg" alt=""
+                          className="w-5 h-5"
+                        />
+                        Address
+                      </Link>
+                    </Button>
+
                     <Button
                       size="lg"
                       variant="outline"
                       className="border-[#299470] text-bold text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
                       asChild
                     >
-                      <Link href="/walk-in-clinic">Walk In Now <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
+                      <Link href="/walk-in-clinic"> <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /> Walk In Now </Link>
                     </Button>
                   </div>
                 </div>
