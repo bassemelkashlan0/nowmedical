@@ -166,10 +166,10 @@ export default function DoctorsSection({
         )}
 
         {!showCategories && useCarousel && (
-          <div className="relative">
+          <div className="relative ">
             <Carousel 
               setApi={setApi} 
-              className="w-full"
+              className="w-[90%] mx-auto"
               opts={{
                 loop: true,
                 align: 'start',
