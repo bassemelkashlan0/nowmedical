@@ -423,26 +423,26 @@ export function LiveStatusBanner() {
       <div className="container py-3 sm:py-5 md:py-7 px-4 sm:px-6">
         <div className="flex relative items-center justify-center flex-wrap sm:justify-center gap-4 sm:gap-6 md:gap-[24px]">
           <div className="flex items-center gap-3 sm:gap-4 md:gap-[24px]">
-            <div className={`w-6 h-6 sm:w-8 sm:h-8 md:w-[32px] md:h-[32px] flex items-center justify-center rounded-full flex-shrink-0 ${isActive ? "bg-[#4DA688]" : "bg-red-400"
+            <div className={`w-6 h-6 sm:w-8 sm:h-8 md:w-[32px] md:h-[32px] flex items-center justify-center rounded-full flex-shrink-0 animate-smooth-blink ${isActive ? "bg-[#4DA688]" : "bg-red-400"
               }`}>
               <div
                 className={`h-4 w-4 sm:h-5 sm:w-5 md:h-[22px] md:w-[22px] rounded-full ${isActive
-                  ? "bg-[#195A44] animate-pulse"
+                  ? "bg-[#195A44]"
                   : "bg-red-600"
                   }`}
               />
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col" style={{ gap: '10px' }}>
               <span className="font-medium block text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#050505] leading-tight">
                 Walk-in Live Status
               </span>
               <span className="block text-xs sm:text-sm md:text-base text-[#050505]">
-                 {isActive ? <span className="font-bold text-xl  text-[#195A44] ml-1 underline">OPEN NOW</span> : <span className="font-bold text-xl  text-red-600 ml-1 underline">CLOSED</span>}
+                 {isActive ? <span className="font-bold text-xl text-white bg-[#195A44] px-4 py-1.5 rounded-full ml-1 uppercase">OPEN NOW</span> : <span className="font-bold text-xl text-white bg-red-600 px-4 py-1.5 rounded-full ml-1 uppercase">CLOSED</span>}
               </span>
             </div>
           </div>  
 
-          <div className="flex items-center gap-3 sm:gap-4 md:gap-[24px]">
+          {/* <div className="flex items-center gap-3 sm:gap-4 md:gap-[24px]">
             <div className="flex flex-col text-center sm:text-left">
               <span className="font-medium block text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#050505] leading-tight">
                 {formatTime(currentTime)}
@@ -452,7 +452,7 @@ export function LiveStatusBanner() {
               </span>
             </div>
 
-          </div>
+          </div> */}
 
           <button
             onClick={handleLiveChatClick}
