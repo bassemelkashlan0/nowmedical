@@ -126,9 +126,9 @@ export default function FoothillsHospitalPage() {
                     height="500"
                     src="https://www.youtube.com/embed/BUde4AOLH7Y?rel=0&modestbranding=1&showinfo=0"
                     title="YouTube Shorts Video"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
+                    allowFullScreen>
                   </iframe>
                 </div>
               </div>

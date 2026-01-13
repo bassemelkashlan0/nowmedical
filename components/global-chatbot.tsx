@@ -140,13 +140,16 @@ export function GlobalChatbot() {
             }
           }, 100)
 
-          // Timeout after 10 seconds
-          setTimeout(() => {
+          // Timeout after 20 seconds (increased from 10)
+          const timeoutId = setTimeout(() => {
             clearInterval(checkInterval)
             if (!window.VG && !window.__VG_SCRIPT_LOADED) {
               reject(new Error('Script load timeout'))
             }
-          }, 10000)
+          }, 20000)
+          
+          // Store timeout for cleanup
+          scriptLoadTimeoutRef.current = timeoutId as any
           return
         }
 
@@ -155,41 +158,58 @@ export function GlobalChatbot() {
         VG_SCRIPT.src = "https://vg-bunny-cdn.b-cdn.net/vg_live_build/vg_bundle.js"
         VG_SCRIPT.async = true
         VG_SCRIPT.defer = true
+        VG_SCRIPT.crossOrigin = "anonymous"
 
-        // Set timeout for script loading (15 seconds)
-        const timeout = setTimeout(() => {
+        let timeoutId: NodeJS.Timeout | null = null
+        let checkVGInterval: NodeJS.Timeout | null = null
+
+        // Set timeout for script loading (30 seconds - increased from 15)
+        timeoutId = setTimeout(() => {
+          if (checkVGInterval) clearInterval(checkVGInterval)
           if (!window.VG) {
             reject(new Error('Script load timeout'))
           }
-        }, 15000)
+        }, 30000)
+        
+        scriptLoadTimeoutRef.current = timeoutId as any
 
         // Handle successful load
         VG_SCRIPT.onload = () => {
-          clearTimeout(timeout)
+          if (timeoutId) clearTimeout(timeoutId)
           // Wait a bit for VG to initialize
-          const checkVG = setInterval(() => {
+          checkVGInterval = setInterval(() => {
             if (window.VG) {
-              clearInterval(checkVG)
+              if (checkVGInterval) clearInterval(checkVGInterval)
               window.__VG_SCRIPT_LOADED = true
+              scriptLoadTimeoutRef.current = null
               resolve()
             }
           }, 100)
 
-          // Final timeout check
+          // Final timeout check (increased to 10 seconds)
           setTimeout(() => {
-            clearInterval(checkVG)
+            if (checkVGInterval) clearInterval(checkVGInterval)
             if (window.VG) {
               window.__VG_SCRIPT_LOADED = true
+              scriptLoadTimeoutRef.current = null
               resolve()
             } else {
-              reject(new Error('VG object not initialized'))
+              // Don't reject if script loaded but VG not initialized yet - it might initialize later
+              // Only log in development mode to reduce console noise
+              if (process.env.NODE_ENV === 'development') {
+                console.debug('Chatbot script loaded but VG object not yet initialized. It may initialize later.')
+              }
+              scriptLoadTimeoutRef.current = null
+              resolve() // Resolve anyway to prevent retry loops
             }
-          }, 5000)
+          }, 10000)
         }
 
         // Handle load error
-        VG_SCRIPT.onerror = () => {
-          clearTimeout(timeout)
+        VG_SCRIPT.onerror = (error) => {
+          if (timeoutId) clearTimeout(timeoutId)
+          if (checkVGInterval) clearInterval(checkVGInterval)
+          scriptLoadTimeoutRef.current = null
           reject(new Error('Script load failed'))
         }
 
@@ -204,21 +224,40 @@ export function GlobalChatbot() {
         await loadChatbotScript()
         retryCountRef.current = 0 // Reset on success
       } catch (error) {
+        retryCountRef.current = attempt + 1
         if (attempt < maxRetries) {
-          // Exponential backoff: 1s, 2s, 4s, 8s, 16s
-          const delay = Math.min(1000 * Math.pow(2, attempt), 16000)
+          // Exponential backoff: 2s, 4s, 8s, 16s, 32s
+          const delay = Math.min(2000 * Math.pow(2, attempt), 32000)
           setTimeout(() => {
             loadScriptWithRetry(attempt + 1)
           }, delay)
         } else {
-          console.error('Failed to load chatbot script after multiple attempts:', error)
+          // Only log error in development or if it's a real failure
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('Chatbot script failed to load after multiple attempts. It may load later or the service may be unavailable:', error)
+          }
           // Still continue with image replacement logic in case script loads later
+          // Don't throw error to prevent React errors
         }
       }
     }
 
     // Start loading script
     loadScriptWithRetry()
+
+    // Also set up a passive check to see if script loads later (even after retries fail)
+    // This helps in cases where network is slow but eventually connects
+    const passiveCheckInterval = setInterval(() => {
+      if (window.VG && !window.__VG_SCRIPT_LOADED) {
+        window.__VG_SCRIPT_LOADED = true
+        clearInterval(passiveCheckInterval)
+      }
+    }, 5000) // Check every 5 seconds
+
+    // Stop passive checking after 2 minutes
+    setTimeout(() => {
+      clearInterval(passiveCheckInterval)
+    }, 120000)
 
     const customImagePath = '/images/chatbot-avatar.png'
     const customImageFullPath = window.location.origin + customImagePath
@@ -425,6 +464,8 @@ export function GlobalChatbot() {
       if (scriptLoadTimeoutRef.current) {
         clearTimeout(scriptLoadTimeoutRef.current)
       }
+      // Clean up passive check interval
+      clearInterval(passiveCheckInterval)
       // Restore original classList.add methods
       document.documentElement.classList.add = originalHtmlAdd
       document.body.classList.add = originalBodyAdd
