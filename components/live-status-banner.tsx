@@ -477,14 +477,17 @@ export function LiveStatusBanner() {
             </div>
 
             {/* Directions */}
-            <div className="flex items-center gap-1.5 sm:gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" fill="none" className="sm:w-5 sm:h-5">
-                <path d="M10 12.5C11.3261 12.5 12.5979 11.9732 13.5355 11.0355C14.4732 10.0979 15 8.82608 15 7.5C15 6.17392 14.4732 4.90215 13.5355 3.96447C12.5979 3.02678 11.3261 2.5 10 2.5C8.67392 2.5 7.40215 3.02678 6.46447 3.96447C5.52678 4.90215 5 6.17392 5 7.5C5 8.82608 5.52678 10.0979 6.46447 11.0355C7.40215 11.9732 8.67392 12.5 10 12.5ZM10 12.5V17.5M7.91667 7.5C7.91667 6.94747 8.13616 6.41756 8.52686 6.02686C8.91756 5.63616 9.44747 5.41667 10 5.41667" stroke="#299470" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+            <a 
+              href="https://share.google/CkrlunWzewWZjaPmv" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 sm:gap-2 hover:opacity-80 transition-opacity"
+            >
+              <img src="/icons/pin-outline-icon.svg" alt="" className="w-4 h-4 sm:w-5 sm:h-5" />
               <span className="text-[10px] sm:text-xs md:text-sm text-[#050505] underline whitespace-nowrap">
                 Directions
               </span>
-            </div>
+            </a>
           </div>
 
           {/* Live Chat Button */}

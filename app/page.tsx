@@ -291,7 +291,7 @@ export default function HomePage() {
                     </a>
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                  <Button
+                    <Button
                       size="lg"
                       variant="outline"
                       className="border-[#299470] text-bold text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
