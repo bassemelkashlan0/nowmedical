@@ -1,5 +1,6 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { LiveStatusBanner } from "@/components/live-status-banner";
 import {
   DoctorCategoriesSection,
   WalkInHeroSection,
@@ -105,6 +106,7 @@ export default function DoctorsPage() {
 
       <div className="flex min-h-screen flex-col">
         <Header />
+        <LiveStatusBanner />
 
         <main className="flex-1">
           {/* Hero Section */}
