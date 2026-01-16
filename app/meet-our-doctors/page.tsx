@@ -19,17 +19,18 @@ export const metadata: Metadata = {
 export default function DoctorsPage() {
   const femaleDoctors = [
     {
+      name: "Dr. Vanessa Marezana",
+      avatar: "/images/landing/dr-ebele.png",
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
+      language: "Spanish",
+    },
+    {
       name: "Dr. Madiha Badshah",
       avatar: "/images/landing/dr-madiha.png",
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
-    // {
-    //   name: "Dr. Vanessa Marezana",
-    //   avatar: "/images/landing/dr-ebele.png",
-    //   specialty: "Family Doctors",
-    //   description: " ",
-    // },
     {
       name: "Dr. Ebele Madubuko",
       avatar: "/images/landing/dr-ebele.png",
