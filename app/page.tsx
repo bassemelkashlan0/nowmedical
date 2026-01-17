@@ -264,7 +264,7 @@ export default function HomePage() {
         <LiveStatusBanner />
 
         <main className="flex-1">
-          {/* Hero Section */}
+          {/*  Hero Section */}
           <section className="bg-[#F1F9F4] to-white py-10 lg:py-[54px] ">
             <div className="container">
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
