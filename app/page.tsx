@@ -146,6 +146,13 @@ export default function HomePage() {
 
   const femaleDoctors = [
     {
+      name: "Dr. Nasreen Abid",
+      avatar: "/images/landing/dr-madiha.png",
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
+      language: "Arabic",
+    },
+    {
       name: "Dr. Vanessa Marezana",
       avatar: "/images/landing/dr-ebele.png",
       specialty: "Family Doctors",
