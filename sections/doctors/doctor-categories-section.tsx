@@ -69,7 +69,7 @@ export default function DoctorCategoriesSection({
       </div>
       <div className="p-4 bg-white">
         <p className="text-m text-[#050505] font-medium mb-2">{doctor.specialty}</p>
-        <h3 className="text-2xl font-medium mb-3">
+        <h3 className="text-[23px] font-medium mb-3">
           {doctor.name}
           {doctor.language && (
             <span className="text-sm font-normal text-gray-500 ml-2">
