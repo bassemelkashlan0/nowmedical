@@ -558,7 +558,7 @@ export default function HomePage() {
 
           {/* Meet Our Doctors */}
           <DoctorsSection
-            title="Meet Our Doctors"
+            title="Meet Our Female Doctors"
             description={<>Our diverse team of male and female family doctors provides care in multiple languages. Each doctor brings years of <br />experience in family medicine, chronic condition management, and preventive health</>}
             femaleDoctors={femaleDoctors}
             maleDoctors={maleDoctors}

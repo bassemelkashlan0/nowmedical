@@ -1,6 +1,6 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { FindUsSection, WhyChooseSection, StorySection, MeetOurSlider } from "@/sections";
+import { FindUsSection, WhyChooseSection, StorySection, MeetOurSlider, DoctorsSection } from "@/sections";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { StructuredData, generatePhysicianSchema, generateFAQSchema, generateLocalBusinessSchema, CLINIC_DATA } from "@/lib/structured-data";
@@ -20,28 +20,30 @@ export const metadata: Metadata = {
 export default function FemaleFamilyDoctorPage() {
   const femaleDoctors = [
     {
-      name: "Dr. Vanessa",
-      avatar: "/images/female-family/slide-one.png",
-      specialty: "Gynecologist",
-      description: "Specializes in women's health and comprehensive family medicine.",
-      phone: "587-391-8188",
-      language: "English"
+      name: "Dr. Nasreen Abid",
+      avatar: "/images/landing/dr-madiha.png",
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
+      language: "Arabic",
     },
     {
-      name: "Dr. Madiha",
-      avatar: "/images/female-family/slide-one.png",
-      specialty: "Family Medicine",
-      description: "Experienced in women's health, family practice, and children's care.",
-      phone: "587-391-8188",
-      language: "English"
+      name: "Dr. Vanessa Marezana",
+      avatar: "/images/landing/dr-ebele.png",
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
+      language: "Spanish",
     },
     {
-      name: "Dr. Ebele",
-      avatar: "/images/female-family/slide-one.png",
-      specialty: "Family Medicine",
-      description: "Dedicated to providing compassionate women's healthcare.",
-      phone: "587-391-8188",
-      language: "English"
+      name: "Dr. Madiha Badshah",
+      avatar: "/images/landing/dr-madiha.png",
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
+    },
+    {
+      name: "Dr. Ebele Madubuko",
+      avatar: "/images/landing/dr-ebele.png",
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
     }
   ];
 
@@ -192,7 +194,31 @@ export default function FemaleFamilyDoctorPage() {
             </div>
           </section>
 
-
+          {/* Meet Our Doctors */}
+          <DoctorsSection
+            title="Meet Our Female Doctors"
+            description={<>Our diverse team of male and female family doctors provides care in multiple languages. Each doctor brings years of <br />experience in family medicine, chronic condition management, and preventive health</>}
+            femaleDoctors={femaleDoctors}
+            maleDoctors={[]}
+            showCategories={false}
+            useCarousel={true}
+            customButtons={[
+              {
+                text: "Call: 587-391-8188",
+                link: "tel:587-391-8188",
+                icon: "/icons/btn_phone-outline-icon.svg",
+                variant: "default",
+                className: "bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg"
+              },
+              {
+                text: "Meet Our Doctors",
+                link: "/meet-our-doctors",
+                icon: "/icons/uil-arrow-up-right-grn.svg",
+                variant: "outline",
+                className: "border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
+              }
+            ]}
+          />
 
           {/* Our Story */}
           <StorySection
