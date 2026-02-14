@@ -73,6 +73,12 @@ export default function FamilyDoctorsPage() {
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
+    {
+      name: "Dr. Nasreen Abid",
+      avatar: "/images/landing/dr-michael.png",
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
+    },
     // {
     //   name: "Dr. Tive Egbonoje",
     //   avatar: "/images/landing/dr-michael.png",
