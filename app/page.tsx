@@ -234,6 +234,26 @@ export default function HomePage() {
     }
   ];
 
+  const NewPages= [
+    {
+      text: <><a href=""> NE Calgary </a></>,
+    },
+    {
+      text: <><a href=""> NW Calgary </a></>,
+    } ,
+    {
+      text: <><a href=""> SW Calgary </a></>,
+    },
+    {
+      text: <><a href=""> SE Calgary  </a></>,
+    } ,
+    {
+      text: <><a href=""> Downtown Calgary </a></>,
+    }
+  ]
+
+  const Family_img = "/images/walk-in/why-us.png";
+
 
   // Structured Data for SEO
   const localBusinessSchema = generateLocalBusinessSchema(CLINIC_DATA);
@@ -277,14 +297,12 @@ export default function HomePage() {
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
                 <div>
                   <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl  mb-4 md:mb-[21px] ">
-                    <span className="text-[#299470]">Walk-In & Family Doctor</span>
+                    <span className="text-[#299470]">Calgary Walk in Clinic - Family Doctors Available Today</span>
                     <br />
-                    <span className="text-[#299470]">Clinic in Calgary</span>
-                    <br />
-                    <span className="text-[#303030] ">Open 7 Days Until 11 PM</span>
+                    <span className="text-[#303030] ">Open 7 days Until 11 PM</span>
                   </h1>
                   <p className=" text-muted-foreground mb-4 md:mb-[21px]">
-                    <span className="font-bold text-[#303030] text-[36px]/10 ">Including weekends and holidays</span>
+                    <span className="font-bold text-[#303030] text-[36px]/10 ">Including Weekends and Holidays</span>
                   </p>
                   <p className="text-base text-[#000000] mb-3 md:mb-[15px] ">
                     Skip the hospital wait. See a Real doctor Today — No Appointment Needed. Fast, friendly care for you and your family, Open on Weekends and Holidays, serving all areas of Calgary.
@@ -310,12 +328,12 @@ export default function HomePage() {
                     <Button size="lg"
                       className="border-[#299470] text-[#fff] hover:bg-[#2d7b6f]  text-lg font-bold"
                       asChild>
-                      <Link href="https://share.google/CkrlunWzewWZjaPmv" className="flex items-center gap-2">
+                      <Link href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6" target="_blank" className="flex items-center gap-2">
                         <img
                           src="/icons/pin-outline-icon.svg" alt=""
                           className="w-5 h-5 brightness-0 invert"
                         />
-                        Directions
+                        Get Directions
                       </Link>
                     </Button>
                     <Button
@@ -597,6 +615,20 @@ export default function HomePage() {
             customButtonLink="/reviews"
           />
 
+        {/* New pages Section */}
+         <WhyChooseSection
+            title={<>Walk-In Clinics by Area</>}
+            subtitle=""
+            items={NewPages}
+            image={Family_img}
+            btn_1_text="Call: 587-391-8188"
+            btn_1_link="tel:587-391-8188"
+            btn_1_icon="/icons/solar_phone-outline.svg"
+            order="order-first"
+            h2_color_1="text-[#299470]"
+            h2_color_2="text-[#303030]"
+            singleButton={true}
+          /> 
 
           {/* Find Us Section */}
           <FindUsSection
@@ -619,7 +651,7 @@ export default function HomePage() {
                   asChild
                 >
                   <Link
-                    href="https://share.google/CkrlunWzewWZjaPmv"
+                    href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"

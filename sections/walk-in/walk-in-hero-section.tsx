@@ -8,6 +8,7 @@ interface ButtonConfig {
   icon?: string;
   variant?: "default" | "outline";
   className?: string;
+  target?: string;
 }
 
 interface WalkInHeroSectionProps {
@@ -38,22 +39,17 @@ export default function WalkInHeroSection({
   additionalText = "Real doctors. Short wait convenient Calgary location",
   buttons = [
     {
-      text: "Walk In Now",
-      link: "/walk-in-clinic",
-      icon: "/icons/solar_walking-outline.svg",
+      text: "Call: 587-391-8188",
+      link: "tel:587-391-8188",
+      icon: "/icons/btn_phone-outline-icon.svg",
       variant: "default" as const,
     },
     {
-      text: "Call: 587-391-8188",
-      link: "tel:587-391-8188",
-      icon: "/icons/solar_phone-outline.svg",
-      variant: "outline" as const,
-    },
-    {
       text: "Get Direction",
-      link: "https://share.google/CkrlunWzewWZjaPmv",
+      link: "https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6",
       icon: "/icons/pin-outline-icon.svg",
       variant: "outline" as const,
+      target: "_blank",
     }
   ],
   image = "/images/walk-in/walk-in-banner.png",
@@ -102,7 +98,7 @@ export default function WalkInHeroSection({
                     } ${button.text && (button.text.includes("Register as a New Patient") || button.text.includes("Register as a new patient")) ? 'hidden' : ''}`}
                     asChild
                   >
-                    <Link href={button.link}  >
+                    <Link href={button.link} target={button.target} rel={button.target === "_blank" ? "noopener noreferrer" : undefined}>
                       {button.icon && (
                         <img
                           src={button.icon}

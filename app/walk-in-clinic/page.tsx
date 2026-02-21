@@ -16,6 +16,7 @@ import { LiveStatusBanner } from "@/components/live-status-banner";
 import { YouTubeVideosGrid } from "@/components/youtube-videos-grid";
 
 
+
 export const metadata: Metadata = {
   title: "Walk-In Clinic Calgary | Same-Day Medical Care Without Appointment",
   description: "Visit our Walk-In Clinic in Calgary for same-day medical care. Get quick, professional treatment for your health concerns—no appointment needed.",
@@ -44,7 +45,25 @@ export default function WalkInPage() {
       text: "Mental health & stress management",
     }
   ]
+  const NewPages= [
+    {
+      text: <><a href=""> Walk-In Clinic NE Calgary </a></>,
+    },
+    {
+      text: <><a href=""> Walk-In Clinic NW Calgary </a></>,
+    } ,
+    {
+      text: <><a href=""> Walk-In Clinic SW Calgary </a></>,
+    },
+    {
+      text: <><a href=""> Walk-In Clinic SE Calgary </a></>,
+    } ,
+    {
+      text: <><a href=""> Walk-In Clinic Downtown Calgary </a></>,
+    }
+  ]
   const Family_img = "/images/walk-in/why-us.png";
+  const walkin_img = "/images/major-sub/rocky-why-now.png";
   // Story Content
   const storyContent = [
     <>
@@ -222,7 +241,7 @@ export default function WalkInPage() {
                   className="border border-white text-white hover:bg-white/10 bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
                   asChild
                 >
-                  <Link href="https://share.google/CkrlunWzewWZjaPmv" className="flex items-center gap-2">
+                  <Link href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                     <img
                       src="/images/walk-in/flowbite_map-pin-outline.svg"
                       alt=""
@@ -324,7 +343,7 @@ export default function WalkInPage() {
                       className="border border-white text-white hover:bg-white/10 bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
                       asChild
                     >
-                      <Link href="https://share.google/CkrlunWzewWZjaPmv">
+                      <Link href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6" target="_blank">
                         <img
                           src="/images/walk-in/flowbite_map-pin-outline.svg"
                           alt=""
@@ -387,6 +406,22 @@ export default function WalkInPage() {
             className=""
           />
 
+        {/* New pages Section */}
+         <WhyChooseSection
+            title={<>Serving Patients Across Calgary</>}
+            subtitle=""
+            items={NewPages}
+            image={walkin_img}
+            btn_1_text="Call: 587-391-8188"
+            btn_1_link="tel:587-391-8188"
+            btn_1_icon="/icons/solar_phone-outline.svg"
+            order="order-first"
+            h2_color_1="text-[#299470]"
+            h2_color_2="text-[#303030]"
+            singleButton={true}
+          />
+
+
 
           {/* Find Us */}
           <FindUsSection
@@ -409,7 +444,7 @@ export default function WalkInPage() {
                   asChild
                 >
                   <Link
-                    href="https://share.google/CkrlunWzewWZjaPmv"
+                    href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
