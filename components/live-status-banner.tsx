@@ -495,8 +495,8 @@ export function LiveStatusBanner() {
           ) : (
             <div></div>
           )}
-
-          {/* Live Chat Button - Right Column */}
+ 
+          {/* Live Chat Button - Right Column */} 
           <div className="flex justify-center sm:justify-end flex-shrink-0 ml-auto sm:ml-0">
             <button
               onClick={handleLiveChatClick}
