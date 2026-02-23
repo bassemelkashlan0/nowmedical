@@ -1,4 +1,4 @@
-import { Header } from "@/components/header";
+  import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { LiveStatusBanner } from "@/components/live-status-banner";
 import { Button } from "@/components/ui/button";
@@ -290,7 +290,7 @@ export default function AboutPage() {
           {/* Find Us */}
           <FindUsSection
             bgColor=" "
-            dairection='https://share.google/CkrlunWzewWZjaPmv'
+            dairection='https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6'
             customButtons={
               <>
                 <Button
@@ -310,7 +310,7 @@ export default function AboutPage() {
                   asChild
                 >
                   <Link 
-                    href="https://share.google/CkrlunWzewWZjaPmv"
+                    href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"

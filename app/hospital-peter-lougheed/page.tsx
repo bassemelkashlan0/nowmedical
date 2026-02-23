@@ -178,7 +178,7 @@ export default function HospitalPeterLougheed() {
                                         className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold"
                                         asChild
                                     >
-                                        <Link href="https://share.google/CkrlunWzewWZjaPmv" className="flex items-center gap-2">
+                                        <Link href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6" className="flex items-center gap-2">
                                             <img src={location_icon.src} alt="Location" className="w-5 h-5" />
                                             Get Direction
                                         </Link>
@@ -253,7 +253,7 @@ export default function HospitalPeterLougheed() {
                           asChild
                         >
                           <Link
-                            href="https://share.google/CkrlunWzewWZjaPmv"
+                            href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2"

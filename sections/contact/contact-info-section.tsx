@@ -135,7 +135,7 @@ export default function ContactInfoSection({
           </Button>
 
           <Button variant="outline" className="border-1 border-[#299470] text-[#299470]  hover:bg-[#2D7B6F]/10 px-6 py-6 text-lg font-bold">
-            <Link className='flex' target='_blank' href='https://share.google/CkrlunWzewWZjaPmv'>
+            <Link className='flex' target='_blank' href='https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6'>
               <Image
                 src="/icons/pin-outline-icon.svg"
                 alt="Location"

@@ -311,7 +311,7 @@ export default function HomePage() {
                     Real doctors. Real care. Open late every day
                   </p>
                   <p className="mb-8 md:mb-12 ">
-                    <a href="https://share.google/CkrlunWzewWZjaPmv" target="_blank" className="text-lg font-bold underline text-[#050505]  ">
+                    <a href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6" target="_blank" className="text-lg font-bold underline text-[#050505]  ">
                       Address: 2520 23 St NE #19, Calgary, AB T2E 8L2
                     </a>
                   </p>
