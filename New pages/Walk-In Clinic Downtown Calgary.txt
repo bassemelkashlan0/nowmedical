@@ -1,0 +1,169 @@
+﻿Walk-In Clinic Downtown Calgary
+
+URL:
+ /walk-in-clinic-downtown-calgary
+________________
+
+
+✅ META DATA
+Meta Title:
+ Downtown Calgary Walk-In Clinic | Open Until 11 PM | No Appointment Needed
+Meta Description:
+ Looking for a walk-in clinic in Downtown Calgary? Open 7 days until 11 PM. Same-day care from licensed family doctors. No appointment required.
+________________
+
+
+________________
+
+
+✅ H1 (Only One)
+Walk-In Clinic Serving Downtown Calgary 
+Open 7 days Until 11 PM
+Including Weekends and Holidays
+________________
+
+
+Same-Day Medical Care for Downtown Calgary
+If you are searching for a walk-in clinic in Downtown Calgary, Now Medical Clinic provides same-day medical care for residents and professionals in Beltline, East Village, Bridgeland, Mission, and surrounding central Calgary communities.
+We are open 7 days a week until 11 PM. No appointment is required.
+Downtown residents and professionals choose walk-in care instead of waiting in hospital emergency departments.
+________________
+
+
+Why Downtown Calgary Patients Choose Us
+• Evening access after work
+. Open 7 days Until 11 PM
+. Open on weekends and holidays
+• Licensed family physicians
+• No appointment required
+• Convenient alternative to emergency wait times
+• Care for adults and families
+Our clinic offers flexible medical access for busy professionals, students, and families living or working in downtown Calgary.
+________________
+
+
+Conditions We Treat
+Our walk-in doctors provide care for:
+• Cold, flu, cough & sore throat
+• Minor injuries and sprains
+• Skin infections and allergic reactions
+• Prescription renewals
+• Medical notes
+• Chronic condition flare-ups
+walk-in care can provide faster access than emergency departments.
+________________
+
+
+Convenient Access From Downtown
+Our clinic is accessible via:
+• 9 Avenue SW
+• Memorial Drive
+• Macleod Trail
+Serving patients across Beltline, East Village, and surrounding central Calgary communities.
+________________
+
+
+Internal Links > green section template
+Learn more about our complete
+Walk-In Clinic services (link to main walk-in page).
+If you are looking for ongoing primary care, visit our
+Family Doctors Accepting New Patients page (family doctors main page link).
+________________
+
+
+Serving Patients Across Calgary
+We also provide walk-in care for:
+• NE Calgary (link)
+• NW Calgary (link)
+• SW Calgary (link)
+• SE Calgary (link)
+________________
+
+
+Frequently Asked Questions
+Do I need an appointment?
+No Appointment Needed. Walk in  is Open 7 days until 11 pm Including weekends and holidays.
+Are you open weekends?
+ Yes. We are open 7 days a week until 11 PM including weekends and holidays.
+Is this a walk-in clinic serving Downtown Calgary?
+Yes. We provide walk-in medical care for residents and professionals in Beltline, East Village, Bridgeland, Mission, and surrounding central Calgary communities.
+
+
+
+
+
+
+
+
+
+
+Add find us and hours section - edit directions - embed google map
+
+
+✅ CANONICAL TAG (Place in <head>)
+<link rel="canonical" href="https://nowmedical.ca/walk-in-clinic-downtown-calgary" />
+
+
+✅ BREADCRUMB SCHEMA (Place in <head>)
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+   {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://nowmedical.ca/"
+   },
+   {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Walk-In Clinic",
+     "item": "https://nowmedical.ca/walk-in-clinic"
+   },
+   {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Walk-In Clinic Downtown Calgary",
+     "item": "https://nowmedical.ca/walk-in-clinic-downtown-calgary"
+   }
+ ]
+}
+</script>
+________________
+
+
+✅ FAQ SCHEMA (Place in <head>)
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+   {
+     "@type": "Question",
+     "name": "Do I need an appointment?",
+     "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "No Appointment Needed. Walk in  is Open 7 days until 11 pm Including weekends and holidays."
+     }
+   },
+   {
+     "@type": "Question",
+     "name": "Are you open weekends?",
+     "acceptedAnswer": {
+       "@type": "Answer",
+       "text": " Yes. We are open 7 days a week until 11 PM including weekends and holidays."
+     }
+   },
+   {
+     "@type": "Question",
+     "name": "Is this a walk-in clinic serving Downtown Calgary?",
+     "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. Now Medical Clinic provides walk-in medical care for residents and professionals in Beltline, East Village, Bridgeland, Mission, and surrounding central Calgary communities."
+     }
+   }
+ ]
+}
+</script>

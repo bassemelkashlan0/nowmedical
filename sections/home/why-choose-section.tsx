@@ -6,7 +6,7 @@ import { ReactNode } from 'react';
 
 
 interface WhyChooseItem {
-  text: string;
+  text: string | ReactNode;
   icon?: React.ReactNode;
 }
 

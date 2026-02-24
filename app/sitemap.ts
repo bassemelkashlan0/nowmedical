@@ -29,6 +29,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/female-family-doctor-calgary', priority: 1.0, changeFrequency: 'weekly' as const },
     { url: '/driver-medical-exam', priority: 1.0, changeFrequency: 'monthly' as const },
     { url: '/best-walk-in-clinic-calgary', priority: 1.0, changeFrequency: 'weekly' as const },
+    { url: '/walk-in-clinic-downtown-calgary', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/walk-in-clinic-ne-calgary', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/walk-in-clinic-nw-calgary', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/walk-in-clinic-se-calgary', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/walk-in-clinic-sw-calgary', priority: 0.8, changeFrequency: 'monthly' as const },
   ]
 
   // Fixed date matching the XML sitemap

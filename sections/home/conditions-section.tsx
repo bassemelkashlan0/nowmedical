@@ -13,10 +13,20 @@ interface Condition {
 interface ConditionsSectionProps {
   title?: string;
   subtitle?: string;
-  para?: string
-  para_2?: string
+  para?: string;
+  para_2?: string;
   conditions: Condition[];
   bg_color?: string;
+  // Button 1 (outline)
+  btn1Text?: string;
+  btn1Link?: string;
+  btn1Icon?: string;
+  // Button 2 (solid)
+  btn2Text?: string;
+  btn2Link?: string;
+  btn2Icon?: string;
+  // Footer note
+  footerNote?: string;
 }
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -35,7 +45,14 @@ export default function ConditionsSection({
   conditions,
   para,
   para_2,
-  bg_color
+  bg_color,
+  btn1Text = "Call: 587-391-8188",
+  btn1Link = "tel:587-391-8188",
+  btn1Icon = "/icons/solar_phone-outline.svg",
+  btn2Text = "Walk In Anytime- Real Doctors Real care",
+  btn2Link = "/walk-in-clinic",
+  btn2Icon = "/icons/uil-arrow-up-right.svg",
+  footerNote = "Open Until 11 PM, 7 Days a week Including weekends and Holidays",
 }: ConditionsSectionProps) {
   return (
     <section className={" py-10 lg:py-[54px] md:px-4 md:px-8  " + (bg_color ? bg_color : "bg-white")}>
@@ -74,24 +91,28 @@ export default function ConditionsSection({
             </Card>
           ))}
         </div>
+
         <div className='w-full text-center justify-center pt-6'>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               variant="outline"
-              className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent font-bold text-lg" 
+              className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent font-bold text-lg"
               asChild
             >
-              <Link href="tel:587-391-8188" className="flex items-center gap-2">
-                <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
-                Call: 587-391-8188
+              <Link href={btn1Link} className="flex items-center gap-2">
+                {btn1Icon && <img src={btn1Icon} alt="" className="w-5 h-5" />}
+                {btn1Text}
               </Link>
             </Button>
             <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] font-bold text-white text-lg" asChild>
-              <Link className='!text-wrap whitespace-wrap' href="/walk-in-clinic">Walk In Anytime- Real Doctors Real care<img src="/icons/uil-arrow-up-right.svg" alt="Register as a new patient" className="w-5 h-5" /></Link>
+              <Link className='!text-wrap whitespace-wrap' href={btn2Link}>
+                {btn2Text}
+                {btn2Icon && <img src={btn2Icon} alt="" className="w-5 h-5" />}
+              </Link>
             </Button>
           </div>
-          <p className='text-[12px] pt-4 text-[#6E6E6E]'>Open Until 11 PM, 7 Days a week Including weekends and Holidays</p>
+          {footerNote && <p className='text-[12px] pt-4 text-[#6E6E6E]'>{footerNote}</p>}
         </div>
       </div>
     </section>

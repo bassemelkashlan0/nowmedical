@@ -28,6 +28,7 @@ interface TestimonialsSectionProps {
   showTitleAndSubtitle?: boolean;
   hideBottomText?: boolean;
   initialCount?: number;
+  callButtonText?: string;
 }
 
 export default function TestimonialsSection({
@@ -41,6 +42,7 @@ export default function TestimonialsSection({
   showTitleAndSubtitle = true,
   hideBottomText = false,
   initialCount = 9,
+  callButtonText = "Call: 587-391-8188",
 }: TestimonialsSectionProps) {
   const [showAll, setShowAll] = useState(false);
   const displayedTestimonials = showAll ? testimonials : testimonials.slice(0, initialCount);
@@ -117,7 +119,7 @@ export default function TestimonialsSection({
                 >
                   <Link href="tel:587-391-8188" className="flex items-center gap-2">
                     <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
-                    Call: 587-391-8188
+                    {callButtonText}
                   </Link>
                 </Button>
                 {customButtonText && (

@@ -443,6 +443,8 @@ export function LiveStatusBanner() {
             </div>
           </div>
 
+
+
           {/* Service Details Section - Center Column - Only show when status is OPEN */}
           {isActive ? (
             <div className="flex flex-col items-center gap-2 sm:gap-3 md:gap-4 flex-shrink-0">
@@ -479,13 +481,13 @@ export function LiveStatusBanner() {
 
               {/* Directions */}
               <a 
-                href="https://share.google/CkrlunWzewWZjaPmv" 
+                href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 sm:gap-2 hover:opacity-80 transition-opacity"
+                className="flex bg-[#195A44] rounded-lg py-1 px-2 pe-3 hover:bg-[#144636]  items-center gap-1.5 sm:gap-2 hover:opacity-80 transition-opacity"
               >
-                <img src="/icons/pin-outline-icon.svg" alt="" className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span className="text-[14px] font-bold  text-[#050505] underline whitespace-nowrap">
+                <img src="/icons/pin-outline-icon-white.svg" alt="" className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="text-[14px] font-bold  text-[#fff] underline whitespace-nowrap">
                   Directions
                 </span>
               </a>
@@ -493,8 +495,8 @@ export function LiveStatusBanner() {
           ) : (
             <div></div>
           )}
-
-          {/* Live Chat Button - Right Column */}
+ 
+          {/* Live Chat Button - Right Column */} 
           <div className="flex justify-center sm:justify-end flex-shrink-0 ml-auto sm:ml-0">
             <button
               onClick={handleLiveChatClick}
