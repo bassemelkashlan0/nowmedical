@@ -47,19 +47,19 @@ export default function WalkInPage() {
   ]
   const NewPages= [
     {
-      text: <><a href=""> Walk-In Clinic NE Calgary </a></>,
+      text: <><a href="/walk-in-clinic-ne-calgary"> Walk-In Clinic NE Calgary </a></>,
     },
     {
-      text: <><a href=""> Walk-In Clinic NW Calgary </a></>,
+      text: <><a href="/walk-in-clinic-nw-calgary"> Walk-In Clinic NW Calgary </a></>,
     } ,
     {
-      text: <><a href=""> Walk-In Clinic SW Calgary </a></>,
+      text: <><a href="/walk-in-clinic-sw-calgary"> Walk-In Clinic SW Calgary </a></>,
     },
     {
-      text: <><a href=""> Walk-In Clinic SE Calgary </a></>,
+      text: <><a href="/walk-in-clinic-se-calgary"> Walk-In Clinic SE Calgary </a></>,
     } ,
     {
-      text: <><a href=""> Walk-In Clinic Downtown Calgary </a></>,
+      text: <><a href="/walk-in-clinic-downtown-calgary"> Walk-In Clinic Downtown Calgary </a></>,
     }
   ]
   const Family_img = "/images/walk-in/why-us.png";

@@ -23,232 +23,232 @@ export const metadata: Metadata = {
 export default function HomePage() {
   const whyChooseItems = [
     {
-      text: "Open 7 Days — Until 11:00 PM",
+      text: "مفتوح 7 أيام في الأسبوع — حتى الساعة 11:00 مساءً",
       icon: <Clock className="w-5 h-5" />
     },
     {
-      text: "Open on Weekends and Holidays",
+      text: "مفتوح في عطلات نهاية الأسبوع والعطلات الرسمية",
       icon: <Stethoscope className="w-5 h-5" />
     },
     {
-      text: "No Appointment Needed — Just Walk In",
+      text: "لا حاجة لموعد مسبق — فقط ادخل مباشرة",
       icon: <Users className="w-5 h-5" />
     },
     {
-      text: "Experienced Family Doctors You Can Rely On",
+      text: "أطباء عائلة ذوو خبرة يمكنك الاعتماد عليهم",
       icon: <Phone className="w-5 h-5" />
     },
     {
       // text: "Short Waits & Same-Day Prescriptions",
-      text: "Short Waits",
+      text: "إنتظارات قصيرة",
       icon: <Phone className="w-5 h-5" />
     },
     {
-      text: "Serving All Areas of Calgary with Free Parking",
+      text: "خدمة جميع مناطق كالجاري مع مواقف سيارات مجانية",
       icon: <Phone className="w-5 h-5" />
     }
   ];
 
   const conditions = [
     {
-      category: "Chronic Conditions",
+      category: "الحالات المزمنة",
       icon: "/images/landing/chronic-conditions.svg",
       items: [
-        "Diabetes (Type 1 & Type 2)",
-        "High blood pressure (Hypertension)",
-        "Asthma and COPD",
-        "Arthritis and joint pain",
-        "Thyroid disorders",
-        "Chronic pain management",
-        "Obesity and weight management",
-        "Chronic kidney disease"
+        "مرض السكري (النوع الأول والنوع الثاني)",
+        "ارتفاع ضغط الدم (فرط ضغط الدم)",
+        "الربو ومرض الانسداد الرئوي المزمن",
+        "التهاب المفاصل وآلام المفاصل",
+        "اضطرابات الغدة الدرقية",
+        "إدارة الألم المزمن",
+        "السمنة وإدارة الوزن",
+        "مرض الكلى المزمن"
       ]
     },
     {
-      category: "Walk-in & Urgent Care",
+      category: "خدمات الرعاية العاجلة والطارئة",
       icon: "/images/landing/walk-In-urgent-care.svg",
       items: [
-        "Cold, cough, and flu symptoms",
-        "Sore throat and tonsillitis",
-        "Ear and eye infections",
-        "Urinary tract infections (UTIs)",
-        "Minor injuries and lacerations",
-        "Sprains and strains",
-        "Allergies and rashes",
-        "Skin infections and cellulitis",
-        "Nausea, vomiting, and diarrhea",
-        "Pink eye and styes"
+        "أعراض البرد والسعال والإنفلونزا",
+        "التهاب الحلق والتهاب اللوزتين",
+        "التهابات الأذن والعين",
+        "التهابات المسالك البولية (UTIs)",
+        "إصابات طفيفة وجروح",
+        "الالتواءات والإجهاد",
+        "الحساسية والطفح الجلدي",
+        "التهابات الجلد والتهاب النسيج الخلوي",
+        "الغثيان والقيء والإسهال",
+        "التهاب الملتحمة والشعيرة"
       ]
     },
     {
-      category: "Mental Health & Wellness",
+      category: "الصحة النفسية والعافية",
       icon: "/images/landing/mental-health-wellness.svg",
       items: [
-        "Anxiety and panic attacks",
-        "Depression and mood disorders",
-        "Stress management",
-        "Sleep disorders and insomnia",
-        "ADHD and focus issues",
-        "Grief and loss counseling (referrals)"
+        "القلق ونوبات الهلع",
+        "الاكتئاب واضطرابات المزاج",
+        "إدارة الإجهاد",
+        "اضطرابات النوم والأرق",
+        "اضطراب فرط الحركة ونقص الانتباه ومشاكل التركيز",
+        "الاستشارات النفسية المتعلقة بالحزن والفقد (الإحالات)"
       ]
     },
     {
-      category: "Men's Health",
+      category: "صحة الرجل",
       icon: "/images/landing/mens-health.svg",
       items: [
-        "Erectile dysfunction and libido issues",
-        "Low testosterone and fatigue",
-        "Prostate exams and PSA screening",
-        "Male pattern baldness",
-        "Weight management and fitness advice",
-        "Mental health and stress counseling",
-        "Sexual health and STD screening"
+        "",
+        "ضعف الانتصاب ومشاكل الرغبة الجنسية",
+        "فحوصات البروستاتا وفحص مستضد البروستاتا النوعي (PSA)",
+        "الصلع الذكوري",
+        "نصائح حول إدارة الوزن واللياقة البدنية",
+        "الاستشارات النفسية والتعامل مع الضغوط النفسية",
+        "الصحة الجنسية وفحص الأمراض المنقولة جنسيا"
       ]
     },
     {
-      category: "Women's Health",
+      category: "صحة المرأة",
       icon: "/images/landing/womens-health.svg",
       items: [
         "Pregnancy testing and prenatal care",
         // "Birth control and family planning",
-        "Menstrual irregularities and PMS",
-        "Menopause management and HRT",
-        "Pap smears and cervical cancer screening",
-        "Breast exams and mammogram referrals",
-        "UTIs and yeast infections",
-        "Pelvic pain and endometriosis"
+        "اضطرابات الدورة الشهرية ومتلازمة ما قبل الحيض",
+        "إدارة انقطاع الطمث والعلاج الهرموني البديل",
+        "مسحات عنق الرحم وفحص سرطان عنق الرحم",
+        "فحوصات الثدي وإحالات التصوير الشعاعي للثدي",
+        "التهابات المسالك البولية والتهابات الخميرة",
+        "ألم الحوض وبطانة الرحم المهاجرة"
       ]
     },
     {
-      category: "Children's Health",
+      category: "صحة الأطفال",
       icon: "/images/landing/childrens-health.svg",
       items: [
-        "Childhood immunizations",
-        "Growth and development monitoring",
-        "Cough, cold, and ear infections",
-        "Fever and rashes",
-        "School and sports physicals",
-        "Behavioral and learning assessments"
+        "التطعيمات في مرحلة الطفولة",
+        "مراقبة النمو والتطور",
+        "السعال، الزكام، والتهابات الأذن",
+        "الحمى والطفح الجلدي",
+        "الفحوصات الطبية المدرسية والرياضية",
+        "التقييمات السلوكية والتعليمية"
       ]
     },
     {
-      category: "Preventive Care & Diagnostics",
+      category: "الرعاية الوقائية والتشخيص",
       icon: "/images/landing/preventive-care.svg",
       items: [
-        "Annual physical exams",
-        "Chronic disease screening",
-        "Travel medicine and vaccines",
-        "Blood work and lab tests",
-        "ECG and cardiac screening"
+        "الفحوصات البدنية السنوية",
+        "فحص الأمراض المزمنة",
+        "طب السفر واللقاحات",
+        "تحاليل الدم والفحوصات المخبرية",
+        "تخطيط كهربية القلب وفحص القلب"
       ]
     }
   ];
 
   const femaleDoctors = [
     {
-      name: "Dr. Nasreen Abid",
+      name: "الدكتورة نسرين عابد",
       avatar: "/images/landing/dr-madiha.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-      language: "Arabic",
+      specialty: "أطباء الأسرة",
+      description: "استقبال مرضى جدد",
+      language: "عربي",
     },
     {
-      name: "Dr. Vanessa Marezana",
+      name: "الدكتورة فانيسا ماريزانا",
       avatar: "/images/landing/dr-ebele.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-      language: "Spanish",
+      specialty: "أطباء الأسرة",
+      description: "استقبال مرضى جدد",
+      language: "الأسبانية",
     },
     {
-      name: "Dr. Madiha Badshah",
+      name: "الدكتورة مديحة بادشاه",
       avatar: "/images/landing/dr-madiha.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
+      specialty: "أطباء الأسرة",
+      description: "استقبال مرضى جدد",
     },
     {
-      name: "Dr. Ebele Madubuko",
+      name: "الدكتورة إيبيل مادوبوكو",
       avatar: "/images/landing/dr-ebele.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
+      specialty: "أطباء الأسرة",
+      description: "استقبال مرضى جدد",
     }
     // {
     //   name: "Dr. Prabhjot Bedi",
     //   avatar: "/images/landing/dr-madiha.png",
     //   specialty: "Family Doctors",
-    //   description: "Accepting New Patients",
+    //   description: "استقبال مرضى جدد",
     // }
   ];
 
   const maleDoctors = [
     {
-      name: "Dr. Michael Ghisel",
+      name: "الدكتور مايكل غيزيل",
       avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-      language: "Spanish",
+      specialty: "أطباء الأسرة",
+      description: "استقبال مرضى جدد",
+      language: "الأسبانية",
     },
     {
-      name: "Dr. Wael Saleh",
+      name: "الدكتور وائل صالح",
       avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
+      specialty: "أطباء الأسرة",
+      description: "استقبال مرضى جدد",
     },
     {
-      name: "Dr. Rai Khan",
+      name: "دكتور راي خان",
       avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
+      specialty: "أطباء الأسرة",
+      description: "استقبال مرضى جدد",
     },
     // {
     //   name: "Dr. Tive Egbonoje",
     //   avatar: "/images/landing/dr-michael.png",
-    //   specialty: "Family Doctors",
-    //   description: "Accepting New Patients",
+    //   specialty: "أطباء الأسرة",
+    //   description: "استقبال مرضى جدد",
     // },
     {
-      name: "Dr. Olasunkanmi Akinremi",
+      name: "الدكتور أولاسونكانمي أكينريمي",
       avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
+      specialty: "أطباء الأسرة",
+      description: "استقبال مرضى جدد",
     },
   ];
 
   const testimonials = [
     {
-      name: "Sanny Cooper",
+      name: "ساني كوبر",
       avatar: "/images/landing/review_1.png",
       rating: 5,
-      text: "Really good experience at this walk-in clinic. I was in and out in about 1.5 hours, and most of that wait was for the pharmacy inside (they're a little slow). The clinic itself runs smoothly, staff were friendly, and it's very convenient to have the pharmacy on-site."
+      text: "تجربة رائعة حقاً في هذه العيادة. دخلت وخرجت في غضون ساعة ونصف تقريباً، وكان معظم وقت الانتظار للصيدلية (خدمتهم بطيئة بعض الشيء). العيادة نفسها تعمل بسلاسة، والموظفون ودودون، ومن المريح جداً وجود الصيدلية في الموقع."
     },
     {
-      name: "Bill Grabovac",
+      name: "بيل جرابوفاتش",
       avatar: "/images/landing/review_2.png",
       rating: 5,
-      text: "Fast service! Well managed medical clinic! Got to see a medical Dr after a 5 minute wait at 7:50pm. There was a small fee as we did not have an Alberta Health Care Number. The Dr was knowledgeable with the medical condition we experienced. Very Happy with the service we received. A+"
+      text: "خدمة سريعة! عيادة طبية مُدارة بكفاءة عالية! تمكنت من مقابلة طبيب بعد انتظار دام 5 دقائق فقط في تمام الساعة 7:50 مساءً. كانت هناك رسوم رمزية لعدم امتلاكنا رقمًا صحيًا في ألبرتا. كان الطبيب على دراية تامة بالحالة الطبية التي كنا نعاني منها. راضون جدًا عن الخدمة التي تلقيناها. ممتاز!"
     },
     {
-      name: "Jetta Lush",
+      name: "جيتا لوش",
       avatar: "/images/landing/review_3.png",
       rating: 5,
-      text: "This place was awesome!!! Hours are wonderful, worked so well for me and my specific situation (working single parent), employees were warm and welcoming. Super fast efficient, doctor was warm, welcoming and super thorough. Great experience overall."
+      text: "كان هذا المكان رائعًا! ساعات العمل ممتازة، وتناسبت تمامًا مع وضعي الخاص (أنا أم عاملة وحيدة)، وكان الموظفون ودودين ومرحبين. الخدمة سريعة وفعالة للغاية، والطبيب كان لطيفًا ومرحبًا ودقيقًا جدًا. تجربة رائعة بشكل عام."
     }
   ];
 
   const NewPages= [
     {
-      text: <><a href="/walk-in-clinic-ne-calgary"> NE Calgary </a></>,
+      text: <><a href="/walk-in-clinic-ne-calgary"> شمال شرق كالجاري </a></>,
     },
     {
-      text: <><a href="/walk-in-clinic-nw-calgary"> NW Calgary </a></>,
+      text: <><a href="/walk-in-clinic-nw-calgary"> شمال غرب كالجاري </a></>,
     } ,
     {
-      text: <><a href="/walk-in-clinic-sw-calgary"> SW Calgary </a></>,
+      text: <><a href="/walk-in-clinic-sw-calgary"> جنوب غرب كالجاري </a></>,
     },
     {
-      text: <><a href="/walk-in-clinic-se-calgary"> SE Calgary  </a></>,
+      text: <><a href="/walk-in-clinic-se-calgary"> جنوب شرق كالجاري  </a></>,
     } ,
     {
-      text: <><a href="/walk-in-clinic-downtown-calgary"> Downtown Calgary </a></>,
+      text: <><a href="/walk-in-clinic-downtown-calgary"> وسط مدينة كالجاري </a></>,
     }
   ]
 
@@ -297,22 +297,21 @@ export default function HomePage() {
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
                 <div>
                   <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl  mb-4 md:mb-[21px] ">
-                    <span className="text-[#299470]">Calgary Walk in Clinic - Family Doctors Available Today</span>
+                    <span className="text-[#299470]">عيادة كالجاري للزيارات الطبية - أطباء عائلة متوفرون اليوم</span>
                     <br />
-                    <span className="text-[#303030] ">Open 7 days Until 11 PM</span>
+                    <span className="text-[#303030] ">مفتوح 7 أيام في الأسبوع حتى الساعة 11 مساءً</span>
                   </h1>
                   <p className=" text-muted-foreground mb-4 md:mb-[21px]">
-                    <span className="font-bold text-[#303030] text-[36px]/10 ">Including Weekends and Holidays</span>
+                    <span className="font-bold text-[#303030] text-[36px]/10 ">بما في ذلك عطلات نهاية الأسبوع والعطلات الرسمية</span>
                   </p>
                   <p className="text-base text-[#000000] mb-3 md:mb-[15px] ">
-                    Skip the hospital wait. See a Real doctor Today — No Appointment Needed. Fast, friendly care for you and your family, Open on Weekends and Holidays, serving all areas of Calgary.
-                  </p>
+تجنّب الانتظار في المستشفى. استشر طبيباً مختصاً اليوم - لا حاجة لموعد مسبق. رعاية سريعة وودودة لك ولعائلتك، مفتوح في عطلات نهاية الأسبوع والأعياد، يخدم جميع مناطق كالجاري.                  </p>
                   <p className="text-lg font-bold text-[#050505] mb-2 ">
-                    Real doctors. Real care. Open late every day
+                    أطباء حقيقيون. رعاية حقيقية. مفتوح حتى وقت متأخر كل يوم
                   </p>
                   <p className="mb-8 md:mb-12 ">
                     <a href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6" target="_blank" className="text-lg font-bold underline text-[#050505]  ">
-                      Address: 2520 23 St NE #19, Calgary, AB T2E 8L2
+                     العنوان: 2520 شارع 23 شمال شرق رقم 19، كالجاري، ألبرتا T2E 8L2
                     </a>
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -333,7 +332,7 @@ export default function HomePage() {
                           src="/icons/pin-outline-icon.svg" alt=""
                           className="w-5 h-5 brightness-0 invert"
                         />
-                        Get Directions
+                        الحصول على الاتجاهات
                       </Link>
                     </Button>
                     <Button
@@ -344,7 +343,7 @@ export default function HomePage() {
                     >
                       <Link href="tel:587-391-8188" className="flex items-center gap-2">
                         <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5 " />
-                        Call: 587-391-8188
+للاتصال: 587-391-8188                
                       </Link>
                     </Button>
 
@@ -383,9 +382,9 @@ export default function HomePage() {
                         </span>
                       </span>
                     </div>
-                    <h3 className="font-bold text-[26px] mb-2 mt-8 text-[#303030] ">Walk-In Visits</h3>
+                    <h3 className="font-bold text-[26px] mb-2 mt-8 text-[#303030] ">الزيارات بدون موعد مسبق</h3>
                     <p className="text-base font-normal  text-[#000000] ">
-                      No appointment needed. See real doctors 7<br /> days a week even on holidays.
+                      لا حاجة لحجز موعد. استشر أطباء حقيقيين 7 أيام في الأسبوع حتى في أيام العطلات.
                     </p>
                   </div>
                   {/* Card 2: Family Doctors */}
@@ -398,9 +397,10 @@ export default function HomePage() {
                         </span>
                       </span>
                     </div>
-                    <h3 className="font-bold text-[26px] mb-2 mt-8 text-[#303030] ">Family Doctors</h3>
+                    <h3 className="font-bold text-[26px] mb-2 mt-8 text-[#303030] ">أطباء الأسرة</h3>
                     <p className="text-base font-normal  text-[#000000]">
-                      Ongoing care for your whole family from<br /> newborns to seniors.
+                      رعاية مستمرة لجميع أفراد عائلتك من
+المواليد الجدد إلى كبار السن.
                     </p>
                   </div>
                   {/* Card 3: Open 7 days */}
@@ -413,10 +413,9 @@ export default function HomePage() {
                         </span>
                       </span>
                     </div>
-                    <h3 className="font-bold text-[26px] mb-2 mt-8 text-[#303030] ">Open 7 days</h3>
+                    <h3 className="font-bold text-[26px] mb-2 mt-8 text-[#303030] ">مفتوح 7 أيام</h3>
                     <p className="text-base font-normal  text-[#000000]">
-                      Until 11:00 PM, including weekends and<br /> Holidays
-                    </p>
+حتى الساعة 11:00 مساءً، بما في ذلك عطلات نهاية الأسبوع والعطلات الرسمية                    </p>
                   </div>
                 </div>
               </div>
@@ -425,19 +424,19 @@ export default function HomePage() {
 
           {/* Why Choose Us Section */}
           <WhyChooseSection
-            title="Why Calgary Trusts"
+            title="لماذا صناديق كالجاري الائتمانية"
             h2_color_1=" text-[#050505] "
-            para="We're here when other clinics are closed and when you need care the most."
+            para="نحن هنا عندما تكون العيادات الأخرى مغلقة وعندما تكون في أمس الحاجة إلى الرعاية."
             para_color=" text-[#000000] "
-            subtitle="Now Medical Clinic"
+            subtitle="الآن عيادة طبية"
             items={whyChooseItems}
             image="/images/landing/why-calgary-trusts.png"
             both_btn="flex pt-4"
-            btn_1_text="Call: 587-391-8188"
+            btn_1_text="للاتصال: 587-391-8188"
             btn_1_link="tel:587-391-8188"
             btn_1_icon="/icons/btn_phone-outline-icon.svg"
             btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
-            btn_2_text="Walk In Now"
+            btn_2_text="ادخل الآن"
             btn_2_link="/walk-in-clinic"
             btn_2_icon="/icons/uil-arrow-up-right-grn.svg"
           />
@@ -448,12 +447,16 @@ export default function HomePage() {
               <div className="grid gap-8 lg:gap-12 lg:grid-cols-2 lg:gap-16 items-center lg:px-[59px] ">
                 <div>
                   <h2 className="text-3xl lg:text-5xl text-[#050505] font-bold mb-4">
-                    Our <span className="text-[#299470]">Promises</span>
+                    ملكنا <span className="text-[#299470]">وعود</span>
                   </h2>
                   <div className="space-y-4 text-[#000000] ">
                     <p>
-                      When you or your loved ones need care, you shouldn't wait days for an appointment. <br />At Now Medical Clinic, our doctors are ready 7 days a week — weekends and holidays <br />included, offering fast, compassionate, professional care for all Calgary residents.<br /> No Appointment Needed
-                      <br /> Because your health matters now — not later.
+                      عندما تحتاج أنت أو أحد أحبائك إلى رعاية طبية، لا ينبغي أن تنتظر أيامًا للحصول على موعد.
+
+في عيادة ناو الطبية، أطباؤنا على أهبة الاستعداد طوال أيام الأسبوع، بما في ذلك عطلات نهاية الأسبوع والأعياد.<br />يشمل ذلك تقديم رعاية سريعة ورحيمة ومهنية لجميع سكان كالجاري.
+
+لا حاجة لحجز موعد مسبق
+                      <br /> لأن صحتك تهمك الآن - وليس لاحقاً.
                     </p>
                   </div>
                   <div className="flex flex-col sm:flex-row gap-4 mt-8 ">
@@ -465,7 +468,7 @@ export default function HomePage() {
                     >
                       <Link href="tel:587-391-8188" className="flex items-center gap-2">
                         <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
-                        Call: 587-391-8188
+                        للاتصال: 587-391-8188
                       </Link>
                     </Button>
                   </div>
@@ -484,11 +487,14 @@ export default function HomePage() {
 
           {/* Conditions Section */}
           <ConditionsSection
-            title="Common Medical Conditions"
-            subtitle="We Treat"
-            para="At Now Medical Clinic, our doctors treat a wide range of medical conditions "
-            para_2="so you can skip the ER and get real help today."
+            title="الحالات الطبية الشائعة"
+            subtitle="نحن نتعامل"
+            para="في عيادة ناو الطبية، يعالج أطباؤنا مجموعة واسعة من الحالات الطبية "
+            para_2="لذا يمكنك تجنب الذهاب إلى قسم الطوارئ والحصول على مساعدة حقيقية اليوم."
             conditions={conditions}
+            btn1Text="للاتصال: 587-391-8188"
+            btn2Text="تفضل بزيارتنا في أي وقت - أطباء حقيقيون ورعاية حقيقية"
+            footerNote="مفتوح حتى الساعة 11 مساءً، 7 أيام في الأسبوع بما في ذلك عطلات نهاية الأسبوع والعطلات الرسمية"
           />
 
           {/* Walk-in Video Promo Section */}
@@ -496,11 +502,11 @@ export default function HomePage() {
             <div className="container mx-auto max-w-[1170px] w-full flex flex-col items-center">
               {/* Headline with Green Text */}
               <h2 className="text-3xl lg:text-5xl font-bold text-[#303030] text-center mb-4">
-                Walk in today until <span className="text-[#299470]">11:00 Pm, Open 7 days</span>
+                المشي اليوم حتى <span className="text-[#299470]">11:00 مساءً، مفتوح 7 أيام في الأسبوع</span>
               </h2>
               {/* Subheadline */}
               <p className="text-[20px] text-center text-[#303030] mb-6">
-                Register as a new patient today with our Male or Female Family Doctors ,Accepting New Patient
+                سجل كمريض جديد اليوم لدى أطباء الأسرة لدينا (ذكورًا وإناثًا)، نستقبل مرضى جدد.
               </p>
               {/* Video Player (with custom poster) */}
               <div className="w-full aspect-video bg-[#299470] rounded-lg shadow overflow-hidden flex items-center justify-center relative">
@@ -522,14 +528,14 @@ export default function HomePage() {
             <div className="container mx-auto flex flex-col items-center">
               {/* Headline */}
               <h2 className="text-3xl lg:text-5xl font-bold text-[#303030] text-center mb-4">
-                Family Doctors Accepting <span className="text-[#299470]">New Patients</span>
+                أطباء الأسرة يستقبلون <span className="text-[#299470]">المرضى الجدد</span>
               </h2>
               {/* Subheadline */}
               <div className="text-center mb-4">
-                <p className="font-bold text-lg text--[#000000">Looking for a family doctor in Calgary?</p>
+                <p className="font-bold text-lg text--[#000000">هل تبحث عن طبيب عائلة في كالجاري؟</p>
               </div>
               <div className="text-center  mb-8 text-[#000000] ">
-                Our caring Male and Female Doctors are accepting new patients in Calgary for long-term, comprehensive care. Get matched with <br /> a doctor who listens, understands, and builds lasting relationships with your family.
+                أطباؤنا المتفانون، من الجنسين، يستقبلون مرضى جدد في كالجاري لتقديم رعاية شاملة وطويلة الأمد. تواصلوا مع طبيب يُصغي إليكم، ويتفهم وضعكم، ويبني علاقات متينة مع عائلتكم.
               </div>
               {/* Cards Row */}
               <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
@@ -539,8 +545,8 @@ export default function HomePage() {
                     {/* icon: users */}
                     <img src="/images/landing/new-patients.svg" alt="" />
                   </span>
-                  <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">Male & Female Doctors</h3>
-                  <p className="text-[#303030] text-base ">Choose a doctor you're comfortable with</p>
+                  <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">أطباء من الذكور والإناث</h3>
+                  <p className="text-[#303030] text-base ">اختر طبيباً تشعر بالراحة معه</p>
                 </div>
                 {/* Card 2: Multiple Languages */}
                 <div className="rounded-xl border border-[#83C1AC] bg-white shadow-sm flex flex-col items-center justify-between px-5 py-5 text-center hover:shadow-lg transition">
@@ -548,8 +554,8 @@ export default function HomePage() {
                     {/* icon: globe / languages */}
                     <img src="/images/landing/new-patients.svg" alt="" />
                   </span>
-                  <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">Multiple languages</h3>
-                  <p className="text-[#303030] text-base">English, Spanish, French, Arabic, Urdu, Hindi</p>
+                  <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">لغات متعددة</h3>
+                  <p className="text-[#303030] text-base">الإنجليزية، الإسبانية، الفرنسية، العربية، الأردية، الهندية</p>
                 </div>
                 {/* Card 3: Comprehensive Care */}
                 <div className="rounded-xl border border-[#83C1AC] bg-white shadow-sm flex flex-col items-center justify-between px-5 py-5 text-center hover:shadow-lg transition">
@@ -557,8 +563,8 @@ export default function HomePage() {
                     {/* icon: comprehensive care */}
                     <img src="/images/landing/new-patients.svg" alt="" />
                   </span>
-                  <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">Comprehensive Care</h3>
-                  <p className="text-[#303030] text-base">Chronic conditions preventive health & more</p>
+                  <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">رعاية شاملة</h3>
+                  <p className="text-[#303030] text-base">الأمراض المزمنة، الصحة الوقائية، والمزيد</p>
                 </div>
               </div>
             </div>
@@ -576,22 +582,22 @@ export default function HomePage() {
 
           {/* Meet Our Doctors */}
           <DoctorsSection
-            title="Meet Our Female Doctors"
-            description={<>Our diverse team of male and female family doctors provides care in multiple languages. Each doctor brings years of <br />experience in family medicine, chronic condition management, and preventive health</>}
+            title="تعرفوا على طبيباتنا"
+            description={<>يقدم فريقنا المتنوع من أطباء الأسرة من الجنسين الرعاية الصحية بلغات متعددة. يتمتع كل طبيب بسنوات من الخبرة في طب الأسرة، وإدارة الأمراض المزمنة، والصحة الوقائية.</>}
             femaleDoctors={femaleDoctors}
             maleDoctors={maleDoctors}
             showCategories={false}
             useCarousel={true}
             customButtons={[
               {
-                text: "Call: 587-391-8188",
+                text: "للاتصال: 587-391-8188",
                 link: "tel:587-391-8188",
                 icon: "/icons/btn_phone-outline-icon.svg",
                 variant: "default",
                 className: "bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg"
               },
               {
-                text: "Meet Our Doctors",
+                text: "تعرف على أطبائنا",
                 link: "/meet-our-doctors",
                 icon: "/icons/uil-arrow-up-right-grn.svg",
                 variant: "outline",
@@ -602,26 +608,26 @@ export default function HomePage() {
 
           {/* Patient Experience */}
           <TestimonialsSection
-            title="Patient Experience"
+            title="تجربة المريض"
             subtitle={
               <>
-                At Now Medical Clinic, our doctors treat a wide range of medical conditions <br />
-                so you can skip the ER and get real help today.
+                في عيادة ناو الطبية، يعالج أطباؤنا مجموعة واسعة من الحالات الطبية حتى تتمكن من تجنب قسم الطوارئ والحصول على مساعدة حقيقية اليوم.
               </>
             }
-            bottomText="Watch why Calgary trusts Now Medical Clinic for fast, professional care."
+            bottomText="شاهد لماذا يثق سكان كالجاري بعيادة ناو الطبية للحصول على رعاية سريعة ومهنية."
             testimonials={testimonials}
-            customButtonText="See What Patients Are Saying"
+            customButtonText="اطلع على آراء المرضى"
+            callButtonText="للاتصال: 587-391-8188"
             customButtonLink="/reviews"
           />
 
         {/* New pages Section */}
          <WhyChooseSection
-            title={<>Walk-In Clinics by Area</>}
+            title={<>العيادات التي تستقبل المرضى بدون موعد مسبق حسب المنطقة</>}
             subtitle=""
             items={NewPages}
             image={Family_img}
-            btn_1_text="Call: 587-391-8188"
+            btn_1_text="للاتصال: 587-391-8188"
             btn_1_link="tel:587-391-8188"
             btn_1_icon="/icons/solar_phone-outline.svg"
             order="order-first"
@@ -632,6 +638,15 @@ export default function HomePage() {
 
           {/* Find Us Section */}
           <FindUsSection
+          titlePart1="ابحث عنا"
+          titlePart2="& ساعات"
+          addressLabel="عنوان"
+          addressValue="2520 شارع 23 شمال شرق، رقم 19، كالجاري، ألبرتا T2E 8L2"
+          hoursLabel="ساعات"
+          hoursValue="من الساعة 7:30 صباحاً حتى الساعة 11:00 مساءً (مفتوح 7 أيام في الأسبوع بما في ذلك عطلات نهاية الأسبوع والعطلات الرسمية)"
+          phoneLabel="هاتف"
+          phoneValue="587-391-8188"
+
             customButtons={
               <>
                 <Button
@@ -642,7 +657,7 @@ export default function HomePage() {
                 >
                   <Link href="tel:587-391-8188" className="flex items-center gap-2">
                     <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
-                    Call: 587-391-8188
+                    للاتصال: 587-391-8188
                   </Link>
                 </Button>
                 <Button
@@ -656,7 +671,7 @@ export default function HomePage() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
                   >
-                    Get Direction on Google Map
+                    احصل على الاتجاهات على خرائط جوجل
                     <img src="/icons/uil-arrow-up-right.svg" alt="" className="w-5 h-5 brightness-0 invert" />
                   </Link>
                 </Button>

@@ -23,193 +23,193 @@ export const metadata: Metadata = {
 export default function HomePage() {
   const whyChooseItems = [
     {
-      text: "Open 7 Days — Until 11:00 PM",
+      text: "Abierto 7 días - hasta las 11:00 pm",
       icon: <Clock className="w-5 h-5" />
     },
     {
-      text: "Open on Weekends and Holidays",
+      text: "Abierto fines de semana y festivos",
       icon: <Stethoscope className="w-5 h-5" />
     },
     {
-      text: "No Appointment Needed — Just Walk In",
+      text: "No necesita cita previa, solo venga",
       icon: <Users className="w-5 h-5" />
     },
     {
-      text: "Experienced Family Doctors You Can Rely On",
+      text: "Médicos de familia experimentados en los que puede confiar",
       icon: <Phone className="w-5 h-5" />
     },
     {
       // text: "Short Waits & Same-Day Prescriptions",
-      text: "Short Waits",
+      text: "Esperas cortas",
       icon: <Phone className="w-5 h-5" />
     },
     {
-      text: "Serving All Areas of Calgary with Free Parking",
+      text: "Sirviendo todas las áreas de Calgary con estacionamiento gratuito",
       icon: <Phone className="w-5 h-5" />
     }
   ];
 
   const conditions = [
     {
-      category: "Chronic Conditions",
+      category: "Condiciones crónicas",
       icon: "/images/landing/chronic-conditions.svg",
       items: [
-        "Diabetes (Type 1 & Type 2)",
-        "High blood pressure (Hypertension)",
-        "Asthma and COPD",
-        "Arthritis and joint pain",
-        "Thyroid disorders",
-        "Chronic pain management",
-        "Obesity and weight management",
-        "Chronic kidney disease"
+        "Diabetes (tipo 1 y tipo 2)",
+        "Presión arterial alta (hipertensión)",
+        "Asma y EPOC",
+        "Artritis y dolor articular",
+        "Trastornos de la tiroides",
+        "Manejo del dolor crónico",
+        "Obesidad y control del peso",
+        "Enfermedad renal crónica"
       ]
     },
     {
-      category: "Walk-in & Urgent Care",
+      category: "Atención sin cita previa y de urgencia",
       icon: "/images/landing/walk-In-urgent-care.svg",
       items: [
-        "Cold, cough, and flu symptoms",
-        "Sore throat and tonsillitis",
-        "Ear and eye infections",
-        "Urinary tract infections (UTIs)",
-        "Minor injuries and lacerations",
-        "Sprains and strains",
-        "Allergies and rashes",
-        "Skin infections and cellulitis",
-        "Nausea, vomiting, and diarrhea",
-        "Pink eye and styes"
+        "Síntomas del resfriado, la tos y la gripe",
+        "Dolor de garganta y amigdalitis",
+        "Infecciones de oído y ojos",
+        "Infecciones del tracto urinario (ITU)",
+        "Lesiones menores y laceraciones",
+        "Esguinces y distensiones",
+        "Alergias y erupciones cutáneas",
+        "Infecciones de la piel y celulitis",
+        "Náuseas, vómitos y diarrea.",
+        "Conjuntivitis y orzuelos"
       ]
     },
     {
-      category: "Mental Health & Wellness",
+      category: "Salud mental y bienestar",
       icon: "/images/landing/mental-health-wellness.svg",
       items: [
-        "Anxiety and panic attacks",
-        "Depression and mood disorders",
-        "Stress management",
-        "Sleep disorders and insomnia",
-        "ADHD and focus issues",
-        "Grief and loss counseling (referrals)"
+        "Ansiedad y ataques de pánico",
+        "Depresión y trastornos del estado de ánimo",
+        "Manejo del estrés",
+        "Trastornos del sueño e insomnio",
+        "TDAH y problemas de concentración",
+        "Asesoramiento sobre duelo y pérdida (derivaciones)"
       ]
     },
     {
-      category: "Men's Health",
+      category: "Salud de los hombres",
       icon: "/images/landing/mens-health.svg",
       items: [
-        "Erectile dysfunction and libido issues",
-        "Low testosterone and fatigue",
-        "Prostate exams and PSA screening",
-        "Male pattern baldness",
-        "Weight management and fitness advice",
-        "Mental health and stress counseling",
-        "Sexual health and STD screening"
+        "Disfunción eréctil y problemas de libido",
+        "Baja testosterona y fatiga",
+        "Exámenes de próstata y detección de PSA",
+        "calvicie de patrón masculino",
+        "Consejos para el control del peso y la actividad física",
+        "Asesoramiento sobre salud mental y estrés",
+        "Salud sexual y detección de ETS"
       ]
     },
     {
-      category: "Women's Health",
+      category: "Salud de la Mujer",
       icon: "/images/landing/womens-health.svg",
       items: [
-        "Pregnancy testing and prenatal care",
+        "Pruebas de embarazo y atención prenatal",
         // "Birth control and family planning",
-        "Menstrual irregularities and PMS",
-        "Menopause management and HRT",
-        "Pap smears and cervical cancer screening",
-        "Breast exams and mammogram referrals",
-        "UTIs and yeast infections",
-        "Pelvic pain and endometriosis"
+        "Irregularidades menstruales y síndrome premenstrual",
+        "Manejo de la menopausia y terapia de reemplazo hormonal (TRH)",
+        "Pruebas de Papanicolaou y detección del cáncer de cuello uterino",
+        "Exámenes de mama y derivaciones para mamografías",
+        "Infecciones urinarias e infecciones por hongos",
+        "Dolor pélvico y endometriosis"
       ]
     },
     {
-      category: "Children's Health",
+      category: "Salud infantil",
       icon: "/images/landing/childrens-health.svg",
       items: [
-        "Childhood immunizations",
-        "Growth and development monitoring",
-        "Cough, cold, and ear infections",
-        "Fever and rashes",
-        "School and sports physicals",
-        "Behavioral and learning assessments"
+        "Vacunas infantiles",
+        "Seguimiento del crecimiento y el desarrollo.",
+        "Tos, resfriado e infecciones de oído.",
+        "Fiebre y erupciones cutáneas",
+        "Exámenes físicos escolares y deportivos",
+        "Evaluaciones de comportamiento y aprendizaje"
       ]
     },
     {
-      category: "Preventive Care & Diagnostics",
+      category: "Atención preventiva y diagnóstico",
       icon: "/images/landing/preventive-care.svg",
       items: [
-        "Annual physical exams",
-        "Chronic disease screening",
-        "Travel medicine and vaccines",
-        "Blood work and lab tests",
-        "ECG and cardiac screening"
+        "Exámenes físicos anuales",
+        "Detección de enfermedades crónicas",
+        "Medicina de viaje y vacunas",
+        "Análisis de sangre y pruebas de laboratorio",
+        "ECG y cribado cardíaco"
       ]
     }
   ];
 
   const femaleDoctors = [
     {
-      name: "Dr. Nasreen Abid",
+      name: "Dra. Nasreen Abid",
       avatar: "/images/landing/dr-madiha.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-      language: "Arabic",
+      specialty: "Médicos de familia",
+      description: "Aceptando nuevos pacientes",
+      language: "árabe",
     },
     {
-      name: "Dr. Vanessa Marezana",
+      name: "Dra. Vanessa Marezana",
       avatar: "/images/landing/dr-ebele.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-      language: "Spanish",
+      specialty: "Médicos de familia",
+      description: "Aceptando nuevos pacientes",
+      language: "Español",
     },
     {
-      name: "Dr. Madiha Badshah",
+      name: "Dra. Madiha Badshah",
       avatar: "/images/landing/dr-madiha.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
+      specialty: "Médicos de familia",
+      description: "Aceptando nuevos pacientes",
     },
     {
-      name: "Dr. Ebele Madubuko",
+      name: "Dra. Ebele Madubuko",
       avatar: "/images/landing/dr-ebele.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
+      specialty: "Médicos de familia",
+      description: "Aceptando nuevos pacientes",
     }
     // {
     //   name: "Dr. Prabhjot Bedi",
     //   avatar: "/images/landing/dr-madiha.png",
-    //   specialty: "Family Doctors",
-    //   description: "Accepting New Patients",
+    //   specialty: "Médicos de familia",
+    //   description: "Aceptando nuevos pacientes",
     // }
   ];
 
   const maleDoctors = [
     {
-      name: "Dr. Michael Ghisel",
+      name: "Dra. Michael Ghisel",
       avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-      language: "Spanish",
+      specialty: "Médicos de familia",
+      description: "Aceptando nuevos pacientes",
+      language: "Español",
     },
     {
-      name: "Dr. Wael Saleh",
+      name: "Dra. Wael Saleh",
       avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
+      specialty: "Médicos de familia",
+      description: "Aceptando nuevos pacientes",
     },
     {
-      name: "Dr. Rai Khan",
+      name: "Dra. Rai Khan",
       avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
+      specialty: "Médicos de familia",
+      description: "Aceptando nuevos pacientes",
     },
     // {
     //   name: "Dr. Tive Egbonoje",
     //   avatar: "/images/landing/dr-michael.png",
-    //   specialty: "Family Doctors",
-    //   description: "Accepting New Patients",
+    //   specialty: "Médicos de familia",
+    //   description: "Aceptando nuevos pacientes",
     // },
     {
-      name: "Dr. Olasunkanmi Akinremi",
+      name: "Dra. Olasunkanmi Akinremi",
       avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
+      specialty: "Médicos de familia",
+      description: "Aceptando nuevos pacientes",
     },
   ];
 
@@ -218,19 +218,19 @@ export default function HomePage() {
       name: "Sanny Cooper",
       avatar: "/images/landing/review_1.png",
       rating: 5,
-      text: "Really good experience at this walk-in clinic. I was in and out in about 1.5 hours, and most of that wait was for the pharmacy inside (they're a little slow). The clinic itself runs smoothly, staff were friendly, and it's very convenient to have the pharmacy on-site."
+      text: "Tuve una experiencia muy buena en esta clínica sin cita previa. Entré y salí en aproximadamente una hora y media, y la mayor parte de la espera fue para la farmacia interna (son un poco lentas). La clínica en sí funciona sin problemas, el personal fue amable y es muy conveniente tener la farmacia en el lugar."
     },
     {
       name: "Bill Grabovac",
       avatar: "/images/landing/review_2.png",
       rating: 5,
-      text: "Fast service! Well managed medical clinic! Got to see a medical Dr after a 5 minute wait at 7:50pm. There was a small fee as we did not have an Alberta Health Care Number. The Dr was knowledgeable with the medical condition we experienced. Very Happy with the service we received. A+"
+      text: "¡Servicio rápido! ¡Clínica médica bien gestionada! Conseguimos ver a un médico después de 5 minutos de espera a las 19:50. Nos cobraron una pequeña tarifa, ya que no teníamos un número de Alberta Health Care. El médico estaba bien informado sobre nuestra condición médica. Muy satisfecho con el servicio recibido. Excelente."
     },
     {
       name: "Jetta Lush",
       avatar: "/images/landing/review_3.png",
       rating: 5,
-      text: "This place was awesome!!! Hours are wonderful, worked so well for me and my specific situation (working single parent), employees were warm and welcoming. Super fast efficient, doctor was warm, welcoming and super thorough. Great experience overall."
+      text: "¡Este lugar fue increíble! El horario es maravilloso, me vino de maravilla en mi situación específica (madre soltera que trabaja). Los empleados fueron cálidos y acogedores. Súper rápidos y eficientes. El doctor fue cálido, amable y muy minucioso. Una gran experiencia en general."
     }
   ];
 
@@ -248,7 +248,7 @@ export default function HomePage() {
       text: <><a href="/walk-in-clinic-se-calgary"> SE Calgary  </a></>,
     } ,
     {
-      text: <><a href="/walk-in-clinic-downtown-calgary"> Downtown Calgary </a></>,
+      text: <><a href="/walk-in-clinic-downtown-calgary"> Centro de Calgary </a></>,
     }
   ]
 
@@ -297,22 +297,22 @@ export default function HomePage() {
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
                 <div>
                   <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl  mb-4 md:mb-[21px] ">
-                    <span className="text-[#299470]">Calgary Walk in Clinic - Family Doctors Available Today</span>
+                    <span className="text-[#299470]">Clínica de atención sin cita previa en Calgary: médicos de familia disponibles hoy</span>
                     <br />
-                    <span className="text-[#303030] ">Open 7 days Until 11 PM</span>
+                    <span className="text-[#303030] ">Abierto 7 días hasta las 23:00 horas.</span>
                   </h1>
                   <p className=" text-muted-foreground mb-4 md:mb-[21px]">
-                    <span className="font-bold text-[#303030] text-[36px]/10 ">Including Weekends and Holidays</span>
+                    <span className="font-bold text-[#303030] text-[36px]/10 ">Incluidos fines de semana y festivos</span>
                   </p>
                   <p className="text-base text-[#000000] mb-3 md:mb-[15px] ">
-                    Skip the hospital wait. See a Real doctor Today — No Appointment Needed. Fast, friendly care for you and your family, Open on Weekends and Holidays, serving all areas of Calgary.
+Evite las esperas en el hospital. Consulte con un médico de verdad hoy mismo, sin cita previa. Atención rápida y amable para usted y su familia. Abierto fines de semana y festivos, atendiendo toda Calgary.
                   </p>
                   <p className="text-lg font-bold text-[#050505] mb-2 ">
-                    Real doctors. Real care. Open late every day
+                    Médicos de verdad. Atención de verdad. Abiertos hasta tarde todos los días.
                   </p>
                   <p className="mb-8 md:mb-12 ">
                     <a href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6" target="_blank" className="text-lg font-bold underline text-[#050505]  ">
-                      Address: 2520 23 St NE #19, Calgary, AB T2E 8L2
+                      Dirección: 2520 23 St NE #19, Calgary, AB T2E 8L2
                     </a>
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -333,7 +333,7 @@ export default function HomePage() {
                           src="/icons/pin-outline-icon.svg" alt=""
                           className="w-5 h-5 brightness-0 invert"
                         />
-                        Get Directions
+                        Obtener direcciones
                       </Link>
                     </Button>
                     <Button
@@ -344,7 +344,7 @@ export default function HomePage() {
                     >
                       <Link href="tel:587-391-8188" className="flex items-center gap-2">
                         <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5 " />
-                        Call: 587-391-8188
+                        Llama al: 587-391-8188
                       </Link>
                     </Button>
 
@@ -383,9 +383,9 @@ export default function HomePage() {
                         </span>
                       </span>
                     </div>
-                    <h3 className="font-bold text-[26px] mb-2 mt-8 text-[#303030] ">Walk-In Visits</h3>
+                    <h3 className="font-bold text-[26px] mb-2 mt-8 text-[#303030] ">Visitas sin cita previa</h3>
                     <p className="text-base font-normal  text-[#000000] ">
-                      No appointment needed. See real doctors 7<br /> days a week even on holidays.
+                      No necesitas cita. Consulta con médicos reales. 7<br /> días a la semana, incluso los días festivos.
                     </p>
                   </div>
                   {/* Card 2: Family Doctors */}
@@ -398,9 +398,9 @@ export default function HomePage() {
                         </span>
                       </span>
                     </div>
-                    <h3 className="font-bold text-[26px] mb-2 mt-8 text-[#303030] ">Family Doctors</h3>
+                    <h3 className="font-bold text-[26px] mb-2 mt-8 text-[#303030] ">Médicos de familia</h3>
                     <p className="text-base font-normal  text-[#000000]">
-                      Ongoing care for your whole family from<br /> newborns to seniors.
+                      Cuidado continuo para toda su familia desde<br /> desde recién nacidos hasta personas mayores.
                     </p>
                   </div>
                   {/* Card 3: Open 7 days */}
@@ -413,9 +413,9 @@ export default function HomePage() {
                         </span>
                       </span>
                     </div>
-                    <h3 className="font-bold text-[26px] mb-2 mt-8 text-[#303030] ">Open 7 days</h3>
+                    <h3 className="font-bold text-[26px] mb-2 mt-8 text-[#303030] ">Abierto 7 dias</h3>
                     <p className="text-base font-normal  text-[#000000]">
-                      Until 11:00 PM, including weekends and<br /> Holidays
+                      Uhasta las 23:00 horas, incluidos fines de semana y<br /> Vacaciones
                     </p>
                   </div>
                 </div>
@@ -425,19 +425,19 @@ export default function HomePage() {
 
           {/* Why Choose Us Section */}
           <WhyChooseSection
-            title="Why Calgary Trusts"
+            title="¿Por qué Calgary Trusts?"
             h2_color_1=" text-[#050505] "
-            para="We're here when other clinics are closed and when you need care the most."
+            para="Estamos aquí cuando otras clínicas están cerradas y cuando usted más necesita atención."
             para_color=" text-[#000000] "
-            subtitle="Now Medical Clinic"
+            subtitle="Ahora Clínica Médica"
             items={whyChooseItems}
             image="/images/landing/why-calgary-trusts.png"
             both_btn="flex pt-4"
-            btn_1_text="Call: 587-391-8188"
+            btn_1_text="Llama al: 587-391-8188"
             btn_1_link="tel:587-391-8188"
             btn_1_icon="/icons/btn_phone-outline-icon.svg"
             btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
-            btn_2_text="Walk In Now"
+            btn_2_text="Entra ahora"
             btn_2_link="/walk-in-clinic"
             btn_2_icon="/icons/uil-arrow-up-right-grn.svg"
           />
@@ -448,12 +448,12 @@ export default function HomePage() {
               <div className="grid gap-8 lg:gap-12 lg:grid-cols-2 lg:gap-16 items-center lg:px-[59px] ">
                 <div>
                   <h2 className="text-3xl lg:text-5xl text-[#050505] font-bold mb-4">
-                    Our <span className="text-[#299470]">Promises</span>
+                    Nuestro <span className="text-[#299470]">Promesas</span>
                   </h2>
                   <div className="space-y-4 text-[#000000] ">
                     <p>
-                      When you or your loved ones need care, you shouldn't wait days for an appointment. <br />At Now Medical Clinic, our doctors are ready 7 days a week — weekends and holidays <br />included, offering fast, compassionate, professional care for all Calgary residents.<br /> No Appointment Needed
-                      <br /> Because your health matters now — not later.
+                      Cuando usted o sus seres queridos necesitan atención, no debe esperar días para una cita. <br />En Now Medical Clinic, nuestros médicos están disponibles los 7 días de la semana: fines de semana y feriados. <br />incluido, ofreciendo atención rápida, compasiva y profesional para todos los residentes de Calgary. No se necesita cita
+                      <br /> Porque tu salud importa ahora, no más tarde.
                     </p>
                   </div>
                   <div className="flex flex-col sm:flex-row gap-4 mt-8 ">
@@ -465,7 +465,7 @@ export default function HomePage() {
                     >
                       <Link href="tel:587-391-8188" className="flex items-center gap-2">
                         <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
-                        Call: 587-391-8188
+                       Llama al: 587-391-8188
                       </Link>
                     </Button>
                   </div>
@@ -484,11 +484,15 @@ export default function HomePage() {
 
           {/* Conditions Section */}
           <ConditionsSection
-            title="Common Medical Conditions"
-            subtitle="We Treat"
-            para="At Now Medical Clinic, our doctors treat a wide range of medical conditions "
-            para_2="so you can skip the ER and get real help today."
+            title="Condiciones médicas comunes"
+            subtitle="Nosotros tratamos"
+            para="En Now Medical Clinic, nuestros médicos tratan una amplia gama de afecciones médicas. "
+            para_2="para que puedas evitar la sala de emergencias y obtener ayuda real hoy mismo."
             conditions={conditions}
+            btn1Text="Llama al: 587-391-8188"
+            btn2Text="Visitenos en cualquier momento - Doctores reales, atención real"
+            footerNote="Abierto hasta las 11 p. m., los 7 días de la semana, incluidos fines de semana y festivos."
+            
           />
 
           {/* Walk-in Video Promo Section */}
@@ -496,11 +500,11 @@ export default function HomePage() {
             <div className="container mx-auto max-w-[1170px] w-full flex flex-col items-center">
               {/* Headline with Green Text */}
               <h2 className="text-3xl lg:text-5xl font-bold text-[#303030] text-center mb-4">
-                Walk in today until <span className="text-[#299470]">11:00 Pm, Open 7 days</span>
+                Entra hoy hasta <span className="text-[#299470]">23:00 horas, abierto los 7 días</span>
               </h2>
               {/* Subheadline */}
               <p className="text-[20px] text-center text-[#303030] mb-6">
-                Register as a new patient today with our Male or Female Family Doctors ,Accepting New Patient
+                Regístrese hoy como nuevo paciente con nuestros médicos de familia masculinos o femeninos. Aceptamos nuevos pacientes.
               </p>
               {/* Video Player (with custom poster) */}
               <div className="w-full aspect-video bg-[#299470] rounded-lg shadow overflow-hidden flex items-center justify-center relative">
@@ -522,14 +526,14 @@ export default function HomePage() {
             <div className="container mx-auto flex flex-col items-center">
               {/* Headline */}
               <h2 className="text-3xl lg:text-5xl font-bold text-[#303030] text-center mb-4">
-                Family Doctors Accepting <span className="text-[#299470]">New Patients</span>
+                Médicos de familia que aceptan <span className="text-[#299470]">Nuevas pacientes</span>
               </h2>
               {/* Subheadline */}
               <div className="text-center mb-4">
-                <p className="font-bold text-lg text--[#000000">Looking for a family doctor in Calgary?</p>
+                <p className="font-bold text-lg text--[#000000">¿Buscas un médico de familia en Calgary?</p>
               </div>
               <div className="text-center  mb-8 text-[#000000] ">
-                Our caring Male and Female Doctors are accepting new patients in Calgary for long-term, comprehensive care. Get matched with <br /> a doctor who listens, understands, and builds lasting relationships with your family.
+                Nuestros médicos, hombres y mujeres, están aceptando nuevos pacientes en Calgary para recibir atención integral a largo plazo. Encuentra a alguien que te ayude. <br /> un médico que escucha, comprende y construye relaciones duraderas con su familia.
               </div>
               {/* Cards Row */}
               <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
@@ -539,8 +543,8 @@ export default function HomePage() {
                     {/* icon: users */}
                     <img src="/images/landing/new-patients.svg" alt="" />
                   </span>
-                  <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">Male & Female Doctors</h3>
-                  <p className="text-[#303030] text-base ">Choose a doctor you're comfortable with</p>
+                  <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">Médicos hombres y mujeres</h3>
+                  <p className="text-[#303030] text-base ">Elija un médico con el que se sienta cómodo</p>
                 </div>
                 {/* Card 2: Multiple Languages */}
                 <div className="rounded-xl border border-[#83C1AC] bg-white shadow-sm flex flex-col items-center justify-between px-5 py-5 text-center hover:shadow-lg transition">
@@ -548,8 +552,8 @@ export default function HomePage() {
                     {/* icon: globe / languages */}
                     <img src="/images/landing/new-patients.svg" alt="" />
                   </span>
-                  <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">Multiple languages</h3>
-                  <p className="text-[#303030] text-base">English, Spanish, French, Arabic, Urdu, Hindi</p>
+                  <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">Múltiples idiomas</h3>
+                  <p className="text-[#303030] text-base">Inglés, español, francés, árabe, urdu, hindi</p>
                 </div>
                 {/* Card 3: Comprehensive Care */}
                 <div className="rounded-xl border border-[#83C1AC] bg-white shadow-sm flex flex-col items-center justify-between px-5 py-5 text-center hover:shadow-lg transition">
@@ -557,8 +561,8 @@ export default function HomePage() {
                     {/* icon: comprehensive care */}
                     <img src="/images/landing/new-patients.svg" alt="" />
                   </span>
-                  <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">Comprehensive Care</h3>
-                  <p className="text-[#303030] text-base">Chronic conditions preventive health & more</p>
+                  <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">Atención Integral</h3>
+                  <p className="text-[#303030] text-base">Enfermedades crónicas, salud preventiva y más</p>
                 </div>
               </div>
             </div>
@@ -576,22 +580,22 @@ export default function HomePage() {
 
           {/* Meet Our Doctors */}
           <DoctorsSection
-            title="Meet Our Female Doctors"
-            description={<>Our diverse team of male and female family doctors provides care in multiple languages. Each doctor brings years of <br />experience in family medicine, chronic condition management, and preventive health</>}
+            title="Conozca a nuestras doctoras"
+            description={<>Nuestro diverso equipo de médicos de familia, hombres y mujeres, brinda atención en varios idiomas. Cada médico aporta años de experiencia. <br />Experiencia en medicina familiar, manejo de enfermedades crónicas y salud preventiva.</>}
             femaleDoctors={femaleDoctors}
             maleDoctors={maleDoctors}
             showCategories={false}
             useCarousel={true}
             customButtons={[
               {
-                text: "Call: 587-391-8188",
+                text: "Llama al: 587-391-8188",
                 link: "tel:587-391-8188",
                 icon: "/icons/btn_phone-outline-icon.svg",
                 variant: "default",
                 className: "bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg"
               },
               {
-                text: "Meet Our Doctors",
+                text: "Conozca a nuestros médicos",
                 link: "/meet-our-doctors",
                 icon: "/icons/uil-arrow-up-right-grn.svg",
                 variant: "outline",
@@ -602,26 +606,27 @@ export default function HomePage() {
 
           {/* Patient Experience */}
           <TestimonialsSection
-            title="Patient Experience"
+            title="Experiencia del paciente"
             subtitle={
               <>
-                At Now Medical Clinic, our doctors treat a wide range of medical conditions <br />
-                so you can skip the ER and get real help today.
+                En Now Medical Clinic, nuestros médicos tratan una amplia gama de afecciones médicas. <br />
+                para que puedas evitar la sala de emergencias y obtener ayuda real hoy mismo.
               </>
             }
-            bottomText="Watch why Calgary trusts Now Medical Clinic for fast, professional care."
+            bottomText="Vea por qué Calgary confía en Now Medical Clinic para recibir atención rápida y profesional."
             testimonials={testimonials}
-            customButtonText="See What Patients Are Saying"
+            callButtonText="Llama al: 587-391-8188"
+            customButtonText="Vea lo que dicen los pacientes"
             customButtonLink="/reviews"
           />
 
         {/* New pages Section */}
          <WhyChooseSection
-            title={<>Walk-In Clinics by Area</>}
+            title={<>Clínicas sin cita previa por área</>}
             subtitle=""
             items={NewPages}
             image={Family_img}
-            btn_1_text="Call: 587-391-8188"
+            btn_1_text="Llama al: 587-391-8188"
             btn_1_link="tel:587-391-8188"
             btn_1_icon="/icons/solar_phone-outline.svg"
             order="order-first"
@@ -632,6 +637,13 @@ export default function HomePage() {
 
           {/* Find Us Section */}
           <FindUsSection
+            titlePart1='Encuéntranos'
+            titlePart2='& Horas'
+            addressLabel="DIRECCIÓN"
+            addressValue="2520 23 St NE #19, Calgary, AB T2E 8L2"
+            hoursLabel="Horas"
+            hoursValue="7:30 a. m. a 11:00 p. m. (abierto los 7 días, incluidos fines de semana y feriados)"
+            phoneLabel="Teléfono"
             customButtons={
               <>
                 <Button
@@ -642,7 +654,7 @@ export default function HomePage() {
                 >
                   <Link href="tel:587-391-8188" className="flex items-center gap-2">
                     <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
-                    Call: 587-391-8188
+                    Llama al: 587-391-8188
                   </Link>
                 </Button>
                 <Button
@@ -656,7 +668,7 @@ export default function HomePage() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
                   >
-                    Get Direction on Google Map
+                    Obtener dirección en Google Map
                     <img src="/icons/uil-arrow-up-right.svg" alt="" className="w-5 h-5 brightness-0 invert" />
                   </Link>
                 </Button>
