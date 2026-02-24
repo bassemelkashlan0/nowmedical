@@ -37,11 +37,38 @@ export function Header() {
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="min-w-[240px] text-[#242121] bg-white border-0">
-              <DropdownMenuItem asChild>
-                <Link href="/walk-in-clinic" className={pathname === '/walk-in-clinic' ? 'bg-[#299470]/10 text-[#242121] font-normal text-[#242121]' : ''}>
+              <DropdownMenuSub>
+                <DropdownMenuSubTrigger>
                   Walk-In Clinic Calgary
-                </Link>
-              </DropdownMenuItem>
+                </DropdownMenuSubTrigger>
+                <DropdownMenuSubContent className="min-w-[240px] text-[#242121] bg-white border-0">
+                  <DropdownMenuItem asChild>
+                    <Link href="/walk-in-clinic-downtown-calgary" className={pathname === '/walk-in-clinic-downtown-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                      Downtown Calgary
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/walk-in-clinic-ne-calgary" className={pathname === '/walk-in-clinic-ne-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                      NE Calgary
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/walk-in-clinic-nw-calgary" className={pathname === '/walk-in-clinic-nw-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                      NW Calgary
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/walk-in-clinic-se-calgary" className={pathname === '/walk-in-clinic-se-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                      SE Calgary
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/walk-in-clinic-sw-calgary" className={pathname === '/walk-in-clinic-sw-calgary' ? 'bg-[#299470]/10 text-[#242121] font-normal' : ''}>
+                      SW Calgary
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuSubContent>
+              </DropdownMenuSub>
               <DropdownMenuItem asChild>
                 <Link href="/urgent-care-calgary" className={pathname === '/urgent-care-calgary' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                   Urgent Care Calgary
@@ -193,6 +220,21 @@ export function Header() {
                   <p className="text-sm font-semibold text-muted-foreground mb-2">Walk-In Clinic</p>
                   <Link href="/walk-in-clinic" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Walk-In Clinic Calgary
+                  </Link>
+                  <Link href="/walk-in-clinic-downtown-calgary" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic-downtown-calgary' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    ↳ Downtown Calgary
+                  </Link>
+                  <Link href="/walk-in-clinic-ne-calgary" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic-ne-calgary' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    ↳ NE Calgary
+                  </Link>
+                  <Link href="/walk-in-clinic-nw-calgary" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic-nw-calgary' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    ↳ NW Calgary
+                  </Link>
+                  <Link href="/walk-in-clinic-se-calgary" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic-se-calgary' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    ↳ SE Calgary
+                  </Link>
+                  <Link href="/walk-in-clinic-sw-calgary" className={`block py-1 text-sm text-[#299470] ${pathname === '/walk-in-clinic-sw-calgary' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    ↳ SW Calgary
                   </Link>
                   <Link href="/urgent-care-calgary" className={`block py-1 text-sm text-[#299470] ${pathname === '/urgent-care-calgary' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Urgent Care
