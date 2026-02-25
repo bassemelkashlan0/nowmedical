@@ -343,7 +343,7 @@ export default function HomePage() {
                     >
                       <Link href="tel:587-391-8188" className="flex items-center gap-2">
                         <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5 " />
-للاتصال: 587-391-8188                
+للاتصال                 
                       </Link>
                     </Button>
 
@@ -424,7 +424,7 @@ export default function HomePage() {
 
           {/* Why Choose Us Section */}
           <WhyChooseSection
-            title="لماذا صناديق كالجاري الائتمانية"
+            title=""
             h2_color_1=" text-[#050505] "
             para="نحن هنا عندما تكون العيادات الأخرى مغلقة وعندما تكون في أمس الحاجة إلى الرعاية."
             para_color=" text-[#000000] "
@@ -432,7 +432,7 @@ export default function HomePage() {
             items={whyChooseItems}
             image="/images/landing/why-calgary-trusts.png"
             both_btn="flex pt-4"
-            btn_1_text="للاتصال: 587-391-8188"
+            btn_1_text="للاتصال"
             btn_1_link="tel:587-391-8188"
             btn_1_icon="/icons/btn_phone-outline-icon.svg"
             btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
@@ -468,7 +468,7 @@ export default function HomePage() {
                     >
                       <Link href="tel:587-391-8188" className="flex items-center gap-2">
                         <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
-                        للاتصال: 587-391-8188
+                        للاتصال 
                       </Link>
                     </Button>
                   </div>
@@ -492,7 +492,7 @@ export default function HomePage() {
             para="في عيادة ناو الطبية، يعالج أطباؤنا مجموعة واسعة من الحالات الطبية "
             para_2="لذا يمكنك تجنب الذهاب إلى قسم الطوارئ والحصول على مساعدة حقيقية اليوم."
             conditions={conditions}
-            btn1Text="للاتصال: 587-391-8188"
+            btn1Text="للاتصال "
             btn2Text="تفضل بزيارتنا في أي وقت - أطباء حقيقيون ورعاية حقيقية"
             footerNote="مفتوح حتى الساعة 11 مساءً، 7 أيام في الأسبوع بما في ذلك عطلات نهاية الأسبوع والعطلات الرسمية"
           />
@@ -502,8 +502,8 @@ export default function HomePage() {
             <div className="container mx-auto max-w-[1170px] w-full flex flex-col items-center">
               {/* Headline with Green Text */}
               <h2 className="text-3xl lg:text-5xl font-bold text-[#303030] text-center mb-4">
-                المشي اليوم حتى <span className="text-[#299470]">11:00 مساءً، مفتوح 7 أيام في الأسبوع</span>
-              </h2>
+              <span className="text-[#299470]">  مفتوح 7 أيام في الأسبوع </span>
+              </h2>مساءً، 
               {/* Subheadline */}
               <p className="text-[20px] text-center text-[#303030] mb-6">
                 سجل كمريض جديد اليوم لدى أطباء الأسرة لدينا (ذكورًا وإناثًا)، نستقبل مرضى جدد.
@@ -590,7 +590,7 @@ export default function HomePage() {
             useCarousel={true}
             customButtons={[
               {
-                text: "للاتصال: 587-391-8188",
+                text: "للاتصال",
                 link: "tel:587-391-8188",
                 icon: "/icons/btn_phone-outline-icon.svg",
                 variant: "default",
@@ -617,7 +617,7 @@ export default function HomePage() {
             bottomText="شاهد لماذا يثق سكان كالجاري بعيادة ناو الطبية للحصول على رعاية سريعة ومهنية."
             testimonials={testimonials}
             customButtonText="اطلع على آراء المرضى"
-            callButtonText="للاتصال: 587-391-8188"
+            callButtonText="للاتصال"
             customButtonLink="/reviews"
           />
 
@@ -627,7 +627,7 @@ export default function HomePage() {
             subtitle=""
             items={NewPages}
             image={Family_img}
-            btn_1_text="للاتصال: 587-391-8188"
+            btn_1_text="للاتصال"
             btn_1_link="tel:587-391-8188"
             btn_1_icon="/icons/solar_phone-outline.svg"
             order="order-first"
@@ -657,7 +657,7 @@ export default function HomePage() {
                 >
                   <Link href="tel:587-391-8188" className="flex items-center gap-2">
                     <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
-                    للاتصال: 587-391-8188
+                    للاتصال
                   </Link>
                 </Button>
                 <Button
