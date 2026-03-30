@@ -82,6 +82,11 @@ export function Header() {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
+                <Link href="/after-hours-walk-in-clinic" className={pathname === '/after-hours-walk-in-clinic' ? 'bg-[#299470]/10 hover:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ' text-[#242121] hover:bg-[#f5f5f5]/10 foces:bg-[#f5f5f5]/10'}>
+                  After-hours Walk-in Clinic
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
                 <Link href="/24-hour-walk-in-clinic-calgary" className={pathname === '/24-hour-walk-in-clinic-calgary' ? 'bg-[#299470]/10 focus:bg-[#f5f5f5]/10 text-[#242121] font-normal text-[#242121]' : ''}>
                   24-Hour / Extended Hours
                 </Link>
@@ -243,6 +248,9 @@ export function Header() {
                   </Link>
                   <Link href="/late-night-clinic" className={`block py-1 text-sm text-[#299470] ${pathname === '/late-night-clinic' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     Late-Night Clinic
+                  </Link>
+                  <Link href="/after-hours-walk-in-clinic" className={`block py-1 text-sm text-[#299470] ${pathname === '/after-hours-walk-in-clinic' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
+                    After-hours Walk-in Clinic
                   </Link>
                   <Link href="/24-hour-walk-in-clinic-calgary" className={`block py-1 text-sm text-[#299470] ${pathname === '/24-hour-walk-in-clinic-calgary' ? ' font-semibold' : ''}`} onClick={() => setIsOpen(false)}>
                     24-Hour / Extended Hours

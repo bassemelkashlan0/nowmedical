@@ -95,6 +95,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/after-hours-walk-in-clinic" className="text-[#303030] hover:text-[#299470] transition-colors">
+                  After-hours Walk-in Clinic
+                </Link>
+              </li>
+              <li>
                 <Link href="/24-hour-walk-in-clinic-calgary" className="text-[#303030] hover:text-[#299470] transition-colors">
                   24-Hour / Extended Hours
                 </Link>

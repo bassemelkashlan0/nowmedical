@@ -297,13 +297,17 @@ export default function HomePage() {
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
                 <div>
                   <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl  mb-4 md:mb-[21px] ">
-                    <span className="text-[#299470]">Calgary Walk in Clinic - Family Doctors Available Today</span>
-                    <br />
-                    <span className="text-[#303030] ">Open 7 days Until 11 PM</span>
+                    <span className="text-[#299470]">Walk-in Clinic Calgary | Near You | Open Today Until 11 PM Family Doctors Available 
+                    </span>
+
                   </h1>
-                  <p className=" text-muted-foreground mb-4 md:mb-[21px]">
+                  <h2 className="text-2xl lg:text-3xl font-medium text-[#303030] mb-[21px] ">
+                    Open 7 days Until 11 PM
+                    Including Weekends and Holidays 
+                  </h2>
+                  {/* <p className=" text-muted-foreground mb-4 md:mb-[21px]">
                     <span className="font-bold text-[#303030] text-[36px]/10 ">Including Weekends and Holidays</span>
-                  </p>
+                  </p> */}
                   <p className="text-base text-[#000000] mb-3 md:mb-[15px] ">
                     Skip the hospital wait. See a Real doctor Today — No Appointment Needed. Fast, friendly care for you and your family, Open on Weekends and Holidays, serving all areas of Calgary.
                   </p>

@@ -73,13 +73,24 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/late-night-clinic" className="text-muted-foreground transition-colors hover:text-primary">
-                  24-Hour Walk-In Clinic
+                <Link
+                  href="/late-night-clinic"
+                  className="text-muted-foreground transition-colors hover:text-primary"
+                >
+                  Late-Night Clinic
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/walk-in-clinicweekends"
+                  href="/after-hours-walk-in-clinic"
+                  className="text-muted-foreground transition-colors hover:text-primary"
+                >
+                  After-hours Walk-in Clinic
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/walk-in-clinic-weekends"
                   className="text-muted-foreground transition-colors hover:text-primary"
                 >
                   Weekend Walk-In Clinic
