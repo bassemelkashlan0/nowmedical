@@ -76,13 +76,13 @@ export default function AboutPage() {
       description: "Experienced in family practice and children's care.",
       phone: "587-391-8188"
     },
-    {
-      name: "Dr. Vanessa",
-      avatar: "/images/about-us/dr-vanessa.png",
-      specialty: "Family Doctors",
-      description: "Experienced in family practice and children's care.",
-      phone: "587-391-8188"
-    },
+    // {
+    //   name: "Dr. Vanessa",
+    //   avatar: "/images/about-us/dr-vanessa.png",
+    //   specialty: "Family Doctors",
+    //   description: "Experienced in family practice and children's care.",
+    //   phone: "587-391-8188"
+    // },
     {
       name: "Dr. Michael",
       avatar: "/images/about-us/dr-michael.png",

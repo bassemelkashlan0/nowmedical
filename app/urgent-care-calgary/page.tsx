@@ -67,10 +67,17 @@ export default function UrgentCarePage() {
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
                   <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4 lg:mb-[21px] text-[#303030]">
-                    <span className="text-[#299470] " >Urgent Care in Calgary </span> <br />
-                    Walk-In Clinic Open <br />
-                    Late 7 Days a Week
-                  </h1>
+                    <span className="text-[#299470] " >Urgent Care Walk-In Clinic in Calgary Open Today Until 11 PM
+No Appointment Needed
+ </span>
+ </h1> 
+ <h2 className="text-2xl lg:text-3xl font-medium text-[#303030] mb-[21px] ">
+ Open 7 days Until 11 PM
+Including Weekends and Holidays 
+
+ </h2>
+
+
 
                   <p className="text-base text-[#000000] mb-4">
                     Need medical care now? <br />

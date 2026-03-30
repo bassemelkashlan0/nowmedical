@@ -19,6 +19,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/walk-in-clinic-calgary',
+        destination: '/walk-in-clinic',
+        permanent: true,
+      },
+      {
         source: '/booking',
         destination: 'https://ocean.cognisantmd.com/online-booking/322be509-ed26-45d8-aa46-a003f21f87a5',
         permanent: true,

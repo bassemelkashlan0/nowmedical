@@ -19,20 +19,20 @@ export const metadata: Metadata = {
 
 export default function DoctorsPage() {
   const femaleDoctors = [
-    {
-      name: "Dr. Nasreen Abid",
-      avatar: "/images/landing/dr-madiha.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-      language: "Arabic",
-    },
-    {
-      name: "Dr. Vanessa Marezana",
-      avatar: "/images/landing/dr-ebele.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-      language: "Spanish",
-    },
+    // {
+    //   name: "Dr. Nasreen Abid",
+    //   avatar: "/images/landing/dr-madiha.png",
+    //   specialty: "Family Doctors",
+    //   description: "Accepting New Patients",
+    //   language: "Arabic",
+    // },
+    // {
+    //   name: "Dr. Vanessa Marezana",
+    //   avatar: "/images/landing/dr-ebele.png",
+    //   specialty: "Family Doctors",
+    //   description: "Accepting New Patients",
+    //   language: "Spanish",
+    // },
     {
       name: "Dr. Madiha Badshah",
       avatar: "/images/landing/dr-madiha.png",
@@ -79,12 +79,12 @@ export default function DoctorsPage() {
     //   specialty: "Family Doctors",
     //   description: "Accepting New Patients",
     // },
-    {
-      name: "Dr. Olasunkanmi Akinremi",
-      avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-    },
+    // {
+    //   name: "Dr. Olasunkanmi Akinremi",
+    //   avatar: "/images/landing/dr-michael.png",
+    //   specialty: "Family Doctors",
+    //   description: "Accepting New Patients",
+    // },
 
   ];
 

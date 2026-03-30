@@ -169,12 +169,12 @@ export default function WalkInPage() {
   //   specialty: "Family Doctors",
   //   description: "Accepting New Patients",
   // },
-  {
-    name: "Dr. Olasunkanmi Akinremi",
-    avatar: "/images/landing/dr-michael.png",
-    specialty: "Family Doctors",
-    description: "Accepting New Patients",
-  }
+  // {
+  //   name: "Dr. Olasunkanmi Akinremi",
+  //   avatar: "/images/landing/dr-michael.png",
+  //   specialty: "Family Doctors",
+  //   description: "Accepting New Patients",
+  // }
   ];
 
 

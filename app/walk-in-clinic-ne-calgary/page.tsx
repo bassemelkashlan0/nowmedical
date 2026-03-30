@@ -116,14 +116,14 @@ export default function NECalgaryClinicPage() {
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
                 <div>
                   <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4">
-                    <span className="text-[#299470]">Walk-In Clinic Serving NE Calgary</span>
-                    <br />
-                    <span className="text-[#303030]">Open 7 days Until 11 PM</span>
-                    <br />
-                    <span className="text-[#303030]">Including Weekends and Holidays</span>
-                    <br />
-                    <span className="text-[#303030] text-2xl lg:text-3xl mt-6 font-semibold leading-snug block">Same-Day Medical Care for Northeast Calgary Residents</span>
+                    <span className="text-[#299470]">Walk-In Clinic NE Calgary | 
+Open today Until 11 PM
+No Appointment Needed</span>
                   </h1>
+                  <h2 className="text-2xl lg:text-3xl font-medium text-[#303030] mb-[21px] ">
+                    Open 7 days Until 11 PM
+                    Including Weekends and Holidays 
+                  </h2>
 
                   <p className="text-base text-[#303030] mb-4">
                     If you are searching for a walk-in clinic in <b>NE Calgary,</b> Now Medical Clinic provides

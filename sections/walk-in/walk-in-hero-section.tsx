@@ -26,11 +26,20 @@ interface WalkInHeroSectionProps {
 export default function WalkInHeroSection({
   title = (
     <>
-      <span className="text-[#299470]">Walk-In Clinic Calgary</span><br />
-      Open 7 Days Until 11 PM
+      <span className="text-[#299470]">Walk-In Clinic Calgary</span>
+      <br />
+      Open Today Until 11 PM | Near You
+      <br />
+      No Appointment Needed
     </>
   ),
-  subtitle = "Including Weekend and Holidays",
+  subtitle = (
+    <>
+      Open 7 days Until 11 PM
+      <br />
+      Including Weekends and Holidays
+    </>
+  ),
   description = (
     <>
       Need a doctor today? Walk in anytime — no appointment needed. <br /> We're open 7 days late <b>evenings, weekends, and holidays</b> to help you feel better faster.
@@ -67,9 +76,9 @@ export default function WalkInHeroSection({
               {title}
             </h1>
             {subtitle && (
-              <p className="text-2xl lg:text-3xl font-medium text-[#303030] mb-[21px] ">
+              <h2 className="text-2xl lg:text-3xl font-bold text-[#303030] mb-[21px] leading-tight">
                 {subtitle}
-              </p>
+              </h2>
             )}
             {description && (
               <p className="text-base text-[#303030] mb-1 ">

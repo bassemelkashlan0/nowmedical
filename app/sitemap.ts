@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/walk-in-clinic-downtown-calgary', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/urgent-care-calgary', priority: 0.8, changeFrequency: 'weekly' as const },
     { url: '/late-night-clinic', priority: 0.8, changeFrequency: 'weekly' as const },
+    { url: '/after-hours-walk-in-clinic', priority: 0.8, changeFrequency: 'weekly' as const },
     { url: '/24-hour-walk-in-clinic-calgary', priority: 0.8, changeFrequency: 'weekly' as const },
     { url: '/walk-in-clinic-weekends', priority: 0.8, changeFrequency: 'weekly' as const },
     { url: '/driver-medical-exam', priority: 0.8, changeFrequency: 'monthly' as const },
