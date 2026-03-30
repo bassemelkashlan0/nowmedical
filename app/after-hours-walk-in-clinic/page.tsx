@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "After-hours Walk-In Clinic Calgary | Open Until 11:00 PM",
+  title: "After-hours Walk-In Clinic Calgary | Open Until 11 PM",
   description:
     "After-hours walk-in clinic in Calgary open daily until 11 PM. No appointment needed—visit Now Medical Clinic on weekends and holidays.",
 };
@@ -66,7 +66,7 @@ export default function AfterHoursWalkInClinicPage() {
                       Calgary's After-hours Walk-in Clinic -
                     </span>
                     <br />
-                    Open Until 11:00 PM
+                    <span className="whitespace-nowrap">Open Until 11 PM</span>
                     <br />
                     No Appointment Needed
                   </h1>

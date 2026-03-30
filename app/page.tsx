@@ -296,14 +296,19 @@ export default function HomePage() {
             <div className="container">
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
                 <div>
-                  <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl  mb-4 md:mb-[21px] ">
-                    <span className="text-[#299470]">Walk-in Clinic Calgary | Near You | Open Today Until 11 PM Family Doctors Available 
+                  <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#303030] tracking-tight mb-4 lg:mb-[21px]">
+                    <span className="text-[#299470]">
+                      Walk-in Clinic Calgary | Near You
+                      <br />
+                      Open Today <span className="whitespace-nowrap">Until 11 PM</span>
+                      <br />
+                      Family Doctors Available
                     </span>
-
                   </h1>
                   <h2 className="text-2xl lg:text-3xl font-medium text-[#303030] mb-[21px] ">
-                    Open 7 days Until 11 PM
-                    Including Weekends and Holidays 
+                    Open 7 days <span className="whitespace-nowrap">Until 11 PM</span>
+                    <br />
+                    Including Weekends and Holidays
                   </h2>
                   {/* <p className=" text-muted-foreground mb-4 md:mb-[21px]">
                     <span className="font-bold text-[#303030] text-[36px]/10 ">Including Weekends and Holidays</span>
@@ -607,12 +612,7 @@ export default function HomePage() {
           {/* Patient Experience */}
           <TestimonialsSection
             title="Patient Experience"
-            subtitle={
-              <>
-                At Now Medical Clinic, our doctors treat a wide range of medical conditions <br />
-                so you can skip the ER and get real help today.
-              </>
-            }
+            subtitle="At Now Medical Clinic, our doctors treat a wide range of medical conditions so you can skip the ER and get real help today."
             bottomText="Watch why Calgary trusts Now Medical Clinic for fast, professional care."
             testimonials={testimonials}
             customButtonText="See What Patients Are Saying"

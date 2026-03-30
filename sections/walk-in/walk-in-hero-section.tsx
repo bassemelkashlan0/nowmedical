@@ -14,6 +14,8 @@ interface ButtonConfig {
 interface WalkInHeroSectionProps {
   title?: ReactNode;
   subtitle?: ReactNode;
+  titleClassName?: string;
+  subtitleClassName?: string;
   description?: ReactNode;
   additionalText?: ReactNode;
   buttons?: ButtonConfig[];
@@ -28,18 +30,20 @@ export default function WalkInHeroSection({
     <>
       <span className="text-[#299470]">Walk-In Clinic Calgary</span>
       <br />
-      Open Today Until 11 PM | Near You
+      Open Today <span className="whitespace-nowrap">Until 11 PM</span> | Near You
       <br />
       No Appointment Needed
     </>
   ),
   subtitle = (
     <>
-      Open 7 days Until 11 PM
+      Open 7 days <span className="whitespace-nowrap">Until 11 PM</span>
       <br />
       Including Weekends and Holidays
     </>
   ),
+  titleClassName = "text-4xl lg:text-5xl xl:text-6xl font-bold text-[#303030] tracking-tight mb-4 lg:mb-[21px]",
+  subtitleClassName = "text-2xl lg:text-3xl font-medium text-[#303030] mb-[21px] leading-tight",
   description = (
     <>
       Need a doctor today? Walk in anytime — no appointment needed. <br /> We're open 7 days late <b>evenings, weekends, and holidays</b> to help you feel better faster.
@@ -72,11 +76,11 @@ export default function WalkInHeroSection({
         <div className="grid  gap-8 lg:grid-cols-2 lg:gap-12 items-center">
           {/* Left Section - Text Content (60-70% width) */}
           <div className="space-y-4">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#303030] mb-4 lg:mb-[21px] ">
+            <h1 className={titleClassName}>
               {title}
             </h1>
             {subtitle && (
-              <h2 className="text-2xl lg:text-3xl font-bold text-[#303030] mb-[21px] leading-tight">
+              <h2 className={subtitleClassName}>
                 {subtitle}
               </h2>
             )}

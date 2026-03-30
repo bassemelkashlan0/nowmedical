@@ -189,7 +189,9 @@ export default function WalkInPage() {
         <LiveStatusBanner />
         <main className="flex-1">
           {/* Hero Section */}
-          <WalkInHeroSection />
+          <WalkInHeroSection
+            titleClassName="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#299470] tracking-tight mb-4 lg:mb-[21px]"
+          />
 
 
           {/* Bottom Call to Action */}
@@ -295,7 +297,7 @@ export default function WalkInPage() {
             values={values}
             titleFontWeight="font-medium"
             useListFormat={true}
-            buttonText={<> Walk In Anytime No Appointment Needed </>}
+            buttonText="Walk In Anytime No Appointment Needed"
             buttonLink="/walk-in-clinic"
             buttonIcon="/icons/uil-arrow-up-right.svg"
             buttonIconClass=""

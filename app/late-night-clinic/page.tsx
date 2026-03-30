@@ -61,12 +61,17 @@ export default function LateNightClinicPage() {
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
                   <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#303030] tracking-tight mb-4 lg:mb-[21px]  ">
-                    <span className="text-[#299470] " >Late-Night Walk-In Clinic in Calgary 
-Open Tonight Until 11 PM
-No Appointment Needed</span>
+                    <span className="text-[#299470] ">
+                      Late-Night Walk-In Clinic in Calgary
+                      <br />
+                      Open Tonight <span className="whitespace-nowrap">Until 11 PM</span>
+                      <br />
+                      No Appointment Needed
+                    </span>
                   </h1>
                   <h2 className="text-2xl lg:text-3xl font-medium text-[#303030] mb-[21px] ">
-                  Open 7 days Until 11 PM
+                  Open 7 days <span className="whitespace-nowrap">Until 11 PM</span>
+                  <br />
 Including Weekends and Holidays 
 
                   </h2>

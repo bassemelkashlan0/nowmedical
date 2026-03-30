@@ -118,8 +118,9 @@ export default function NWCalgaryClinicPage() {
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
                 <div>
                   <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4">
-                    <span className="text-[#299470]">Walk-In Clinic NW Calgary 
+                    <span className="text-[#299470]">Walk-In Clinic NW Calgary <br />
 Open Late Until 11 PM 
+<br />
 No Appointment Needed</span>
                   </h1>
                   <h2 className="text-2xl lg:text-3xl font-medium text-[#303030] mb-[21px] ">
