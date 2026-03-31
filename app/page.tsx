@@ -298,7 +298,9 @@ export default function HomePage() {
                 <div>
                   <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#303030] tracking-tight mb-4 lg:mb-[21px]">
                     <span className="text-[#299470]">
-                      Walk-in Clinic Calgary | Near You
+                      Walk-in Clinic Calgary
+                      <br />
+                      Near You
                       <br />
                       Open Today <span className="whitespace-nowrap">Until 11 PM</span>
                       <br />
