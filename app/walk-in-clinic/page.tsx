@@ -39,7 +39,7 @@ export default function WalkInPage() {
       text: "Preventive care & lab follow-ups",
     },
     {
-      text: "Men’s and women’s health",
+      text: "Men's and women's health",
     },
     {
       text: "Mental health & stress management",
@@ -67,11 +67,11 @@ export default function WalkInPage() {
   // Story Content
   const storyContent = [
     <>
-      At Now Medical Clinic, we make healthcare simple. <br /> You don’t have to wait for weeks to see a doctor — just walk in and get care the same day. <br />
+      At Now Medical Clinic, we make healthcare simple. <br /> You don't have to wait for weeks to see a doctor — just walk in and get care the same day. <br />
       Our experienced family doctors provide compassionate, professional care for patients of all ages.
     </>,
     <>
-      <b className="text-lg">Whether it’s morning, evening, or a holiday we’re here when you need us most.</b>
+      <b className="text-lg">Whether it's morning, evening, or a holiday we're here when you need us most.</b>
     </>
   ];
   const values = [
@@ -81,12 +81,12 @@ export default function WalkInPage() {
       image: "/images/walk-in/everyday-illnesses.svg"
     },
     {
-      title: "Women’s Health",
+      title: "Women's Health",
       description: ["Prenatal Care, Pap tests, menopause care"],
       image: "/images/walk-in/women-sexual-health.svg"
     },
     {
-      title: "Children’s & Family Care",
+      title: "Children's & Family Care",
       description: ["Fever, rash, ear infection, asthma management", "School notes, flu shots, immunizations"],
       image: "/images/walk-in/children-family-care.svg"
     },
@@ -132,7 +132,7 @@ export default function WalkInPage() {
     // },
     {
       name: "Dr. Ebele Madubuko",
-      avatar: "/images/landing/dr-ebele.png",
+      avatar: "/images/landing/Ebele.webp",      // ✅ Fixed: was dr-ebele.png
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     }
@@ -144,37 +144,38 @@ export default function WalkInPage() {
     // }
   ];
 
-  const maleDoctors = [{
-    name: "Dr. Michael Ghisel",
-    avatar: "/images/landing/dr-michael.png",
-    specialty: "Family Doctors",
-    description: "Accepting New Patients",
-    language: "Spanish",
-  },
-  {
-    name: "Dr. Wael Saleh",
-    avatar: "/images/landing/dr-michael.png",
-    specialty: "Family Doctors",
-    description: "Accepting New Patients",
-  },
-  {
-    name: "Dr. Rai Khan",
-    avatar: "/images/landing/dr-michael.png",
-    specialty: "Family Doctors",
-    description: "Accepting New Patients",
-  },
-  // {
-  //   name: "Dr. Tive Egbonoje",
-  //   avatar: "/images/landing/dr-michael.png",
-  //   specialty: "Family Doctors",
-  //   description: "Accepting New Patients",
-  // },
-  // {
-  //   name: "Dr. Olasunkanmi Akinremi",
-  //   avatar: "/images/landing/dr-michael.png",
-  //   specialty: "Family Doctors",
-  //   description: "Accepting New Patients",
-  // }
+  const maleDoctors = [
+    {
+      name: "Dr. Michael Ghisel",
+      avatar: "/images/landing/Michael.webp",    // ✅ Fixed: was dr-michael.png
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
+      language: "Spanish",
+    },
+    {
+      name: "Dr. Wael Saleh",
+      avatar: "/images/landing/Wael.webp",        // ✅ Fixed: was dr-michael.png
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
+    },
+    {
+      name: "Dr. Rai Khan",
+      avatar: "/images/landing/Rai-Khan.webp",    // ✅ Fixed: was dr-michael.png
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
+    },
+    // {
+    //   name: "Dr. Tive Egbonoje",
+    //   avatar: "/images/landing/dr-michael.png",
+    //   specialty: "Family Doctors",
+    //   description: "Accepting New Patients",
+    // },
+    // {
+    //   name: "Dr. Olasunkanmi Akinremi",
+    //   avatar: "/images/landing/dr-michael.png",
+    //   specialty: "Family Doctors",
+    //   description: "Accepting New Patients",
+    // }
   ];
 
 
@@ -199,11 +200,11 @@ export default function WalkInPage() {
             <div className="bg-[#195A44] max-w-[1240px] mx-auto rounded-[16px]  px-4  md:px-8 lg:px-18 py-10 lg:py-14 ">
               <div className="mx-auto">
                 <h2 className="text-2xl md:text-5xl font-bold text-[#FEFEFE] mb-[10px] ">
-                  Near the Hospital? We’re a Fast Option
+                  Near the Hospital? We're a Fast Option
                 </h2>
 
                 <p className="text-[#FEFEFE] text-base ">
-                  Coming from a hospital area and don’t need the ER? Walk in for same-day care with shorter waits <b className="text-lg"> open late, 7 days a week</b>.
+                  Coming from a hospital area and don't need the ER? Walk in for same-day care with shorter waits <b className="text-lg"> open late, 7 days a week</b>.
                 </p>
               </div>
               {/* Buttons */}
@@ -315,10 +316,10 @@ export default function WalkInPage() {
 
                   <div className="space-y-3 text-[#FEFEFE] text-base text-center md:text-left">
                     <p>
-                      Walk in before or after work we’re open from <b>7:30 AM to 11:00 PM,</b> every day. <br />Our clinic stays open on weekends and holidays, so you never have to delay car
+                      Walk in before or after work we're open from <b>7:30 AM to 11:00 PM,</b> every day. <br />Our clinic stays open on weekends and holidays, so you never have to delay car
                     </p>
                     <p className="text-[#FEFEFE]  " >
-                      <b className="text-lg" >You don’t need to call ahead — just come in.</b><br />
+                      <b className="text-lg" >You don't need to call ahead — just come in.</b><br />
                       Our caring team will help you feel better fast.
                     </p>
                   </div>
@@ -378,7 +379,6 @@ export default function WalkInPage() {
             showCategories={false}
             useCarousel={true}
             customButtons={[
-
               {
                 text: "Call: 587-391-8188",
                 link: "tel:587-391-8188",
@@ -394,8 +394,6 @@ export default function WalkInPage() {
             ]}
           />
 
-
-
           {/* YouTube Videos Grid */}
           <YouTubeVideosGrid
             maxResults={3}
@@ -408,8 +406,8 @@ export default function WalkInPage() {
             className=""
           />
 
-        {/* New pages Section */}
-         <WhyChooseSection
+          {/* New pages Section */}
+          <WhyChooseSection
             title={<>Serving Patients Across Calgary</>}
             subtitle=""
             items={NewPages}
@@ -422,8 +420,6 @@ export default function WalkInPage() {
             h2_color_2="text-[#303030]"
             singleButton={true}
           />
-
-
 
           {/* Find Us */}
           <FindUsSection
