@@ -41,7 +41,7 @@ export default function DoctorsPage() {
     },
     {
       name: "Dr. Ebele Madubuko",
-      avatar: "/images/landing/dr-ebele.png",
+      avatar: "/images/landing/ebele.webp",
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     }
@@ -56,20 +56,20 @@ export default function DoctorsPage() {
   const maleDoctors = [
     {
       name: "Dr. Michael Ghisel",
-      avatar: "/images/landing/dr-michael.png",
+      avatar: "/images/landing/michael.webp",
       specialty: "Family Doctors",
       description: "Accepting New Patients",
       language: "Spanish",
     },
     {
       name: "Dr. Wael Saleh",
-      avatar: "/images/landing/dr-michael.png",
+      avatar: "/images/landing/wael.webp",
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
     {
       name: "Dr. Rai Khan",
-      avatar: "/images/landing/dr-michael.png",
+      avatar: "/images/landing/rai-khan.webp",
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },

@@ -41,7 +41,7 @@ export default function FemaleFamilyDoctorPage() {
     },
     {
       name: "Dr. Ebele Madubuko",
-      avatar: "/images/landing/dr-ebele.png",
+      avatar: "/images/landing/ebele.webp",
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     }

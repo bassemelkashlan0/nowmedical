@@ -41,11 +41,11 @@ export default function ServicesPage() {
       title: "Women's Health",
       description: "We provide comprehensive women's healthcare services to support your health at every stage of life.",
       features: [
-        "Annual exams",
-        "Pap smears",
-        "Contraception counseling",
-        "Pregnancy testing",
-        "Menopause management"
+        "Pap tests and cervical screening",
+        "Prenatal care",
+        "Menopause management",
+        "Breast exams and health checks",
+        "UTIs, yeast infections, and hormonal care"
       ],
       image: "/images/our-services/women-health.png"
     },

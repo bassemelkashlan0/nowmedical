@@ -109,14 +109,14 @@ export default function HomePage() {
       category: "Women's Health",
       icon: "/images/landing/womens-health.svg",
       items: [
-        "Pregnancy testing and prenatal care",
+        "Pap tests and cervical screening",
         // "Birth control and family planning",
-        "Menstrual irregularities and PMS",
-        "Menopause management and HRT",
-        "Pap smears and cervical cancer screening",
-        "Breast exams and mammogram referrals",
-        "UTIs and yeast infections",
-        "Pelvic pain and endometriosis"
+        "Prenatal care",
+        "Menopause management",
+        "Breast exams and health checks",
+        "UTIs, yeast infections, and hormonal care",
+        // "UTIs and yeast infections",
+        // "Pelvic pain and endometriosis"
       ]
     },
     {
@@ -167,7 +167,7 @@ export default function HomePage() {
     },
     {
       name: "Dr. Ebele Madubuko",
-      avatar: "/images/landing/dr-ebele.png",
+      avatar: "/images/landing/ebele.webp",
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     }
@@ -182,20 +182,20 @@ export default function HomePage() {
   const maleDoctors = [
     {
       name: "Dr. Michael Ghisel",
-      avatar: "/images/landing/dr-michael.png",
+      avatar: "/images/landing/michael.webp",
       specialty: "Family Doctors",
       description: "Accepting New Patients",
       language: "Spanish",
     },
     {
       name: "Dr. Wael Saleh",
-      avatar: "/images/landing/dr-michael.png",
+      avatar: "/images/landing/wael.webp",
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
     {
       name: "Dr. Rai Khan",
-      avatar: "/images/landing/dr-michael.png",
+      avatar: "/images/landing/rai-khan.webp",
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },

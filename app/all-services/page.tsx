@@ -95,11 +95,11 @@ export default function OurServicesPage() {
             text: "HIV screening and prevention advice"
         },
         {
-            text: "Birth control and emergency contraception"
-        },
-        {
-            text: "Sexual health counseling"
+            text: "General Health counseling"
         }
+        // {
+        //     text: "Sexual health counseling"
+        // }
     ]
     const Vaccinations = [
         {
@@ -320,8 +320,8 @@ export default function OurServicesPage() {
 
                 {/* Sexual Health Section */}
                 <WhyChooseSection
-                    title="Sexual Health"
-                    title_2="& STD Testing"
+                    title=""
+                    title_2="STD Testing"
                     subtitle=""
                     items={sexualHealth}
                     image={sexual_img.src}

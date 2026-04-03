@@ -85,7 +85,7 @@ export default function AboutPage() {
     // },
     {
       name: "Dr. Michael",
-      avatar: "/images/about-us/dr-michael.png",
+      avatar: "/images/landing/michael.webp",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
       phone: "587-391-8188"

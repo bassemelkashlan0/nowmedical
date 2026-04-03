@@ -41,7 +41,7 @@ export default function FamilyDoctorsPage() {
     // },
     {
       name: "Dr. Ebele Madubuko",
-      avatar: "/images/landing/dr-ebele.png",
+      avatar: "/images/landing/ebele.webp",
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     }
@@ -56,20 +56,20 @@ export default function FamilyDoctorsPage() {
   const maleDoctors = [
     {
       name: "Dr. Michael Ghisel",
-      avatar: "/images/landing/dr-michael.png",
+      avatar: "/images/landing/michael.webp",
       specialty: "Family Doctors",
       description: "Accepting New Patients",
       language: "Spanish",
     },
     {
       name: "Dr. Wael Saleh",
-      avatar: "/images/landing/dr-michael.png",
+      avatar: "/images/landing/wael.webp",
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
     {
       name: "Dr. Rai Khan",
-      avatar: "/images/landing/dr-michael.png",
+      avatar: "/images/landing/rai-khan.webp",
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
@@ -145,7 +145,7 @@ export default function FamilyDoctorsPage() {
     },
     {
       title: "Women’s Health",
-      description: ["Pap tests, birth control, menopause support", "Prenatal and postnatal care"],
+      description: ["Pap tests and cervical screening", "Prenatal care","Menopause management","Breast exams and health checks","UTIs, yeast infections, and hormonal care"],
       image: "/images/family-doctor/women-health.svg"
     },
     {

@@ -81,8 +81,8 @@ export default function WalkInPage() {
       image: "/images/walk-in/everyday-illnesses.svg"
     },
     {
-      title: "Women’s & Sexual Health",
-      description: ["Women’s & Sexual Health", "Pregnancy testing, Pap tests, menopause care", "STI treatment, emergency contraception"],
+      title: "Women’s Health",
+      description: ["Prenatal Care, Pap tests, menopause care"],
       image: "/images/walk-in/women-sexual-health.svg"
     },
     {
