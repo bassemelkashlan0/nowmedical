@@ -41,7 +41,7 @@ export default function FemaleFamilyDoctorPage() {
     },
     {
       name: "Dr. Ebele Madubuko",
-      avatar: "/images/landing/ebele.webp",
+      avatar: "/images/landing/Ebele.webp",   // ✅ Fixed: capital E
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     }
@@ -118,10 +118,10 @@ export default function FemaleFamilyDoctorPage() {
   // Story Content
   const storyContent = [
     <>
-      At <b>Now Medical Clinic,</b> we know that many women feel more comfortable discussing their health with a female doctor.<br /> Whether it’s your first check-up, a sensitive concern, or ongoing family care, our female physicians are here to make your experience comfortable and empowering.
+      At <b>Now Medical Clinic,</b> we know that many women feel more comfortable discussing their health with a female doctor.<br /> Whether it's your first check-up, a sensitive concern, or ongoing family care, our female physicians are here to make your experience comfortable and empowering.
     </>,
     <>
-      We’re proud to offer <b>female family doctors accepting new patients</b> in Calgary open <b>7 days a week until 11 PM,</b> including <b>weekends and holidays</b>
+      We're proud to offer <b>female family doctors accepting new patients</b> in Calgary open <b>7 days a week until 11 PM,</b> including <b>weekends and holidays</b>
     </>
   ];
   return (
