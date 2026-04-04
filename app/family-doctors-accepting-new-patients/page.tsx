@@ -41,7 +41,7 @@ export default function FamilyDoctorsPage() {
     // },
     {
       name: "Dr. Ebele Madubuko",
-      avatar: "/images/landing/ebele.webp",
+      avatar: "/images/landing/Ebele.webp",   // ✅ Fixed: capital E
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     }
@@ -56,20 +56,20 @@ export default function FamilyDoctorsPage() {
   const maleDoctors = [
     {
       name: "Dr. Michael Ghisel",
-      avatar: "/images/landing/michael.webp",
+      avatar: "/images/landing/Michael.webp",   // ✅ Fixed: capital M
       specialty: "Family Doctors",
       description: "Accepting New Patients",
       language: "Spanish",
     },
     {
       name: "Dr. Wael Saleh",
-      avatar: "/images/landing/wael.webp",
+      avatar: "/images/landing/Wael.webp",       // ✅ Fixed: capital W
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
     {
       name: "Dr. Rai Khan",
-      avatar: "/images/landing/rai-khan.webp",
+      avatar: "/images/landing/Rai-Khan.webp",   // ✅ Fixed: capital R-K
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
@@ -144,17 +144,17 @@ export default function FamilyDoctorsPage() {
       image: "/images/family-doctor/preventive-routine-care.svg"
     },
     {
-      title: "Women’s Health",
+      title: "Women's Health",
       description: ["Pap tests and cervical screening", "Prenatal care","Menopause management","Breast exams and health checks","UTIs, yeast infections, and hormonal care"],
       image: "/images/family-doctor/women-health.svg"
     },
     {
-      title: "Children’s Health",
+      title: "Children's Health",
       description: ["Immunizations, check-ups, growth monitoring", "Asthma and allergy management"],
       image: "/images/family-doctor/children-health.svg"
     },
     {
-      title: "Men’s Health",
+      title: "Men's Health",
       description: ["Prostate health, cholesterol, heart checks", "Stress and sleep issues"],
       image: "/images/family-doctor/men-health.svg"
     },
@@ -291,7 +291,6 @@ export default function FamilyDoctorsPage() {
           {/* How to Register */}
           <HowToRegisterSection />
 
-
           {/* YouTube Videos Grid */}
           <YouTubeVideosGrid
             maxResults={3}
@@ -352,4 +351,3 @@ export default function FamilyDoctorsPage() {
     </>
   );
 }
-

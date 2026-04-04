@@ -1,4 +1,4 @@
-  import { Header } from "@/components/header";
+import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { LiveStatusBanner } from "@/components/live-status-banner";
 import { Button } from "@/components/ui/button";
@@ -85,7 +85,7 @@ export default function AboutPage() {
     // },
     {
       name: "Dr. Michael",
-      avatar: "/images/landing/michael.webp",
+      avatar: "/images/landing/Michael.webp",   // ✅ Fixed: capital M
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
       phone: "587-391-8188"
@@ -147,7 +147,7 @@ export default function AboutPage() {
                   <p className="text-m text-[#303030] mb-12 ">
                     At <b>Now Medical Clinic</b>, we believe that quality healthcare should be <b>accessible, compassionate, and convenient</b> — not stressful or delayed.
                     <br />
-                    We’re proud to be the only clinic in Calgary that <b>opens 7 days a week — until 11 PM</b>, including <b>weekends and holidays</b>.
+                    We're proud to be the only clinic in Calgary that <b>opens 7 days a week — until 11 PM</b>, including <b>weekends and holidays</b>.
                   </p>
                   <div className="flex flex-wrap flex-row gap-4">
                     <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg font-bold" asChild>
@@ -205,7 +205,7 @@ export default function AboutPage() {
             sub_color=" text-[#303030]"
             subtitle="Values"
             title_color=" text-[#299470] "
-            description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, "
+            description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, "
             values={values}
           />
 
@@ -330,7 +330,6 @@ export default function AboutPage() {
             description="Serving Calgary with compassion and commitment."
           />
 
-
         </main>
 
         <Footer />
@@ -338,4 +337,3 @@ export default function AboutPage() {
     </>
   );
 }
-

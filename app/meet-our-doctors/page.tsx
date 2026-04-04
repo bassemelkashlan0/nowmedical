@@ -41,7 +41,7 @@ export default function DoctorsPage() {
     },
     {
       name: "Dr. Ebele Madubuko",
-      avatar: "/images/landing/ebele.webp",
+      avatar: "/images/landing/Ebele.webp",     // ✅ Fixed: capital E
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     }
@@ -56,20 +56,20 @@ export default function DoctorsPage() {
   const maleDoctors = [
     {
       name: "Dr. Michael Ghisel",
-      avatar: "/images/landing/michael.webp",
+      avatar: "/images/landing/Michael.webp",   // ✅ Fixed: capital M
       specialty: "Family Doctors",
       description: "Accepting New Patients",
       language: "Spanish",
     },
     {
       name: "Dr. Wael Saleh",
-      avatar: "/images/landing/wael.webp",
+      avatar: "/images/landing/Wael.webp",       // ✅ Fixed: capital W
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
     {
       name: "Dr. Rai Khan",
-      avatar: "/images/landing/rai-khan.webp",
+      avatar: "/images/landing/Rai-Khan.webp",   // ✅ Fixed: capital R-K
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
@@ -85,7 +85,6 @@ export default function DoctorsPage() {
     //   specialty: "Family Doctors",
     //   description: "Accepting New Patients",
     // },
-
   ];
 
 
@@ -125,7 +124,7 @@ export default function DoctorsPage() {
               </>
             }
             subtitle={<><span className="text-[#000000] font-bold">Female and Male Family Doctors</span><br/><span className="text-[#299470] font-bold ">ACCEPTING NEW PATIENTS</span><br/>Searching for a  family doctor?<br/> </>}
-            description={<><b>Now Medical Clinic</b> has both <b>male and female</b> doctors currently Accepting New Patients in Calgary. We’re available <b>seven days a week, open late until 11 PM</b> to support your ongoing health needs.</>}
+            description={<><b>Now Medical Clinic</b> has both <b>male and female</b> doctors currently Accepting New Patients in Calgary. We're available <b>seven days a week, open late until 11 PM</b> to support your ongoing health needs.</>}
             additionalText=""
             buttons={[
               {

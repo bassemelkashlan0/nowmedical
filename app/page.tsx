@@ -39,7 +39,6 @@ export default function HomePage() {
       icon: <Phone className="w-5 h-5" />
     },
     {
-      // text: "Short Waits & Same-Day Prescriptions",
       text: "Short Waits",
       icon: <Phone className="w-5 h-5" />
     },
@@ -110,13 +109,10 @@ export default function HomePage() {
       icon: "/images/landing/womens-health.svg",
       items: [
         "Pap tests and cervical screening",
-        // "Birth control and family planning",
         "Prenatal care",
         "Menopause management",
         "Breast exams and health checks",
         "UTIs, yeast infections, and hormonal care",
-        // "UTIs and yeast infections",
-        // "Pelvic pain and endometriosis"
       ]
     },
     {
@@ -145,20 +141,6 @@ export default function HomePage() {
   ];
 
   const femaleDoctors = [
-    // {
-    //   name: "Dr. Nasreen Abid",
-    //   avatar: "/images/landing/dr-madiha.png",
-    //   specialty: "Family Doctors",
-    //   description: "Accepting New Patients",
-    //   language: "Arabic",
-    // },
-    // {
-    //   name: "Dr. Vanessa Marezana",
-    //   avatar: "/images/landing/dr-ebele.png",
-    //   specialty: "Family Doctors",
-    //   description: "Accepting New Patients",
-    //   language: "Spanish",
-    // },
     {
       name: "Dr. Madiha Badshah",
       avatar: "/images/landing/dr-madiha.png",
@@ -167,50 +149,32 @@ export default function HomePage() {
     },
     {
       name: "Dr. Ebele Madubuko",
-      avatar: "/images/landing/ebele.webp",
+      avatar: "/images/landing/Ebele.webp",   // ✅ Fixed: capital E
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     }
-    // {
-    //   name: "Dr. Prabhjot Bedi",
-    //   avatar: "/images/landing/dr-madiha.png",
-    //   specialty: "Family Doctors",
-    //   description: "Accepting New Patients",
-    // }
   ];
 
   const maleDoctors = [
     {
       name: "Dr. Michael Ghisel",
-      avatar: "/images/landing/michael.webp",
+      avatar: "/images/landing/Michael.webp",  // ✅ Fixed: capital M
       specialty: "Family Doctors",
       description: "Accepting New Patients",
       language: "Spanish",
     },
     {
       name: "Dr. Wael Saleh",
-      avatar: "/images/landing/wael.webp",
+      avatar: "/images/landing/Wael.webp",     // ✅ Fixed: capital W
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
     {
       name: "Dr. Rai Khan",
-      avatar: "/images/landing/rai-khan.webp",
+      avatar: "/images/landing/Rai-Khan.webp", // ✅ Fixed: capital R-K
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
-    // {
-    //   name: "Dr. Tive Egbonoje",
-    //   avatar: "/images/landing/dr-michael.png",
-    //   specialty: "Family Doctors",
-    //   description: "Accepting New Patients",
-    // },
-    // {
-    //   name: "Dr. Olasunkanmi Akinremi",
-    //   avatar: "/images/landing/dr-michael.png",
-    //   specialty: "Family Doctors",
-    //   description: "Accepting New Patients",
-    // },
   ];
 
   const testimonials = [
@@ -234,26 +198,25 @@ export default function HomePage() {
     }
   ];
 
-  const NewPages= [
+  const NewPages = [
     {
       text: <><a href="/walk-in-clinic-ne-calgary"> NE Calgary </a></>,
     },
     {
       text: <><a href="/walk-in-clinic-nw-calgary"> NW Calgary </a></>,
-    } ,
+    },
     {
       text: <><a href="/walk-in-clinic-sw-calgary"> SW Calgary </a></>,
     },
     {
       text: <><a href="/walk-in-clinic-se-calgary"> SE Calgary  </a></>,
-    } ,
+    },
     {
       text: <><a href="/walk-in-clinic-downtown-calgary"> Downtown Calgary </a></>,
     }
-  ]
+  ];
 
   const Family_img = "/images/walk-in/why-us.png";
-
 
   // Structured Data for SEO
   const localBusinessSchema = generateLocalBusinessSchema(CLINIC_DATA);
@@ -312,9 +275,6 @@ export default function HomePage() {
                     <br />
                     Including Weekends and Holidays
                   </h2>
-                  {/* <p className=" text-muted-foreground mb-4 md:mb-[21px]">
-                    <span className="font-bold text-[#303030] text-[36px]/10 ">Including Weekends and Holidays</span>
-                  </p> */}
                   <p className="text-base text-[#000000] mb-3 md:mb-[15px] ">
                     Skip the hospital wait. See a Real doctor Today — No Appointment Needed. Fast, friendly care for you and your family, Open on Weekends and Holidays, serving all areas of Calgary.
                   </p>
@@ -327,15 +287,6 @@ export default function HomePage() {
                     </a>
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    {/* <Button
-                      size="lg"
-                      variant="outline"
-                      className="border-[#299470] text-bold text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
-                      asChild
-                    >
-                      <Link href="/walk-in-clinic"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" fill="none" class="sm:w-5 sm:h-5"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.4153 2.28906C10.2238 2.28906 10.0341 2.32678 9.85719 2.40007C9.68026 2.47336 9.51949 2.58078 9.38407 2.7162C9.24865 2.85162 9.14123 3.01238 9.06795 3.18932C8.99466 3.36625 8.95694 3.55588 8.95694 3.7474C8.95694 3.93891 8.99466 4.12854 9.06795 4.30548C9.14123 4.48241 9.24865 4.64317 9.38407 4.77859C9.51949 4.91401 9.68026 5.02143 9.85719 5.09472C10.0341 5.16801 10.2238 5.20573 10.4153 5.20573C10.802 5.20573 11.173 5.05208 11.4465 4.77859C11.72 4.5051 11.8736 4.13417 11.8736 3.7474C11.8736 3.36062 11.72 2.98969 11.4465 2.7162C11.173 2.44271 10.802 2.28906 10.4153 2.28906ZM7.70694 3.7474C7.70694 3.0291 7.99228 2.34023 8.50019 1.83231C9.0081 1.3244 9.69698 1.03906 10.4153 1.03906C11.1336 1.03906 11.8224 1.3244 12.3304 1.83231C12.8383 2.34023 13.1236 3.0291 13.1236 3.7474C13.1236 4.46569 12.8383 5.15457 12.3304 5.66248C11.8224 6.17039 11.1336 6.45573 10.4153 6.45573C9.69698 6.45573 9.0081 6.17039 8.50019 5.66248C7.99228 5.15457 7.70694 4.46569 7.70694 3.7474ZM11.2719 8.95823C11.2003 8.95508 11.1286 8.95425 11.0569 8.95573H10.1478L10.0719 9.71573C9.92694 11.1657 9.8761 11.7491 10.0053 12.2999C10.1353 12.8516 10.4403 13.3507 11.2161 14.5849L13.3611 17.9982C13.447 18.1385 13.4742 18.307 13.4366 18.4672C13.3991 18.6274 13.2999 18.7663 13.1606 18.8539C13.0213 18.9414 12.8531 18.9705 12.6925 18.9348C12.5319 18.8991 12.3919 18.8015 12.3028 18.6632L10.1578 15.2499L10.0969 15.1532C9.4011 14.0474 8.97194 13.3649 8.7886 12.5866C8.60527 11.8082 8.6861 11.0049 8.81694 9.70406L8.82777 9.59073L8.8911 8.95656C8.47444 8.95906 8.16444 8.96656 7.9161 8.9974C7.6011 9.0349 7.45444 9.10156 7.35027 9.1849C7.24694 9.26823 7.15027 9.39656 7.04444 9.69573C6.9336 10.0099 6.83777 10.4357 6.69527 11.0766L6.44194 12.2166C6.40402 12.3764 6.30471 12.5149 6.16548 12.602C6.02625 12.6892 5.8583 12.7181 5.69796 12.6824C5.53762 12.6467 5.39779 12.5493 5.3087 12.4113C5.21962 12.2733 5.18845 12.1057 5.22194 11.9449L5.4836 10.7691C5.61527 10.1741 5.72694 9.67406 5.8661 9.27906C6.0136 8.86073 6.21527 8.49323 6.5686 8.2099C6.92194 7.92656 7.3236 7.8099 7.76444 7.75573C8.18027 7.70573 8.69277 7.70573 9.30194 7.70573H11.0778C11.1911 7.70573 11.2786 7.70573 11.3611 7.71156C11.815 7.74406 12.249 7.91097 12.6077 8.19102C12.9664 8.47108 13.2336 8.85159 13.3753 9.28406C13.4003 9.3624 13.4219 9.44823 13.4503 9.55823L13.4544 9.57823C13.5011 9.7649 13.5153 9.81823 13.5286 9.8549C13.7036 10.3599 14.2328 10.6507 14.7528 10.5274C14.7911 10.5191 14.8436 10.5016 15.0261 10.4407L15.6344 10.2382C15.7896 10.193 15.9563 10.2096 16.0995 10.2846C16.2427 10.3596 16.3512 10.4872 16.4024 10.6406C16.4535 10.7939 16.4432 10.9611 16.3737 11.1071C16.3041 11.253 16.1807 11.3663 16.0294 11.4232L15.4211 11.6266L15.3944 11.6349C15.2783 11.6762 15.1604 11.7124 15.0411 11.7432C14.4888 11.8741 13.9076 11.7954 13.41 11.5223C12.9124 11.2491 12.5339 10.8011 12.3478 10.2649C12.3094 10.1475 12.2764 10.0285 12.2486 9.90823L12.2419 9.88073C12.2259 9.81071 12.2075 9.74123 12.1869 9.6724C12.1225 9.47601 12.0011 9.30323 11.8381 9.17606C11.6752 9.04888 11.4781 8.97306 11.2719 8.95823ZM8.6786 14.0607C8.81651 14.1527 8.91224 14.2956 8.94475 14.4582C8.97725 14.6207 8.94387 14.7895 8.85194 14.9274L6.35194 18.6774C6.30685 18.7467 6.24847 18.8063 6.18017 18.8529C6.11188 18.8994 6.03502 18.932 5.95407 18.9486C5.87311 18.9653 5.78965 18.9657 5.70852 18.9499C5.62739 18.9341 5.55021 18.9023 5.48144 18.8565C5.41266 18.8106 5.35367 18.7516 5.30787 18.6828C5.26206 18.614 5.23036 18.5368 5.2146 18.4556C5.19883 18.3745 5.19932 18.2911 5.21603 18.2101C5.23274 18.1292 5.26533 18.0523 5.31194 17.9841L7.81194 14.2341C7.90389 14.0962 8.04685 14.0004 8.20937 13.9679C8.3719 13.9354 8.54069 13.9688 8.6786 14.0607Z" fill="#299470"></path></svg> Walk In Now </Link>
-                    </Button> */}
-
                     <Button size="lg"
                       className="border-[#299470] text-[#fff] hover:bg-[#2d7b6f]  text-lg font-bold"
                       asChild>
@@ -358,7 +309,6 @@ export default function HomePage() {
                         Call: 587-391-8188
                       </Link>
                     </Button>
-
                   </div>
                 </div>
 
@@ -385,12 +335,9 @@ export default function HomePage() {
                   {/* Card 1: Walk-In Visits */}
                   <div className="flex-1 flex flex-col items-center justify-center px-4 py-6 text-center  md:border-r-2  border-[#9AD9BA80]  ">
                     <div className="flex items-center justify-center mb-4">
-                      {/* Placeholder icon */}
                       <span className="inline-flex h-[100px] w-[100px] rounded-full bg-[#4AB27F1A] items-center justify-center">
-                        {/* Medical Bag/Phone Emoji placeholder */}
                         <span className="mt-16">
                           <img src="/images/landing/mobile.png" alt="Walk-In Visits" className="w-full h-full" />
-
                         </span>
                       </span>
                     </div>
@@ -402,7 +349,6 @@ export default function HomePage() {
                   {/* Card 2: Family Doctors */}
                   <div className="flex-1 flex flex-col items-center justify-center px-4 py-6 text-center md:border-r-2  border-[#9AD9BA80] ">
                     <div className="flex items-center justify-center mb-4">
-                      {/* Stethoscope icon placeholder */}
                       <span className="inline-flex h-[100px] w-[100px] rounded-full bg-[#4AB27F1A] items-center justify-center">
                         <span className="mt-16">
                           <img src="/images/landing/stethoscope.png" alt="Family Doctors" className="w-full h-full" />
@@ -417,7 +363,6 @@ export default function HomePage() {
                   {/* Card 3: Open 7 days */}
                   <div className="flex-1 flex flex-col items-center justify-center px-4 py-6 text-center">
                     <div className="flex items-center justify-center mb-4">
-                      {/* 24/7 service icon placeholder */}
                       <span className="inline-flex h-[100px] w-[100px] rounded-full bg-[#4AB27F1A] items-center justify-center">
                         <span className="mt-8">
                           <img src="/images/landing/24x7.png" alt="Open 7 days" className="w-full h-full" />
@@ -505,15 +450,12 @@ export default function HomePage() {
           {/* Walk-in Video Promo Section */}
           <section className="py-10 lg:py-[54px]  ">
             <div className="container mx-auto max-w-[1170px] w-full flex flex-col items-center">
-              {/* Headline with Green Text */}
               <h2 className="text-3xl lg:text-5xl font-bold text-[#303030] text-center mb-4">
                 Walk in today until <span className="text-[#299470]">11:00 Pm, Open 7 days</span>
               </h2>
-              {/* Subheadline */}
               <p className="text-[20px] text-center text-[#303030] mb-6">
                 Register as a new patient today with our Male or Female Family Doctors ,Accepting New Patient
               </p>
-              {/* Video Player (with custom poster) */}
               <div className="w-full aspect-video bg-[#299470] rounded-lg shadow overflow-hidden flex items-center justify-center relative">
                 <iframe
                   width="100%"
@@ -531,23 +473,19 @@ export default function HomePage() {
           {/* Family Doctors Accepting New Patients Section */}
           <section className="bg-[#F1F9F4] pt-10 lg:pt-[54px] pb-10">
             <div className="container mx-auto flex flex-col items-center">
-              {/* Headline */}
               <h2 className="text-3xl lg:text-5xl font-bold text-[#303030] text-center mb-4">
                 Family Doctors Accepting <span className="text-[#299470]">New Patients</span>
               </h2>
-              {/* Subheadline */}
               <div className="text-center mb-4">
                 <p className="font-bold text-lg text--[#000000">Looking for a family doctor in Calgary?</p>
               </div>
               <div className="text-center  mb-8 text-[#000000] ">
                 Our caring Male and Female Doctors are accepting new patients in Calgary for long-term, comprehensive care. Get matched with <br /> a doctor who listens, understands, and builds lasting relationships with your family.
               </div>
-              {/* Cards Row */}
               <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
                 {/* Card 1: Male & Female Doctors */}
                 <div className="rounded-xl border border-[#83C1AC] bg-white shadow-sm flex flex-col items-center justify-between px-5 py-5 text-center hover:shadow-lg transition">
                   <span className="inline-flex h-14 w-14 items-center justify-center mb-6">
-                    {/* icon: users */}
                     <img src="/images/landing/new-patients.svg" alt="" />
                   </span>
                   <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">Male & Female Doctors</h3>
@@ -556,7 +494,6 @@ export default function HomePage() {
                 {/* Card 2: Multiple Languages */}
                 <div className="rounded-xl border border-[#83C1AC] bg-white shadow-sm flex flex-col items-center justify-between px-5 py-5 text-center hover:shadow-lg transition">
                   <span className="inline-flex h-14 w-14 items-center justify-center mb-4">
-                    {/* icon: globe / languages */}
                     <img src="/images/landing/new-patients.svg" alt="" />
                   </span>
                   <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">Multiple languages</h3>
@@ -565,7 +502,6 @@ export default function HomePage() {
                 {/* Card 3: Comprehensive Care */}
                 <div className="rounded-xl border border-[#83C1AC] bg-white shadow-sm flex flex-col items-center justify-between px-5 py-5 text-center hover:shadow-lg transition">
                   <span className="inline-flex h-14 w-14 items-center justify-center mb-4">
-                    {/* icon: comprehensive care */}
                     <img src="/images/landing/new-patients.svg" alt="" />
                   </span>
                   <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">Comprehensive Care</h3>
@@ -574,16 +510,6 @@ export default function HomePage() {
               </div>
             </div>
           </section>
-
-          {/* Values Section
-        <ValuesSection
-          title="Our Values"
-          values={values}
-        /> */}
-
-
-          {/* Registration Process Section */}
-          {/* <RegistrationProcessSection /> */}
 
           {/* Meet Our Doctors */}
           <DoctorsSection
@@ -621,8 +547,8 @@ export default function HomePage() {
             customButtonLink="/reviews"
           />
 
-        {/* New pages Section */}
-         <WhyChooseSection
+          {/* New pages Section */}
+          <WhyChooseSection
             title={<>Walk-In Clinics by Area</>}
             subtitle=""
             items={NewPages}
@@ -634,7 +560,7 @@ export default function HomePage() {
             h2_color_1="text-[#299470]"
             h2_color_2="text-[#303030]"
             singleButton={true}
-          /> 
+          />
 
           {/* Find Us Section */}
           <FindUsSection
@@ -669,11 +595,6 @@ export default function HomePage() {
               </>
             }
           />
-
-          {/* CTA Banner */}
-          {/* <CTABannerSection
-          title="Walk In Today We're Open Late Weekend and Holidays"
-        /> */}
         </main>
 
         <Footer />
