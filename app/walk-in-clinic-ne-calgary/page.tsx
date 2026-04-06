@@ -35,7 +35,7 @@ export default function NECalgaryClinicPage() {
     { text: "Cold and flu symptoms" },
     { text: "Minor injuries" },
     { text: "Infections" },
-    { text: "Prescription renewals" },
+    // { text: "Prescription renewals" },
     { text: "Chronic condition flare-ups" },
     { text: "Pediatric and adult care" }
   ];

@@ -84,15 +84,15 @@ export default function HospitalPeterLougheed() {
                 "Prostate exams and PSA screening",
                 "Male pattern baldness",
                 "Weight management and fitness advice",
-                "Mental health and stress counseling",
-                "Sexual health and STD screening"
+                "Mental health and stress counseling"
+                // "Sexual health and STD screening"
             ]
         },
         {
             category: "Women's Health",
             icon: "/images/landing/womens-health.svg",
             items: [
-                "Pregnancy testing and prenatal care",
+                // "Pregnancy testing and prenatal care",
                 "Menstrual irregularities and PMS",
                 "Menopause management and HRT",
                 "Pap smears and cervical cancer screening",
