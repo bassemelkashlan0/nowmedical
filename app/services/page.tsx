@@ -44,8 +44,8 @@ export default function ServicesPage() {
         "Pap tests and cervical screening",
         "Prenatal care",
         "Menopause management",
-        "Breast exams and health checks",
-        "UTIs, yeast infections, and hormonal care"
+        "Breast exams and health checks"
+        // "UTIs, yeast infections, and hormonal care"
       ],
       image: "/images/our-services/women-health.png"
     },

@@ -31,10 +31,10 @@ export default function OurServicesPage() {
         },
         {
             text: "Rashes, burns, or minor injuries",
-        },
-        {
-            text: "Prescription renewals",
         }
+        // {
+        //     text: "Prescription renewals",
+        // }
     ]
     const FamilyMadicine = [
         {
@@ -57,9 +57,9 @@ export default function OurServicesPage() {
         {
             text: "Pap tests and cervical screening"
         },
-        {
-            text: "Birth control consultations"
-        },
+        // {
+        //     text: "Birth control consultations"
+        // },
         {
             text: "Pregnancy testing & early prenatal care"
         },
@@ -68,10 +68,10 @@ export default function OurServicesPage() {
         },
         {
             text: "Breast exams and health checks"
-        },
-        {
-            text: " UTIs, yeast infections, and hormonal care"
         }
+        // {
+        //     text: " UTIs, yeast infections, and hormonal care"
+        // }
     ]
     const ChildrenCare = [
         {
@@ -87,20 +87,7 @@ export default function OurServicesPage() {
             text: "Growth check-ups and development visits"
         }
     ]
-    const sexualHealth = [
-        {
-            text: "STD / STI testing and treatment"
-        },
-        {
-            text: "HIV screening and prevention advice"
-        },
-        {
-            text: "General Health counseling"
-        }
-        // {
-        //     text: "Sexual health counseling"
-        // }
-    ]
+
     const Vaccinations = [
         {
             text: "Flu shots and COVID vaccines"
@@ -115,20 +102,7 @@ export default function OurServicesPage() {
             text: "Health risk screening & prevention planning"
         },
     ]
-    const prescriptionServices = [
-        {
-            text: "Prescription refills"
-        },
-        {
-            text: "Medication management for chronic conditions"
-        },
-        {
-            text: "Adjustments and dosage reviews"
-        },
-        {
-            text: " Coordination with your pharmacy "
-        }
-    ]
+
     const whyChooseItems = [
         {
             text: "Open 7 Days a Week — Until 11 PM "
@@ -318,32 +292,11 @@ export default function OurServicesPage() {
 
                 />
 
-                {/* Sexual Health Section */}
-                <WhyChooseSection
-                    title=""
-                    title_2="STD Testing"
-                    subtitle=""
-                    items={sexualHealth}
-                    image={sexual_img.src}
-                    para="Private, judgment-free, and confidential. Our doctors offer sexual health consultations and testing in a comfortable environment."
-                    para_2="We treat:"
-                    both_btn="flex pt-2"
-                    btn_1_text="Call: 587-391-8188"
-                    btn_1_link="tel:587-391-8188"
-                    btn_1_icon="/icons/btn_phone-outline-icon.svg"
-                    btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
-                    btn_2_text="Walk In Now"
-                    btn_2_link="/walk-in-clinic"
-                    btn_2_icon="/icons/btn-walking-outline-icon.svg"
-                    IsDot={true}
-                    h2_color_1="text-[#299470]"
-                    h2_color_2="text-[#303030]"
 
-                />
 
                 {/*  Vaccinations Section*/}
                 <WhyChooseSection
-                    bg_color="bg-[#F1F9F4]"
+                    // bg_color="bg-[#F1F9F4]"
                     title="Vaccinations"
                     subtitle="& Preventive Care"
                     para={
@@ -362,35 +315,16 @@ export default function OurServicesPage() {
                     btn_2_text="Walk In Now"
                     btn_2_link="/walk-in-clinic"
                     btn_2_icon="/icons/btn-walking-outline-icon.svg"
-                    order="order-first"
+                    // order="order-first"
                     IsDot={true}
 
                 />
 
-                {/* precscription Section */}
-                <WhyChooseSection
-                    title="Prescription"
-                    title_2="Services"
-                    subtitle=""
-                    para="Fast prescription renewals and medication reviews to keep your treatment consistent and safe."
-                    items={prescriptionServices}
-                    image={Precscription_img.src}
-                    both_btn="flex pt-2"
-                    btn_1_text="Call: 587-391-8188"
-                    btn_1_link="tel:587-391-8188"
-                    btn_1_icon="/icons/btn_phone-outline-icon.svg"
-                    btn_1_bg="bg-[#299470] hover:bg-[#2D7B6F] text-white"
-                    btn_2_text="Walk In Now"
-                    btn_2_link="/walk-in-clinic"
-                    btn_2_icon="/icons/btn-walking-outline-icon.svg"
-                    IsDot={true}
-                    h2_color_1="text-[#299470]"
-                    h2_color_2="text-[#303030]"
 
-                />
 
                 {/* Why Choose */}
                 <WhyChooseSection
+                    bg_color="bg-[#F1F9F4]"
                     title="Why Calgary Chooses "
                     subtitle="Now Medical Clinic"
                     items={whyChooseItems}

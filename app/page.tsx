@@ -112,7 +112,7 @@ export default function HomePage() {
         "Prenatal care",
         "Menopause management",
         "Breast exams and health checks",
-        "UTIs, yeast infections, and hormonal care",
+        // "UTIs, yeast infections, and hormonal care",
       ]
     },
     {
