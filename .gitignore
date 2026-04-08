@@ -20,9 +20,9 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files
-.env*
 
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+config.bat
