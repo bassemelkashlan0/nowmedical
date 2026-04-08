@@ -19,7 +19,16 @@ export async function GET(request: Request) {
     const videoId = searchParams.get('videoId') || process.env.YOUTUBE_VIDEO_ID;
     const maxResults = parseInt(searchParams.get('maxResults') || '50');
     
-    const apiKey = 'AIzaSyA0bhoP_9y8-LyvgW8FYpl-DcEaQEQpqkA';
+    const apiKey = process.env.YOUTUBE_API_KEY;
+    if (!apiKey) {
+      return NextResponse.json(
+        {
+          error:
+            'Missing YOUTUBE_API_KEY. Set it in your environment (recommended: .env.local) and redeploy.',
+        },
+        { status: 500 }
+      );
+    }
 
     // If video ID is provided, get channel ID from the video
     if (!channelId && videoId) {
