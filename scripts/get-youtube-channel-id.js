@@ -6,12 +6,19 @@
  */
 
 const videoId = process.argv[2];
-const apiKey = process.env.YOUTUBE_API_KEY || 'AIzaSyA0bhoP_9y8-LyvgW8FYpl-DcEaQEQpqkA';
+const apiKey = process.env.YOUTUBE_API_KEY;
 
 if (!videoId) {
   console.error('Please provide a video ID as an argument');
   console.log('Usage: node scripts/get-youtube-channel-id.js <videoId>');
   console.log('Example: node scripts/get-youtube-channel-id.js zeArmG81bAE');
+  process.exit(1);
+}
+
+if (!apiKey) {
+  console.error('Missing YOUTUBE_API_KEY in environment');
+  console.log('Set it and retry, e.g. in PowerShell:');
+  console.log('$env:YOUTUBE_API_KEY="YOUR_KEY_HERE"');
   process.exit(1);
 }
 
