@@ -315,10 +315,10 @@ export default function HomePage() {
                     height="500"
                     src="https://www.youtube.com/embed/zeArmG81bAE?rel=0&modestbranding=1&showinfo=0"
                     title="YouTube Shorts Video"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                  </iframe>
+                    allowFullScreen
+                  />
                 </div>
               </div>
             </div>
@@ -467,10 +467,10 @@ export default function HomePage() {
                   height="100%"
                   src="https://www.youtube.com/embed/IpTEkX4lRWQ?rel=0&modestbranding=1&showinfo=0"
                   title="YouTube Shorts Video"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
+                  allowFullScreen
+                />
               </div>
             </div>
           </section>
