@@ -19,7 +19,6 @@ declare global {
 }
 
 export function LiveStatusBanner() {
-  const [currentTime, setCurrentTime] = useState(new Date())
   const [isActive, setIsActive] = useState(true)
   const [loading, setLoading] = useState(true)
   const [chatbotReady, setChatbotReady] = useState(false)
@@ -49,14 +48,6 @@ export function LiveStatusBanner() {
     const statusInterval = setInterval(fetchStatus, 30000)
 
     return () => clearInterval(statusInterval)
-  }, [])
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTime(new Date())
-    }, 1000)
-
-    return () => clearInterval(timer)
   }, [])
 
   // Monitor chatbot initialization
@@ -390,22 +381,6 @@ export function LiveStatusBanner() {
     checkAndOpen()
   }
 
-  const formatTime = (date: Date) => {
-    return date.toLocaleTimeString("en-US", {
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: true,
-    })
-  }
-
-  const formatDate = (date: Date) => {
-    return date.toLocaleDateString("en-GB", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-    })
-  }
-
   if (loading) {
     return (
       <div className="bg-[#A7D3C4] z-40 sticky w-full mx-auto top-16 sm:top-20 md:top-[82px]">
@@ -437,22 +412,24 @@ export function LiveStatusBanner() {
                 Walk-in Live Status
               </span>
               <span className="block text-xs sm:text-sm md:text-base text-[#050505]">
-                 {isActive ? <span className="font-bold text-xl  text-[#195A44] ml-1 underline">OPEN NOW</span> : <span className="font-bold text-xl  text-red-600 ml-1 underline">CLOSED</span>}
+                 {isActive ? <span className="font-bold text-2xl sm:text-3xl md:text-4xl text-[#195A44] ml-1 underline">OPEN NOW</span> : <span className="font-bold text-2xl sm:text-3xl md:text-4xl text-red-600 ml-1 underline">CLOSED</span>}
               </span>
             </div>
           </div>  
 
-          <div className="flex items-center gap-3 sm:gap-4 md:gap-[24px]">
-            <div className="flex flex-col text-center sm:text-left">
-              <span className="font-medium block text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#050505] leading-tight">
-                {formatTime(currentTime)}
-              </span>
-              <span className="block text-xs sm:text-sm md:text-base text-[#050505]">
-                {formatDate(currentTime)}
+          {isActive && (
+            <div className="flex items-center gap-2 sm:gap-3">
+              <img
+                src="/images/image.png"
+                alt=""
+                className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 object-contain flex-shrink-0"
+                aria-hidden="true"
+              />
+              <span className="font-semibold text-lg sm:text-xl md:text-2xl text-[#050505]">
+                Short Wait
               </span>
             </div>
-
-          </div>
+          )}
 
           <button
             onClick={handleLiveChatClick}

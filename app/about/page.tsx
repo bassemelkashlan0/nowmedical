@@ -77,7 +77,7 @@ export default function AboutPage() {
       phone: "587-391-8188"
     },
     {
-      name: "Dr. Vanessa",
+      name: "Dr. Ebele",
       avatar: "/images/about-us/dr-vanessa.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
@@ -91,7 +91,7 @@ export default function AboutPage() {
       phone: "587-391-8188"
     },
     {
-      name: "Dr. Bedi",
+      name: "Dr. Rai",
       avatar: "/images/about-us/dr-vanessa.png",
       specialty: "Family Doctors",
       description: "Experienced in family practice and children's care.",
@@ -174,12 +174,12 @@ export default function AboutPage() {
                   <iframe
                     width="100%"
                     height="500"
-                    src="https://www.youtube.com/embed/X0BcuE-6Kuw?rel=0&modestbranding=1&showinfo=0"
+                    src="https://www.youtube.com/embed/5omqaFVvv-I?rel=0&modestbranding=1&showinfo=0"
                     title="YouTube Shorts Video"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                  </iframe>
+                    allowFullScreen
+                  />
                 </div>
               </div>
             </div>
