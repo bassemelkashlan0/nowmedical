@@ -32,9 +32,9 @@ export default function UrgentCarePage() {
     {
       text: "Cuts, burns, or insect bites"
     },
-    {
-      text: "Prescription renewals and follow-ups"
-    },
+    // {
+    //   text: "Prescription renewals and follow-ups"
+    // },
   ]
   const whyChoose = [
     {
@@ -67,10 +67,22 @@ export default function UrgentCarePage() {
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center  ">
                 <div>
                   <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4 lg:mb-[21px] text-[#303030]">
-                    <span className="text-[#299470] " >Urgent Care in Calgary </span> <br />
-                    Walk-In Clinic Open <br />
-                    Late 7 Days a Week
-                  </h1>
+                    <span className="text-[#299470] ">
+                      Urgent Care Walk-In Clinic in Calgary
+                      <br />
+                      Open Today <span className="whitespace-nowrap">Until 11 PM</span>
+                      <br />
+                      No Appointment Needed
+                    </span>
+ </h1> 
+ <h2 className="text-2xl lg:text-3xl font-medium text-[#303030] mb-[21px] ">
+ Open 7 days <span className="whitespace-nowrap">Until 11 PM</span>
+ <br />
+ Including Weekends and Holidays 
+
+ </h2>
+
+
 
                   <p className="text-base text-[#000000] mb-4">
                     Need medical care now? <br />
@@ -104,11 +116,11 @@ export default function UrgentCarePage() {
                   <iframe
                     width="100%"
                     height="500"
-                    src="https://www.youtube.com/embed/X0BcuE-6Kuw?rel=0&modestbranding=1&showinfo=0"
+                    src="https://www.youtube.com/embed/VMruVCS172c?rel=0&modestbranding=1&showinfo=0"
                     title="YouTube Shorts Video"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
+                    allowFullScreen>
                   </iframe>
                 </div>
               </div>
@@ -205,7 +217,7 @@ export default function UrgentCarePage() {
                   className="border border-white text-white hover:bg-white/10 bg-transparent font-bold text-lg px-6 py-6 flex items-center gap-2"
                   asChild
                 >
-                  <Link href="https://share.google/CkrlunWzewWZjaPmv" className="flex items-center gap-2">
+                  <Link href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6" className="flex items-center gap-2">
                     <img
                       src="/images/walk-in/flowbite_map-pin-outline.svg"
                       alt=""
@@ -239,7 +251,7 @@ export default function UrgentCarePage() {
                   asChild
                 >
                   <Link
-                    href="https://share.google/CkrlunWzewWZjaPmv"
+                    href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"

@@ -32,7 +32,6 @@ export default function ServicesPage() {
       features: [
         "Annual physical examinations",
         "Chronic disease management",
-        "Prescription refills",
         "Health counseling",
         "Referrals to specialists"
       ],
@@ -42,11 +41,11 @@ export default function ServicesPage() {
       title: "Women's Health",
       description: "We provide comprehensive women's healthcare services to support your health at every stage of life.",
       features: [
-        "Annual exams",
-        "Pap smears",
-        "Contraception counseling",
-        "Pregnancy testing",
-        "Menopause management"
+        "Pap tests and cervical screening",
+        "Prenatal care",
+        "Menopause management",
+        "Breast exams and health checks"
+        // "UTIs, yeast infections, and hormonal care"
       ],
       image: "/images/our-services/women-health.png"
     },
@@ -90,7 +89,6 @@ export default function ServicesPage() {
       icon: "/images/hospital-wait-times/women-health.svg",
       items: [
         "Pregnancy testing and prenatal care",
-        "Birth control and family planning",
         "Pap smears and screening",
         "Menopause management"
       ]
@@ -133,7 +131,6 @@ export default function ServicesPage() {
       description: "Comprehensive healthcare for women at all stages",
       items: [
         "Pap smears and screening",
-        "Birth control counseling",
         "Pregnancy testing"
       ],
       icon: <Heart className="w-8 h-8" />

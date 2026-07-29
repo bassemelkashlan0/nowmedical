@@ -39,7 +39,7 @@ export default function StorySection({
               <iframe
                 width="100%"
                 height="500"
-                src="https://www.youtube.com/embed/X0BcuE-6Kuw?rel=0&modestbranding=1&showinfo=0"
+                src="https://www.youtube.com/embed/kp-G-j-DRhg?rel=0&modestbranding=1&showinfo=0"
                 title="YouTube Shorts Video"
                 frameBorder="0"
                 allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

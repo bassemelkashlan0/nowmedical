@@ -39,7 +39,7 @@ export default function HomePage() {
       icon: <Phone className="w-5 h-5" />
     },
     {
-      text: "Short Waits & Same-Day Prescriptions",
+      text: "Short Waits",
       icon: <Phone className="w-5 h-5" />
     },
     {
@@ -108,14 +108,11 @@ export default function HomePage() {
       category: "Women's Health",
       icon: "/images/landing/womens-health.svg",
       items: [
-        "Pregnancy testing and prenatal care",
-        "Birth control and family planning",
-        "Menstrual irregularities and PMS",
-        "Menopause management and HRT",
-        "Pap smears and cervical cancer screening",
-        "Breast exams and mammogram referrals",
-        "UTIs and yeast infections",
-        "Pelvic pain and endometriosis"
+        "Pap tests and cervical screening",
+        "Prenatal care",
+        "Menopause management",
+        "Breast exams and health checks",
+        // "UTIs, yeast infections, and hormonal care",
       ]
     },
     {
@@ -151,20 +148,8 @@ export default function HomePage() {
       description: "Accepting New Patients",
     },
     {
-      name: "Dr. Vanessa Marezana",
-      avatar: "/images/landing/dr-ebele.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-    },
-    {
       name: "Dr. Ebele Madubuko",
-      avatar: "/images/landing/dr-ebele.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-    },
-    {
-      name: "Dr. Prabhjot Bedi",
-      avatar: "/images/landing/dr-madiha.png",
+      avatar: "/images/landing/Ebele.webp",   // ✅ Fixed: capital E
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     }
@@ -173,32 +158,20 @@ export default function HomePage() {
   const maleDoctors = [
     {
       name: "Dr. Michael Ghisel",
-      avatar: "/images/landing/dr-michael.png",
+      avatar: "/images/landing/Michael.webp",  // ✅ Fixed: capital M
       specialty: "Family Doctors",
       description: "Accepting New Patients",
       language: "Spanish",
     },
     {
       name: "Dr. Wael Saleh",
-      avatar: "/images/landing/dr-michael.png",
+      avatar: "/images/landing/Wael.webp",     // ✅ Fixed: capital W
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
     {
       name: "Dr. Rai Khan",
-      avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-    },
-    {
-      name: "Dr. Tive Egbonoje",
-      avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-    },
-    {
-      name: "Dr. Olasunkanmi Akinremi",
-      avatar: "/images/landing/dr-michael.png",
+      avatar: "/images/landing/Rai-Khan.webp", // ✅ Fixed: capital R-K
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
@@ -225,6 +198,25 @@ export default function HomePage() {
     }
   ];
 
+  const NewPages = [
+    {
+      text: <><a href="/walk-in-clinic-ne-calgary"> NE Calgary </a></>,
+    },
+    {
+      text: <><a href="/walk-in-clinic-nw-calgary"> NW Calgary </a></>,
+    },
+    {
+      text: <><a href="/walk-in-clinic-sw-calgary"> SW Calgary </a></>,
+    },
+    {
+      text: <><a href="/walk-in-clinic-se-calgary"> SE Calgary  </a></>,
+    },
+    {
+      text: <><a href="/walk-in-clinic-downtown-calgary"> Downtown Calgary </a></>,
+    }
+  ];
+
+  const Family_img = "/images/walk-in/why-us.png";
 
   // Structured Data for SEO
   const localBusinessSchema = generateLocalBusinessSchema(CLINIC_DATA);
@@ -261,50 +253,61 @@ export default function HomePage() {
         <Header />
         <LiveStatusBanner />
 
-
         <main className="flex-1">
-          {/* Hero Section */}
+          {/*  Hero Section */}
           <section className="bg-[#F1F9F4] to-white py-10 lg:py-[54px] ">
             <div className="container">
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
                 <div>
-                  <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl  mb-4 md:mb-[21px] ">
-                    <span className="text-[#299470]">Walk-In & Family Doctor</span>
-                    <br />
-                    <span className="text-[#299470]">Clinic in Calgary</span>
-                    <br />
-                    <span className="text-[#303030] ">Open 7 Days Until 11 PM</span>
+                  <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#303030] tracking-tight mb-4 lg:mb-[21px]">
+                    <span className="text-[#299470]">
+                      Walk-in Clinic Calgary
+                      <br />
+                      Near You
+                      <br />
+                      Open Today <span className="whitespace-nowrap">Until 11 PM</span>
+                      <br />
+                      Family Doctors Available
+                    </span>
                   </h1>
-                  <p className=" text-muted-foreground mb-4 md:mb-[21px]">
-                    <span className="font-bold text-[#303030] text-[36px]/10 ">Including weekends and holidays</span>
-                  </p>
+                  <h2 className="text-2xl lg:text-3xl font-medium text-[#303030] mb-[21px] ">
+                    Open 7 days <span className="whitespace-nowrap">Until 11 PM</span>
+                    <br />
+                    Including Weekends and Holidays
+                  </h2>
                   <p className="text-base text-[#000000] mb-3 md:mb-[15px] ">
                     Skip the hospital wait. See a Real doctor Today — No Appointment Needed. Fast, friendly care for you and your family, Open on Weekends and Holidays, serving all areas of Calgary.
                   </p>
-                  <p className="text-lg font-bold text-[#050505] mb-8 md:mb-[52px] ">
+                  <p className="text-lg font-bold text-[#050505] mb-2 ">
                     Real doctors. Real care. Open late every day
                   </p>
+                  <p className="mb-8 md:mb-12 ">
+                    <a href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6" target="_blank" className="text-lg font-bold underline text-[#050505]  ">
+                      Address: 2520 23 St NE #19, Calgary, AB T2E 8L2
+                    </a>
+                  </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button size="lg" className="bg-[#299470] text-bold hover:bg-[#2D7B6F] text-white text-lg hidden" asChild>
-                      <Link href="/contact">Register as a new patient<img src="/icons/uil-arrow-up-right.svg" alt="Register as a new patient" className="w-5 h-5" /></Link>
-                    </Button>
-                    <Button
-                      size="lg"
-                      className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg font-bold"
-                      asChild
-                    >
-                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
-                        <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
-                        Call: 587-391-8188
+                    <Button size="lg"
+                      className="border-[#299470] text-[#fff] hover:bg-[#2d7b6f]  text-lg font-bold"
+                      asChild>
+                      <Link href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6" target="_blank" className="flex items-center gap-2">
+                        <img
+                          src="/icons/pin-outline-icon.svg" alt=""
+                          className="w-5 h-5 brightness-0 invert"
+                        />
+                        Get Directions
                       </Link>
                     </Button>
                     <Button
                       size="lg"
                       variant="outline"
-                      className="border-[#299470] text-bold text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
+                      className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
                       asChild
                     >
-                      <Link href="/walk-in-clinic">Walk In Now <img src="/icons/uil-arrow-up-right-grn.svg" alt="Walk In Now" className="w-5 h-5" /></Link>
+                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
+                        <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5 " />
+                        Call: 587-391-8188
+                      </Link>
                     </Button>
                   </div>
                 </div>
@@ -313,12 +316,12 @@ export default function HomePage() {
                   <iframe
                     width="100%"
                     height="500"
-                    src="https://www.youtube.com/embed/5omqaFVvv-I?rel=0&modestbranding=1&showinfo=0"
+                    src="https://www.youtube.com/embed/zeArmG81bAE?rel=0&modestbranding=1&showinfo=0"
                     title="YouTube Shorts Video"
                     frameBorder="0"
                     allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
+                    allowFullScreen>
+                  </iframe>
                 </div>
               </div>
             </div>
@@ -332,12 +335,9 @@ export default function HomePage() {
                   {/* Card 1: Walk-In Visits */}
                   <div className="flex-1 flex flex-col items-center justify-center px-4 py-6 text-center  md:border-r-2  border-[#9AD9BA80]  ">
                     <div className="flex items-center justify-center mb-4">
-                      {/* Placeholder icon */}
                       <span className="inline-flex h-[100px] w-[100px] rounded-full bg-[#4AB27F1A] items-center justify-center">
-                        {/* Medical Bag/Phone Emoji placeholder */}
                         <span className="mt-16">
                           <img src="/images/landing/mobile.png" alt="Walk-In Visits" className="w-full h-full" />
-
                         </span>
                       </span>
                     </div>
@@ -349,7 +349,6 @@ export default function HomePage() {
                   {/* Card 2: Family Doctors */}
                   <div className="flex-1 flex flex-col items-center justify-center px-4 py-6 text-center md:border-r-2  border-[#9AD9BA80] ">
                     <div className="flex items-center justify-center mb-4">
-                      {/* Stethoscope icon placeholder */}
                       <span className="inline-flex h-[100px] w-[100px] rounded-full bg-[#4AB27F1A] items-center justify-center">
                         <span className="mt-16">
                           <img src="/images/landing/stethoscope.png" alt="Family Doctors" className="w-full h-full" />
@@ -364,7 +363,6 @@ export default function HomePage() {
                   {/* Card 3: Open 7 days */}
                   <div className="flex-1 flex flex-col items-center justify-center px-4 py-6 text-center">
                     <div className="flex items-center justify-center mb-4">
-                      {/* 24/7 service icon placeholder */}
                       <span className="inline-flex h-[100px] w-[100px] rounded-full bg-[#4AB27F1A] items-center justify-center">
                         <span className="mt-8">
                           <img src="/images/landing/24x7.png" alt="Open 7 days" className="w-full h-full" />
@@ -452,25 +450,22 @@ export default function HomePage() {
           {/* Walk-in Video Promo Section */}
           <section className="py-10 lg:py-[54px]  ">
             <div className="container mx-auto max-w-[1170px] w-full flex flex-col items-center">
-              {/* Headline with Green Text */}
               <h2 className="text-3xl lg:text-5xl font-bold text-[#303030] text-center mb-4">
                 Walk in today until <span className="text-[#299470]">11:00 Pm, Open 7 days</span>
               </h2>
-              {/* Subheadline */}
               <p className="text-[20px] text-center text-[#303030] mb-6">
                 Register as a new patient today with our Male or Female Family Doctors ,Accepting New Patient
               </p>
-              {/* Video Player (with custom poster) */}
               <div className="w-full aspect-video bg-[#299470] rounded-lg shadow overflow-hidden flex items-center justify-center relative">
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed/BUde4AOLH7Y?rel=0&modestbranding=1&showinfo=0"
+                  src="https://www.youtube.com/embed/kp-G-j-DRhg?rel=0&modestbranding=1&showinfo=0"
                   title="YouTube Shorts Video"
                   frameBorder="0"
                   allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+                  allowFullScreen>
+                </iframe>
               </div>
             </div>
           </section>
@@ -478,23 +473,19 @@ export default function HomePage() {
           {/* Family Doctors Accepting New Patients Section */}
           <section className="bg-[#F1F9F4] pt-10 lg:pt-[54px] pb-10">
             <div className="container mx-auto flex flex-col items-center">
-              {/* Headline */}
               <h2 className="text-3xl lg:text-5xl font-bold text-[#303030] text-center mb-4">
                 Family Doctors Accepting <span className="text-[#299470]">New Patients</span>
               </h2>
-              {/* Subheadline */}
               <div className="text-center mb-4">
                 <p className="font-bold text-lg text--[#000000">Looking for a family doctor in Calgary?</p>
               </div>
               <div className="text-center  mb-8 text-[#000000] ">
                 Our caring Male and Female Doctors are accepting new patients in Calgary for long-term, comprehensive care. Get matched with <br /> a doctor who listens, understands, and builds lasting relationships with your family.
               </div>
-              {/* Cards Row */}
               <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
                 {/* Card 1: Male & Female Doctors */}
                 <div className="rounded-xl border border-[#83C1AC] bg-white shadow-sm flex flex-col items-center justify-between px-5 py-5 text-center hover:shadow-lg transition">
                   <span className="inline-flex h-14 w-14 items-center justify-center mb-6">
-                    {/* icon: users */}
                     <img src="/images/landing/new-patients.svg" alt="" />
                   </span>
                   <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">Male & Female Doctors</h3>
@@ -503,7 +494,6 @@ export default function HomePage() {
                 {/* Card 2: Multiple Languages */}
                 <div className="rounded-xl border border-[#83C1AC] bg-white shadow-sm flex flex-col items-center justify-between px-5 py-5 text-center hover:shadow-lg transition">
                   <span className="inline-flex h-14 w-14 items-center justify-center mb-4">
-                    {/* icon: globe / languages */}
                     <img src="/images/landing/new-patients.svg" alt="" />
                   </span>
                   <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">Multiple languages</h3>
@@ -512,7 +502,6 @@ export default function HomePage() {
                 {/* Card 3: Comprehensive Care */}
                 <div className="rounded-xl border border-[#83C1AC] bg-white shadow-sm flex flex-col items-center justify-between px-5 py-5 text-center hover:shadow-lg transition">
                   <span className="inline-flex h-14 w-14 items-center justify-center mb-4">
-                    {/* icon: comprehensive care */}
                     <img src="/images/landing/new-patients.svg" alt="" />
                   </span>
                   <h3 className="font-medium text-[#000000] text-2xl lg:text-3xl mb-[10px] ">Comprehensive Care</h3>
@@ -522,19 +511,9 @@ export default function HomePage() {
             </div>
           </section>
 
-          {/* Values Section
-        <ValuesSection
-          title="Our Values"
-          values={values}
-        /> */}
-
-
-          {/* Registration Process Section */}
-          {/* <RegistrationProcessSection /> */}
-
           {/* Meet Our Doctors */}
           <DoctorsSection
-            title="Meet Our Doctors"
+            title="Meet Our Female Doctors"
             description={<>Our diverse team of male and female family doctors provides care in multiple languages. Each doctor brings years of <br />experience in family medicine, chronic condition management, and preventive health</>}
             femaleDoctors={femaleDoctors}
             maleDoctors={maleDoctors}
@@ -568,6 +547,20 @@ export default function HomePage() {
             customButtonLink="/reviews"
           />
 
+          {/* New pages Section */}
+          <WhyChooseSection
+            title={<>Walk-In Clinics by Area</>}
+            subtitle=""
+            items={NewPages}
+            image={Family_img}
+            btn_1_text="Call: 587-391-8188"
+            btn_1_link="tel:587-391-8188"
+            btn_1_icon="/icons/solar_phone-outline.svg"
+            order="order-first"
+            h2_color_1="text-[#299470]"
+            h2_color_2="text-[#303030]"
+            singleButton={true}
+          />
 
           {/* Find Us Section */}
           <FindUsSection
@@ -590,7 +583,7 @@ export default function HomePage() {
                   asChild
                 >
                   <Link
-                    href="https://share.google/CkrlunWzewWZjaPmv"
+                    href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
@@ -602,11 +595,6 @@ export default function HomePage() {
               </>
             }
           />
-
-          {/* CTA Banner */}
-          {/* <CTABannerSection
-          title="Walk In Today We're Open Late Weekend and Holidays"
-        /> */}
         </main>
 
         <Footer />

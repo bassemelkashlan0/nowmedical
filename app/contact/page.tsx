@@ -69,9 +69,9 @@ export default function ContactPage() {
                   height="500"
                   src="https://www.youtube.com/embed/zeArmG81bAE?rel=0&modestbranding=1&showinfo=0"
                   title="YouTube Shorts Video"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
+                  allowFullScreen>
                 </iframe>
               </div>
             </div>
@@ -152,7 +152,7 @@ export default function ContactPage() {
           btn_1_link="tel:587-391-8188"
           btn_1_icon="/icons/btn_phone-outline-icon.svg"
           btn_2_text="Start Direction"
-          btn_2_link="https://share.google/CkrlunWzewWZjaPmv"
+          btn_2_link="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6"
           btn_2_icon="/icons/pin-outline-icon.svg"
           both_btn="flex"
           bg_color="bg-[#F1F9F4] "

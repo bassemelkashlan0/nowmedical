@@ -69,7 +69,7 @@ export default function DoctorCategoriesSection({
       </div>
       <div className="p-4 bg-white">
         <p className="text-m text-[#050505] font-medium mb-2">{doctor.specialty}</p>
-        <h3 className="text-2xl font-medium mb-3">
+        <h3 className="text-[23px] font-medium mb-3">
           {doctor.name}
           {doctor.language && (
             <span className="text-sm font-normal text-gray-500 ml-2">
@@ -123,7 +123,7 @@ export default function DoctorCategoriesSection({
                 <CarouselContent className="-ml-2 md:-ml-4">
                   {femaleSlides.map((slide, slideIndex) => (
                     <CarouselItem key={slideIndex} className="pl-2 md:pl-4 basis-full">
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 ">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
                         {slide.map((doctor, doctorIndex) =>
                           renderDoctorCard(doctor, slideIndex * 4 + doctorIndex)
                         )}

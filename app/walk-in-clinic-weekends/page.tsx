@@ -44,10 +44,10 @@ export default function WeekendClinicPage() {
     },
     {
       text: "Sprains, back pain, muscle aches"
-    },
-    {
-      text: "Prescription renewals or medical forms"
     }
+    // {
+    //   text: "Prescription renewals or medical forms"
+    // }
   ];
 
   const faqSchema = generateFAQSchema([
@@ -127,11 +127,11 @@ export default function WeekendClinicPage() {
                   <iframe
                     width="100%"
                     height="500"
-                    src="https://www.youtube.com/embed/IpTEkX4lRWQ?rel=0&modestbranding=1&showinfo=0"
+                    src="https://www.youtube.com/embed/VMruVCS172c?rel=0&modestbranding=1&showinfo=0"
                     title="YouTube Shorts Video"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
+                    allowFullScreen>
                   </iframe>
                 </div>
               </div>
@@ -216,7 +216,7 @@ export default function WeekendClinicPage() {
                   asChild
                 >
                   <Link
-                    href="https://share.google/CkrlunWzewWZjaPmv"
+                    href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"

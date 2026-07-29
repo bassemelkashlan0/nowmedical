@@ -1,5 +1,6 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { LiveStatusBanner } from "@/components/live-status-banner";
 import {
   DoctorCategoriesSection,
   WalkInHeroSection,
@@ -18,6 +19,20 @@ export const metadata: Metadata = {
 
 export default function DoctorsPage() {
   const femaleDoctors = [
+    // {
+    //   name: "Dr. Nasreen Abid",
+    //   avatar: "/images/landing/dr-madiha.png",
+    //   specialty: "Family Doctors",
+    //   description: "Accepting New Patients",
+    //   language: "Arabic",
+    // },
+    // {
+    //   name: "Dr. Vanessa Marezana",
+    //   avatar: "/images/landing/dr-ebele.png",
+    //   specialty: "Family Doctors",
+    //   description: "Accepting New Patients",
+    //   language: "Spanish",
+    // },
     {
       name: "Dr. Madiha Badshah",
       avatar: "/images/landing/dr-madiha.png",
@@ -25,58 +40,51 @@ export default function DoctorsPage() {
       description: "Accepting New Patients",
     },
     {
-      name: "Dr. Vanessa Marezana",
-      avatar: "/images/landing/dr-ebele.png",
-      specialty: "Family Doctors",
-      description: " ",
-    },
-    {
       name: "Dr. Ebele Madubuko",
-      avatar: "/images/landing/dr-ebele.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-    },
-    {
-      name: "Dr. Prabhjot Bedi",
-      avatar: "/images/landing/dr-madiha.png",
+      avatar: "/images/landing/Ebele.webp",     // ✅ Fixed: capital E
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     }
+    // {
+    //   name: "Dr. Prabhjot Bedi",
+    //   avatar: "/images/landing/dr-madiha.png",
+    //   specialty: "Family Doctors",
+    //   description: "Accepting New Patients",
+    // }
   ];
 
   const maleDoctors = [
     {
       name: "Dr. Michael Ghisel",
-      avatar: "/images/landing/dr-michael.png",
+      avatar: "/images/landing/Michael.webp",   // ✅ Fixed: capital M
       specialty: "Family Doctors",
       description: "Accepting New Patients",
       language: "Spanish",
     },
     {
       name: "Dr. Wael Saleh",
-      avatar: "/images/landing/dr-michael.png",
+      avatar: "/images/landing/Wael.webp",       // ✅ Fixed: capital W
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
     {
       name: "Dr. Rai Khan",
-      avatar: "/images/landing/dr-michael.png",
+      avatar: "/images/landing/Rai-Khan.webp",   // ✅ Fixed: capital R-K
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     },
-    {
-      name: "Dr. Tive Egbonoje",
-      avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-    },
-    {
-      name: "Dr. Olasunkanmi Akinremi",
-      avatar: "/images/landing/dr-michael.png",
-      specialty: "Family Doctors",
-      description: "Accepting New Patients",
-    },
-
+    // {
+    //   name: "Dr. Tive Egbonoje",
+    //   avatar: "/images/landing/dr-michael.png",
+    //   specialty: "Family Doctors",
+    //   description: "Accepting New Patients",
+    // },
+    // {
+    //   name: "Dr. Olasunkanmi Akinremi",
+    //   avatar: "/images/landing/dr-michael.png",
+    //   specialty: "Family Doctors",
+    //   description: "Accepting New Patients",
+    // },
   ];
 
 
@@ -104,6 +112,7 @@ export default function DoctorsPage() {
 
       <div className="flex min-h-screen flex-col">
         <Header />
+        <LiveStatusBanner />
 
         <main className="flex-1">
           {/* Hero Section */}
@@ -115,7 +124,7 @@ export default function DoctorsPage() {
               </>
             }
             subtitle={<><span className="text-[#000000] font-bold">Female and Male Family Doctors</span><br/><span className="text-[#299470] font-bold ">ACCEPTING NEW PATIENTS</span><br/>Searching for a  family doctor?<br/> </>}
-            description={<><b>Now Medical Clinic</b> has both <b>male and female</b> doctors currently Accepting New Patients in Calgary. We’re available <b>seven days a week, open late until 11 PM</b> to support your ongoing health needs.</>}
+            description={<><b>Now Medical Clinic</b> has both <b>male and female</b> doctors currently Accepting New Patients in Calgary. We're available <b>seven days a week, open late until 11 PM</b> to support your ongoing health needs.</>}
             additionalText=""
             buttons={[
               {

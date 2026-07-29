@@ -8,11 +8,14 @@ interface ButtonConfig {
   icon?: string;
   variant?: "default" | "outline";
   className?: string;
+  target?: string;
 }
 
 interface WalkInHeroSectionProps {
   title?: ReactNode;
   subtitle?: ReactNode;
+  titleClassName?: string;
+  subtitleClassName?: string;
   description?: ReactNode;
   additionalText?: ReactNode;
   buttons?: ButtonConfig[];
@@ -25,11 +28,22 @@ interface WalkInHeroSectionProps {
 export default function WalkInHeroSection({
   title = (
     <>
-      <span className="text-[#299470]">Walk-In Clinic Calgary</span><br />
-      Open 7 Days Until 11 PM
+      <span className="text-[#299470]">Walk-In Clinic Calgary</span>
+      <br />
+      Open Today <span className="whitespace-nowrap">Until 11 PM</span> | Near You
+      <br />
+      No Appointment Needed
     </>
   ),
-  subtitle = "Including Weekend and Holidays",
+  subtitle = (
+    <>
+      Open 7 days <span className="whitespace-nowrap">Until 11 PM</span>
+      <br />
+      Including Weekends and Holidays
+    </>
+  ),
+  titleClassName = "text-4xl lg:text-5xl xl:text-6xl font-bold text-[#303030] tracking-tight mb-4 lg:mb-[21px]",
+  subtitleClassName = "text-2xl lg:text-3xl font-medium text-[#303030] mb-[21px] leading-tight",
   description = (
     <>
       Need a doctor today? Walk in anytime — no appointment needed. <br /> We're open 7 days late <b>evenings, weekends, and holidays</b> to help you feel better faster.
@@ -38,22 +52,17 @@ export default function WalkInHeroSection({
   additionalText = "Real doctors. Short wait convenient Calgary location",
   buttons = [
     {
-      text: "Walk In Now",
-      link: "/walk-in-clinic",
-      icon: "/icons/solar_walking-outline.svg",
+      text: "Call: 587-391-8188",
+      link: "tel:587-391-8188",
+      icon: "/icons/btn_phone-outline-icon.svg",
       variant: "default" as const,
     },
     {
-      text: "Call: 587-391-8188",
-      link: "tel:587-391-8188",
-      icon: "/icons/solar_phone-outline.svg",
-      variant: "outline" as const,
-    },
-    {
       text: "Get Direction",
-      link: "https://share.google/CkrlunWzewWZjaPmv",
+      link: "https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6",
       icon: "/icons/pin-outline-icon.svg",
       variant: "outline" as const,
+      target: "_blank",
     }
   ],
   image = "/images/walk-in/walk-in-banner.png",
@@ -67,13 +76,13 @@ export default function WalkInHeroSection({
         <div className="grid  gap-8 lg:grid-cols-2 lg:gap-12 items-center">
           {/* Left Section - Text Content (60-70% width) */}
           <div className="space-y-4">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#303030] mb-4 lg:mb-[21px] ">
+            <h1 className={titleClassName}>
               {title}
             </h1>
             {subtitle && (
-              <p className="text-2xl lg:text-3xl font-medium text-[#303030] mb-[21px] ">
+              <h2 className={subtitleClassName}>
                 {subtitle}
-              </p>
+              </h2>
             )}
             {description && (
               <p className="text-base text-[#303030] mb-1 ">
@@ -102,7 +111,7 @@ export default function WalkInHeroSection({
                     } ${button.text && (button.text.includes("Register as a New Patient") || button.text.includes("Register as a new patient")) ? 'hidden' : ''}`}
                     asChild
                   >
-                    <Link href={button.link}  >
+                    <Link href={button.link} target={button.target} rel={button.target === "_blank" ? "noopener noreferrer" : undefined}>
                       {button.icon && (
                         <img
                           src={button.icon}
@@ -123,12 +132,12 @@ export default function WalkInHeroSection({
             <iframe
               width="100%"
               height="500"
-              src="https://www.youtube.com/embed/5omqaFVvv-I?rel=0&modestbranding=1&showinfo=0"
+              src="https://youtube.com/embed/VMruVCS172c"
               title="YouTube Shorts Video"
               frameBorder="0"
               allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+              allowFullScreen>
+            </iframe>
           </div>
         </div>
       </div>

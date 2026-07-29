@@ -1,6 +1,6 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { FindUsSection, WhyChooseSection, StorySection, MeetOurSlider } from "@/sections";
+import { FindUsSection, WhyChooseSection, StorySection, MeetOurSlider, DoctorsSection } from "@/sections";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { StructuredData, generatePhysicianSchema, generateFAQSchema, generateLocalBusinessSchema, CLINIC_DATA } from "@/lib/structured-data";
@@ -19,29 +19,31 @@ export const metadata: Metadata = {
 
 export default function FemaleFamilyDoctorPage() {
   const femaleDoctors = [
+    // {
+    //   name: "Dr. Nasreen Abid",
+    //   avatar: "/images/landing/dr-madiha.png",
+    //   specialty: "Family Doctors",
+    //   description: "Accepting New Patients",
+    //   language: "Arabic",
+    // },
+    // {
+    //   name: "Dr. Vanessa Marezana",
+    //   avatar: "/images/landing/dr-ebele.png",
+    //   specialty: "Family Doctors",
+    //   description: "Accepting New Patients",
+    //   language: "Spanish",
+    // },
     {
-      name: "Dr. Vanessa",
-      avatar: "/images/female-family/slide-one.png",
-      specialty: "Gynecologist",
-      description: "Specializes in women's health and comprehensive family medicine.",
-      phone: "587-391-8188",
-      language: "English"
+      name: "Dr. Madiha Badshah",
+      avatar: "/images/landing/dr-madiha.png",
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
     },
     {
-      name: "Dr. Madiha",
-      avatar: "/images/female-family/slide-one.png",
-      specialty: "Family Medicine",
-      description: "Experienced in women's health, family practice, and children's care.",
-      phone: "587-391-8188",
-      language: "English"
-    },
-    {
-      name: "Dr. Ebele",
-      avatar: "/images/female-family/slide-one.png",
-      specialty: "Family Medicine",
-      description: "Dedicated to providing compassionate women's healthcare.",
-      phone: "587-391-8188",
-      language: "English"
+      name: "Dr. Ebele Madubuko",
+      avatar: "/images/landing/Ebele.webp",   // ✅ Fixed: capital E
+      specialty: "Family Doctors",
+      description: "Accepting New Patients",
     }
   ];
 
@@ -116,10 +118,10 @@ export default function FemaleFamilyDoctorPage() {
   // Story Content
   const storyContent = [
     <>
-      At <b>Now Medical Clinic,</b> we know that many women feel more comfortable discussing their health with a female doctor.<br /> Whether it’s your first check-up, a sensitive concern, or ongoing family care, our female physicians are here to make your experience comfortable and empowering.
+      At <b>Now Medical Clinic,</b> we know that many women feel more comfortable discussing their health with a female doctor.<br /> Whether it's your first check-up, a sensitive concern, or ongoing family care, our female physicians are here to make your experience comfortable and empowering.
     </>,
     <>
-      We’re proud to offer <b>female family doctors accepting new patients</b> in Calgary open <b>7 days a week until 11 PM,</b> including <b>weekends and holidays</b>
+      We're proud to offer <b>female family doctors accepting new patients</b> in Calgary open <b>7 days a week until 11 PM,</b> including <b>weekends and holidays</b>
     </>
   ];
   return (
@@ -181,18 +183,42 @@ export default function FemaleFamilyDoctorPage() {
                   <iframe
                     width="100%"
                     height="500"
-                    src="https://www.youtube.com/embed/5omqaFVvv-I?rel=0&modestbranding=1&showinfo=0"
+                    src="https://www.youtube.com/embed/kp-G-j-DRhg?rel=0&modestbranding=1&showinfo=0"
                     title="YouTube Shorts Video"
                     frameBorder="0"
                     allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
+                    allowFullScreen>
+                  </iframe>
                 </div>
               </div>
             </div>
           </section>
 
-
+          {/* Meet Our Doctors */}
+          <DoctorsSection
+            title="Meet Our Female Doctors"
+            description={<>Our diverse team of male and female family doctors provides care in multiple languages. Each doctor brings years of <br />experience in family medicine, chronic condition management, and preventive health</>}
+            femaleDoctors={femaleDoctors}
+            maleDoctors={[]}
+            showCategories={false}
+            useCarousel={true}
+            customButtons={[
+              {
+                text: "Call: 587-391-8188",
+                link: "tel:587-391-8188",
+                icon: "/icons/btn_phone-outline-icon.svg",
+                variant: "default",
+                className: "bg-[#299470] hover:bg-[#2D7B6F] text-white text-lg"
+              },
+              {
+                text: "Meet Our Doctors",
+                link: "/meet-our-doctors",
+                icon: "/icons/uil-arrow-up-right-grn.svg",
+                variant: "outline",
+                className: "border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg"
+              }
+            ]}
+          />
 
           {/* Our Story */}
           <StorySection
@@ -324,7 +350,7 @@ export default function FemaleFamilyDoctorPage() {
                   asChild
                 >
                   <Link
-                    href="https://share.google/CkrlunWzewWZjaPmv"
+                    href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"

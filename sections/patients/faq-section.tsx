@@ -20,43 +20,47 @@ interface FAQSectionProps {
   subtitle?: string;
   description?: string;
   categories: FAQCategory[];
+  showHero?: boolean;
 }
 
 export default function FAQSection({
   title = "Frequently Asked Questions",
   subtitle = "Walk-In & Family Doctor Clinic in Calgary",
   description,
-  categories
+  categories,
+  showHero = true
 }: FAQSectionProps) {
   return (
     <>
-      <section className=" overflow-hidden py-10 lg:pt-[92px] lg:pb-[83px] px-4 md:px-8 bg-[#F1F9F4] relative">
-        <div className="container">
-          <div className="grid gap-12 lg:grid-cols-[53%_47%] lg:gap-16 items-center">
-            <div>
-              <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl mb-6 text-[#299470] ">
-                Frequently Asked Questions
-                <br />
-                <span className="text-[#303030]">Walk-In & Family Doctor Clinic in Calgary</span>
-              </h1>
-              <p className="text-m text-[#303030] mb-4"><b>
-                At Now Medical Clinic, we want your visit to be simple, fast, and stress-free. Below you’ll find answers to our most common patient questions — from walk-in care and hours to insurance coverage, family doctors, and urgent care services.
-              </b></p>
-              <p className="text-base text-[#303030] mb-8"><b>
-                If you still have questions, call us anytime at 587-391-8188 — we’re happy to help.
-              </b></p>
-            </div>
+      {showHero && (
+        <section className=" overflow-hidden py-10 lg:pt-[92px] lg:pb-[83px] px-4 md:px-8 bg-[#F1F9F4] relative">
+          <div className="container">
+            <div className="grid gap-12 lg:grid-cols-[53%_47%] lg:gap-16 items-center">
+              <div>
+                <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl mb-6 text-[#299470] ">
+                  Frequently Asked Questions
+                  <br />
+                  <span className="text-[#303030]">Walk-In &amp; Family Doctor Clinic in Calgary</span>
+                </h1>
+                <p className="text-m text-[#303030] mb-4"><b>
+                  At Now Medical Clinic, we want your visit to be simple, fast, and stress-free. Below you&apos;ll find answers to our most common patient questions — from walk-in care and hours to insurance coverage, family doctors, and urgent care services.
+                </b></p>
+                <p className="text-base text-[#303030] mb-8"><b>
+                  If you still have questions, call us anytime at 587-391-8188 — we&apos;re happy to help.
+                </b></p>
+              </div>
 
-            <div>
-              <img
-                src="/images/faq/banner.png"
-                alt="Now Medical Clinic Calgary doctor"
-                className="absolute  top-0 -right-12 h-full w-[900px] object-cover"
-              />
+              <div>
+                <img
+                  src="/images/faq/banner.png"
+                  alt="Now Medical Clinic Calgary doctor"
+                  className="absolute  top-0 -right-12 h-full w-[900px] object-cover"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section className="py-10 lg:py-[54px] px-4 md:px-8">
         <div className="max-w-4xl mx-auto">

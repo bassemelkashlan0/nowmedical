@@ -1,7 +1,7 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import bg_img from "@/public/images/walkin-sub/late-night-treat.png"
-import whyChoose_img from "@/public/images/walkin-sub/late-night-why-choose.png"
+import bg_img from "@/public/images/walkin-sub/late-night-treat.png";
+import whyChoose_img from "@/public/images/walkin-sub/late-night-why-choose.png";
 import { FindUsSection, WhyChooseSection } from "@/sections";
 import BottomCallAction from "@/components/ui/bottom-call-acction";
 import { LiveStatusBanner } from "@/components/live-status-banner";
@@ -10,43 +10,44 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: 'Late-Night Clinic Calgary | Walk-In Medical Care Until 11 PM',
-  description: 'Need medical care late at night? Visit our Calgary clinic open until 11 PM. Walk-ins welcome—no appointment needed for evening care.'
-}
+  title: "After-hours Walk-In Clinic Calgary | Open Until 11 PM",
+  description:
+    "After-hours walk-in clinic in Calgary open daily until 11 PM. No appointment needed—visit Now Medical Clinic on weekends and holidays.",
+};
 
-export default function LateNightClinicPage() {
-
+export default function AfterHoursWalkInClinicPage() {
   const whatWeTreat = [
     {
-      text: 'Cold, flu, sore throat, fever'
+      text: "Cold, flu, sore throat, fever",
     },
     {
-      text: "Ear or sinus infections, allergies, or asthma"
+      text: "Ear or sinus infections, allergies, or asthma",
     },
     {
-      text: "Urinary tract infections (UTIs)"
+      text: "Urinary tract infections (UTIs)",
     },
     {
-      text: "Rashes, minor skin conditions, or insect bites"
+      text: "Rashes, minor skin conditions, or insect bites",
     },
     {
-      text: "Sprains, strains, back or joint pain"
-    }
-  ]
+      text: "Sprains, strains, back or joint pain",
+    },
+  ];
+
   const whyChoose = [
     {
-      text: "Open Late Every Day — until 11 PM, even on weekends & holidays"
+      text: "Open Late Every Day — until 11 PM, even on weekends & holidays",
     },
     {
-      text: "Real Family Doctors"
+      text: "Real Family Doctors",
     },
     {
-      text: "Short Wait Times —"
+      text: "Short Wait Times —",
     },
     {
-      text: "Convenient Location — free parking, easy to all Calgary areas"
-    }
-  ]
+      text: "Convenient Location — free parking, easy to all Calgary areas",
+    },
+  ];
 
   return (
     <>
@@ -62,32 +63,40 @@ export default function LateNightClinicPage() {
                 <div>
                   <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#303030] tracking-tight mb-4 lg:mb-[21px]  ">
                     <span className="text-[#299470] ">
-                      Late-Night Walk-In Clinic in Calgary
-                      <br />
-                      Open Tonight <span className="whitespace-nowrap">Until 11 PM</span>
-                      <br />
-                      No Appointment Needed
+                      Calgary's After-hours Walk-in Clinic -
                     </span>
+                    <br />
+                    <span className="whitespace-nowrap">Open Until 11 PM</span>
+                    <br />
+                    No Appointment Needed
                   </h1>
-                  <h2 className="text-2xl lg:text-3xl font-medium text-[#303030] mb-[21px] ">
-                  Open 7 days <span className="whitespace-nowrap">Until 11 PM</span>
-                  <br />
-Including Weekends and Holidays 
 
+                  <h2 className="text-base font-bold text-[#303030] mb-4">
+                    Open 7 days Until 11 PM Including Weekends and Holidays
                   </h2>
 
-                  <p className="text-base  text-[#303030] mb-4">
-                    Need to see a <b>doctor tonight</b> but don’t want to wait hours in the hospital? <br />At <b>Now Medical Clinic,</b> we’re one of Calgary’s <b>latest-open medical clinics,</b> with <b>real family doctors</b> available until <b>11 PM every night,</b> including <b>weekends and holidays.</b> No appointment needed — just walk in.
-                  </p>
-
-                  <p className="text-base font-bold">
-                    Skip the wait. See a real doctor tonight.
+                  <p className="text-base text-[#303030] mb-4">
+                    Need After Hours Walk in Doctors now? Skip long hospital
+                    waits - visit Now Medical Clinic, Calgary's trusted walk in
+                    clinic open daily until 11 PM, including weekends and
+                    holidays.
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                    <Button size="lg" className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold" asChild>
-                      <Link href="tel:587-391-8188" className="flex items-center gap-2">
-                        <img src="/icons/btn_phone-outline-icon.svg" alt="Phone" className="w-5 h-5 brightness-0 invert" />
+                    <Button
+                      size="lg"
+                      className="bg-[#299470] hover:bg-[#2D7B6F] text-white text-base font-bold"
+                      asChild
+                    >
+                      <Link
+                        href="tel:587-391-8188"
+                        className="flex items-center gap-2"
+                      >
+                        <img
+                          src="/icons/btn_phone-outline-icon.svg"
+                          alt="Phone"
+                          className="w-5 h-5 brightness-0 invert"
+                        />
                         Call: 587-391-8188
                       </Link>
                     </Button>
@@ -98,8 +107,15 @@ Including Weekends and Holidays
                       className="border-[#299470] border-1 text-[#299470] hover:bg-[#299470]/10 bg-transparent text-base font-bold"
                       asChild
                     >
-                      <Link href="/walk-in-clinic" className="flex items-center gap-2">
-                        <img src="/icons/btn-walking-outline-icon.svg" alt="Walk In" className="w-5 h-5" />
+                      <Link
+                        href="/walk-in-clinic"
+                        className="flex items-center gap-2"
+                      >
+                        <img
+                          src="/icons/btn-walking-outline-icon.svg"
+                          alt="Walk In"
+                          className="w-5 h-5"
+                        />
                         Walk In Now
                       </Link>
                     </Button>
@@ -114,9 +130,8 @@ Including Weekends and Holidays
                     title="YouTube Shorts Video"
                     frameBorder="0"
                     allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen>
-                  </iframe>
-
+                    allowFullScreen
+                  ></iframe>
                 </div>
               </div>
             </div>
@@ -124,7 +139,7 @@ Including Weekends and Holidays
 
           {/* why choose  */}
           <WhyChooseSection
-            py=' py-10 lg:py-[69px] '
+            py=" py-10 lg:py-[69px] "
             title="Why Choose"
             subtitle="Our Late-Night Clinic"
             items={whyChoose}
@@ -139,20 +154,20 @@ Including Weekends and Holidays
             btn_2_icon="/icons/btn-walking-outline-icon.svg"
           />
 
-
           {/* What we Treat */}
           <WhyChooseSection
             title="What We Treat"
             subtitle="After Hours"
             para={
               <>
-                Our doctors are ready to help with most <b>concerns,</b>  including:
+                Our doctors are ready to help with most <b>concerns,</b>{" "}
+                including:
               </>
             }
             items={whatWeTreat}
             image={bg_img.src}
-            h2_color_1='text-[#299470]'
-            h2_sub_color='text-[#303030]'
+            h2_color_1="text-[#299470]"
+            h2_sub_color="text-[#303030]"
             order="order-first"
             bg_color="bg-[#F1F9F4] "
             py=" py-10 lg:py-[149px] "
@@ -166,12 +181,9 @@ Including Weekends and Holidays
             btn_2_icon="/icons/btn-walking-outline-icon.svg"
           />
 
-
           {/* Map Section */}
-
-
           <FindUsSection
-          bgColor="bg-white"
+            bgColor="bg-white"
             customButtons={
               <>
                 <Button
@@ -180,8 +192,15 @@ Including Weekends and Holidays
                   className="bg-[#299470] hover:bg-[#256358] text-white font-bold text-lg"
                   asChild
                 >
-                  <Link href="/walk-in-clinic" className="flex items-center gap-2">
-                    <img src="/icons/solar_walking-outline.svg" alt="Phone" className="w-5 h-5" />
+                  <Link
+                    href="/walk-in-clinic"
+                    className="flex items-center gap-2"
+                  >
+                    <img
+                      src="/icons/solar_walking-outline.svg"
+                      alt="Phone"
+                      className="w-5 h-5"
+                    />
                     Walk In Now
                   </Link>
                 </Button>
@@ -191,8 +210,15 @@ Including Weekends and Holidays
                   className="border-[#299470] text-[#299470] hover:bg-[#299470]/10 bg-transparent text-lg font-bold"
                   asChild
                 >
-                  <Link href="tel:587-391-8188" className="flex items-center gap-2">
-                    <img src="/icons/solar_phone-outline.svg" alt="Phone" className="w-5 h-5" />
+                  <Link
+                    href="tel:587-391-8188"
+                    className="flex items-center gap-2"
+                  >
+                    <img
+                      src="/icons/solar_phone-outline.svg"
+                      alt="Phone"
+                      className="w-5 h-5"
+                    />
                     Call: 587-391-8188
                   </Link>
                 </Button>
@@ -208,7 +234,11 @@ Including Weekends and Holidays
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
                   >
-                    <img src="/icons/pin-outline-icon.svg" alt="" className="w-5 h-5 " />
+                    <img
+                      src="/icons/pin-outline-icon.svg"
+                      alt=""
+                      className="w-5 h-5 "
+                    />
                     Get Direction
                   </Link>
                 </Button>
@@ -217,20 +247,18 @@ Including Weekends and Holidays
           />
 
           <div className="mt-15"></div>
+
           {/* CTA Banner */}
           <BottomCallAction
-            title=' Late-Night Walk-In Clinic Calgary | Open Until  '
+            title=" Late-Night Walk-In Clinic Calgary | Open Until  "
             title_2="11 PM Daily"
             description="Looking for a late-night clinic in Calgary? We’re open until 11 PM every day, including weekends & holidays. Real doctors, short waits. Call 587-391-8188."
           />
-
-
         </main>
 
         <Footer />
       </div>
     </>
   );
-
 }
 

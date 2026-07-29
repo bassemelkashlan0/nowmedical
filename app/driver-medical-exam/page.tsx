@@ -82,9 +82,9 @@ export default function DriversMedicalExamsInCalgaryScreen() {
                                     height="500"
                                     src="https://www.youtube.com/embed/zeArmG81bAE?rel=0&modestbranding=1&showinfo=0"
                                     title="YouTube Shorts Video"
-                                    frameborder="0"
+                                    frameBorder="0"
                                     allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen>
+                                    allowFullScreen>
                                 </iframe>
                             </div>
                         </div>
@@ -129,7 +129,7 @@ export default function DriversMedicalExamsInCalgaryScreen() {
                           asChild
                         >
                           <Link
-                            href="https://share.google/CkrlunWzewWZjaPmv"
+                            href="https://maps.app.goo.gl/cL3Y6A4iHoaXZ8jv6"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2"
