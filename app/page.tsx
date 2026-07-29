@@ -154,7 +154,7 @@ export default function HomePage() {
       name: "Dr. Vanessa Marezana",
       avatar: "/images/landing/dr-ebele.png",
       specialty: "Family Doctors",
-      // description: "Accepting New Patients",
+      description: "Accepting New Patients",
     },
     {
       name: "Dr. Ebele Madubuko",
@@ -313,7 +313,7 @@ export default function HomePage() {
                   <iframe
                     width="100%"
                     height="500"
-                    src="https://www.youtube.com/embed/zeArmG81bAE?rel=0&modestbranding=1&showinfo=0"
+                    src="https://www.youtube.com/embed/5omqaFVvv-I?rel=0&modestbranding=1&showinfo=0"
                     title="YouTube Shorts Video"
                     frameBorder="0"
                     allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -561,12 +561,7 @@ export default function HomePage() {
           {/* Patient Experience */}
           <TestimonialsSection
             title="Patient Experience"
-            subtitle={
-              <>
-                At Now Medical Clinic, our doctors treat a wide range of medical conditions <br />
-                so you can skip the ER and get real help today.
-              </>
-            }
+            subtitle="At Now Medical Clinic, our doctors treat a wide range of medical conditions so you can skip the ER and get real help today."
             bottomText="Watch why Calgary trusts Now Medical Clinic for fast, professional care."
             testimonials={testimonials}
             customButtonText="See What Patients Are Saying"

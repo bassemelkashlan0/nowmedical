@@ -123,12 +123,12 @@ export default function WalkInHeroSection({
             <iframe
               width="100%"
               height="500"
-              src="https://youtube.com/embed/IpTEkX4lRWQ"
+              src="https://www.youtube.com/embed/5omqaFVvv-I?rel=0&modestbranding=1&showinfo=0"
               title="YouTube Shorts Video"
               frameBorder="0"
               allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen>
-            </iframe>
+              allowFullScreen
+            />
           </div>
         </div>
       </div>
