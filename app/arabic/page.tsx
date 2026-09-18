@@ -30,7 +30,7 @@ function ContactButtons() {
   );
 }
 
-function ClinicVideo({ src }: { src: string }) {
+function ClinicVideo({ src, poster }: { src: string; poster: string }) {
   return (
     <div className="flex w-full max-w-md justify-center rounded-xl border border-[#83C1AC] bg-white p-2 shadow-sm">
       <video
@@ -38,6 +38,7 @@ function ClinicVideo({ src }: { src: string }) {
         controls
         playsInline
         preload="metadata"
+        poster={poster}
         src={src}
       />
     </div>
@@ -66,9 +67,9 @@ export default function ArabicPage() {
 
         <div className="flex w-full flex-col items-center gap-12">
           <ContactButtons />
-          <ClinicVideo src="/Amel.mp4" />
+          <ClinicVideo src="/Amel.mp4" poster="/thumbnail1.png" />
           <ContactButtons />
-          <ClinicVideo src="/Wael.mp4" />
+          <ClinicVideo src="/Wael.mp4" poster="/thumbnail2.png" />
           <ContactButtons />
         </div>
       </main>
