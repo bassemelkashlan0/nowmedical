@@ -131,8 +131,8 @@ export default function WalkInPage() {
     //   description: "Accepting New Patients",
     // },
     {
-      name: "Dr. Ebele Madubuko",
-      avatar: "/images/landing/Ebele.webp",      // ✅ Fixed: was dr-ebele.png
+      name: "Dr. Amel AlDerbi",
+      avatar: "/images/Dr. Amel AlDerbi.jpeg",      // ✅ Fixed: was dr-ebele.png
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     }

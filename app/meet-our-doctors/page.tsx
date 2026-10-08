@@ -40,8 +40,8 @@ export default function DoctorsPage() {
       description: "Accepting New Patients",
     },
     {
-      name: "Dr. Ebele Madubuko",
-      avatar: "/images/landing/Ebele.webp",     // ✅ Fixed: capital E
+      name: "Dr. Amel AlDerbi",
+      avatar: "/images/Dr. Amel AlDerbi.jpeg",     // ✅ Fixed: capital E
       specialty: "Family Doctors",
       description: "Accepting New Patients",
     }
