@@ -25,6 +25,7 @@ async function getChannelIdFromVideo(videoId) {
       const error = await response.json();
       console.error('Error:', error);
       return null;
+      
     }
 
     const data = await response.json();
