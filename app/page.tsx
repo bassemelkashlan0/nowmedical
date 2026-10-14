@@ -13,6 +13,7 @@ import Link from "next/link";
 import { StructuredData, generateLocalBusinessSchema, generateFAQSchema, generateAggregateRatingSchema, CLINIC_DATA } from "@/lib/structured-data";
 import type { Metadata } from "next";
 import { LiveStatusBanner } from "@/components/live-status-banner";
+import { YouTubeThumbnailPlayer } from "@/components/youtube-thumbnail-player";
 
 export const metadata: Metadata = {
   title: "Walk-In Clinic Calgary | Open 7 Days Until 11 PM",
@@ -457,15 +458,7 @@ export default function HomePage() {
                 Register as a new patient today with our Male or Female Family Doctors ,Accepting New Patient
               </p>
               <div className="w-full aspect-video bg-[#299470] rounded-lg shadow overflow-hidden flex items-center justify-center relative">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/kp-G-j-DRhg?rel=0&modestbranding=1&showinfo=0"
-                  title="YouTube Shorts Video"
-                  frameBorder="0"
-                  allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen>
-                </iframe>
+                <YouTubeThumbnailPlayer videoId="VMruVCS172c" thumbnail="/thumbnail-walkin.png" />
               </div>
             </div>
           </section>
