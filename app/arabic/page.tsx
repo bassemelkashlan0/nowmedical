@@ -26,6 +26,15 @@ function ContactButtons() {
       >
         اتصل بنا الآن
       </Link>
+      <div className="mt-2 flex flex-col items-center gap-3">
+        <p className="text-2xl font-bold text-[#299470] sm:text-3xl">العنوان</p>
+        <p dir="ltr" className="text-xl font-bold text-[#303030] sm:text-2xl">
+          2520 23 ST NE, Calgary, AB
+        </p>
+        <p dir="ltr" className="text-xl font-bold text-[#303030] sm:text-2xl">
+          Now Medical Clinic
+        </p>
+      </div>
     </div>
   );
 }
